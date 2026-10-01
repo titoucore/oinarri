@@ -1,0 +1,235 @@
+:root {
+  --ink-900: #2C2C2A;
+  --ink-800: #444441;
+  --ink-600: #5F5E5A;
+  --ink-400: #888780;
+  --ink-200: #B4B2A9;
+  --ink-100: #D3D1C7;
+  --ink-50:  #F1EFE8;
+  --paper:   #FFFFFF;
+  --radius: 10px;
+  --page-w: 680px;
+}
+
+:root[data-theme="dark"] {
+  --ink-900: #F1EFE8;
+  --ink-800: #D9D7CE;
+  --ink-600: #B4B2A9;
+  --ink-400: #8A8880;
+  --ink-200: #5F5E5A;
+  --ink-100: #45443F;
+  --ink-50:  #242320;
+  --paper:   #181715;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink-900);
+  line-height: 1.6;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.page {
+  max-width: var(--page-w);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* --- En-tête et logo --- */
+
+.entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  width: 42px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.logo-stroke-1 { stroke: var(--ink-900); }
+.logo-stroke-2 { stroke: var(--ink-600); }
+.logo-stroke-3 { stroke: var(--ink-200); }
+
+.logo-text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.theme-toggle {
+  border: 1px solid var(--ink-200);
+  background: none;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-600);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.theme-toggle svg { width: 17px; height: 17px; }
+
+.icon-moon { display: none; }
+:root[data-theme="dark"] .icon-sun { display: none; }
+:root[data-theme="dark"] .icon-moon { display: block; }
+
+/* --- Accueil --- */
+
+.assises {
+  margin-bottom: 2rem;
+}
+
+.assise {
+  height: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.assise-1 { width: 34%; background: var(--ink-900); }
+.assise-2 { width: 62%; background: var(--ink-600); }
+.assise-3 { width: 100%; background: var(--ink-200); }
+
+h1 {
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--ink-600);
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+}
+
+.cta {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 11px 22px;
+  border-radius: 8px;
+  background: var(--ink-900);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.note {
+  margin-top: 2.5rem;
+  font-size: 14px;
+  color: var(--ink-600);
+  max-width: 34rem;
+}
+
+/* --- Parcours B.A.-BA --- */
+
+.chapitres {
+  list-style: none;
+  counter-reset: chapitre;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chapitre {
+  counter-increment: chapitre;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border: 1px solid var(--ink-100);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.chapitre::before {
+  content: counter(chapitre);
+  font-weight: 700;
+  color: var(--ink-600);
+  min-width: 1.2rem;
+}
+
+.chapitre-corps { flex: 1; min-width: 0; }
+
+.chapitre-titre {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+}
+
+.chapitre-desc {
+  font-size: 14px;
+  color: var(--ink-600);
+  margin: 2px 0 0;
+}
+
+.etiquette {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px dashed var(--ink-400);
+  color: var(--ink-600);
+  white-space: nowrap;
+}
+
+.retour {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--ink-600);
+  margin-bottom: 1.5rem;
+}
+
+/* --- Pied de page --- */
+
+.pied {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink-100);
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+@media (max-width: 420px) {
+  .logo-text { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { transition: none; }
+}
