@@ -15,5 +15,9 @@
       "database_id": "c12fd79d-f9f0-431c-a739-2ebea76be9dd"
     }
   ],
+  "vars": {
+    "ACCESS_TEAM_DOMAIN": "e-t-i-k-a.cloudflareaccess.com",
+    "ACCESS_AUD": "55aeb6179b058585ed736ed19713c93bcf4d8232e57a2857dd7e892bef310a32"
+  },
   "observability": { "enabled": true }
 }
