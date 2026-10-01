@@ -4,6 +4,25 @@ import Base from '../layouts/Base.astro';
 
 <Base title="Oinarri — comprendre le bâtiment">
   <section>
+    <div class="perso" id="perso" hidden>
+      <p class="salut" id="salut" hidden></p>
+      <form class="form-prenom" id="form-prenom" hidden>
+        <label for="prenom">Comment t'appelles-tu ?</label>
+        <div class="ligne">
+          <input
+            id="prenom"
+            name="prenom"
+            type="text"
+            maxlength="40"
+            autocomplete="given-name"
+            required
+          />
+          <button type="submit">Enregistrer</button>
+        </div>
+        <p class="erreur" id="erreur-prenom" role="alert" hidden></p>
+      </form>
+    </div>
+
     <div class="assises" aria-hidden="true">
       <div class="assise assise-1"></div>
       <div class="assise assise-2"></div>
@@ -23,3 +42,113 @@ import Base from '../layouts/Base.astro';
     </p>
   </section>
 </Base>
+
+<style>
+  .perso {
+    margin-bottom: 2rem;
+  }
+  .salut {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-600);
+  }
+  .form-prenom label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .ligne {
+    display: flex;
+    gap: 8px;
+  }
+  .ligne input {
+    flex: 1;
+    min-width: 0;
+    padding: 9px 11px;
+    font-family: inherit;
+    font-size: 14px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+  .ligne button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: none;
+    background: var(--ink-900);
+    color: var(--paper);
+    cursor: pointer;
+  }
+  .ligne button:disabled {
+    opacity: 0.5;
+  }
+  .erreur {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--ink-900);
+    font-weight: 500;
+  }
+</style>
+
+<script>
+  const perso = document.getElementById('perso');
+  const salut = document.getElementById('salut');
+  const formulaire = document.getElementById('form-prenom');
+  const champ = document.getElementById('prenom');
+  const erreur = document.getElementById('erreur-prenom');
+
+  function afficher(moi) {
+    perso.hidden = false;
+    if (moi.prenom) {
+      salut.textContent = 'Bonjour, ' + moi.prenom;
+      salut.hidden = false;
+      formulaire.hidden = true;
+    } else {
+      salut.hidden = true;
+      formulaire.hidden = false;
+    }
+  }
+
+  async function charger() {
+    try {
+      const reponse = await fetch('/api/moi');
+      if (!reponse.ok) return;
+      afficher(await reponse.json());
+    } catch (e) {
+      // Hors ligne ou API indisponible : la page reste utilisable sans salutation.
+    }
+  }
+
+  formulaire.addEventListener('submit', async (evenement) => {
+    evenement.preventDefault();
+    erreur.hidden = true;
+    const bouton = formulaire.querySelector('button');
+    bouton.disabled = true;
+    try {
+      const reponse = await fetch('/api/moi', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prenom: champ.value }),
+      });
+      const donnees = await reponse.json();
+      if (!reponse.ok) {
+        erreur.textContent = donnees.erreur || "Impossible d'enregistrer le prénom.";
+        erreur.hidden = false;
+      } else {
+        afficher(donnees);
+      }
+    } catch (e) {
+      erreur.textContent = 'Connexion impossible. Réessaie dans un instant.';
+      erreur.hidden = false;
+    } finally {
+      bouton.disabled = false;
+    }
+  });
+
+  charger();
+</script>
