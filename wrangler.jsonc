@@ -8,5 +8,12 @@
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
   },
+  "d1_databases": [
+    {
+      "binding": "DB_OINARRI",
+      "database_name": "oinarri-db",
+      "database_id": "c12fd79d-f9f0-431c-a739-2ebea76be9dd"
+    }
+  ],
   "observability": { "enabled": true }
 }
