@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 530" role="img">
+<title>Déroulé d'une opération et intervenants par phase</title>
+<desc>Sept phases de l'opération, du programme et du terrain jusqu'aux garanties après réception, avec pour chacune les missions et les intervenants principaux.</desc>
+<style>
+text{font-family:'Space Grotesk',system-ui,sans-serif}
+.th{font-size:14px;font-weight:500}
+.ts{font-size:12px}
+.teal rect{fill:#E1F5EE;stroke:#0F6E56;stroke-width:.5}.teal .th{fill:#085041}.teal .ts{fill:#0F6E56}
+.coral rect{fill:#FAECE7;stroke:#993C1D;stroke-width:.5}.coral .th{fill:#712B13}.coral .ts{fill:#993C1D}
+.gray rect{fill:#F1EFE8;stroke:#5F5E5A;stroke-width:.5}.gray .th{fill:#444441}.gray .ts{fill:#5F5E5A}
+</style>
+<rect width="680" height="530" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<g class="teal"><rect x="40" y="24" width="600" height="58" rx="8"/><text class="th" x="56" y="44" dominant-baseline="central">Programme et terrain</text><text class="ts" x="56" y="64" dominant-baseline="central">Besoins, budget, sol</text><text class="ts" x="340" y="44" dominant-baseline="central">MOA, géomètre, géotechnicien (G1)</text><text class="ts" x="340" y="64" dominant-baseline="central">Programme et enveloppe fixés</text></g>
+<g class="teal"><rect x="40" y="94" width="600" height="58" rx="8"/><text class="th" x="56" y="114" dominant-baseline="central">Conception</text><text class="ts" x="56" y="134" dominant-baseline="central">ESQ, APS, APD, PRO</text><text class="ts" x="340" y="114" dominant-baseline="central">MOE, BET, économiste, géotechnicien (G2)</text><text class="ts" x="340" y="134" dominant-baseline="central">Contrôleur et SPS désignés</text></g>
+<g class="teal"><rect x="40" y="164" width="600" height="58" rx="8"/><text class="th" x="56" y="184" dominant-baseline="central">Autorisations</text><text class="ts" x="56" y="204" dominant-baseline="central">Permis de construire</text><text class="ts" x="340" y="184" dominant-baseline="central">L'architecte établit le projet</text><text class="ts" x="340" y="204" dominant-baseline="central">Le service d'urbanisme instruit</text></g>
+<g class="teal"><rect x="40" y="234" width="600" height="58" rx="8"/><text class="th" x="56" y="254" dominant-baseline="central">Choix des entreprises</text><text class="ts" x="56" y="274" dominant-baseline="central">ACT, consultation</text><text class="ts" x="340" y="254" dominant-baseline="central">La MOE prépare, le MOA signe</text><text class="ts" x="340" y="274" dominant-baseline="central">Assurance DO avant le chantier</text></g>
+<g class="coral"><rect x="40" y="304" width="600" height="58" rx="8"/><text class="th" x="56" y="324" dominant-baseline="central">Chantier</text><text class="ts" x="56" y="344" dominant-baseline="central">VISA, DET, OPC</text><text class="ts" x="340" y="324" dominant-baseline="central">Entreprises, MOE, OPC</text><text class="ts" x="340" y="344" dominant-baseline="central">Contrôleur, SPS, géotechnique (G3)</text></g>
+<g class="gray"><rect x="40" y="374" width="600" height="58" rx="8"/><text class="th" x="56" y="394" dominant-baseline="central">Réception</text><text class="ts" x="56" y="414" dominant-baseline="central">AOR</text><text class="ts" x="340" y="394" dominant-baseline="central">Le MOA reçoit l'ouvrage</text><text class="ts" x="340" y="414" dominant-baseline="central">La MOE assiste, les entreprises sont présentes</text></g>
+<g class="gray"><rect x="40" y="444" width="600" height="58" rx="8"/><text class="th" x="56" y="464" dominant-baseline="central">Après réception</text><text class="ts" x="56" y="484" dominant-baseline="central">Garanties</text><text class="ts" x="340" y="464" dominant-baseline="central">Entreprises : garanties de 1, 2 et 10 ans</text><text class="ts" x="340" y="484" dominant-baseline="central">Assureur DO : préfinance les dommages</text></g>
+</svg>
