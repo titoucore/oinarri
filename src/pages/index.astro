@@ -1,5 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import { disponibles } from '../data/ba-ba.js';
+
+// Seuls les chapitres disponibles servent à « reprendre où on en est ».
+const chapitresDisponibles = disponibles.map((c) => ({
+  titre: c.titre,
+  href: c.href,
+  cours: c.cours,
+}));
 ---
 
 <Base title="Oinarri — comprendre le bâtiment">
@@ -34,6 +42,19 @@ import Base from '../layouts/Base.astro';
       Une formation en ligne pour adultes, qui part de zéro : qui construit, comment, avec quelles
       règles et à quel prix.
     </p>
+
+    <a
+      class="reprise"
+      id="reprise"
+      href="/ba-ba/"
+      data-chapitres={JSON.stringify(chapitresDisponibles)}
+      hidden
+    >
+      <span class="reprise-etiquette">Reprendre où tu en es</span>
+      <span class="reprise-titre" id="reprise-titre"></span>
+      <span class="reprise-etat" id="reprise-etat"></span>
+    </a>
+
     <a class="cta" href="/ba-ba/">Commencer le B.A.-BA</a>
 
     <p class="note">
@@ -93,9 +114,41 @@ import Base from '../layouts/Base.astro';
     color: var(--ink-900);
     font-weight: 500;
   }
+
+  .reprise {
+    display: block;
+    max-width: 34rem;
+    margin: 0 0 1.25rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--ink-900);
+    border-radius: 12px;
+    text-decoration: none;
+  }
+  .reprise[hidden] {
+    display: none;
+  }
+  .reprise-etiquette {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-600);
+  }
+  .reprise-titre {
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  .reprise-etat {
+    display: block;
+    font-size: 14px;
+    color: var(--ink-600);
+    margin-top: 2px;
+  }
 </style>
 
 <script>
+  import { chargerProgression, libelleEtat } from '../scripts/progression.js';
+
   const perso = document.getElementById('perso');
   const salut = document.getElementById('salut');
   const formulaire = document.getElementById('form-prenom');
@@ -122,6 +175,33 @@ import Base from '../layouts/Base.astro';
     } catch (e) {
       // Hors ligne ou API indisponible : la page reste utilisable sans salutation.
     }
+  }
+
+  // « Reprendre où j'en suis » : le premier chapitre disponible non terminé,
+  // affiché seulement si l'utilisateur a déjà validé quelque chose.
+  async function afficherReprise() {
+    const bloc = document.getElementById('reprise');
+    if (!bloc) return;
+    const progression = await chargerProgression();
+    if (!progression) return;
+
+    const chapitres = JSON.parse(bloc.dataset.chapitres);
+    if (!chapitres.some((c) => progression.has(c.cours))) return;
+
+    const titre = document.getElementById('reprise-titre');
+    const etat = document.getElementById('reprise-etat');
+    const cible = chapitres.find((c) => !progression.get(c.cours)?.termine);
+
+    if (cible) {
+      bloc.href = cible.href;
+      titre.textContent = cible.titre;
+      etat.textContent = libelleEtat(progression.get(cible.cours)) || 'Pas encore commencé';
+    } else {
+      bloc.href = '/ba-ba/';
+      titre.textContent = 'Tous les chapitres disponibles sont terminés';
+      etat.textContent = 'Les suivants arrivent.';
+    }
+    bloc.hidden = false;
   }
 
   formulaire.addEventListener('submit', async (evenement) => {
@@ -151,4 +231,5 @@ import Base from '../layouts/Base.astro';
   });
 
   charger();
+  afficherReprise();
 </script>
