@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { disponibles } from '../data/ba-ba.js';
+import { listerCartes } from '../lib/cartes.js';
 
 // Seuls les chapitres disponibles servent à « reprendre où on en est ».
 const chapitresDisponibles = disponibles.map((c) => ({
@@ -8,6 +9,9 @@ const chapitresDisponibles = disponibles.map((c) => ({
   href: c.href,
   cours: c.cours,
 }));
+
+// Identifiants des cartes de révision existantes (pour ignorer d'éventuelles cartes orphelines).
+const idsCartes = (await listerCartes()).map((c) => c.carte);
 ---
 
 <Base title="Oinarri — comprendre le bâtiment">
@@ -53,6 +57,17 @@ const chapitresDisponibles = disponibles.map((c) => ({
       <span class="reprise-etiquette">Reprendre où tu en es</span>
       <span class="reprise-titre" id="reprise-titre"></span>
       <span class="reprise-etat" id="reprise-etat"></span>
+    </a>
+
+    <a
+      class="revision-lien"
+      id="revision-lien"
+      href="/revisions/"
+      data-cartes={JSON.stringify(idsCartes)}
+      hidden
+    >
+      <span class="reprise-etiquette">Révisions</span>
+      <span class="reprise-titre" id="revision-texte"></span>
     </a>
 
     <a class="cta" href="/ba-ba/">Commencer le B.A.-BA</a>
@@ -115,7 +130,8 @@ const chapitresDisponibles = disponibles.map((c) => ({
     font-weight: 500;
   }
 
-  .reprise {
+  .reprise,
+  .revision-lien {
     display: block;
     max-width: 34rem;
     margin: 0 0 1.25rem;
@@ -124,7 +140,11 @@ const chapitresDisponibles = disponibles.map((c) => ({
     border-radius: 12px;
     text-decoration: none;
   }
-  .reprise[hidden] {
+  .revision-lien {
+    border-color: var(--ink-200);
+  }
+  .reprise[hidden],
+  .revision-lien[hidden] {
     display: none;
   }
   .reprise-etiquette {
@@ -147,94 +167,5 @@ const chapitresDisponibles = disponibles.map((c) => ({
 </style>
 
 <script>
-  import { chargerProgression, libelleEtat } from '../scripts/progression.js';
-
-  const perso = document.getElementById('perso');
-  const salut = document.getElementById('salut');
-  const formulaire = document.getElementById('form-prenom');
-  const champ = document.getElementById('prenom');
-  const erreur = document.getElementById('erreur-prenom');
-
-  function afficher(moi) {
-    perso.hidden = false;
-    if (moi.prenom) {
-      salut.textContent = 'Bonjour, ' + moi.prenom;
-      salut.hidden = false;
-      formulaire.hidden = true;
-    } else {
-      salut.hidden = true;
-      formulaire.hidden = false;
-    }
-  }
-
-  async function charger() {
-    try {
-      const reponse = await fetch('/api/moi');
-      if (!reponse.ok) return;
-      afficher(await reponse.json());
-    } catch (e) {
-      // Hors ligne ou API indisponible : la page reste utilisable sans salutation.
-    }
-  }
-
-  // « Reprendre où j'en suis » : le premier chapitre disponible non terminé,
-  // affiché seulement si l'utilisateur a déjà validé quelque chose.
-  async function afficherReprise() {
-    const bloc = document.getElementById('reprise');
-    if (!bloc) return;
-    const progression = await chargerProgression();
-    if (!progression) return;
-
-    const chapitres = JSON.parse(bloc.dataset.chapitres);
-    if (!chapitres.some((c) => progression.has(c.cours))) return;
-
-    const titre = document.getElementById('reprise-titre');
-    const etat = document.getElementById('reprise-etat');
-    const cible = chapitres.find((c) => !progression.get(c.cours)?.termine);
-
-    if (cible) {
-      bloc.href = cible.href;
-      titre.textContent = cible.titre;
-      etat.textContent = libelleEtat(progression.get(cible.cours)) || 'Pas encore commencé';
-    } else {
-      bloc.href = '/ba-ba/';
-      titre.textContent = 'Tous les chapitres disponibles sont terminés';
-      etat.textContent = 'Les suivants arrivent.';
-    }
-    bloc.hidden = false;
-  }
-
-  formulaire.addEventListener('submit', async (evenement) => {
-    evenement.preventDefault();
-    erreur.hidden = true;
-    const bouton = formulaire.querySelector('button');
-    bouton.disabled = true;
-    try {
-      const reponse = await fetch('/api/moi', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prenom: champ.value }),
-      });
-      const donnees = await reponse.json();
-      if (!reponse.ok) {
-        erreur.textContent = donnees.erreur || "Impossible d'enregistrer le prénom.";
-        erreur.hidden = false;
-      } else {
-        afficher(donnees);
-      }
-    } catch (e) {
-      erreur.textContent = 'Connexion impossible. Réessaie dans un instant.';
-      erreur.hidden = false;
-    } finally {
-      bouton.disabled = false;
-    }
-  });
-
-  // Les appels API se font l'un après l'autre (et non en parallèle).
-  async function demarrer() {
-    await charger();
-    await afficherReprise();
-  }
-
-  demarrer();
+  import '../scripts/accueil.js';
 </script>
