@@ -8,11 +8,13 @@
 
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
+import { gererRevisions } from './api-revisions.js';
 
 // Routes qui exigent un utilisateur identifié : chemin -> gestionnaire.
 const ROUTES_UTILISATEUR = new Map([
   ['/api/progression', gererProgression],
   ['/api/quiz', gererQuiz],
+  ['/api/revisions', gererRevisions],
 ]);
 
 const DUREE_CACHE_CLES = 60 * 60 * 1000; // 1 heure
