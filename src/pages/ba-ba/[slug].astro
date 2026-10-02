@@ -28,7 +28,7 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     <span class="etiquette">{niveau}</span>
     <span>Dernière vérification : {date}</span>
   </p>
-  <article class="cours">
+  <article class="cours" data-cours={entry.id}>
     <Content />
   </article>
 </Base>
@@ -102,4 +102,166 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
   .cours a {
     text-underline-offset: 3px;
   }
+
+  /* --- Validation d'un niveau (insérée par le script) --- */
+
+  .validation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin: 2rem 0 0;
+    padding: 0.9rem 1rem;
+    border: 1px dashed var(--ink-200);
+    border-radius: 12px;
+  }
+
+  .validation[data-acquis='true'] {
+    border-style: solid;
+    border-color: var(--ink-900);
+  }
+
+  .validation-texte {
+    flex: 1;
+    min-width: 12rem;
+    margin: 0 !important;
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  .validation[data-acquis='true'] .validation-texte {
+    color: var(--ink-900);
+    font-weight: 500;
+  }
+
+  .validation-bouton {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: none;
+    background: var(--ink-900);
+    color: var(--paper);
+    cursor: pointer;
+  }
+
+  .validation-annuler {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 4px;
+    border: none;
+    background: none;
+    color: var(--ink-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  .validation button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .validation-erreur {
+    flex-basis: 100%;
+    margin: 0 !important;
+    font-size: 13px;
+    font-weight: 500;
+  }
 </style>
+
+<script>
+  import {
+    NIVEAUX,
+    LIBELLES,
+    chargerProgression,
+    enregistrerProgression,
+  } from '../../scripts/progression.js';
+
+  async function initialiser() {
+    const article = document.querySelector('.cours');
+    if (!article) return;
+    const cours = article.dataset.cours;
+
+    const progression = await chargerProgression();
+    if (!progression) return; // API indisponible : le cours reste lisible sans boutons.
+
+    const ligne = progression.get(cours);
+    let atteint = ligne ? NIVEAUX.indexOf(ligne.niveau_atteint) : -1;
+
+    const blocs = [];
+
+    NIVEAUX.forEach((niveau, i) => {
+      const titre = document.getElementById(niveau);
+      if (!titre) return;
+
+      const bloc = document.createElement('div');
+      bloc.className = 'validation';
+
+      const texte = document.createElement('p');
+      texte.className = 'validation-texte';
+
+      const valider = document.createElement('button');
+      valider.type = 'button';
+      valider.className = 'validation-bouton';
+      valider.textContent = `Valider le niveau « ${LIBELLES[niveau]} »`;
+
+      const annuler = document.createElement('button');
+      annuler.type = 'button';
+      annuler.className = 'validation-annuler';
+      annuler.textContent = 'Annuler';
+
+      const erreur = document.createElement('p');
+      erreur.className = 'validation-erreur';
+      erreur.setAttribute('role', 'alert');
+      erreur.hidden = true;
+
+      bloc.append(texte, valider, annuler, erreur);
+
+      // La fin du niveau = juste avant le titre de la section suivante.
+      let suivant = titre.nextElementSibling;
+      while (suivant && suivant.tagName !== 'H2') suivant = suivant.nextElementSibling;
+      if (suivant) suivant.before(bloc);
+      else article.append(bloc);
+
+      async function appliquer(nouveauNiveau) {
+        valider.disabled = true;
+        annuler.disabled = true;
+        erreur.hidden = true;
+        try {
+          await enregistrerProgression(cours, nouveauNiveau);
+          atteint = nouveauNiveau ? NIVEAUX.indexOf(nouveauNiveau) : -1;
+        } catch {
+          erreur.textContent = "L'enregistrement a échoué. Réessaie dans un instant.";
+          erreur.hidden = false;
+        }
+        valider.disabled = false;
+        annuler.disabled = false;
+        afficher();
+      }
+
+      valider.addEventListener('click', () => appliquer(niveau));
+      // Annuler un niveau annule aussi ceux d'au-dessus : on revient au niveau précédent.
+      annuler.addEventListener('click', () => appliquer(i === 0 ? null : NIVEAUX[i - 1]));
+
+      blocs.push({ i, niveau, bloc, texte, valider, annuler });
+    });
+
+    function afficher() {
+      for (const { i, niveau, bloc, texte, valider, annuler } of blocs) {
+        const acquis = i <= atteint;
+        bloc.dataset.acquis = String(acquis);
+        texte.textContent = acquis
+          ? `Niveau « ${LIBELLES[niveau]} » acquis`
+          : 'Tu as compris cette partie ? Valide-la pour suivre ta progression.';
+        valider.hidden = acquis;
+        annuler.hidden = !(acquis && i === atteint);
+      }
+    }
+
+    afficher();
+  }
+
+  initialiser();
+</script>
