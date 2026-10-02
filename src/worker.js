@@ -223,7 +223,16 @@ async function router(request, env, ctx) {
   const url = new URL(request.url);
 
   if (url.pathname === '/api/sante') {
-    return reponseJson({ app: 'oinarri', ok: true, date: new Date().toISOString() });
+    // Diagnostic temporaire : mode actif et présence des secrets (oui/non, jamais leur valeur).
+    return reponseJson({
+      app: 'oinarri',
+      ok: true,
+      date: new Date().toISOString(),
+      version: 'diag-2026-10-02',
+      mode: env.AUTH_MODE ?? null,
+      secret_pepper: Boolean(env.PEPPER),
+      secret_resend: Boolean(env.RESEND_API_KEY),
+    });
   }
 
   if (url.pathname.startsWith('/api/auth/')) {
