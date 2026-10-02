@@ -1,0 +1,37 @@
+---
+import Auth from '../layouts/Auth.astro';
+---
+
+<Auth
+  title="Mot de passe oublié — Oinarri"
+  description="Crée ou réinitialise ton mot de passe grâce à un lien envoyé par e-mail."
+>
+  <a class="retour" href="/connexion/">Connexion</a>
+  <h1>Mot de passe oublié</h1>
+  <p class="lead">
+    Indique ton adresse e-mail : tu recevras un lien pour créer ou réinitialiser ton mot de passe.
+  </p>
+
+  <form id="form-auth" class="auth-form" data-action="oubli">
+    <label for="a-email">Adresse e-mail</label>
+    <input
+      id="a-email"
+      type="email"
+      autocomplete="username"
+      inputmode="email"
+      autocapitalize="none"
+      required
+    />
+
+    <p class="auth-erreur" id="auth-erreur" role="alert" hidden></p>
+    <div>
+      <button class="auth-bouton" type="submit">Envoyer le lien</button>
+    </div>
+  </form>
+
+  <div class="auth-succes" id="auth-succes" role="status" hidden>
+    <p id="auth-succes-texte"></p>
+    <p>Pense à regarder dans tes courriers indésirables si le message tarde.</p>
+    <a class="auth-lien" id="auth-succes-lien" href="/connexion/" hidden></a>
+  </div>
+</Auth>
