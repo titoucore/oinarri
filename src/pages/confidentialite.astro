@@ -1,0 +1,184 @@
+---
+import Base from '../layouts/Base.astro';
+import { RESPONSABLE, CONTACT_EMAIL, MAJ_CONFIDENTIALITE } from '../data/legal.js';
+
+const maj = new Date(`${MAJ_CONFIDENTIALITE}T00:00:00Z`).toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<Base
+  title="Confidentialité — Oinarri"
+  description="Quelles données Oinarri collecte, pourquoi, combien de temps, et comment exercer tes droits."
+>
+  <a class="retour" href="/">Accueil</a>
+  <h1>Confidentialité</h1>
+  <p class="lead">
+    Oinarri collecte le strict nécessaire pour te permettre de suivre ta formation. Cette page
+    explique quoi, pourquoi, combien de temps, et comment garder la main sur tes données.
+  </p>
+  <p class="legal-maj">Dernière mise à jour : {maj}</p>
+
+  <article class="legal">
+    <h2>Qui est responsable de tes données ?</h2>
+    <p>
+      Le responsable du traitement est <strong>{RESPONSABLE}</strong>, éditeur d'Oinarri (projet
+      personnel, sans but commercial). Pour toute question ou pour exercer tes droits :
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+    </p>
+
+    <h2>Quelles données sont collectées ?</h2>
+    <ul>
+      <li>
+        <strong>Ton adresse e-mail.</strong> Elle te sert d'identifiant de connexion. Elle est
+        indispensable : sans elle, l'accès au site n'est pas possible.
+      </li>
+      <li>
+        <strong>Ton prénom</strong> (ou un pseudonyme). Il sert uniquement à te saluer et se modifie
+        à tout moment.
+      </li>
+      <li>
+        <strong>Ta progression :</strong> les niveaux de lecture que tu valides pour chaque chapitre.
+      </li>
+      <li>
+        <strong>Tes résultats de quiz :</strong> chapitre, niveau, score et date de chaque passage.
+      </li>
+      <li>
+        <strong>Tes cartes de révision :</strong> les cartes inscrites et leur planification
+        (prochaine date de révision, rythme de répétition).
+      </li>
+      <li>
+        <strong>Des dates :</strong> création du compte et dernière visite.
+      </li>
+    </ul>
+    <p>
+      Les réponses que tu écris dans les champs libres des quiz ne sont pas enregistrées. Il n'y a
+      aucun profilage, aucune publicité et aucune décision automatisée te concernant.
+    </p>
+
+    <h2>Pourquoi, et sur quel fondement ?</h2>
+    <p>
+      Ces données servent à faire fonctionner le service que tu utilises : te reconnaître, conserver ta
+      progression, planifier tes révisions et sécuriser l'accès. Le traitement repose sur
+      l'exécution du service demandé (article 6, 1, b du RGPD). Elles ne sont ni vendues, ni utilisées
+      pour de la publicité, ni réutilisées pour une autre finalité.
+    </p>
+
+    <h2>Qui y a accès ?</h2>
+    <p>
+      Le site est hébergé par <strong>Cloudflare</strong>, qui fournit aussi le contrôle d'accès
+      (Cloudflare Access) et la base de données où tes données sont stockées. Cloudflare traite
+      également des données techniques de connexion (dont l'adresse IP) pour assurer le service et sa
+      sécurité. Cloudflare est une société américaine : les éventuels transferts hors de l'Union
+      européenne relèvent des garanties prévues par le chapitre V du RGPD. Aucun autre destinataire ne
+      reçoit tes données.
+    </p>
+
+    <h2>Combien de temps sont-elles conservées ?</h2>
+    <ul>
+      <li>Tant que ton compte existe.</li>
+      <li>
+        Si tu supprimes ton compte depuis la page « Mon compte », toutes tes données sont effacées
+        immédiatement de la base. Des copies techniques de sauvegarde gérées par l'hébergeur peuvent
+        subsister quelque temps avant leur expiration automatique.
+      </li>
+      <li>
+        Une durée de conservation des comptes inactifs sera fixée avant l'ouverture du service à
+        d'autres personnes.
+      </li>
+    </ul>
+
+    <h2>Quels sont tes droits ?</h2>
+    <p>Tu peux à tout moment :</p>
+    <ul>
+      <li>
+        <strong>consulter et récupérer</strong> tes données : bouton « Télécharger mes données » dans
+        <a href="/compte/">Mon compte</a> (fichier JSON) ;
+      </li>
+      <li>
+        <strong>rectifier</strong> ton prénom depuis <a href="/compte/">Mon compte</a> ;
+      </li>
+      <li>
+        <strong>remettre ta progression à zéro</strong>, chapitre par chapitre ou en totalité ;
+      </li>
+      <li>
+        <strong>supprimer ton compte</strong> et toutes tes données, depuis la même page ;
+      </li>
+      <li>
+        demander la <strong>limitation</strong> du traitement ou t'y <strong>opposer</strong>, en
+        écrivant à <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+      </li>
+    </ul>
+    <p>
+      Toute demande reçoit une réponse dans un délai d'un mois. Si tu estimes que tes droits ne sont
+      pas respectés, tu peux introduire une réclamation auprès de la CNIL
+      (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).
+    </p>
+
+    <h2>Cookies, stockage local et polices</h2>
+    <ul>
+      <li>
+        <strong>Cookie de connexion :</strong> Cloudflare Access dépose un cookie
+        d'authentification, strictement nécessaire pour accéder au site.
+      </li>
+      <li>
+        <strong>Préférence d'affichage :</strong> ton choix de thème clair ou sombre est conservé dans
+        le stockage local de ton navigateur. Il ne quitte pas ton appareil.
+      </li>
+      <li>
+        <strong>Police de caractères :</strong> le site charge la police Space Grotesk depuis les
+        serveurs de Google Fonts, ce qui transmet à Google ton adresse IP. Une version hébergée sur le
+        site même est prévue pour supprimer ce échange.
+      </li>
+      <li>Aucun cookie publicitaire ni outil de mesure d'audience n'est utilisé.</li>
+    </ul>
+
+    <h2>Cette page peut évoluer</h2>
+    <p>
+      Si le traitement de tes données change (nouveau service, nouveau destinataire), cette page sera
+      mise à jour et la date ci-dessus modifiée.
+    </p>
+  </article>
+</Base>
+
+<style is:global>
+  .legal-maj {
+    font-size: 13px;
+    color: var(--ink-600);
+    margin: -0.75rem 0 2rem;
+  }
+
+  .legal {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .legal h2 {
+    font-size: 1.25rem;
+    margin: 2.25rem 0 0.6rem;
+  }
+
+  .legal p {
+    margin: 0 0 1rem;
+  }
+
+  .legal ul {
+    margin: 0 0 1rem;
+    padding-left: 1.4rem;
+  }
+
+  .legal li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal li::marker {
+    color: var(--ink-400);
+  }
+
+  .legal a {
+    text-underline-offset: 3px;
+  }
+</style>
