@@ -1,0 +1,355 @@
+---
+import Base from '../layouts/Base.astro';
+import { disponibles } from '../data/ba-ba.js';
+import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
+---
+
+<Base
+  title="Mon compte — Oinarri"
+  description="Gère ton compte Oinarri : informations, progression, export et suppression."
+>
+  <a class="retour" href="/">Accueil</a>
+  <h1>Mon compte</h1>
+
+  <div id="compte" class="compte">
+    <!-- Le contenu apparaît d'un coup quand les données sont reçues (filet de sécurité : 2,5 s). -->
+    <script is:inline>
+      (function () {
+        var s = document.getElementById('compte');
+        s.classList.add('attente');
+        setTimeout(function () {
+          s.classList.remove('attente');
+        }, 2500);
+      })();
+    </script>
+
+    <p class="c-message" id="c-message" role="status" aria-live="polite" hidden></p>
+
+    <p class="c-supprime" id="c-supprime" hidden>
+      Ton compte et toutes tes données ont été supprimés. Tu vas être déconnecté.
+    </p>
+
+    <div id="c-contenu">
+      <section class="c-bloc" aria-labelledby="t-infos">
+        <h2 id="t-infos">Mes informations</h2>
+        <dl class="c-infos">
+          <dt>E-mail</dt>
+          <dd id="c-email"></dd>
+          <dt>Prénom</dt>
+          <dd>
+            <form id="c-form-prenom" class="c-prenom">
+              <input
+                id="c-prenom"
+                type="text"
+                maxlength="40"
+                autocomplete="given-name"
+                aria-label="Prénom"
+                required
+              />
+              <button class="c-bouton" type="submit">Enregistrer</button>
+            </form>
+          </dd>
+          <dt>Compte créé le</dt>
+          <dd id="c-cree"></dd>
+          <dt>Dernière visite</dt>
+          <dd id="c-visite"></dd>
+        </dl>
+        <p class="c-aide">
+          Ton e-mail est ton identifiant de connexion : l'accès au site est contrôlé par Cloudflare
+          Access, il n'y a pas de mot de passe à gérer dans l'application.
+        </p>
+      </section>
+
+      <section class="c-bloc" aria-labelledby="t-progression">
+        <h2 id="t-progression">Ma progression</h2>
+        <ul class="c-chapitres">
+          {
+            disponibles.map((c) => (
+              <li class="c-chapitre" data-cours={c.cours}>
+                <p class="c-titre">
+                  <a href={c.href}>{c.titre}</a>
+                </p>
+                <p class="c-etat" />
+                <ul class="c-details">
+                  {NIVEAUX_AFFICHES.map((n) => (
+                    <li data-niveau={n} />
+                  ))}
+                </ul>
+                <div class="c-actions">
+                  <button class="c-lien" type="button" data-action="reset">
+                    Remettre ce chapitre à zéro
+                  </button>
+                  <div class="c-confirm" hidden>
+                    <p>
+                      Confirmer ? Les niveaux validés, les scores de quiz et les cartes de révision de
+                      ce chapitre seront effacés.
+                    </p>
+                    <div class="c-boutons">
+                      <button class="c-bouton" type="button" data-action="oui">
+                        Oui, remettre à zéro
+                      </button>
+                      <button class="c-bouton c-bouton-secondaire" type="button" data-action="non">
+                        Annuler
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="c-bloc" aria-labelledby="t-donnees">
+        <h2 id="t-donnees">Mes données</h2>
+        <p>
+          Télécharge une copie de toutes les données associées à ton compte (informations,
+          progression, résultats de quiz, cartes de révision) dans un fichier JSON.
+        </p>
+        <a class="c-bouton c-bouton-secondaire" href="/api/compte/export" download>
+          Télécharger mes données
+        </a>
+      </section>
+
+      <section class="c-bloc c-sensible" aria-labelledby="t-sensible">
+        <h2 id="t-sensible">Zone sensible</h2>
+
+        <div class="c-sous-bloc">
+          <p>
+            <strong>Tout remettre à zéro.</strong> Efface toute ta progression : niveaux validés, scores
+            de quiz et cartes de révision. Ton compte reste.
+          </p>
+          <button class="c-bouton c-bouton-secondaire" id="c-reset-tout" type="button">
+            Tout remettre à zéro
+          </button>
+          <div class="c-confirm" id="c-reset-tout-confirm" hidden>
+            <p>Confirmer ? Toute ta progression sera effacée. Cette action est définitive.</p>
+            <div class="c-boutons">
+              <button class="c-bouton" id="c-reset-tout-oui" type="button">Oui, tout effacer</button>
+              <button class="c-bouton c-bouton-secondaire" id="c-reset-tout-non" type="button">
+                Annuler
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-sous-bloc">
+          <p>
+            <strong>Supprimer mon compte.</strong> Efface définitivement ton compte et toutes tes
+            données. Cette action est irréversible.
+          </p>
+          <label for="c-suppr-champ">Pour confirmer, écris SUPPRIMER</label>
+          <input id="c-suppr-champ" type="text" autocomplete="off" autocapitalize="characters" />
+          <button class="c-bouton" id="c-suppr-oui" type="button" disabled>
+            Supprimer définitivement mon compte
+          </button>
+          <p class="c-aide">
+            Comme l'accès au site est géré par Cloudflare Access, ton adresse reste autorisée à se
+            connecter : te reconnecter créerait un compte vide.
+          </p>
+        </div>
+      </section>
+
+      <p class="c-deconnexion">
+        <a href="/cdn-cgi/access/logout">Se déconnecter</a>
+      </p>
+    </div>
+  </div>
+</Base>
+
+<style is:global>
+  #compte {
+    transition: opacity 0.25s ease;
+  }
+  #compte.attente {
+    opacity: 0;
+  }
+  #compte [hidden] {
+    display: none !important;
+  }
+
+  #compte .c-bloc {
+    margin: 0 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+  }
+
+  #compte .c-bloc h2 {
+    margin: 0 0 0.75rem;
+  }
+
+  #compte p {
+    margin: 0 0 0.75rem;
+  }
+
+  #compte .c-message {
+    padding: 0.7rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  #compte .c-supprime {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  #compte .c-infos {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1rem;
+    margin: 0 0 0.75rem;
+    font-size: 15px;
+  }
+  #compte .c-infos dt {
+    color: var(--ink-600);
+  }
+  #compte .c-infos dd {
+    margin: 0;
+    min-width: 0;
+    word-break: break-word;
+  }
+
+  #compte .c-prenom {
+    display: flex;
+    gap: 8px;
+  }
+  #compte input {
+    min-width: 0;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+  #compte .c-prenom input {
+    flex: 1;
+  }
+  #compte .c-sous-bloc input {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0 0.75rem;
+  }
+  #compte label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  #compte .c-aide {
+    font-size: 13px;
+    color: var(--ink-600);
+    margin: 0;
+  }
+
+  #compte .c-chapitres {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #compte .c-chapitre + .c-chapitre {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ink-100);
+  }
+  #compte .c-titre {
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+  }
+  #compte .c-titre a {
+    text-underline-offset: 3px;
+  }
+  #compte .c-etat {
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+  #compte .c-details {
+    margin: 0 0 0.75rem;
+    padding-left: 1.1rem;
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+  #compte .c-details li {
+    margin-bottom: 0.25rem;
+  }
+
+  #compte .c-bouton {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--ink-900);
+    background: var(--ink-900);
+    color: var(--paper);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #compte .c-bouton-secondaire {
+    background: none;
+    color: var(--ink-900);
+  }
+  #compte .c-bouton:disabled,
+  #compte .c-lien:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  #compte .c-lien {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 4px 0;
+    border: none;
+    background: none;
+    color: var(--ink-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  #compte .c-confirm {
+    margin-top: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-size: 15px;
+  }
+  #compte .c-boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #compte .c-sensible {
+    border-color: var(--ink-400);
+  }
+  #compte .c-sous-bloc + .c-sous-bloc {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink-100);
+  }
+
+  #compte .c-deconnexion {
+    font-size: 14px;
+  }
+  #compte .c-deconnexion a {
+    color: var(--ink-600);
+    text-underline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #compte {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  import '../scripts/compte.js';
+</script>
