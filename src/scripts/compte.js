@@ -1,15 +1,12 @@
 // Page /compte/ : informations, connexion et sécurité, progression détaillée,
 // remise à zéro, export des données et suppression du compte.
 // Le squelette de la page est dans compte.astro ; ce script le remplit et branche les boutons.
-// Selon le mode de connexion renvoyé par l'API ("access" ou "compte"), certaines sections changent.
 
 import { LIBELLES, NIVEAUX, libelleEtat } from './progression.js';
 
 const $ = (id) => document.getElementById(id);
 const section = $('compte');
 const message = $('c-message');
-
-let mode = 'access';
 
 // ---------- Outils ----------
 
@@ -53,16 +50,6 @@ const posterCompte = (corps) => poster('/api/compte', corps);
 
 function afficher(donnees) {
   const { moi, progression, quiz, revisions } = donnees;
-  mode = donnees.mode;
-  const modeCompte = mode === 'compte';
-
-  // Les éléments propres à chaque mode de connexion.
-  $('c-aide-access').hidden = modeCompte;
-  $('c-aide-compte').hidden = !modeCompte;
-  $('c-securite').hidden = !modeCompte;
-  $('c-suppr-mdp-bloc').hidden = !modeCompte;
-  $('c-suppr-aide-access').hidden = modeCompte;
-  $('c-deconnexion-access').hidden = modeCompte;
 
   $('c-email').textContent = moi.email;
   $('c-prenom').value = moi.prenom || '';
@@ -101,7 +88,6 @@ function afficher(donnees) {
   }
 
   $('c-reset-tout').disabled = toutVide;
-  majBoutonSuppression();
 }
 
 async function recharger() {
@@ -178,7 +164,7 @@ $('c-form-prenom').addEventListener('submit', async (evenement) => {
   bouton.disabled = false;
 });
 
-// ---------- Connexion et sécurité (mode "compte") ----------
+// ---------- Connexion et sécurité ----------
 
 // Envoie un formulaire de sécurité et affiche le résultat ; vide les champs en cas de succès.
 async function soumettreSecurite(formulaire, url, corps, texteSucces) {
@@ -238,11 +224,10 @@ const champSuppression = $('c-suppr-champ');
 const champMotDePasse = $('c-suppr-mdp');
 const boutonSuppression = $('c-suppr-oui');
 
-// Le bouton ne s'active que si SUPPRIMER est écrit (et le mot de passe saisi en mode "compte").
+// Le bouton ne s'active que si SUPPRIMER est écrit et le mot de passe saisi.
 function majBoutonSuppression() {
   const confirme = champSuppression.value.trim().toUpperCase() === 'SUPPRIMER';
-  const motDePasseOk = mode !== 'compte' || champMotDePasse.value.length > 0;
-  boutonSuppression.disabled = !(confirme && motDePasseOk);
+  boutonSuppression.disabled = !(confirme && champMotDePasse.value.length > 0);
 }
 
 champSuppression.addEventListener('input', majBoutonSuppression);
@@ -270,11 +255,11 @@ boutonSuppression.addEventListener('click', async () => {
     majBoutonSuppression();
     return;
   }
-  // Compte supprimé : on masque la page, puis on quitte (déconnexion Access ou page de connexion).
+  // Compte supprimé : on masque la page, puis on redirige vers la connexion.
   $('c-contenu').hidden = true;
   $('c-supprime').hidden = false;
   setTimeout(() => {
-    location.href = mode === 'compte' ? '/connexion/' : '/cdn-cgi/access/logout';
+    location.href = '/connexion/';
   }, 3000);
 });
 
