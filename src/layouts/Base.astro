@@ -1,5 +1,9 @@
 ---
 import '../styles/global.css';
+// Police hébergée avec le site : aucun appel à un service tiers (pas de Google Fonts).
+import '@fontsource/space-grotesk/latin-400.css';
+import '@fontsource/space-grotesk/latin-500.css';
+import '@fontsource/space-grotesk/latin-700.css';
 
 const {
   title = 'Oinarri',
@@ -15,12 +19,6 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
     <script is:inline>
       (function () {
         try {
