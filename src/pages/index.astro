@@ -155,6 +155,18 @@ const chapitresDisponibles = disponibles.map((c) => ({
   const champ = document.getElementById('prenom');
   const erreur = document.getElementById('erreur-prenom');
 
+  // Mode diagnostic temporaire : ouvrir /?debug pour voir où le script s'arrête.
+  const debug = new URLSearchParams(location.search).has('debug');
+  const etapes = [];
+  function diag(message) {
+    if (!debug) return;
+    etapes.push(message);
+    const bloc = document.getElementById('reprise');
+    bloc.hidden = false;
+    document.getElementById('reprise-titre').textContent = 'Diagnostic';
+    document.getElementById('reprise-etat').textContent = etapes.join(' · ');
+  }
+
   function afficher(moi) {
     perso.hidden = false;
     if (moi.prenom) {
@@ -170,9 +182,11 @@ const chapitresDisponibles = disponibles.map((c) => ({
   async function charger() {
     try {
       const reponse = await fetch('/api/moi');
+      diag('moi: HTTP ' + reponse.status);
       if (!reponse.ok) return;
       afficher(await reponse.json());
     } catch (e) {
+      diag('moi: erreur ' + e);
       // Hors ligne ou API indisponible : la page reste utilisable sans salutation.
     }
   }
@@ -181,12 +195,20 @@ const chapitresDisponibles = disponibles.map((c) => ({
   // affiché seulement si l'utilisateur a déjà validé quelque chose.
   async function afficherReprise() {
     const bloc = document.getElementById('reprise');
-    if (!bloc) return;
+    if (!bloc) {
+      diag('bloc introuvable');
+      return;
+    }
     const progression = await chargerProgression();
+    diag(progression ? 'progression: ' + progression.size + ' ligne(s)' : 'progression: null');
     if (!progression) return;
 
     const chapitres = JSON.parse(bloc.dataset.chapitres);
-    if (!chapitres.some((c) => progression.has(c.cours))) return;
+    diag('chapitres: ' + chapitres.length);
+    if (!chapitres.some((c) => progression.has(c.cours))) {
+      diag('aucune correspondance');
+      return;
+    }
 
     const titre = document.getElementById('reprise-titre');
     const etat = document.getElementById('reprise-etat');
@@ -230,6 +252,16 @@ const chapitresDisponibles = disponibles.map((c) => ({
     }
   });
 
-  charger();
-  afficherReprise();
+  // Les deux appels API se font l'un après l'autre (et non en parallèle).
+  async function demarrer() {
+    diag('script démarré');
+    try {
+      await charger();
+      await afficherReprise();
+    } catch (e) {
+      diag('erreur: ' + e);
+    }
+  }
+
+  demarrer();
 </script>
