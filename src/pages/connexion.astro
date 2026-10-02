@@ -1,0 +1,33 @@
+---
+import Auth from '../layouts/Auth.astro';
+---
+
+<Auth title="Connexion — Oinarri" description="Connecte-toi pour retrouver ta progression.">
+  <h1>Connexion</h1>
+  <p class="lead">Connecte-toi pour retrouver ta progression.</p>
+
+  <form id="form-auth" class="auth-form" data-action="connexion">
+    <label for="a-email">Adresse e-mail</label>
+    <input
+      id="a-email"
+      type="email"
+      autocomplete="username"
+      inputmode="email"
+      autocapitalize="none"
+      required
+    />
+
+    <label for="a-mdp">Mot de passe</label>
+    <input id="a-mdp" type="password" autocomplete="current-password" required />
+
+    <p class="auth-erreur" id="auth-erreur" role="alert" hidden></p>
+    <div>
+      <button class="auth-bouton" type="submit">Se connecter</button>
+    </div>
+  </form>
+
+  <p class="auth-aide">
+    <a href="/mot-de-passe-oublie/">Mot de passe oublié ?</a><br />
+    Première connexion avec un mot de passe : utilise ce même lien pour le créer.
+  </p>
+</Auth>
