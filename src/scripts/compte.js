@@ -1,12 +1,15 @@
-// Page /compte/ : informations, progression détaillée, remise à zéro,
-// export des données et suppression du compte.
+// Page /compte/ : informations, connexion et sécurité, progression détaillée,
+// remise à zéro, export des données et suppression du compte.
 // Le squelette de la page est dans compte.astro ; ce script le remplit et branche les boutons.
+// Selon le mode de connexion renvoyé par l'API ("access" ou "compte"), certaines sections changent.
 
 import { LIBELLES, NIVEAUX, libelleEtat } from './progression.js';
 
 const $ = (id) => document.getElementById(id);
 const section = $('compte');
 const message = $('c-message');
+
+let mode = 'access';
 
 // ---------- Outils ----------
 
@@ -26,6 +29,7 @@ function pluriel(nombre, mot) {
 function annoncer(texte) {
   message.textContent = texte;
   message.hidden = !texte;
+  if (texte) message.scrollIntoView({ block: 'nearest' });
 }
 
 async function appeler(url, options) {
@@ -35,18 +39,30 @@ async function appeler(url, options) {
   return donnees;
 }
 
-function poster(corps) {
-  return appeler('/api/compte', {
+function poster(url, corps) {
+  return appeler(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(corps),
   });
 }
 
+const posterCompte = (corps) => poster('/api/compte', corps);
+
 // ---------- Affichage ----------
 
 function afficher(donnees) {
   const { moi, progression, quiz, revisions } = donnees;
+  mode = donnees.mode;
+  const modeCompte = mode === 'compte';
+
+  // Les éléments propres à chaque mode de connexion.
+  $('c-aide-access').hidden = modeCompte;
+  $('c-aide-compte').hidden = !modeCompte;
+  $('c-securite').hidden = !modeCompte;
+  $('c-suppr-mdp-bloc').hidden = !modeCompte;
+  $('c-suppr-aide-access').hidden = modeCompte;
+  $('c-deconnexion-access').hidden = modeCompte;
 
   $('c-email').textContent = moi.email;
   $('c-prenom').value = moi.prenom || '';
@@ -85,6 +101,7 @@ function afficher(donnees) {
   }
 
   $('c-reset-tout').disabled = toutVide;
+  majBoutonSuppression();
 }
 
 async function recharger() {
@@ -109,11 +126,11 @@ function brancherReinitialisation({ bouton, confirmation, oui, non, cours, texte
     oui.disabled = true;
     non.disabled = true;
     try {
-      await poster({ action: 'reinitialiser', cours });
+      await posterCompte({ action: 'reinitialiser', cours });
       await recharger();
       annoncer(texteSucces);
     } catch {
-      annoncer("La remise à zéro a échoué. Réessaie dans un instant.");
+      annoncer('La remise à zéro a échoué. Réessaie dans un instant.');
     }
     oui.disabled = false;
     non.disabled = false;
@@ -161,32 +178,103 @@ $('c-form-prenom').addEventListener('submit', async (evenement) => {
   bouton.disabled = false;
 });
 
+// ---------- Connexion et sécurité (mode "compte") ----------
+
+// Envoie un formulaire de sécurité et affiche le résultat ; vide les champs en cas de succès.
+async function soumettreSecurite(formulaire, url, corps, texteSucces) {
+  const bouton = formulaire.querySelector('button[type="submit"]');
+  bouton.disabled = true;
+  try {
+    const donnees = await poster(url, corps);
+    formulaire.reset();
+    annoncer(donnees.message || texteSucces);
+  } catch (e) {
+    annoncer(e.message || 'Action impossible pour le moment.');
+  }
+  bouton.disabled = false;
+}
+
+$('c-form-mdp').addEventListener('submit', (evenement) => {
+  evenement.preventDefault();
+  if ($('c-mdp-nouveau').value !== $('c-mdp-confirmation').value) {
+    annoncer('Les deux nouveaux mots de passe ne sont pas identiques.');
+    return;
+  }
+  soumettreSecurite(
+    $('c-form-mdp'),
+    '/api/auth/mot-de-passe',
+    { actuel: $('c-mdp-actuel').value, nouveau: $('c-mdp-nouveau').value },
+    'Mot de passe modifié. Les autres appareils ont été déconnectés.',
+  );
+});
+
+$('c-form-email').addEventListener('submit', (evenement) => {
+  evenement.preventDefault();
+  soumettreSecurite(
+    $('c-form-email'),
+    '/api/auth/email',
+    { nouvel_email: $('c-email-nouveau').value, mot_de_passe: $('c-email-mdp').value },
+    'Un e-mail de confirmation a été envoyé.',
+  );
+});
+
+async function deconnecter(url) {
+  try {
+    await poster(url, {});
+    location.href = '/connexion/';
+  } catch {
+    annoncer('La déconnexion a échoué. Réessaie dans un instant.');
+  }
+}
+
+$('c-deconnexion').addEventListener('click', () => deconnecter('/api/auth/deconnexion'));
+$('c-deconnexion-globale').addEventListener('click', () =>
+  deconnecter('/api/auth/deconnexion-globale'),
+);
+
 // ---------- Suppression du compte ----------
 
 const champSuppression = $('c-suppr-champ');
+const champMotDePasse = $('c-suppr-mdp');
 const boutonSuppression = $('c-suppr-oui');
 
-champSuppression.addEventListener('input', () => {
-  boutonSuppression.disabled = champSuppression.value.trim().toUpperCase() !== 'SUPPRIMER';
-});
+// Le bouton ne s'active que si SUPPRIMER est écrit (et le mot de passe saisi en mode "compte").
+function majBoutonSuppression() {
+  const confirme = champSuppression.value.trim().toUpperCase() === 'SUPPRIMER';
+  const motDePasseOk = mode !== 'compte' || champMotDePasse.value.length > 0;
+  boutonSuppression.disabled = !(confirme && motDePasseOk);
+}
+
+champSuppression.addEventListener('input', majBoutonSuppression);
+champMotDePasse.addEventListener('input', majBoutonSuppression);
 
 boutonSuppression.addEventListener('click', async () => {
   boutonSuppression.disabled = true;
   champSuppression.disabled = true;
+  champMotDePasse.disabled = true;
   annoncer('');
   try {
-    await poster({ action: 'supprimer', confirmation: 'SUPPRIMER' });
-  } catch {
-    annoncer('La suppression a échoué. Ton compte est intact. Réessaie dans un instant.');
+    await posterCompte({
+      action: 'supprimer',
+      confirmation: 'SUPPRIMER',
+      mot_de_passe: champMotDePasse.value,
+    });
+  } catch (e) {
+    annoncer(
+      e.message && e.message !== 'Requête refusée'
+        ? `${e.message} Ton compte est intact.`
+        : 'La suppression a échoué. Ton compte est intact. Réessaie dans un instant.',
+    );
     champSuppression.disabled = false;
-    boutonSuppression.disabled = false;
+    champMotDePasse.disabled = false;
+    majBoutonSuppression();
     return;
   }
-  // Compte supprimé : on masque la page et on déconnecte la session Access.
+  // Compte supprimé : on masque la page, puis on quitte (déconnexion Access ou page de connexion).
   $('c-contenu').hidden = true;
   $('c-supprime').hidden = false;
   setTimeout(() => {
-    location.href = '/cdn-cgi/access/logout';
+    location.href = mode === 'compte' ? '/connexion/' : '/cdn-cgi/access/logout';
   }, 3000);
 });
 
@@ -196,7 +284,7 @@ async function demarrer() {
   try {
     await recharger();
   } catch {
-    annoncer("Impossible de charger ton compte pour le moment. Réessaie dans un instant.");
+    annoncer('Impossible de charger ton compte pour le moment. Réessaie dans un instant.');
   } finally {
     section.classList.remove('attente');
   }
