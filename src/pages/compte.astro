@@ -54,17 +54,13 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
           <dt>Dernière visite</dt>
           <dd id="c-visite"></dd>
         </dl>
-        <p class="c-aide" id="c-aide-access" hidden>
-          Ton e-mail est ton identifiant de connexion : l'accès au site est contrôlé par Cloudflare
-          Access, il n'y a pas de mot de passe à gérer dans l'application.
-        </p>
-        <p class="c-aide" id="c-aide-compte" hidden>
+        <p class="c-aide">
           Ton e-mail est ton identifiant de connexion. Tu peux le changer dans la section « Connexion
           et sécurité » ci-dessous.
         </p>
       </section>
 
-      <section class="c-bloc" id="c-securite" aria-labelledby="t-securite" hidden>
+      <section class="c-bloc" aria-labelledby="t-securite">
         <h2 id="t-securite">Connexion et sécurité</h2>
 
         <form id="c-form-mdp" class="c-form">
@@ -207,23 +203,13 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
           </p>
           <label for="c-suppr-champ">Pour confirmer, écris SUPPRIMER</label>
           <input id="c-suppr-champ" type="text" autocomplete="off" autocapitalize="characters" />
-          <div id="c-suppr-mdp-bloc" hidden>
-            <label for="c-suppr-mdp">Ton mot de passe</label>
-            <input id="c-suppr-mdp" type="password" autocomplete="current-password" />
-          </div>
+          <label for="c-suppr-mdp">Ton mot de passe</label>
+          <input id="c-suppr-mdp" type="password" autocomplete="current-password" />
           <button class="c-bouton" id="c-suppr-oui" type="button" disabled>
             Supprimer définitivement mon compte
           </button>
-          <p class="c-aide" id="c-suppr-aide-access" hidden>
-            Comme l'accès au site est géré par Cloudflare Access, ton adresse reste autorisée à se
-            connecter : te reconnecter créerait un compte vide.
-          </p>
         </div>
       </section>
-
-      <p class="c-deconnexion" id="c-deconnexion-access" hidden>
-        <a href="/cdn-cgi/access/logout">Se déconnecter</a>
-      </p>
     </div>
   </div>
 </Base>
@@ -422,14 +408,6 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
     margin-top: 1.25rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--ink-100);
-  }
-
-  #compte .c-deconnexion {
-    font-size: 14px;
-  }
-  #compte .c-deconnexion a {
-    color: var(--ink-600);
-    text-underline-offset: 3px;
   }
 
   @media (prefers-reduced-motion: reduce) {
