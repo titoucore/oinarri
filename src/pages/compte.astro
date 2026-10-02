@@ -6,7 +6,7 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
 
 <Base
   title="Mon compte — Oinarri"
-  description="Gère ton compte Oinarri : informations, progression, export et suppression."
+  description="Gère ton compte Oinarri : informations, progression, sécurité, export et suppression."
 >
   <a class="retour" href="/">Accueil</a>
   <h1>Mon compte</h1>
@@ -26,7 +26,7 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
     <p class="c-message" id="c-message" role="status" aria-live="polite" hidden></p>
 
     <p class="c-supprime" id="c-supprime" hidden>
-      Ton compte et toutes tes données ont été supprimés. Tu vas être déconnecté.
+      Ton compte et toutes tes données ont été supprimés. Tu vas être redirigé.
     </p>
 
     <div id="c-contenu">
@@ -54,10 +54,74 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
           <dt>Dernière visite</dt>
           <dd id="c-visite"></dd>
         </dl>
-        <p class="c-aide">
+        <p class="c-aide" id="c-aide-access" hidden>
           Ton e-mail est ton identifiant de connexion : l'accès au site est contrôlé par Cloudflare
           Access, il n'y a pas de mot de passe à gérer dans l'application.
         </p>
+        <p class="c-aide" id="c-aide-compte" hidden>
+          Ton e-mail est ton identifiant de connexion. Tu peux le changer dans la section « Connexion
+          et sécurité » ci-dessous.
+        </p>
+      </section>
+
+      <section class="c-bloc" id="c-securite" aria-labelledby="t-securite" hidden>
+        <h2 id="t-securite">Connexion et sécurité</h2>
+
+        <form id="c-form-mdp" class="c-form">
+          <h3>Changer de mot de passe</h3>
+          <label for="c-mdp-actuel">Mot de passe actuel</label>
+          <input id="c-mdp-actuel" type="password" autocomplete="current-password" required />
+          <label for="c-mdp-nouveau">Nouveau mot de passe</label>
+          <input id="c-mdp-nouveau" type="password" autocomplete="new-password" minlength="12" required />
+          <label for="c-mdp-confirmation">Confirme le nouveau mot de passe</label>
+          <input
+            id="c-mdp-confirmation"
+            type="password"
+            autocomplete="new-password"
+            minlength="12"
+            required
+          />
+          <p class="c-aide">
+            12 caractères minimum. Les autres appareils seront déconnectés.
+          </p>
+          <div>
+            <button class="c-bouton" type="submit">Changer le mot de passe</button>
+          </div>
+        </form>
+
+        <form id="c-form-email" class="c-form">
+          <h3>Changer d'adresse e-mail</h3>
+          <label for="c-email-nouveau">Nouvelle adresse e-mail</label>
+          <input
+            id="c-email-nouveau"
+            type="email"
+            autocomplete="email"
+            inputmode="email"
+            autocapitalize="none"
+            required
+          />
+          <label for="c-email-mdp">Ton mot de passe</label>
+          <input id="c-email-mdp" type="password" autocomplete="current-password" required />
+          <p class="c-aide">
+            Un lien de confirmation sera envoyé à la nouvelle adresse. Après confirmation, toutes les
+            sessions seront fermées et tu te reconnecteras avec la nouvelle adresse.
+          </p>
+          <div>
+            <button class="c-bouton" type="submit">Envoyer le lien de confirmation</button>
+          </div>
+        </form>
+
+        <div class="c-form">
+          <h3>Sessions</h3>
+          <div class="c-boutons">
+            <button class="c-bouton c-bouton-secondaire" id="c-deconnexion" type="button">
+              Me déconnecter de cet appareil
+            </button>
+            <button class="c-bouton c-bouton-secondaire" id="c-deconnexion-globale" type="button">
+              Me déconnecter de tous les appareils
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="c-bloc" aria-labelledby="t-progression">
@@ -109,6 +173,9 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
         <a class="c-bouton c-bouton-secondaire" href="/api/compte/export" download>
           Télécharger mes données
         </a>
+        <p class="c-aide c-aide-lien">
+          <a href="/confidentialite/">Lire la politique de confidentialité</a>
+        </p>
       </section>
 
       <section class="c-bloc c-sensible" aria-labelledby="t-sensible">
@@ -140,17 +207,21 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
           </p>
           <label for="c-suppr-champ">Pour confirmer, écris SUPPRIMER</label>
           <input id="c-suppr-champ" type="text" autocomplete="off" autocapitalize="characters" />
+          <div id="c-suppr-mdp-bloc" hidden>
+            <label for="c-suppr-mdp">Ton mot de passe</label>
+            <input id="c-suppr-mdp" type="password" autocomplete="current-password" />
+          </div>
           <button class="c-bouton" id="c-suppr-oui" type="button" disabled>
             Supprimer définitivement mon compte
           </button>
-          <p class="c-aide">
+          <p class="c-aide" id="c-suppr-aide-access" hidden>
             Comme l'accès au site est géré par Cloudflare Access, ton adresse reste autorisée à se
             connecter : te reconnecter créerait un compte vide.
           </p>
         </div>
       </section>
 
-      <p class="c-deconnexion">
+      <p class="c-deconnexion" id="c-deconnexion-access" hidden>
         <a href="/cdn-cgi/access/logout">Se déconnecter</a>
       </p>
     </div>
@@ -177,6 +248,11 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
 
   #compte .c-bloc h2 {
     margin: 0 0 0.75rem;
+  }
+
+  #compte h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
   }
 
   #compte p {
@@ -230,7 +306,8 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
   #compte .c-prenom input {
     flex: 1;
   }
-  #compte .c-sous-bloc input {
+  #compte .c-sous-bloc input,
+  #compte .c-form input {
     display: block;
     width: 100%;
     margin: 0.25rem 0 0.75rem;
@@ -241,10 +318,22 @@ import { NIVEAUX_AFFICHES } from '../data/niveaux.js';
     font-weight: 500;
   }
 
+  #compte .c-form + .c-form {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink-100);
+  }
+
   #compte .c-aide {
     font-size: 13px;
     color: var(--ink-600);
-    margin: 0;
+    margin: 0 0 0.75rem;
+  }
+  #compte .c-aide-lien {
+    margin: 0.75rem 0 0;
+  }
+  #compte .c-aide a {
+    text-underline-offset: 3px;
   }
 
   #compte .c-chapitres {
