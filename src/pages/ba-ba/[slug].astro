@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 
 export async function getStaticPaths() {
@@ -19,6 +19,10 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
   year: 'numeric',
   timeZone: 'UTC',
 });
+
+// Mini-quiz du chapitre (même identifiant que le cours), transmis au navigateur en JSON.
+const quiz = await getEntry('quiz', entry.id);
+const quizJson = JSON.stringify(quiz?.data ?? {}).replace(/</g, '\\u003c');
 ---
 
 <Base title={`${titre} — Oinarri`} description={description}>
@@ -31,6 +35,7 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
   <article class="cours" data-cours={entry.id}>
     <Content />
   </article>
+  <script is:inline type="application/json" id="quiz-data" set:html={quizJson} />
 </Base>
 
 <style is:global>
@@ -103,6 +108,133 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     text-underline-offset: 3px;
   }
 
+  /* --- Mini-quiz (inséré par le script) --- */
+
+  .cours .quiz {
+    margin: 2rem 0 0;
+    padding: 1rem;
+    border: 1px solid var(--ink-200);
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .quiz .quiz-titre {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 0.25rem;
+  }
+
+  .quiz .quiz-info {
+    font-size: 14px;
+    color: var(--ink-600);
+    margin: 0 0 0.75rem;
+  }
+
+  .quiz .quiz-progression {
+    font-size: 13px;
+    color: var(--ink-600);
+    margin: 0 0 0.5rem;
+  }
+
+  .quiz .quiz-enonce {
+    font-weight: 500;
+    margin: 0 0 0.9rem;
+  }
+
+  .quiz .quiz-score {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.25rem;
+  }
+
+  .quiz .quiz-liste {
+    font-size: 14px;
+    color: var(--ink-600);
+    margin: 0 0 0.75rem;
+  }
+
+  .quiz .quiz-choix {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px 12px;
+    margin: 0 0 8px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+    cursor: pointer;
+  }
+
+  .quiz .quiz-choix:disabled {
+    cursor: default;
+  }
+
+  .quiz .quiz-choix[data-etat='juste'] {
+    border: 2px solid var(--ink-900);
+    font-weight: 500;
+  }
+
+  .quiz .quiz-choix[data-etat='faux'] {
+    border-style: dashed;
+    color: var(--ink-600);
+  }
+
+  .quiz textarea {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 9px 11px;
+    margin: 0 0 0.75rem;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+    resize: vertical;
+  }
+
+  .quiz .quiz-retour {
+    margin: 0.75rem 0;
+    padding: 0.75rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-size: 15px;
+  }
+
+  .quiz .quiz-retour[hidden] {
+    display: none;
+  }
+
+  .quiz .quiz-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .quiz .quiz-bouton {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--ink-900);
+    background: var(--ink-900);
+    color: var(--paper);
+    cursor: pointer;
+  }
+
+  .quiz .quiz-bouton-secondaire {
+    background: none;
+    color: var(--ink-900);
+  }
+
   /* --- Validation d'un niveau (insérée par le script) --- */
 
   .validation {
@@ -110,7 +242,7 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px 14px;
-    margin: 2rem 0 0;
+    margin: 1rem 0 0;
     padding: 0.9rem 1rem;
     border: 1px dashed var(--ink-200);
     border-radius: 12px;
@@ -178,16 +310,25 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     chargerProgression,
     enregistrerProgression,
   } from '../../scripts/progression.js';
+  import { chargerResultatsQuiz, creerQuiz } from '../../scripts/quiz.js';
 
   async function initialiser() {
     const article = document.querySelector('.cours');
     if (!article) return;
     const cours = article.dataset.cours;
 
-    const progression = await chargerProgression();
-    if (!progression) return; // API indisponible : le cours reste lisible sans boutons.
+    let quiz = {};
+    try {
+      quiz = JSON.parse(document.getElementById('quiz-data')?.textContent || '{}');
+    } catch {
+      quiz = {};
+    }
 
-    const ligne = progression.get(cours);
+    // Les appels API se font l'un après l'autre (et non en parallèle).
+    const progression = await chargerProgression();
+    const resultats = await chargerResultatsQuiz();
+
+    const ligne = progression ? progression.get(cours) : null;
     let atteint = ligne ? NIVEAUX.indexOf(ligne.niveau_atteint) : -1;
 
     const blocs = [];
@@ -195,6 +336,27 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     NIVEAUX.forEach((niveau, i) => {
       const titre = document.getElementById(niveau);
       if (!titre) return;
+
+      // La fin du niveau = juste avant le titre de la section suivante.
+      let suivant = titre.nextElementSibling;
+      while (suivant && suivant.tagName !== 'H2') suivant = suivant.nextElementSibling;
+      const inserer = (noeud) => (suivant ? suivant.before(noeud) : article.append(noeud));
+
+      // 1. Le mini-quiz du niveau (s'il existe).
+      const questions = quiz[niveau] || [];
+      if (questions.length) {
+        inserer(
+          creerQuiz({
+            cours,
+            niveau,
+            questions,
+            resultat: resultats ? resultats.get(`${cours}#${niveau}`) : null,
+          }),
+        );
+      }
+
+      // 2. La validation du niveau (seulement si l'API de progression répond).
+      if (!progression) return;
 
       const bloc = document.createElement('div');
       bloc.className = 'validation';
@@ -218,12 +380,7 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
       erreur.hidden = true;
 
       bloc.append(texte, valider, annuler, erreur);
-
-      // La fin du niveau = juste avant le titre de la section suivante.
-      let suivant = titre.nextElementSibling;
-      while (suivant && suivant.tagName !== 'H2') suivant = suivant.nextElementSibling;
-      if (suivant) suivant.before(bloc);
-      else article.append(bloc);
+      inserer(bloc);
 
       async function appliquer(nouveauNiveau) {
         valider.disabled = true;
