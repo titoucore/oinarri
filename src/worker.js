@@ -1,16 +1,19 @@
 // Worker d'Oinarri.
-// Les pages du site (dossier dist) sont servies directement par Cloudflare.
-// Ce Worker n'est appelé en premier que pour les routes /api/* (voir wrangler.jsonc).
+// Les pages du site (dossier dist) passent par ce Worker (voir wrangler.jsonc), qui sert aussi /api/*.
 //
-// Identification : Cloudflare Access place un jeton signé (JWT) dans chaque requête.
-// On ne se fie jamais à un simple en-tête : on vérifie la signature, l'émetteur,
-// l'audience et la date d'expiration avant d'accepter l'e-mail qu'il contient.
+// Deux modes d'identification, choisis par la variable AUTH_MODE :
+//   "access" (par défaut) : Cloudflare Access place un jeton signé (JWT) dans chaque requête.
+//                           On vérifie signature, émetteur, audience et expiration avant d'accepter l'e-mail.
+//   "compte"              : connexion par e-mail et mot de passe, avec cookie de session (voir api-auth.js).
+//                           Toutes les pages, sauf quelques pages publiques, exigent une session.
 
 import { gererAccueil } from './api-accueil.js';
+import { gererAuth } from './api-auth.js';
 import { gererCompte } from './api-compte.js';
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
 import { gererRevisions } from './api-revisions.js';
+import { lireSession } from './lib/sessions.js';
 
 // Routes qui exigent un utilisateur identifié : chemin -> gestionnaire.
 const ROUTES_UTILISATEUR = new Map([
@@ -22,10 +25,27 @@ const ROUTES_UTILISATEUR = new Map([
   ['/api/revisions', gererRevisions],
 ]);
 
+// Pages accessibles sans être connecté (mode "compte").
+const PAGES_PUBLIQUES = [
+  '/connexion/',
+  '/mot-de-passe-oublie/',
+  '/reinitialiser/',
+  '/confirmer-email/',
+  '/confidentialite/',
+  '/favicon.svg',
+];
+
+function cheminPublic(chemin) {
+  const avecSlash = chemin.endsWith('/') ? chemin : `${chemin}/`;
+  return (
+    chemin.startsWith('/_astro/') || PAGES_PUBLIQUES.includes(chemin) || PAGES_PUBLIQUES.includes(avecSlash)
+  );
+}
+
 const DUREE_CACHE_CLES = 60 * 60 * 1000; // 1 heure
 let cacheCles = { cles: null, expire: 0 };
 
-// ---------- Outils JWT ----------
+// ---------- Outils JWT (mode "access") ----------
 
 function base64urlVersOctets(texte) {
   const b64 = texte
@@ -127,9 +147,9 @@ async function authentifier(request, env) {
 
 // ---------- Utilisateurs ----------
 
-// Une visite n'est enregistrée que si la précédente date de plus de 10 minutes :
+// Mode "access". Une visite n'est enregistrée que si la précédente date de plus de 10 minutes :
 // la plupart des requêtes ne font ainsi qu'une lecture, sans écriture en base.
-async function utilisateurCourant(request, env) {
+async function utilisateurAccess(request, env) {
   const charge = await authentifier(request, env);
   if (!charge) return null;
   const email = charge.email.trim().toLowerCase();
@@ -170,6 +190,12 @@ async function utilisateurCourant(request, env) {
     .first();
 }
 
+// Utilisateur de la requête selon le mode choisi.
+async function utilisateurCourant(request, env) {
+  if (env.AUTH_MODE === 'compte') return await lireSession(request, env);
+  return await utilisateurAccess(request, env);
+}
+
 const PRENOM_VALIDE = /^[\p{L}\p{M}'’ .-]{1,40}$/u;
 
 // ---------- Réponses ----------
@@ -181,13 +207,28 @@ function reponseJson(donnees, statut = 200) {
   });
 }
 
+// En-têtes de sécurité ajoutés aux pages.
+function avecEntetes(reponse) {
+  const r = new Response(reponse.body, reponse);
+  r.headers.set('X-Content-Type-Options', 'nosniff');
+  r.headers.set('X-Frame-Options', 'DENY');
+  // Aucun lien (ni jeton présent dans une adresse) n'est transmis à un autre site.
+  r.headers.set('Referrer-Policy', 'same-origin');
+  return r;
+}
+
 // ---------- Routes ----------
 
-async function router(request, env) {
+async function router(request, env, ctx) {
   const url = new URL(request.url);
 
   if (url.pathname === '/api/sante') {
     return reponseJson({ app: 'oinarri', ok: true, date: new Date().toISOString() });
+  }
+
+  if (url.pathname.startsWith('/api/auth/')) {
+    if (env.AUTH_MODE !== 'compte') return reponseJson({ erreur: 'Route inconnue' }, 404);
+    return gererAuth(request, env, ctx, url);
   }
 
   if (url.pathname === '/api/moi') {
@@ -244,16 +285,31 @@ async function router(request, env) {
     return reponseJson({ erreur: 'Route inconnue' }, 404);
   }
 
-  return env.ASSETS.fetch(request);
+  // Pages : en mode "compte", toute page non publique exige une session.
+  if (env.AUTH_MODE === 'compte' && !cheminPublic(url.pathname)) {
+    const session = await lireSession(request, env);
+    if (!session) {
+      if (request.method === 'GET' || request.method === 'HEAD') {
+        const retour = encodeURIComponent(url.pathname + url.search);
+        return new Response(null, {
+          status: 302,
+          headers: { Location: `/connexion/?retour=${retour}`, 'Cache-Control': 'no-store' },
+        });
+      }
+      return new Response('Non authentifié', { status: 401 });
+    }
+  }
+
+  return avecEntetes(await env.ASSETS.fetch(request));
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     try {
-      return await router(request, env);
+      return await router(request, env, ctx);
     } catch (erreur) {
-      // Toute panne inattendue (base indisponible, etc.) devient une réponse claire,
-      // et le détail reste dans les journaux du Worker (Observability).
+      // Toute panne inattendue (base indisponible, secret manquant, etc.) devient une réponse
+      // claire, et le détail reste dans les journaux du Worker (Observability).
       console.error('Erreur Worker', request.method, new URL(request.url).pathname, erreur);
       return reponseJson({ erreur: 'Service temporairement indisponible. Réessaie dans un instant.' }, 503);
     }
