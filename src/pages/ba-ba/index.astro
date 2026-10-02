@@ -1,39 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-
-// Plan provisoire : à ajuster avant la rédaction des cours.
-// Un chapitre avec `href` est disponible ; sans `href`, il est « À venir ».
-const chapitres = [
-  {
-    titre: 'Qui intervient sur une opération',
-    desc: "Maîtrise d'ouvrage, architecte, bureaux d'études, contrôleur technique, entreprises.",
-    href: '/ba-ba/01-qui-intervient/',
-  },
-  {
-    titre: 'Du terrain au bâtiment',
-    desc: 'Les grandes étapes, de la parcelle nue à la livraison.',
-  },
-  {
-    titre: 'Les modes constructifs',
-    desc: 'Béton, maçonnerie, bois, métal : comment on fait tenir un bâtiment debout.',
-  },
-  {
-    titre: 'Terrassement et VRD',
-    desc: 'Préparer le terrain et le raccorder aux réseaux.',
-  },
-  {
-    titre: 'Les fondations',
-    desc: 'Ce qui relie le bâtiment au sol.',
-  },
-  {
-    titre: 'Le gros œuvre',
-    desc: 'La structure : murs, planchers, charpente.',
-  },
-  {
-    titre: "Les marchés et les appels d'offres",
-    desc: 'Comment les entreprises sont choisies et engagées.',
-  },
-];
+import { chapitres } from '../../data/ba-ba.js';
 ---
 
 <Base title="B.A.-BA du bâtiment — Oinarri">
@@ -47,7 +14,7 @@ const chapitres = [
   <ol class="chapitres">
     {
       chapitres.map((c) => (
-        <li class="chapitre">
+        <li class="chapitre" data-cours={c.cours}>
           <div class="chapitre-corps">
             <p class="chapitre-titre">
               {c.href ? <a class="chapitre-lien" href={c.href}>{c.titre}</a> : c.titre}
@@ -81,3 +48,19 @@ const chapitres = [
     color: var(--ink-900);
   }
 </style>
+
+<script>
+  import { chargerProgression, libelleEtat } from '../../scripts/progression.js';
+
+  async function afficherAvancement() {
+    const progression = await chargerProgression();
+    if (!progression) return;
+    for (const element of document.querySelectorAll('li[data-cours]')) {
+      const texte = libelleEtat(progression.get(element.dataset.cours));
+      const etiquette = element.querySelector('.etiquette');
+      if (texte && etiquette) etiquette.textContent = texte;
+    }
+  }
+
+  afficherAvancement();
+</script>
