@@ -1,0 +1,25 @@
+---
+import Auth from '../layouts/Auth.astro';
+---
+
+<Auth
+  title="Confirmer l'adresse e-mail — Oinarri"
+  description="Confirme le changement d'adresse e-mail de ton compte Oinarri."
+>
+  <h1>Confirmer ton adresse e-mail</h1>
+  <p class="lead">
+    Confirme que cette adresse devient l'identifiant de connexion de ton compte Oinarri.
+  </p>
+
+  <form id="form-auth" class="auth-form" data-action="confirmer">
+    <p class="auth-erreur" id="auth-erreur" role="alert" hidden></p>
+    <div>
+      <button class="auth-bouton" type="submit">Confirmer le changement</button>
+    </div>
+  </form>
+
+  <div class="auth-succes" id="auth-succes" role="status" hidden>
+    <p id="auth-succes-texte"></p>
+    <a class="auth-bouton" id="auth-succes-lien" href="/connexion/" hidden></a>
+  </div>
+</Auth>
