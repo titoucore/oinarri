@@ -1,0 +1,101 @@
+# Mini-quiz du chapitre 1 : Qui intervient sur une opération.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+
+essentiel:
+  - type: qcm
+    question: "Qui fixe le programme et l'enveloppe financière de l'opération, avant les études d'avant-projet ?"
+    choix:
+      - "Le maître d'œuvre"
+      - "Le maître d'ouvrage"
+      - "Le contrôleur technique"
+      - "L'entreprise générale"
+    reponse: 1
+    explication: "C'est le maître d'ouvrage : il décide, finance et répond de l'opération. Cette fonction ne se délègue pas ; il peut seulement confier certaines attributions à un mandataire."
+
+  - type: vf
+    affirmation: "Une entreprise de plomberie est liée par contrat à l'architecte."
+    reponse: false
+    explication: "Les entreprises ont un contrat avec le maître d'ouvrage. L'architecte, membre de la maîtrise d'œuvre, les dirige au nom du maître d'ouvrage, mais il n'est pas leur cocontractant."
+
+  - type: qcm
+    question: "Un organisme HLM construit un petit bâtiment de 100 m² de surface de plancher. L'architecte est-il obligatoire pour le permis de construire ?"
+    choix:
+      - "Non, le seuil est de 150 m²"
+      - "Oui, car un organisme HLM est une personne morale"
+      - "Oui, mais seulement en zone protégée"
+      - "Non, sauf si le chantier dure plus d'un an"
+    reponse: 1
+    explication: "Le seuil de 150 m² ne concerne que les particuliers. Les personnes morales n'ont aucune exemption : un organisme HLM doit toujours recourir à un architecte."
+
+  - type: vf
+    affirmation: "Dès que plusieurs entreprises interviennent sur un chantier de bâtiment, le maître d'ouvrage doit organiser une coordination en matière de sécurité et de santé (SPS)."
+    reponse: true
+    explication: "Le coordonnateur SPS est désigné par le maître d'ouvrage dès la conception et agit sous sa responsabilité. Il ne remplace pas la responsabilité de chaque entreprise envers ses salariés."
+
+  - type: ouverte
+    question: "Explique avec tes mots la différence entre maître d'ouvrage, maître d'œuvre et entreprises."
+    modele: "Le maître d'ouvrage décide, finance et répond de l'opération (ici, l'organisme HLM). Le maître d'œuvre (architecte et bureaux d'études) conçoit le projet puis dirige sa réalisation. Les entreprises construisent, par corps d'état, sous contrat avec le maître d'ouvrage."
+
+approfondir:
+  - type: qcm
+    question: "Quelle est la différence entre un AMO et un mandataire ?"
+    choix:
+      - "L'AMO conseille sans pouvoir de décision ; le mandataire agit au nom et pour le compte du maître d'ouvrage"
+      - "L'AMO construit ; le mandataire conçoit"
+      - "Il n'y en a pas : ce sont deux noms pour le même rôle"
+      - "L'AMO contrôle la solidité ; le mandataire coordonne la sécurité"
+    reponse: 0
+    explication: "L'assistant à maîtrise d'ouvrage est une prestation de conseil, sans pouvoir de décision. Le mandataire, lui, exerce par contrat de mandat tout ou partie des attributions du maître d'ouvrage, en son nom et pour son compte."
+
+  - type: qcm
+    question: "Laquelle de ces phrases décrit correctement les deux assurances obligatoires ?"
+    choix:
+      - "Les deux sont souscrites par le constructeur"
+      - "La décennale est souscrite par le constructeur ; la dommages-ouvrage par le maître d'ouvrage, avant l'ouverture du chantier"
+      - "La dommages-ouvrage se souscrit après la réception des travaux"
+      - "La décennale est souscrite par le maître d'ouvrage pour dix ans"
+    reponse: 1
+    explication: "C'est la « double détente » : le constructeur couvre sa responsabilité décennale ; le maître d'ouvrage souscrit la dommages-ouvrage avant l'ouverture du chantier. Elle préfinance les réparations, puis l'assureur se retourne contre les responsables."
+
+  - type: vf
+    affirmation: "Dans la mission de maîtrise d'œuvre, l'avant-projet définitif (APD) fournit la base du dossier de permis de construire."
+    reponse: true
+    explication: "L'APD donne les plans précis, les surfaces détaillées et une estimation arrêtée : c'est la base du permis. Le projet (PRO) vient ensuite, avec le niveau de détail nécessaire pour consulter les entreprises."
+
+  - type: qcm
+    question: "Quelle étude géotechnique précise les fondations pendant la conception ?"
+    choix:
+      - "La G1"
+      - "La G2"
+      - "La G3"
+      - "Aucune : c'est l'architecte qui les dimensionne seul"
+    reponse: 1
+    explication: "La G2 est l'étude de conception : elle précise les fondations. La G1 est l'étude préalable, menée avant la conception. Les bureaux d'études dimensionnent à partir de ces études."
+
+  - type: ouverte
+    question: "Cite dans l'ordre les éléments de la mission de base de la maîtrise d'œuvre, et explique à quoi sert le VISA."
+    modele: "ESQ, APS, APD, PRO, ACT, VISA, DET, AOR. L'ACT aide le maître d'ouvrage à consulter les entreprises et préparer les marchés. Le VISA consiste à vérifier que les plans d'exécution des entreprises respectent le projet. La DET suit le chantier ; l'AOR assiste le maître d'ouvrage à la réception."
+
+expert:
+  - type: qcm
+    question: "Que peut-on affirmer avec certitude sur l'application du régime de la loi MOP à une opération d'accession d'un organisme HLM ?"
+    choix:
+      - "Elle s'applique toujours"
+      - "Elle ne s'applique jamais"
+      - "Le point reste à vérifier : l'article L2411-1 cite les organismes HLM pour les logements locatifs aidés par l'État"
+      - "Elle s'applique seulement au-dessus de 1 000 m²"
+    reponse: 2
+    explication: "Les sources consultées ne tranchent pas pour l'accession. Ce point sera traité dans le module logement social. Savoir qu'une question est ouverte vaut mieux que de répondre avec une certitude qu'on n'a pas."
+
+  - type: vf
+    affirmation: "Pour citer l'obligation de contrôle technique, on peut utiliser indifféremment L111-23 ou L125-1 : la numérotation n'a pas changé."
+    reponse: false
+    explication: "Les sources anciennes citent L111-23 à L111-26 ; les textes actuels sont au chapitre V du livre Ier du code de la construction et de l'habitation (L125-1 et suivants, R125-17 pour l'obligation). Il faut toujours citer la version en vigueur."
+
+  - type: ouverte
+    question: "Pourquoi une étude géotechnique G1 ne remplace-t-elle pas la G2 ?"
+    modele: "La G1 est une étude préalable : elle répond à l'obligation du vendeur d'un terrain en zone argileuse, mais elle ne dimensionne rien. La G2 est l'étude de conception : elle précise les fondations, et son rapport est une donnée essentielle à l'exécution du marché pour les fondations superficielles (NF DTU 13.1)."
