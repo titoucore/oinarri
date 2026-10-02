@@ -9,6 +9,7 @@ en partant de zéro. Publiée sur oinarri.etika.eus.
 - **Cloudflare Worker** (`src/worker.js`) : sert le site (`dist/`) et l'API (`/api/*`).
 - **D1** (`oinarri-db`, liaison `DB_OINARRI`) : comptes, sessions, progression, quiz, révisions.
 - **Resend** : e-mails du service (création et réinitialisation du mot de passe, changement d'adresse).
+- **Police** : Space Grotesk, hébergée avec le site via `@fontsource/space-grotesk` (aucun appel à un tiers).
 
 ## Organisation du code
 
@@ -77,5 +78,5 @@ Tables : `utilisateurs`, `sessions`, `jetons` (liens à usage unique), `limites`
 - Créer la boîte qui reçoit les demandes de droits (`CONTACT_EMAIL` dans `src/data/legal.js`).
 - Faire relire la page de confidentialité et la question de l'identité du responsable du traitement.
 - Fixer une durée de conservation des comptes inactifs.
-- Héberger la police Space Grotesk sur le site (Google Fonts transmet l'adresse IP à Google).
 - Construire l'inscription (avec vérification de l'adresse e-mail) et la limiter.
+- Envisager une politique de sécurité de contenu (CSP) pour durcir davantage les pages.
