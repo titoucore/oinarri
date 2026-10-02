@@ -120,10 +120,39 @@ async function authentifier(request, env) {
 
 // ---------- Utilisateurs ----------
 
+// Une visite n'est enregistrée que si la précédente date de plus de 10 minutes :
+// la plupart des requêtes ne font ainsi qu'une lecture, sans écriture en base.
 async function utilisateurCourant(request, env) {
   const charge = await authentifier(request, env);
   if (!charge) return null;
   const email = charge.email.trim().toLowerCase();
+
+  const existant = await env.DB_OINARRI.prepare(
+    `SELECT id, email, prenom,
+            (derniere_visite IS NULL OR derniere_visite < datetime('now', '-10 minutes')) AS a_rafraichir
+     FROM utilisateurs
+     WHERE email = ?`,
+  )
+    .bind(email)
+    .first();
+
+  if (existant) {
+    if (existant.a_rafraichir) {
+      try {
+        await env.DB_OINARRI.prepare(
+          `UPDATE utilisateurs SET derniere_visite = datetime('now') WHERE id = ?`,
+        )
+          .bind(existant.id)
+          .run();
+      } catch (erreur) {
+        // La date de visite est secondaire : son échec ne doit pas faire échouer la requête.
+        console.error('Mise à jour de la dernière visite impossible', erreur);
+      }
+    }
+    return { id: existant.id, email: existant.email, prenom: existant.prenom };
+  }
+
+  // Première visite : création du compte (ON CONFLICT couvre deux premières requêtes simultanées).
   return await env.DB_OINARRI.prepare(
     `INSERT INTO utilisateurs (email, derniere_visite)
      VALUES (?, datetime('now'))
@@ -147,68 +176,79 @@ function reponseJson(donnees, statut = 200) {
 
 // ---------- Routes ----------
 
+async function router(request, env) {
+  const url = new URL(request.url);
+
+  if (url.pathname === '/api/sante') {
+    return reponseJson({ app: 'oinarri', ok: true, date: new Date().toISOString() });
+  }
+
+  if (url.pathname === '/api/moi') {
+    const utilisateur = await utilisateurCourant(request, env);
+    if (!utilisateur) return reponseJson({ erreur: 'Non authentifié' }, 401);
+
+    if (request.method === 'GET') {
+      return reponseJson({
+        email: utilisateur.email,
+        prenom: utilisateur.prenom,
+        prenom_requis: !utilisateur.prenom,
+      });
+    }
+
+    if (request.method === 'PUT') {
+      // Protection contre les requêtes venues d'un autre site.
+      const origine = request.headers.get('Origin');
+      if (origine && origine !== url.origin) {
+        return reponseJson({ erreur: 'Origine refusée' }, 403);
+      }
+
+      let corps;
+      try {
+        corps = await request.json();
+      } catch {
+        return reponseJson({ erreur: 'Requête invalide' }, 400);
+      }
+
+      const prenom = typeof corps?.prenom === 'string' ? corps.prenom.trim() : '';
+      if (!PRENOM_VALIDE.test(prenom)) {
+        return reponseJson(
+          { erreur: 'Prénom invalide : 1 à 40 caractères, lettres, espaces, tirets ou apostrophes.' },
+          400,
+        );
+      }
+
+      await env.DB_OINARRI.prepare('UPDATE utilisateurs SET prenom = ? WHERE id = ?')
+        .bind(prenom, utilisateur.id)
+        .run();
+      return reponseJson({ email: utilisateur.email, prenom, prenom_requis: false });
+    }
+
+    return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
+  }
+
+  const gestionnaire = ROUTES_UTILISATEUR.get(url.pathname);
+  if (gestionnaire) {
+    const utilisateur = await utilisateurCourant(request, env);
+    if (!utilisateur) return reponseJson({ erreur: 'Non authentifié' }, 401);
+    return gestionnaire(request, env, utilisateur, url);
+  }
+
+  if (url.pathname.startsWith('/api/')) {
+    return reponseJson({ erreur: 'Route inconnue' }, 404);
+  }
+
+  return env.ASSETS.fetch(request);
+}
+
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
-
-    if (url.pathname === '/api/sante') {
-      return reponseJson({ app: 'oinarri', ok: true, date: new Date().toISOString() });
+    try {
+      return await router(request, env);
+    } catch (erreur) {
+      // Toute panne inattendue (base indisponible, etc.) devient une réponse claire,
+      // et le détail reste dans les journaux du Worker (Observability).
+      console.error('Erreur Worker', request.method, new URL(request.url).pathname, erreur);
+      return reponseJson({ erreur: 'Service temporairement indisponible. Réessaie dans un instant.' }, 503);
     }
-
-    if (url.pathname === '/api/moi') {
-      const utilisateur = await utilisateurCourant(request, env);
-      if (!utilisateur) return reponseJson({ erreur: 'Non authentifié' }, 401);
-
-      if (request.method === 'GET') {
-        return reponseJson({
-          email: utilisateur.email,
-          prenom: utilisateur.prenom,
-          prenom_requis: !utilisateur.prenom,
-        });
-      }
-
-      if (request.method === 'PUT') {
-        // Protection contre les requêtes venues d'un autre site.
-        const origine = request.headers.get('Origin');
-        if (origine && origine !== url.origin) {
-          return reponseJson({ erreur: 'Origine refusée' }, 403);
-        }
-
-        let corps;
-        try {
-          corps = await request.json();
-        } catch {
-          return reponseJson({ erreur: 'Requête invalide' }, 400);
-        }
-
-        const prenom = typeof corps?.prenom === 'string' ? corps.prenom.trim() : '';
-        if (!PRENOM_VALIDE.test(prenom)) {
-          return reponseJson(
-            { erreur: 'Prénom invalide : 1 à 40 caractères, lettres, espaces, tirets ou apostrophes.' },
-            400,
-          );
-        }
-
-        await env.DB_OINARRI.prepare('UPDATE utilisateurs SET prenom = ? WHERE id = ?')
-          .bind(prenom, utilisateur.id)
-          .run();
-        return reponseJson({ email: utilisateur.email, prenom, prenom_requis: false });
-      }
-
-      return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
-    }
-
-    const gestionnaire = ROUTES_UTILISATEUR.get(url.pathname);
-    if (gestionnaire) {
-      const utilisateur = await utilisateurCourant(request, env);
-      if (!utilisateur) return reponseJson({ erreur: 'Non authentifié' }, 401);
-      return gestionnaire(request, env, utilisateur, url);
-    }
-
-    if (url.pathname.startsWith('/api/')) {
-      return reponseJson({ erreur: 'Route inconnue' }, 404);
-    }
-
-    return env.ASSETS.fetch(request);
   },
 };
