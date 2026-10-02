@@ -2,10 +2,12 @@
 import Base from '../../layouts/Base.astro';
 
 // Plan provisoire : à ajuster avant la rédaction des cours.
+// Un chapitre avec `href` est disponible ; sans `href`, il est « À venir ».
 const chapitres = [
   {
     titre: 'Qui intervient sur une opération',
     desc: "Maîtrise d'ouvrage, architecte, bureaux d'études, contrôleur technique, entreprises.",
+    href: '/ba-ba/01-qui-intervient/',
   },
   {
     titre: 'Du terrain au bâtiment',
@@ -47,12 +49,35 @@ const chapitres = [
       chapitres.map((c) => (
         <li class="chapitre">
           <div class="chapitre-corps">
-            <p class="chapitre-titre">{c.titre}</p>
+            <p class="chapitre-titre">
+              {c.href ? <a class="chapitre-lien" href={c.href}>{c.titre}</a> : c.titre}
+            </p>
             <p class="chapitre-desc">{c.desc}</p>
           </div>
-          <span class="etiquette">À venir</span>
+          {c.href ? (
+            <span class="etiquette etiquette-ok">Disponible</span>
+          ) : (
+            <span class="etiquette">À venir</span>
+          )}
         </li>
       ))
     }
   </ol>
 </Base>
+
+<style>
+  .chapitre-lien {
+    text-decoration: none;
+  }
+
+  .chapitre-lien:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .etiquette-ok {
+    border-style: solid;
+    border-color: var(--ink-900);
+    color: var(--ink-900);
+  }
+</style>
