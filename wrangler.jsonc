@@ -20,6 +20,8 @@
   "vars": {
     // "access" : connexion gérée par Cloudflare Access.
     // "compte" : connexion par e-mail et mot de passe. Exige les secrets PEPPER et RESEND_API_KEY.
+    // Cette variable se pilote ICI, jamais depuis le tableau de bord : un réglage du même nom
+    // créé là-bas (un secret AUTH_MODE, par exemple) masque cette valeur.
     // Retour arrière : remettre "access" (ou rétablir la version précédente dans Cloudflare).
     "AUTH_MODE": "compte",
     "EXPEDITEUR": "Oinarri <no-reply@mail.etika.eus>",
