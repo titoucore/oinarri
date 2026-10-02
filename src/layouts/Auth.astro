@@ -1,0 +1,106 @@
+---
+// Gabarit des pages d'authentification : habillage commun, styles des formulaires et script.
+import Base from './Base.astro';
+
+const { title, description } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <slot />
+</Base>
+
+<style is:global>
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    max-width: 24rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .auth-form label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0.6rem;
+  }
+
+  .auth-form input {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+
+  .auth-form .auth-aide-champ {
+    margin: 0;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .auth-erreur {
+    margin: 0.6rem 0 0;
+    padding: 0.6rem 0.8rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .auth-erreur[hidden],
+  .auth-succes[hidden],
+  .auth-form[hidden],
+  .auth-lien[hidden] {
+    display: none;
+  }
+
+  .auth-bouton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 11px 22px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--ink-900);
+    color: var(--paper);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .auth-bouton:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .auth-succes {
+    max-width: 28rem;
+    margin: 1.5rem 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--ink-900);
+    border-radius: 12px;
+  }
+
+  .auth-succes p {
+    margin: 0 0 0.75rem;
+  }
+
+  .auth-aide {
+    max-width: 28rem;
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  .auth-aide a {
+    text-underline-offset: 3px;
+  }
+</style>
+
+<script>
+  import '../scripts/auth.js';
+</script>
