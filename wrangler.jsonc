@@ -7,7 +7,7 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     // Toutes les requêtes passent d'abord par le Worker : il protège les pages
-    // quand AUTH_MODE vaut "compte" et ajoute des en-têtes de sécurité.
+    // (session exigée sauf pages publiques) et ajoute des en-têtes de sécurité.
     "run_worker_first": true
   },
   "d1_databases": [
@@ -17,16 +17,13 @@
       "database_id": "c12fd79d-f9f0-431c-a739-2ebea76be9dd"
     }
   ],
+  // Secrets à définir dans le tableau de bord (jamais dans ce fichier) :
+  //   PEPPER          secret appliqué avant le hachage des mots de passe (32 caractères minimum)
+  //   RESEND_API_KEY  clé d'API Resend pour l'envoi des e-mails
+  // Ne créer aucun secret ni aucune variable du tableau de bord portant le nom d'une variable ci-dessous :
+  // il masquerait la valeur de ce fichier.
   "vars": {
-    // "access" : connexion gérée par Cloudflare Access.
-    // "compte" : connexion par e-mail et mot de passe. Exige les secrets PEPPER et RESEND_API_KEY.
-    // Cette variable se pilote ICI, jamais depuis le tableau de bord : un réglage du même nom
-    // créé là-bas (un secret AUTH_MODE, par exemple) masque cette valeur.
-    // Retour arrière : remettre "access" (ou rétablir la version précédente dans Cloudflare).
-    "AUTH_MODE": "compte",
-    "EXPEDITEUR": "Oinarri <no-reply@mail.etika.eus>",
-    "ACCESS_TEAM_DOMAIN": "e-t-i-k-a.cloudflareaccess.com",
-    "ACCESS_AUD": "55aeb6179b058585ed736ed19713c93bcf4d8232e57a2857dd7e892bef310a32"
+    "EXPEDITEUR": "Oinarri <no-reply@mail.etika.eus>"
   },
   "observability": { "enabled": true }
 }
