@@ -18,9 +18,10 @@
     }
   ],
   "vars": {
-    // "access" : connexion gérée par Cloudflare Access (état actuel).
+    // "access" : connexion gérée par Cloudflare Access.
     // "compte" : connexion par e-mail et mot de passe. Exige les secrets PEPPER et RESEND_API_KEY.
-    "AUTH_MODE": "access",
+    // Retour arrière : remettre "access" (ou rétablir la version précédente dans Cloudflare).
+    "AUTH_MODE": "compte",
     "EXPEDITEUR": "Oinarri <no-reply@mail.etika.eus>",
     "ACCESS_TEAM_DOMAIN": "e-t-i-k-a.cloudflareaccess.com",
     "ACCESS_AUD": "55aeb6179b058585ed736ed19713c93bcf4d8232e57a2857dd7e892bef310a32"
