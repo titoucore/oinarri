@@ -1,16 +1,19 @@
 // Accueil : salutation par prénom, « reprendre où tu en es » et compteur de révisions.
-// Les appels API se font l'un après l'autre (et non en parallèle).
+//
+// Une seule requête (/api/accueil) récupère tout. L'affichage se fait ensuite en un seul
+// temps, puis le contenu apparaît en fondu : pas de blocs qui surgissent un par un.
 
-import { chargerProgression, libelleEtat } from './progression.js';
-import { chargerRevisions, cartesDues } from './revisions.js';
+import { libelleEtat } from './progression.js';
+import { cartesDues } from './revisions.js';
 
+const section = document.getElementById('accueil');
 const perso = document.getElementById('perso');
 const salut = document.getElementById('salut');
 const formulaire = document.getElementById('form-prenom');
 const champ = document.getElementById('prenom');
 const erreur = document.getElementById('erreur-prenom');
 
-function afficher(moi) {
+function afficherPrenom(moi) {
   perso.hidden = false;
   if (moi.prenom) {
     salut.textContent = 'Bonjour, ' + moi.prenom;
@@ -22,23 +25,11 @@ function afficher(moi) {
   }
 }
 
-async function charger() {
-  try {
-    const reponse = await fetch('/api/moi');
-    if (!reponse.ok) return;
-    afficher(await reponse.json());
-  } catch (e) {
-    // Hors ligne ou API indisponible : la page reste utilisable sans salutation.
-  }
-}
-
 // « Reprendre où j'en suis » : le premier chapitre disponible non terminé,
 // affiché seulement si l'utilisateur a déjà validé quelque chose.
-async function afficherReprise() {
+function afficherReprise(progression) {
   const bloc = document.getElementById('reprise');
   if (!bloc) return;
-  const progression = await chargerProgression();
-  if (!progression) return;
 
   const chapitres = JSON.parse(bloc.dataset.chapitres);
   if (!chapitres.some((c) => progression.has(c.cours))) return;
@@ -60,11 +51,9 @@ async function afficherReprise() {
 }
 
 // Compteur de révisions : affiché seulement si au moins une carte est inscrite.
-async function afficherRevisions() {
+function afficherRevisions(donnees) {
   const lien = document.getElementById('revision-lien');
   if (!lien) return;
-  const donnees = await chargerRevisions();
-  if (!donnees) return;
 
   const idsValides = new Set(JSON.parse(lien.dataset.cartes));
   const inscrites = donnees.revisions.filter((r) => idsValides.has(r.carte));
@@ -94,7 +83,7 @@ formulaire.addEventListener('submit', async (evenement) => {
       erreur.textContent = donnees.erreur || "Impossible d'enregistrer le prénom.";
       erreur.hidden = false;
     } else {
-      afficher(donnees);
+      afficherPrenom(donnees);
     }
   } catch (e) {
     erreur.textContent = 'Connexion impossible. Réessaie dans un instant.';
@@ -105,9 +94,20 @@ formulaire.addEventListener('submit', async (evenement) => {
 });
 
 async function demarrer() {
-  await charger();
-  await afficherReprise();
-  await afficherRevisions();
+  try {
+    const reponse = await fetch('/api/accueil');
+    if (reponse.ok) {
+      const donnees = await reponse.json();
+      afficherPrenom(donnees.moi);
+      afficherReprise(new Map(donnees.progression.map((ligne) => [ligne.cours, ligne])));
+      afficherRevisions(donnees.revisions);
+    }
+  } catch (e) {
+    // Hors ligne ou API indisponible : l'accueil reste utilisable sans personnalisation.
+  } finally {
+    // Tout est en place : on révèle le contenu d'un seul coup.
+    section?.classList.remove('attente');
+  }
 }
 
 demarrer();
