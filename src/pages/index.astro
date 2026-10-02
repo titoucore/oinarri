@@ -15,7 +15,19 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
 ---
 
 <Base title="Oinarri — comprendre le bâtiment">
-  <section>
+  <section id="accueil">
+    <!-- Le contenu reste invisible tant que les données personnelles n'ont pas été reçues,
+         puis apparaît d'un coup. Filet de sécurité : au bout de 2,5 s, on l'affiche quand même. -->
+    <script is:inline>
+      (function () {
+        var s = document.getElementById('accueil');
+        s.classList.add('attente');
+        setTimeout(function () {
+          s.classList.remove('attente');
+        }, 2500);
+      })();
+    </script>
+
     <div class="perso" id="perso" hidden>
       <p class="salut" id="salut" hidden></p>
       <form class="form-prenom" id="form-prenom" hidden>
@@ -80,6 +92,13 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
 </Base>
 
 <style>
+  #accueil {
+    transition: opacity 0.25s ease;
+  }
+  #accueil.attente {
+    opacity: 0;
+  }
+
   .perso {
     margin-bottom: 2rem;
   }
@@ -163,6 +182,12 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     font-size: 14px;
     color: var(--ink-600);
     margin-top: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #accueil {
+      transition: none;
+    }
   }
 </style>
 
