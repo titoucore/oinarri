@@ -16,4 +16,37 @@ const cours = defineCollection({
   }),
 });
 
-export const collections = { cours };
+// Les mini-quiz sont des fichiers YAML qui portent le même chemin que leur cours :
+// src/content/quiz/<parcours>/<numero>-<slug>.yaml
+// Trois types de question : qcm, vf (vrai/faux), ouverte (auto-évaluation).
+const question = z.discriminatedUnion('type', [
+  z.object({
+    type: z.literal('qcm'),
+    question: z.string(),
+    choix: z.array(z.string()).min(2),
+    reponse: z.number().int().min(0),
+    explication: z.string(),
+  }),
+  z.object({
+    type: z.literal('vf'),
+    affirmation: z.string(),
+    reponse: z.boolean(),
+    explication: z.string(),
+  }),
+  z.object({
+    type: z.literal('ouverte'),
+    question: z.string(),
+    modele: z.string(),
+  }),
+]);
+
+const quiz = defineCollection({
+  loader: glob({ base: './src/content/quiz', pattern: '**/*.yaml' }),
+  schema: z.object({
+    essentiel: z.array(question).default([]),
+    approfondir: z.array(question).default([]),
+    expert: z.array(question).default([]),
+  }),
+});
+
+export const collections = { cours, quiz };
