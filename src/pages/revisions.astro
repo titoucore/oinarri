@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+import { listerCartes } from '../lib/cartes.js';
+
+// Toutes les cartes issues des mini-quiz, transmises au navigateur en JSON.
+const cartes = await listerCartes();
+const cartesJson = JSON.stringify(cartes).replace(/</g, '\\u003c');
+---
+
+<Base
+  title="Révisions — Oinarri"
+  description="Révise à intervalles espacés les notions des chapitres que tu as validés."
+>
+  <a class="retour" href="/">Accueil</a>
+  <h1>Révisions</h1>
+  <p class="lead">
+    Les questions des niveaux que tu as validés reviennent à intervalles croissants. Se tester
+    régulièrement est ce qui fait durer les connaissances.
+  </p>
+
+  <div class="revision" id="revision" aria-live="polite">
+    <p class="rev-message">Chargement de tes cartes…</p>
+  </div>
+
+  <script is:inline type="application/json" id="cartes-data" set:html={cartesJson} />
+</Base>
+
+<style is:global>
+  .revision {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--ink-200);
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .revision p {
+    margin: 0 0 0.75rem;
+  }
+
+  .revision .rev-message {
+    color: var(--ink-600);
+  }
+
+  .revision .rev-progression {
+    font-size: 13px;
+    color: var(--ink-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .revision .rev-origine {
+    font-size: 13px;
+    color: var(--ink-600);
+    margin-bottom: 0.9rem;
+  }
+
+  .revision .rev-enonce {
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  .revision .rev-choix {
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+    font-size: 15px;
+    color: var(--ink-600);
+  }
+
+  .revision .rev-choix li {
+    margin-bottom: 0.4rem;
+  }
+
+  .revision .rev-verso {
+    margin: 0.75rem 0;
+    padding: 0.75rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+  }
+
+  .revision .rev-reponse {
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .revision .rev-explication {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .revision .rev-info {
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  .revision .rev-titre {
+    font-weight: 700;
+    font-size: 17px;
+  }
+
+  .revision .rev-score {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  }
+
+  .revision .rev-erreur {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0.5rem 0 0;
+  }
+
+  .revision .rev-erreur[hidden] {
+    display: none;
+  }
+
+  .revision .rev-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .revision .rev-bouton {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--ink-900);
+    background: var(--ink-900);
+    color: var(--paper);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .revision .rev-bouton-secondaire {
+    background: none;
+    color: var(--ink-900);
+  }
+
+  .revision .rev-bouton:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+</style>
+
+<script>
+  import '../scripts/session-revision.js';
+</script>
