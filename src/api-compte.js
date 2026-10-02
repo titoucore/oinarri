@@ -1,24 +1,30 @@
 // Route /api/compte : gestion du compte de l'utilisateur connecté.
 //
-// GET  /api/compte         -> informations, avancement, résultats de quiz, cartes de révision
+// GET  /api/compte         -> informations, avancement, résultats de quiz, cartes de révision, mode de connexion
 // GET  /api/compte/export  -> toutes les données du compte, en téléchargement (JSON)
 // POST /api/compte         -> { action: 'reinitialiser', cours }       efface la progression d'un cours
 //                             { action: 'reinitialiser', cours: null } efface toute la progression
-//                             { action: 'supprimer', confirmation: 'SUPPRIMER' } supprime le compte
+//                             { action: 'supprimer', confirmation: 'SUPPRIMER', mot_de_passe }
+//                                supprime le compte (le mot de passe est exigé en mode "compte")
 //
 // « Progression » = avancement par niveau + scores de quiz + cartes de révision.
 // Chaque requête ne touche que les lignes de l'utilisateur identifié.
 
+import { obtenirPoivre, verifierMotDePasse } from './lib/securite.js';
+import { cookieEffacement } from './lib/sessions.js';
+import { verifierLimite } from './lib/limites.js';
+
 const COURS_VALIDE = /^[a-z0-9-]{1,40}\/[a-z0-9-]{1,80}$/;
 
-function reponseJson(donnees, statut = 200) {
+function reponseJson(donnees, statut = 200, entetes = {}) {
   return Response.json(donnees, {
     status: statut,
-    headers: { 'Cache-Control': 'no-store' },
+    headers: { 'Cache-Control': 'no-store', ...entetes },
   });
 }
 
 // Lit toutes les données d'un utilisateur en un seul aller-retour vers la base.
+// Le mot de passe haché n'est jamais lu ici : il ne sort pas du serveur.
 async function lireDonnees(env, id) {
   const base = env.DB_OINARRI;
   const [compte, progression, quiz, revisions] = await base.batch([
@@ -73,6 +79,7 @@ function resumerQuiz(lignes) {
 
 export async function gererCompte(request, env, utilisateur, url) {
   const base = env.DB_OINARRI;
+  const modeCompte = env.AUTH_MODE === 'compte';
 
   if (url.pathname === '/api/compte/export') {
     if (request.method !== 'GET') return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
@@ -98,6 +105,7 @@ export async function gererCompte(request, env, utilisateur, url) {
     const donnees = await lireDonnees(env, utilisateur.id);
     const jour = await base.prepare(`SELECT date('now') AS aujourdhui`).first();
     return reponseJson({
+      mode: modeCompte ? 'compte' : 'access',
       moi: donnees.compte,
       progression: donnees.progression,
       quiz: resumerQuiz(donnees.quiz),
@@ -156,14 +164,42 @@ export async function gererCompte(request, env, utilisateur, url) {
       if (corps.confirmation !== 'SUPPRIMER') {
         return reponseJson({ erreur: 'Confirmation manquante' }, 400);
       }
+
+      // En mode "compte", supprimer un compte exige aussi le mot de passe.
+      if (modeCompte) {
+        const poivre = obtenirPoivre(env);
+        const limite = await verifierLimite(env, `suppr:${id}`, 5, 900);
+        if (!limite.autorise) {
+          return reponseJson({ erreur: 'Trop de tentatives. Réessaie dans quelques minutes.' }, 429);
+        }
+        const compte = await base
+          .prepare('SELECT mot_de_passe_hash FROM utilisateurs WHERE id = ?')
+          .bind(id)
+          .first();
+        const motDePasse = typeof corps.mot_de_passe === 'string' ? corps.mot_de_passe : '';
+        if (
+          !compte?.mot_de_passe_hash ||
+          !motDePasse ||
+          !(await verifierMotDePasse(motDePasse, compte.mot_de_passe_hash, poivre))
+        ) {
+          return reponseJson({ erreur: 'Mot de passe incorrect.' }, 403);
+        }
+      }
+
       // Les données liées d'abord, le compte en dernier, en une seule opération.
       await base.batch([
         base.prepare('DELETE FROM progression WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM resultats_quiz WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM revisions WHERE utilisateur_id = ?').bind(id),
+        base.prepare('DELETE FROM sessions WHERE utilisateur_id = ?').bind(id),
+        base.prepare('DELETE FROM jetons WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM utilisateurs WHERE id = ?').bind(id),
       ]);
-      return reponseJson({ ok: true, supprime: true });
+      return reponseJson(
+        { ok: true, supprime: true },
+        200,
+        modeCompte ? { 'Set-Cookie': cookieEffacement() } : {},
+      );
     }
 
     return reponseJson({ erreur: 'Action inconnue' }, 400);
