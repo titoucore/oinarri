@@ -1,0 +1,29 @@
+---
+import Auth from '../layouts/Auth.astro';
+---
+
+<Auth title="Nouveau mot de passe — Oinarri" description="Choisis ton mot de passe Oinarri.">
+  <h1>Nouveau mot de passe</h1>
+  <p class="lead">Choisis le mot de passe de ton compte.</p>
+
+  <form id="form-auth" class="auth-form" data-action="reinitialiser">
+    <label for="a-nouveau">Nouveau mot de passe</label>
+    <input id="a-nouveau" type="password" autocomplete="new-password" minlength="12" required />
+    <p class="auth-aide-champ">
+      12 caractères minimum. Une phrase de passe longue, facile à retenir, convient très bien.
+    </p>
+
+    <label for="a-confirmation">Confirme le mot de passe</label>
+    <input id="a-confirmation" type="password" autocomplete="new-password" minlength="12" required />
+
+    <p class="auth-erreur" id="auth-erreur" role="alert" hidden></p>
+    <div>
+      <button class="auth-bouton" type="submit">Enregistrer le mot de passe</button>
+    </div>
+  </form>
+
+  <div class="auth-succes" id="auth-succes" role="status" hidden>
+    <p id="auth-succes-texte"></p>
+    <a class="auth-bouton" id="auth-succes-lien" href="/connexion/" hidden></a>
+  </div>
+</Auth>
