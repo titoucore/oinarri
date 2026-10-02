@@ -6,6 +6,8 @@
 // On ne se fie jamais à un simple en-tête : on vérifie la signature, l'émetteur,
 // l'audience et la date d'expiration avant d'accepter l'e-mail qu'il contient.
 
+import { gererProgression } from './api-progression.js';
+
 const DUREE_CACHE_CLES = 60 * 60 * 1000; // 1 heure
 let cacheCles = { cles: null, expire: 0 };
 
@@ -187,6 +189,12 @@ export default {
       }
 
       return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
+    }
+
+    if (url.pathname === '/api/progression') {
+      const utilisateur = await utilisateurCourant(request, env);
+      if (!utilisateur) return reponseJson({ erreur: 'Non authentifié' }, 401);
+      return gererProgression(request, env, utilisateur, url);
     }
 
     if (url.pathname.startsWith('/api/')) {
