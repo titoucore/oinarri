@@ -7,6 +7,7 @@
 // l'audience et la date d'expiration avant d'accepter l'e-mail qu'il contient.
 
 import { gererAccueil } from './api-accueil.js';
+import { gererCompte } from './api-compte.js';
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
 import { gererRevisions } from './api-revisions.js';
@@ -14,6 +15,8 @@ import { gererRevisions } from './api-revisions.js';
 // Routes qui exigent un utilisateur identifié : chemin -> gestionnaire.
 const ROUTES_UTILISATEUR = new Map([
   ['/api/accueil', gererAccueil],
+  ['/api/compte', gererCompte],
+  ['/api/compte/export', gererCompte],
   ['/api/progression', gererProgression],
   ['/api/quiz', gererQuiz],
   ['/api/revisions', gererRevisions],
