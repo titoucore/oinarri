@@ -54,7 +54,7 @@ export const chapitres = [
   },
   {
     titre: 'Gérer et entretenir le parc',
-    desc: 'Maintenance, rénovation énergétique et gestion locative.',
+    desc: 'Rénovation énergétique, prêts et aides, convention d\'utilité sociale et contrôle.',
     href: '/logement-social/09-gerer-et-entretenir-le-parc/',
     cours: 'logement-social/09-gerer-et-entretenir-le-parc',
   },
