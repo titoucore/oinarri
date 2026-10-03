@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" role="img">
+<title>Le plan de financement d'Arbola et la frise des jalons (valeurs fictives)</title>
+<desc>Un besoin de financement de 2 240 000 euros couvert par 440 000 euros de fonds propres (environ 20 %) et 1 800 000 euros de crédit (environ 80 %). Dessous, huit jalons : acquisition du terrain, conditions levées, garantie d'achèvement et ouverture de crédit, ordre de service, puis les paiements des acquéreurs aux fondations, au hors d'eau, à l'achèvement et à la livraison.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="470" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+
+<text class="th" x="40" y="34" fill="#444441">Plan de financement · besoin de 2 240 000 € HT</text>
+<rect x="40" y="44" width="117.9" height="40" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<rect x="157.9" y="44" width="482.1" height="40" fill="#5F5E5A"/>
+<text class="ts" x="98.9" y="64" text-anchor="middle" dominant-baseline="central" fill="#085041">Fonds propres</text>
+<text class="ts" x="399" y="64" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">Crédit de l'opération</text>
+<text class="ts" x="98.9" y="102" text-anchor="middle" fill="#085041">440 000 € · ≈ 20 %</text>
+<text class="ts" x="399" y="102" text-anchor="middle" fill="#444441">1 800 000 € · ≈ 80 %</text>
+
+<text class="th" x="40" y="142" fill="#444441">Les jalons : ce qui sort, ce qui rentre</text>
+
+<rect x="40" y="152" width="600" height="32" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="60" cy="168" r="10" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="ts" x="60" y="168" text-anchor="middle" dominant-baseline="central" fill="#712B13">1</text>
+<text class="th" x="82" y="162" dominant-baseline="central" fill="#712B13">Acquisition du terrain</text>
+<text class="ts" x="82" y="176" dominant-baseline="central" fill="#993C1D">Sort : 320 000 €, financés par les fonds propres</text>
+
+<rect x="40" y="188" width="600" height="32" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="60" cy="204" r="10" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="ts" x="60" y="204" text-anchor="middle" dominant-baseline="central" fill="#444441">2</text>
+<text class="th" x="82" y="198" dominant-baseline="central" fill="#444441">Permis purgé, entreprises consultées</text>
+<text class="ts" x="82" y="212" dominant-baseline="central" fill="#5F5E5A">Conditions de la banque : 4 logements réservés sur 12</text>
+
+<rect x="40" y="224" width="600" height="32" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="60" cy="240" r="10" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="ts" x="60" y="240" text-anchor="middle" dominant-baseline="central" fill="#444441">3</text>
+<text class="th" x="82" y="234" dominant-baseline="central" fill="#444441">Garantie d'achèvement et ouverture de crédit</text>
+<text class="ts" x="82" y="248" dominant-baseline="central" fill="#5F5E5A">La banque signe : l'enveloppe est mise à disposition</text>
+
+<rect x="40" y="260" width="600" height="32" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="60" cy="276" r="10" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="ts" x="60" y="276" text-anchor="middle" dominant-baseline="central" fill="#712B13">4</text>
+<text class="th" x="82" y="270" dominant-baseline="central" fill="#712B13">Ordre de service : le chantier démarre</text>
+<text class="ts" x="82" y="284" dominant-baseline="central" fill="#993C1D">Sortent : travaux et honoraires, payés par tirages sur le crédit</text>
+
+<rect x="40" y="296" width="600" height="32" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="60" cy="312" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="ts" x="60" y="312" text-anchor="middle" dominant-baseline="central" fill="#085041">5</text>
+<text class="th" x="82" y="306" dominant-baseline="central" fill="#085041">Fondations achevées</text>
+<text class="ts" x="82" y="320" dominant-baseline="central" fill="#0F6E56">Entre : jusqu'à 35 % du prix des logements vendus</text>
+
+<rect x="40" y="332" width="600" height="32" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="60" cy="348" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="ts" x="60" y="348" text-anchor="middle" dominant-baseline="central" fill="#085041">6</text>
+<text class="th" x="82" y="342" dominant-baseline="central" fill="#085041">Hors d'eau</text>
+<text class="ts" x="82" y="356" dominant-baseline="central" fill="#0F6E56">Entre : jusqu'à 70 % cumulés</text>
+
+<rect x="40" y="368" width="600" height="32" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="60" cy="384" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="ts" x="60" y="384" text-anchor="middle" dominant-baseline="central" fill="#085041">7</text>
+<text class="th" x="82" y="378" dominant-baseline="central" fill="#085041">Achèvement</text>
+<text class="ts" x="82" y="392" dominant-baseline="central" fill="#0F6E56">Entre : jusqu'à 95 % cumulés</text>
+
+<rect x="40" y="404" width="600" height="32" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="60" cy="420" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="ts" x="60" y="420" text-anchor="middle" dominant-baseline="central" fill="#085041">8</text>
+<text class="th" x="82" y="414" dominant-baseline="central" fill="#085041">Livraison</text>
+<text class="ts" x="82" y="428" dominant-baseline="central" fill="#0F6E56">Entre : le solde, et le crédit est remboursé</text>
+
+<text class="ts" x="40" y="456" fill="#5F5E5A">Valeurs fictives, arrondies, hors taxes · les paiements supposent des logements déjà vendus</text>
+</svg>
