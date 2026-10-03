@@ -123,4 +123,82 @@ export const termes = [
       "Émissions de gaz à effet de serre produites sur place, par exemple par la combustion du gaz ou du fioul d'un bâtiment (scope 1). Les chiffres officiels du secteur du bâtiment ne comptent qu'elles.",
     aussi: ['Scope 1', 'Émissions directes de gaz à effet de serre'],
   },
+  {
+    terme: 'CLT',
+    developpe: 'Cross Laminated Timber',
+    categorie: 'Biosourcé',
+    definition:
+      "Panneau massif en bois formé de plusieurs couches de planches croisées et collées. Il sert à réaliser des murs, des planchers et des noyaux de bâtiment.",
+    aussi: ['Bois lamellé-croisé', 'Bois lamellé croisé', 'Lamellé-croisé', 'Panneau massif contrecollé', 'Panneaux massifs contrecollés'],
+  },
+  {
+    terme: "Classe d'emploi",
+    categorie: 'Matériaux',
+    definition:
+      "Classement (norme NF EN 335) de l'exposition d'un bois à l'humidité et aux agents biologiques, qui détermine la durabilité demandée. Le NF DTU 31.2 place par défaut les bois de structure d'une ossature en classe d'emploi 2.",
+    aussi: ["Classes d'emploi", 'NF EN 335'],
+  },
+  {
+    terme: 'Botte de paille',
+    categorie: 'Biosourcé',
+    definition:
+      "Paille de céréale compactée, utilisée comme remplissage isolant d'une ossature et comme support d'enduit. Les règles CP 2012 demandent une masse volumique de 80 à 120 kg/m³ et une humidité inférieure à 20 %.",
+    aussi: ['Bottes de paille', 'Paille', 'Construction paille'],
+  },
+  {
+    terme: 'Règles professionnelles',
+    categorie: 'Réglementation',
+    definition:
+      "Documents rédigés par les professionnels d'une filière pour décrire comment concevoir et mettre en œuvre un procédé. Exemple : les règles CP 2012 de la construction en paille, approuvées par la commission de l'AQC chargée de la prévention des produits. Ce n'est pas une loi.",
+    aussi: ['Règles pro', 'Règles CP 2012', 'CP 2012', 'Règles professionnelles de la construction en paille'],
+  },
+  {
+    terme: 'Chènevotte',
+    categorie: 'Biosourcé',
+    definition:
+      "Partie fragmentée de l'intérieur de la tige du chanvre, obtenue après défibrage. C'est le granulat léger du béton de chanvre.",
+  },
+  {
+    terme: 'Béton de chanvre',
+    categorie: 'Biosourcé',
+    definition:
+      "Mélange de chènevotte et de chaux, banché, projeté ou coulé pour remplir une ossature, doubler un mur ou isoler une toiture. Il apporte de l'isolation et de l'inertie, mais il ne porte pas le bâtiment.",
+    aussi: ['Chaux-chanvre', 'Béton chaux-chanvre', 'Mortier de chanvre'],
+  },
+  {
+    terme: 'Ouate de cellulose',
+    categorie: 'Biosourcé',
+    definition:
+      "Isolant fait de papier recyclé défibré, vendu en vrac (soufflé), en panneaux ou en rouleaux.",
+    aussi: ['Laine de cellulose', 'Cellulose'],
+  },
+  {
+    terme: 'Fibre de bois',
+    categorie: 'Biosourcé',
+    definition:
+      "Isolant fabriqué à partir de bois défibré, en panneaux souples ou rigides. Il est souvent fait de coproduits de scierie.",
+    aussi: ['Laine de bois', 'Isolant en fibre de bois'],
+  },
+  {
+    terme: 'Liège expansé',
+    categorie: 'Biosourcé',
+    definition:
+      "Isolant issu de l'écorce du chêne-liège, en panneaux ou en vrac.",
+    aussi: ['Liège'],
+  },
+  {
+    terme: 'Conductivité thermique',
+    developpe: 'lambda, λ',
+    categorie: 'Thermique',
+    definition:
+      "Capacité d'un matériau à laisser passer la chaleur, notée λ et exprimée en W/(m·K). Plus elle est faible, mieux le matériau isole à épaisseur égale.",
+    aussi: ['Lambda', 'λ'],
+  },
+  {
+    terme: 'Résistance thermique',
+    categorie: 'Thermique',
+    definition:
+      "Capacité d'une couche de matériau à s'opposer au passage de la chaleur, notée R en m².K/W. Elle vaut l'épaisseur divisée par la conductivité thermique.",
+    aussi: ['R', 'Résistance thermique R'],
+  },
 ];
