@@ -361,7 +361,7 @@ export const termes = [
     developpe: 'Prêt Social Location-Accession',
     categorie: 'Logement social',
     definition:
-      "Dispositif de location-accession à la propriété pour des ménages sous plafonds de ressources, avec des plafonds de prix de vente. Les logements financés en PSLA peuvent bénéficier de la TVA à 5,5 %.",
+      "Prêt conventionné consenti à un opérateur (organisme HLM, société d'économie mixte, promoteur) pour financer des logements neufs vendus en location-accession, à des ménages sous plafonds de ressources. Il suppose un agrément et une convention avec l'État, et les logements peuvent bénéficier de la TVA à 5,5 %.",
   },
   {
     terme: 'QPV',
@@ -370,5 +370,67 @@ export const termes = [
     definition:
       "Quartier défini par la politique de la ville, où vit une population à faibles revenus. Pour l'accession sociale, la vente de logements neufs dans un QPV ou à moins de 300 m de ses limites peut bénéficier de la TVA à 5,5 %, sous conditions.",
     aussi: ['Quartier prioritaire', 'Quartiers prioritaires'],
+  },
+  {
+    terme: 'Plan de financement',
+    categorie: 'Financement',
+    definition:
+      "Tableau qui montre comment le besoin de financement d'une opération est couvert : fonds propres, crédit et autres ressources. Il se construit à partir du bilan d'opération.",
+    aussi: ['Montage financier'],
+  },
+  {
+    terme: 'Besoin de financement',
+    categorie: 'Financement',
+    definition:
+      "Somme à réunir pour payer les dépenses d'une opération avant d'avoir encaissé les recettes. Elle est égale au total des dépenses du bilan.",
+    aussi: ['Besoin en financement'],
+  },
+  {
+    terme: 'Fonds propres',
+    categorie: 'Financement',
+    definition:
+      "Argent que l'organisme ou le promoteur investit lui-même dans l'opération, sans l'emprunter. Les banques en exigent une part, souvent de l'ordre de 15 à 20 % du besoin de financement.",
+    aussi: ['Apport en fonds propres'],
+  },
+  {
+    terme: 'Crédit de promotion',
+    categorie: 'Financement',
+    definition:
+      "Prêt bancaire qui finance une opération de construction. Il prend la forme d'une ouverture de crédit : la banque met une enveloppe à disposition, et l'emprunteur tire les sommes au fur et à mesure. Les intérêts portent sur les sommes tirées.",
+    aussi: ['Crédit promoteur', "Crédit de l'opération", 'Ouverture de crédit', "Crédit d'accompagnement"],
+  },
+  {
+    terme: 'Pré-commercialisation',
+    categorie: 'Promotion',
+    definition:
+      "Vente ou réservation de logements avant le début des travaux. Les banques l'exigent pour s'assurer que la demande existe ; les seuils varient selon les établissements (souvent de 30 à 50 %).",
+    aussi: ['Prévente', 'Pré-vente', 'Préventes'],
+  },
+  {
+    terme: 'Appel de fonds',
+    categorie: 'Financement',
+    definition:
+      "Demande de paiement adressée à l'acquéreur à chaque étape d'avancement du chantier, dans les plafonds de la vente en l'état futur d'achèvement : 35 % aux fondations, 70 % hors d'eau, 95 % à l'achèvement.",
+    aussi: ['Appels de fonds'],
+  },
+  {
+    terme: "Garantie financière d'achèvement",
+    categorie: 'Assurance',
+    definition:
+      "Garantie que le vendeur en l'état futur d'achèvement doit souscrire (article L261-10-1 du code de la construction et de l'habitation) : si le vendeur est défaillant, les sommes nécessaires pour achever l'immeuble sont versées. Elle est en principe délivrée par une banque ou une assurance (garantie extrinsèque).",
+    aussi: ['GFA', "Garantie d'achèvement", 'Garantie extrinsèque'],
+  },
+  {
+    terme: 'Location-accession',
+    categorie: 'Logement social',
+    definition:
+      "Contrat par lequel un ménage occupe d'abord un logement neuf en payant une redevance, puis peut lever l'option pour en devenir propriétaire. Le logement reste la propriété du vendeur jusqu'à la levée de l'option.",
+    aussi: ['Contrat de location-accession', 'Locataire-accédant'],
+  },
+  {
+    terme: 'Quasi-fonds propres',
+    categorie: 'Financement',
+    definition:
+      "Financements de long terme, souvent remboursés tard, que les banques traitent comme proches des fonds propres. Un organisme peut s'en servir pour renforcer son apport.",
   },
 ];
