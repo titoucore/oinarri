@@ -66,4 +66,135 @@ export const termes = [
       "Remise du logement terminé à l'acquéreur. Elle ne se confond pas avec la réception des travaux, qui est l'acceptation de l'ouvrage par le maître d'ouvrage.",
     aussi: ['Remise des clés'],
   },
+  {
+    terme: 'Charge foncière',
+    categorie: 'Promotion',
+    definition:
+      "Part du prix de revient des logements qui correspond au terrain : prix d'achat, frais, et parfois démolition ou dépollution. Elle pèse lourd dans le bilan de l'opération.",
+  },
+  {
+    terme: 'Promesse de vente',
+    categorie: 'Juridique',
+    definition:
+      "Avant-contrat signé avant l'acte authentique, qui bloque un terrain ou un logement tout en le soumettant à des conditions. Elle prend la forme d'une promesse unilatérale ou d'une promesse synallagmatique.",
+    aussi: ['Avant-contrat', 'Promesse'],
+  },
+  {
+    terme: 'Promesse unilatérale de vente',
+    categorie: 'Juridique',
+    definition:
+      "Promesse par laquelle le vendeur s'engage à vendre, l'acheteur gardant le choix d'acheter ou non (il « lève l'option »). L'acheteur verse en général une indemnité d'immobilisation.",
+    aussi: ['Promesse unilatérale'],
+  },
+  {
+    terme: 'Promesse synallagmatique de vente',
+    categorie: 'Juridique',
+    definition:
+      "Promesse par laquelle le vendeur et l'acheteur s'engagent tous deux à conclure la vente, sous réserve des conditions suspensives prévues. On l'appelle couramment « compromis de vente ».",
+    aussi: ['Compromis', 'Compromis de vente', 'Promesse synallagmatique'],
+  },
+  {
+    terme: 'Condition suspensive',
+    categorie: 'Juridique',
+    definition:
+      "Événement dont dépend la vente : s'il ne se réalise pas avant la date limite prévue, l'acheteur peut renoncer sans pénalité. Exemples : obtention du permis, absence de préemption, sol compatible avec le projet.",
+    aussi: ['Conditions suspensives'],
+  },
+  {
+    terme: "Indemnité d'immobilisation",
+    categorie: 'Juridique',
+    definition:
+      "Somme que l'acheteur verse au vendeur en contrepartie du blocage du bien pendant une promesse unilatérale. Il la perd s'il renonce à acheter alors que les conditions sont remplies.",
+  },
+  {
+    terme: 'Acte authentique',
+    categorie: 'Juridique',
+    definition:
+      "Acte de vente signé devant notaire. C'est lui qui transfère la propriété du bien à l'acheteur.",
+    aussi: ['Acte de vente', 'Acte notarié'],
+  },
+  {
+    terme: 'Droit de préemption urbain',
+    categorie: 'Urbanisme',
+    definition:
+      "Droit pour une commune de se substituer à l'acheteur lors de la vente d'un bien situé dans une zone qu'elle a délimitée. Le notaire lui adresse une déclaration d'intention d'aliéner, et elle dispose d'environ deux mois pour décider.",
+    aussi: ['DPU', 'Préemption', 'Droit de préemption'],
+  },
+  {
+    terme: "Déclaration d'intention d'aliéner",
+    categorie: 'Urbanisme',
+    definition:
+      "Document que le notaire adresse à la commune avant une vente en zone de préemption, pour lui permettre d'exercer son droit ou d'y renoncer.",
+    aussi: ['DIA'],
+  },
+  {
+    terme: 'Servitude',
+    categorie: 'Juridique',
+    definition:
+      "Charge qui pèse sur un terrain au profit d'un autre terrain (passage, canalisation, vue) ou d'un intérêt public. Elle peut empêcher de construire à un endroit.",
+    aussi: ['Servitudes', "Servitude d'utilité publique"],
+  },
+  {
+    terme: 'Viabilisation',
+    categorie: 'Construction',
+    definition:
+      "Ensemble des travaux qui rendent un terrain constructible en le desservant : voirie, eau, assainissement, électricité, télécoms. Son coût est à chiffrer avant d'acheter.",
+    aussi: ['Terrain viabilisé', 'Viabilisé'],
+  },
+  {
+    terme: "Secteur d'information sur les sols",
+    categorie: 'Réglementation',
+    definition:
+      "Zone arrêtée par le préfet où la connaissance de la pollution des sols justifie une étude de sols en cas de changement d'usage. Pour construire, le dossier de permis doit contenir une attestation d'un bureau d'études certifié.",
+    aussi: ['SIS', 'Attestation ATTES'],
+  },
+  {
+    terme: 'Archéologie préventive',
+    categorie: 'Réglementation',
+    definition:
+      "Ensemble des opérations (diagnostic, puis éventuellement fouilles) menées avant des travaux pour étudier les vestiges enfouis. Le préfet de région les prescrit.",
+    aussi: ['Diagnostic archéologique', 'Fouilles archéologiques'],
+  },
+  {
+    terme: 'Étude géotechnique préalable',
+    categorie: 'Réglementation',
+    definition:
+      "Étude de sol que le vendeur d'un terrain constructible fournit en zone argileuse d'exposition moyenne ou forte. Elle donne une première identification des risques et est annexée à la promesse de vente.",
+    aussi: ['Étude préalable'],
+  },
+  {
+    terme: 'Service des Domaines',
+    categorie: 'Juridique',
+    definition:
+      "Service de l'État qui estime la valeur vénale d'un bien public avant une cession. Son avis éclaire la collectivité sans la lier.",
+    aussi: ['Domaines', 'France Domaine', 'Avis du Domaine'],
+  },
+  {
+    terme: 'Établissement public foncier',
+    categorie: 'Urbanisme',
+    definition:
+      "Établissement public qui achète et porte des terrains pour le compte de collectivités, parfois pendant plusieurs années, avant de les céder à un opérateur.",
+    aussi: ['EPF'],
+  },
+  {
+    terme: "Zone d'aménagement concerté",
+    categorie: 'Urbanisme',
+    definition:
+      "Opération d'aménagement conduite par un aménageur qui équipe un grand terrain, puis cède des lots à des constructeurs avec un cahier des charges.",
+    aussi: ['ZAC'],
+  },
+  {
+    terme: 'Bail réel solidaire',
+    categorie: 'Logement social',
+    definition:
+      "Contrat par lequel un organisme de foncier solidaire accorde à un ménage un droit de construire ou d'occuper un logement, sans lui vendre le terrain. Le prix du logement baisse d'autant.",
+    aussi: ['BRS'],
+  },
+  {
+    terme: 'Organisme de foncier solidaire',
+    categorie: 'Logement social',
+    definition:
+      "Organisme agréé qui reste propriétaire du terrain et le met à disposition de ménages par des baux réels solidaires.",
+    aussi: ['OFS'],
+  },
 ];
