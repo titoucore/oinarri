@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import { chapitres } from '../../data/logement-social.js';
+---
+
+<Base
+  title="Bailleurs sociaux et logement social — Oinarri"
+  large
+  bande
+  etiquette={['LOGE-', 'MENT']}
+>
+  <Fragment slot="bande">
+    <a class="retour" href="/">Accueil</a>
+    <p class="chiffre-evide" aria-hidden="true">03</p>
+    <h1>Bailleurs sociaux et logement social</h1>
+    <p class="lead">
+      Qui produit, finance et attribue le logement social, et selon quelles règles. La Résidence
+      Arbola sert de fil rouge, vue cette fois du côté du bailleur.
+    </p>
+  </Fragment>
+
+  <ol class="chapitres">
+    {
+      chapitres.map((c) => (
+        <li class="chapitre" data-cours={c.cours}>
+          <div class="chapitre-corps">
+            <p class="chapitre-titre">
+              {c.href ? <a class="chapitre-lien" href={c.href}>{c.titre}</a> : c.titre}
+            </p>
+            <p class="chapitre-desc">{c.desc}</p>
+          </div>
+          {c.href ? (
+            <span class="etiquette etiquette-ok">Disponible</span>
+          ) : (
+            <span class="etiquette">À venir</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</Base>
+
+<style>
+  .chapitre-lien {
+    text-decoration: none;
+  }
+
+  .etiquette-ok {
+    border-style: solid;
+    border-color: var(--ink-900);
+    color: var(--ink-900);
+  }
+</style>
+
+<script>
+  import { chargerProgression, libelleEtat } from '../../scripts/progression.js';
+
+  async function afficherAvancement() {
+    const progression = await chargerProgression();
+    if (!progression) return;
+    for (const element of document.querySelectorAll('li[data-cours]')) {
+      const texte = libelleEtat(progression.get(element.dataset.cours));
+      const etiquette = element.querySelector('.etiquette');
+      if (texte && etiquette) etiquette.textContent = texte;
+    }
+  }
+
+  afficherAvancement();
+</script>
