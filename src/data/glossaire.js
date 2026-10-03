@@ -18,6 +18,7 @@
 
 import { termes as termesPromotion } from './glossaire-promotion.js';
 import { termes as termesLogementSocial } from './glossaire-logement-social.js';
+import { termes as termesMateriauxBiosources } from './glossaire-materiaux-biosources.js';
 
 const termesBatiment = [
   {
@@ -801,4 +802,4 @@ const termesBatiment = [
   },
 ];
 
-export const termes = [...termesBatiment, ...termesPromotion, ...termesLogementSocial];
+export const termes = [...termesBatiment, ...termesPromotion, ...termesLogementSocial, ...termesMateriauxBiosources];
