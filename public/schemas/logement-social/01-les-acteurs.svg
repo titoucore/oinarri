@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img">
+<title>Qui fait quoi dans le logement social</title>
+<desc>Cinq familles d'acteurs : l'État et les collectivités fixent le cadre et agréent les opérations, les financeurs prêtent, les organismes construisent et gèrent, l'ANCOLS contrôle.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="430" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="60" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="46" dominant-baseline="central" fill="#085041">L'État</text><text class="ts" x="60" y="66" dominant-baseline="central" fill="#0F6E56">Fixe le cadre, agrée les opérations, accorde les aides à la pierre (PLUS, PLAI)</text>
+<path d="M340 85 V97" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="98" width="600" height="60" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="120" dominant-baseline="central" fill="#085041">Les collectivités</text><text class="ts" x="60" y="140" dominant-baseline="central" fill="#0F6E56">Urbanisme, politique de l'habitat, parfois délégation des aides, quotas de la loi SRU</text>
+<path d="M340 159 V171" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="172" width="600" height="60" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="194" dominant-baseline="central" fill="#712B13">Les financeurs</text><text class="ts" x="60" y="214" dominant-baseline="central" fill="#993C1D">Banque des Territoires (prêts sur épargne), Action Logement (employeurs)</text>
+<path d="M340 233 V245" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="246" width="600" height="60" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="268" dominant-baseline="central" fill="#444441">Les organismes de logement social</text><text class="ts" x="60" y="288" dominant-baseline="central" fill="#5F5E5A">Construisent, achètent, attribuent et gèrent les logements (OPH, ESH, coopératives, SEM)</text>
+<path d="M340 307 V319" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="40" y="320" width="600" height="60" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="342" dominant-baseline="central" fill="#444441">Les locataires</text><text class="ts" x="60" y="362" dominant-baseline="central" fill="#5F5E5A">Occupent les logements ; ils sont représentés au conseil d'administration</text>
+<text class="ts" x="340" y="408" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">L'ANCOLS contrôle les organismes sur l'ensemble de ce circuit</text>
+</svg>
