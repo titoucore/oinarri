@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img">
+<title>Le cycle de la loi SRU</title>
+<desc>Cinq étapes : l'inventaire annuel des logements sociaux, l'objectif de rattrapage par période de trois ans, la production de logements, le bilan triennal, puis éventuellement le constat de carence par le préfet.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="420" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="52" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="52" text-anchor="middle" dominant-baseline="central" fill="#085041">1</text>
+<text class="th" x="88" y="42" dominant-baseline="central" fill="#085041">Inventaire annuel</text><text class="ts" x="88" y="62" dominant-baseline="central" fill="#0F6E56">On compte les logements sociaux de la commune au 1er janvier</text>
+<path d="M64 81 V93" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="94" width="600" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="122" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="122" text-anchor="middle" dominant-baseline="central" fill="#085041">2</text>
+<text class="th" x="88" y="112" dominant-baseline="central" fill="#085041">Objectif triennal</text><text class="ts" x="88" y="132" dominant-baseline="central" fill="#0F6E56">Un tiers du déficit à rattraper (un quart avec un contrat de mixité sociale)</text>
+<path d="M64 151 V163" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="164" width="600" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="64" cy="192" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="64" y="192" text-anchor="middle" dominant-baseline="central" fill="#712B13">3</text>
+<text class="th" x="88" y="182" dominant-baseline="central" fill="#712B13">Production sur trois ans</text><text class="ts" x="88" y="202" dominant-baseline="central" fill="#993C1D">Construction, VEFA à un bailleur, acquisition de logements</text>
+<path d="M64 221 V233" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="234" width="600" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="64" cy="262" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="64" y="262" text-anchor="middle" dominant-baseline="central" fill="#712B13">4</text>
+<text class="th" x="88" y="252" dominant-baseline="central" fill="#712B13">Bilan triennal</text><text class="ts" x="88" y="272" dominant-baseline="central" fill="#993C1D">On compare les réalisations à l'objectif</text>
+<path d="M64 291 V303" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="304" width="600" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="64" cy="332" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="64" y="332" text-anchor="middle" dominant-baseline="central" fill="#444441">5</text>
+<text class="th" x="88" y="322" dominant-baseline="central" fill="#444441">Constat de carence</text><text class="ts" x="88" y="342" dominant-baseline="central" fill="#5F5E5A">Si l'objectif n'est pas atteint : arrêté du préfet et prélèvement majoré</text>
+<text class="ts" x="340" y="392" text-anchor="middle" fill="#5F5E5A">Le prélèvement annuel s'applique dès que la commune est en déficit</text>
+</svg>
