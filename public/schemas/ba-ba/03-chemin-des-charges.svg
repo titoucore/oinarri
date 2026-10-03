@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 462" role="img">
+<title>Le chemin des charges dans un bâtiment</title>
+<desc>Les charges (neige, vent, occupants, poids propre) sont reçues par la toiture, passent par les planchers, descendent par les murs ou les poteaux, puis par les fondations jusqu'au sol.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}.num{font-size:12px;font-weight:500}.note{font-size:12px;fill:#5F5E5A}</style>
+<rect width="680" height="462" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<path d="M120 40 V80" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M115 74 L120 82 L125 74" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<path d="M210 40 V80" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M205 74 L210 82 L215 74" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<path d="M300 40 V80" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M295 74 L300 82 L305 74" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<text class="ts" x="60" y="30" fill="#993C1D">Neige et vent</text>
+<path d="M50 118 L210 86 L370 118 Z" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="60" y="118" width="300" height="10" fill="#0F6E56" fill-opacity=".25" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="60" y="200" width="300" height="10" fill="#0F6E56" fill-opacity=".25" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="60" y="282" width="300" height="10" fill="#0F6E56" fill-opacity=".25" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="60" y="364" width="300" height="10" fill="#0F6E56" fill-opacity=".25" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="60" y="128" width="14" height="72" fill="#0F6E56" fill-opacity=".12" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="346" y="128" width="14" height="72" fill="#0F6E56" fill-opacity=".12" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="60" y="210" width="14" height="72" fill="#0F6E56" fill-opacity=".12" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="346" y="210" width="14" height="72" fill="#0F6E56" fill-opacity=".12" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="60" y="292" width="14" height="72" fill="#0F6E56" fill-opacity=".12" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="346" y="292" width="14" height="72" fill="#0F6E56" fill-opacity=".12" stroke="#0F6E56" stroke-width="1.5"/>
+<circle cx="160" cy="182" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="210" cy="182" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="260" cy="182" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="160" cy="264" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="210" cy="264" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="260" cy="264" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="160" cy="346" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="210" cy="346" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<circle cx="260" cy="346" r="5" fill="#993C1D" fill-opacity=".25" stroke="#993C1D" stroke-width="1"/>
+<rect x="48" y="374" width="38" height="24" fill="#5F5E5A" fill-opacity=".2" stroke="#5F5E5A" stroke-width="1.5"/><rect x="334" y="374" width="38" height="24" fill="#5F5E5A" fill-opacity=".2" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="30" y="398" width="360" height="40" fill="#F1EFE8" stroke="none"/><path d="M30 398 H390" stroke="#5F5E5A" stroke-width="1.5"/>
+<path d="M40 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M58 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M76 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M94 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M112 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M130 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M148 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M166 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M184 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M202 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M220 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M238 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M256 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M274 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M292 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M310 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M328 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M346 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M364 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<path d="M382 438 l10 -14" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<text class="ts" x="150" y="422" fill="#444441" text-anchor="middle">Sol</text>
+<rect x="420" y="28" width="220" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="438" cy="55" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="num" x="438" y="55" text-anchor="middle" dominant-baseline="central" fill="#085041">1</text>
+<text class="th" x="458" y="46" dominant-baseline="central" fill="#085041">Toiture et charpente</text><text class="ts" x="458" y="66" dominant-baseline="central" fill="#0F6E56">Reçoivent neige et vent</text>
+<path d="M530 84 V98" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M525 93 L530 99 L535 93" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<rect x="420" y="100" width="220" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="438" cy="127" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="num" x="438" y="127" text-anchor="middle" dominant-baseline="central" fill="#085041">2</text>
+<text class="th" x="458" y="118" dominant-baseline="central" fill="#085041">Planchers</text><text class="ts" x="458" y="138" dominant-baseline="central" fill="#0F6E56">Portent occupants, meubles</text>
+<path d="M530 156 V170" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M525 165 L530 171 L535 165" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<rect x="420" y="172" width="220" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="438" cy="199" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="num" x="438" y="199" text-anchor="middle" dominant-baseline="central" fill="#085041">3</text>
+<text class="th" x="458" y="190" dominant-baseline="central" fill="#085041">Murs ou poteaux</text><text class="ts" x="458" y="210" dominant-baseline="central" fill="#0F6E56">Portent ce qui est au-dessus</text>
+<path d="M530 228 V242" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M525 237 L530 243 L535 237" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<rect x="420" y="244" width="220" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="438" cy="271" r="10" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="num" x="438" y="271" text-anchor="middle" dominant-baseline="central" fill="#085041">4</text>
+<text class="th" x="458" y="262" dominant-baseline="central" fill="#085041">Fondations</text><text class="ts" x="458" y="282" dominant-baseline="central" fill="#0F6E56">Répartissent la charge</text>
+<path d="M530 300 V314" stroke="#993C1D" stroke-width="1.5" fill="none"/><path d="M525 309 L530 315 L535 309" stroke="#993C1D" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+<rect x="420" y="316" width="220" height="54" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="438" cy="343" r="10" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="num" x="438" y="343" text-anchor="middle" dominant-baseline="central" fill="#444441">5</text>
+<text class="th" x="458" y="334" dominant-baseline="central" fill="#444441">Sol</text><text class="ts" x="458" y="354" dominant-baseline="central" fill="#5F5E5A">Reçoit et résiste (étude G2)</text>
+<text class="note" x="420" y="396">Les charges descendent toujours</text>
+<text class="note" x="420" y="412">jusqu'au sol.</text>
+<text class="note" x="420" y="434">Le contreventement empêche le</text>
+<text class="note" x="420" y="450">bâtiment de bouger au vent.</text>
+</svg>
