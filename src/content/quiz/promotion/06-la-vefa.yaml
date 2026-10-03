@@ -1,0 +1,108 @@
+# Mini-quiz du chapitre 6 de Promotion immobilière : La VEFA.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+# Les chiffres sont fictifs.
+
+essentiel:
+  - type: qcm
+    question: "Dans une VEFA, que reçoit immédiatement l'acquéreur à la signature de l'acte de vente ?"
+    choix:
+      - "Les droits sur le sol et la propriété des constructions déjà existantes"
+      - "Les clés du logement"
+      - "Seulement une promesse de propriété"
+      - "Rien avant la livraison"
+    reponse: 0
+    explication: "La vente en l'état futur d'achèvement transfère immédiatement à l'acquéreur ses droits sur le sol et la propriété des constructions existantes. Les ouvrages à venir deviennent sa propriété au fur et à mesure de leur exécution, et il paie le prix à mesure de l'avancement."
+
+  - type: qcm
+    question: "Quels sont les plafonds cumulés de paiement d'une VEFA, de la fin des fondations à l'achèvement ?"
+    choix:
+      - "35 %, 70 %, 95 %"
+      - "20 %, 50 %, 80 %"
+      - "10 %, 40 %, 100 %"
+      - "50 %, 75 %, 100 %"
+    reponse: 0
+    explication: "L'article R261-14 du code de la construction et de l'habitation limite les paiements à 35 % du prix à l'achèvement des fondations, 70 % à la mise hors d'eau et 95 % à l'achèvement de l'immeuble."
+
+  - type: vf
+    affirmation: "Le solde de 5 % doit être payé à la signature de l'acte de vente."
+    reponse: false
+    explication: "Le solde est payable lors de la mise du logement à la disposition de l'acquéreur, c'est-à-dire à la livraison."
+
+  - type: qcm
+    question: "En secteur protégé, quel est le seul avant-contrat autorisé ?"
+    choix:
+      - "La promesse de vente classique"
+      - "Le contrat de réservation (contrat préliminaire)"
+      - "Le bail"
+      - "Aucun : on signe directement chez le notaire"
+    reponse: 1
+    explication: "En secteur protégé, le contrat préliminaire, appelé contrat de réservation, est le seul avant-contrat autorisé. Il est strictement encadré pour protéger le réservataire."
+
+  - type: ouverte
+    question: "Cite dans l'ordre les grandes étapes d'une vente sur plan."
+    modele: "Contrat de réservation (avec dépôt de garantie éventuel), délai de rétractation de 10 jours, acte de vente chez le notaire (avec la garantie d'achèvement), appels de fonds aux fondations, au hors d'eau et à l'achèvement, puis livraison et paiement du solde."
+
+approfondir:
+  - type: qcm
+    question: "Quel est le dépôt de garantie maximal si l'acte de vente doit être signé dans l'année qui suit la réservation ?"
+    choix:
+      - "2 % du prix prévisionnel"
+      - "5 % du prix prévisionnel"
+      - "10 % du prix prévisionnel"
+      - "35 % du prix prévisionnel"
+    reponse: 1
+    explication: "L'article R261-28 limite le dépôt à 5 % du prix prévisionnel si la vente doit être conclue dans l'année, à 2 % jusqu'à deux ans, et interdit tout dépôt au-delà."
+
+  - type: qcm
+    question: "De combien de jours dispose l'acquéreur pour se rétracter après réception du contrat de réservation ?"
+    choix:
+      - "3 jours"
+      - "7 jours"
+      - "10 jours"
+      - "30 jours"
+    reponse: 2
+    explication: "L'article L271-1 du code de la construction et de l'habitation donne dix jours, à compter du lendemain de la première présentation de la lettre qui notifie le contrat. Le dépôt de garantie est alors restitué."
+
+  - type: vf
+    affirmation: "À la livraison, si l'acquéreur constate des défauts de conformité ou des vices apparents, il peut consigner le solde de 5 % auprès de la Caisse des dépôts."
+    reponse: true
+    explication: "L'article R261-14 prévoit cette consignation. L'acquéreur ne verse pas le solde au vendeur tant que les défauts ne sont pas corrigés."
+
+  - type: qcm
+    question: "Sur quel type de compte le dépôt de garantie est-il versé ?"
+    choix:
+      - "Sur le compte courant du vendeur"
+      - "Sur un compte spécial, distinct des fonds du vendeur"
+      - "Directement à l'architecte"
+      - "À la mairie"
+    reponse: 1
+    explication: "Le dépôt de garantie est versé sur un compte spécial, par exemple chez le notaire, et restitué dans les cas prévus par la loi (rétractation, vente non conclue du fait du vendeur…)."
+
+  - type: ouverte
+    question: "Que protège la garantie financière d'achèvement, et dans quel cas joue-t-elle ?"
+    modele: "Elle assure aux acquéreurs le versement des sommes nécessaires pour achever l'immeuble si le vendeur est défaillant financièrement. Le vendeur doit la justifier à la signature de l'acte de vente. Elle est en principe délivrée par une banque ou une assurance (garantie extrinsèque)."
+
+expert:
+  - type: qcm
+    question: "Un logement est vendu 200 000 € TTC. Quel est le montant cumulé maximal que le vendeur peut avoir reçu à la mise hors d'eau ?"
+    choix:
+      - "70 000 €"
+      - "140 000 €"
+      - "190 000 €"
+      - "200 000 €"
+    reponse: 1
+    explication: "70 % de 200 000 € = 140 000 €. Les dépôts comptent dans ces plafonds."
+
+  - type: vf
+    affirmation: "Un dépôt de garantie peut être exigé même si la vente ne doit être conclue que dans plus de deux ans."
+    reponse: false
+    explication: "Selon l'article R261-28, aucun dépôt de garantie ne peut être exigé si le délai de réalisation de la vente excède deux ans."
+
+  - type: ouverte
+    question: "Pourquoi l'échelonnement des paiements est-il un équilibre entre le vendeur et l'acquéreur ?"
+    modele: "Le vendeur finance le chantier en partie avec les paiements des acquéreurs, qui arrivent à mesure de l'avancement. L'acquéreur, lui, ne paie que ce qui correspond à des ouvrages réalisés, dans la limite de plafonds, et garde un solde de 5 % pour obtenir la correction des défauts à la livraison."
