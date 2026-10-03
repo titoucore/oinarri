@@ -1,0 +1,52 @@
+/* Termes du glossaire repérés dans le texte d'un cours, et leur bulle de définition. */
+
+.cours .terme {
+  text-decoration: underline dotted;
+  text-decoration-color: var(--ink-400);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.cours .terme:hover,
+.cours .terme[aria-expanded='true'] {
+  text-decoration-style: solid;
+  text-decoration-color: var(--ink-900);
+}
+
+.terme-bulle {
+  position: absolute;
+  z-index: 50;
+  width: max-content;
+  max-width: min(22rem, calc(100vw - 24px));
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ink-900);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink-900);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.terme-bulle-titre {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.terme-bulle-categorie {
+  margin: 0 0 0.4rem;
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+.terme-bulle-definition {
+  margin: 0 0 0.6rem;
+}
+
+.terme-bulle-lien {
+  font-size: 13px;
+  font-weight: 500;
+  text-underline-offset: 3px;
+}
