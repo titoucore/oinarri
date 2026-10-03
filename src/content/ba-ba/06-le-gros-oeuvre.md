@@ -1,6 +1,6 @@
 ---
 titre: Le gros œuvre
-description: La structure d'un bâtiment, élément par élément : murs porteurs, planchers, chaînages, linteaux, escaliers, charpente et couverture, avec les repères sur le béton et les règles d'exécution.
+description: "La structure d'un bâtiment, élément par élément : murs porteurs, planchers, chaînages, linteaux, escaliers, charpente et couverture, avec les repères sur le béton et les règles d'exécution."
 parcours: ba-ba
 ordre: 6
 niveau: Débutant
