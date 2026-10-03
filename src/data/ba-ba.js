@@ -13,6 +13,8 @@ export const chapitres = [
   {
     titre: 'Du terrain au bâtiment',
     desc: 'Les grandes étapes, de la parcelle nue à la livraison.',
+    href: '/ba-ba/02-du-terrain-au-batiment/',
+    cours: 'ba-ba/02-du-terrain-au-batiment',
   },
   {
     titre: 'Les modes constructifs',
