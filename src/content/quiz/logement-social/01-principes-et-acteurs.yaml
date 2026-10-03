@@ -1,0 +1,73 @@
+# Mini-quiz du chapitre 1 de Bailleurs sociaux et logement social : Le logement social, principes et acteurs.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Au 1er janvier 2025, quelle part des résidences principales représentent les logements locatifs sociaux en France ?"
+    choix:
+      - "Environ 6 %"
+      - "Environ 16 %"
+      - "Environ 35 %"
+      - "Environ 50 %"
+    reponse: 1
+    explication: "Le répertoire RPLS donne 5,4 millions de logements locatifs sociaux, soit 15,9 % des résidences principales."
+
+  - type: vf
+    affirmation: "Le logement social est réservé aux ménages en situation de grande précarité."
+    reponse: false
+    explication: "La loi vise les personnes de ressources modestes ou défavorisées. Il existe plusieurs types de logements sociaux, avec des plafonds de ressources différents."
+
+  - type: qcm
+    question: "Quel organisme est chargé de contrôler et d'évaluer les organismes de logement social ?"
+    choix:
+      - "L'ANRU"
+      - "L'ANCOLS"
+      - "La CAF"
+      - "L'ANIL"
+    reponse: 1
+    explication: "L'Agence nationale de contrôle du logement social contrôle les organismes de logement social et la participation des employeurs à l'effort de construction."
+
+  - type: ouverte
+    question: "Cite quatre familles d'acteurs du logement social et le rôle de chacune."
+    modele: "Par exemple : l'État (cadre, agrément, aides), les collectivités (urbanisme, politique de l'habitat, quotas de la loi SRU), les financeurs (Banque des Territoires, Action Logement), les organismes (construire, attribuer, gérer), l'ANCOLS (contrôle). Les locataires sont aussi représentés au conseil d'administration."
+
+approfondir:
+  - type: qcm
+    question: "Quelle institution prête aux organismes de logement social à partir de l'épargne réglementée, dont le Livret A ?"
+    choix:
+      - "La Banque des Territoires"
+      - "L'ANAH"
+      - "La CGLLS"
+      - "L'USH"
+    reponse: 0
+    explication: "La Banque des Territoires, entité de la Caisse des Dépôts, transforme une partie de l'épargne réglementée en prêts de très longue durée pour le logement social."
+
+  - type: vf
+    affirmation: "L'État peut déléguer la gestion des aides à la pierre à une intercommunalité ou à un département."
+    reponse: true
+    explication: "La loi du 13 août 2004 le permet. Le président de l'intercommunalité ou du département prend alors à la place du préfet les décisions de financement."
+
+  - type: qcm
+    question: "Qu'est-ce qui justifie les exonérations fiscales et les aides spécifiques des organismes HLM ?"
+    choix:
+      - "Leur statut d'association"
+      - "Le service d'intérêt général défini à l'article L411-2 du CCH"
+      - "Leur taille"
+      - "Leur ancienneté"
+    reponse: 1
+    explication: "L'article L411-2 définit le service d'intérêt général (loger sous plafonds de loyers et de ressources) en contrepartie duquel ils bénéficient d'avantages."
+
+expert:
+  - type: vf
+    affirmation: "Le parc compté dans le RPLS et le parc compté au titre de la loi SRU sont exactement les mêmes."
+    reponse: false
+    explication: "Le RPLS recense les logements locatifs ordinaires des bailleurs sociaux ; le décompte SRU inclut d'autres logements et en exclut certains. Les chiffres varient selon le périmètre."
+
+  - type: ouverte
+    question: "Pourquoi un organisme HLM peut-il aussi faire de l'accession à la propriété sans contredire sa mission ?"
+    modele: "Parce que l'article L411-2 du CCH précise que, au titre de la mission d'intérêt général de recherche de la mixité sociale et de la diversité de l'habitat, les organismes HLM peuvent exercer des compétences d'aménagement, d'accession et de prestations de services."
