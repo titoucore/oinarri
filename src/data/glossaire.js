@@ -304,4 +304,141 @@ export const termes = [
       "Vente d'un logement qui n'est pas encore terminé. Le prix se paie par étapes selon l'avancement du chantier, avec des plafonds cumulés : 35 % aux fondations, 70 % hors d'eau, 95 % à l'achèvement.",
     aussi: ["Vente en l'état futur d'achèvement", 'Vente sur plan'],
   },
+  {
+    terme: 'Structure porteuse',
+    categorie: 'Construction',
+    definition:
+      "Le squelette du bâtiment : l'ensemble des éléments qui portent les charges et assurent la stabilité (fondations, murs ou poteaux, planchers, charpente).",
+    aussi: ['Structure'],
+  },
+  {
+    terme: 'Descente de charges',
+    categorie: 'Construction',
+    definition:
+      "Le chemin que suivent les charges, de la toiture jusqu'au sol : toiture, planchers, murs ou poteaux, fondations, puis sol. Elle sert à dimensionner chaque élément.",
+    aussi: ['Charges', 'Chemin des charges'],
+  },
+  {
+    terme: 'Contreventement',
+    categorie: 'Construction',
+    definition:
+      "Ensemble des éléments (murs pleins, voiles, croix de renfort…) qui empêchent le bâtiment de se déformer ou de bouger sous les efforts horizontaux, surtout le vent.",
+  },
+  {
+    terme: 'Mur porteur',
+    categorie: 'Construction',
+    definition:
+      "Mur qui porte les planchers ou la toiture et fait partie du chemin des charges. On ne le perce ni ne le supprime sans étude.",
+    aussi: ['Murs porteurs'],
+  },
+  {
+    terme: 'Poteau',
+    categorie: 'Construction',
+    definition: "Élément vertical d'une ossature qui porte les charges jusqu'aux fondations.",
+    aussi: ['Poteaux'],
+  },
+  {
+    terme: 'Poutre',
+    categorie: 'Construction',
+    definition:
+      "Élément horizontal qui reprend les charges d'un plancher ou d'une toiture et les transmet aux poteaux ou aux murs.",
+    aussi: ['Poutres'],
+  },
+  {
+    terme: 'Plancher',
+    categorie: 'Construction',
+    definition:
+      "Élément horizontal qui sépare deux niveaux et porte les occupants et le mobilier. Il peut être en béton, en bois ou mixte.",
+    aussi: ['Planchers'],
+  },
+  {
+    terme: 'Béton armé',
+    categorie: 'Matériaux',
+    definition:
+      "Béton dans lequel on noie des armatures en acier. Le béton résiste bien à la compression, l'acier reprend les efforts de traction.",
+  },
+  {
+    terme: 'Armatures',
+    categorie: 'Matériaux',
+    definition:
+      "Barres et treillis en acier noyés dans le béton pour reprendre les efforts de traction.",
+    aussi: ['Armature', 'Ferraillage'],
+  },
+  {
+    terme: 'Béton banché',
+    categorie: 'Construction',
+    definition:
+      "Murs en béton coulés sur place entre deux coffrages (les banches). On parle aussi de voiles en béton.",
+    aussi: ['Banché', 'Banches'],
+  },
+  {
+    terme: 'Voile',
+    categorie: 'Construction',
+    definition:
+      "Mur plein, en général en béton armé, qui porte les planchers et contribue au contreventement.",
+    aussi: ['Voiles', 'Voile en béton'],
+  },
+  {
+    terme: 'Préfabrication',
+    categorie: 'Construction',
+    definition:
+      "Fabrication d'éléments (murs, planchers, panneaux) en usine, puis assemblage sur le chantier. Elle réduit le temps passé sur place.",
+    aussi: ['Préfabriqué'],
+  },
+  {
+    terme: 'Maçonnerie',
+    categorie: 'Construction',
+    definition:
+      "Ouvrage réalisé en assemblant des petits éléments (blocs de béton, briques de terre cuite, pierre) au mortier.",
+    aussi: ['Maçonnerie de petits éléments'],
+  },
+  {
+    terme: 'Parpaing',
+    categorie: 'Matériaux',
+    definition: "Nom courant d'un bloc de béton utilisé en maçonnerie.",
+    aussi: ['Bloc béton', 'Agglo'],
+  },
+  {
+    terme: 'Ossature bois',
+    categorie: 'Construction',
+    definition:
+      "Mode constructif où des montants en bois rapprochés, contreventés par des panneaux, forment des murs porteurs légers. Il est encadré par le NF DTU 31.2.",
+    aussi: ['Construction bois', 'Ossature en bois'],
+  },
+  {
+    terme: 'Construction métallique',
+    categorie: 'Construction',
+    definition:
+      "Structure en acier faite de poteaux et de poutres assemblés. Elle permet de grandes portées et demande une protection contre le feu et la corrosion.",
+    aussi: ['Charpente métallique', 'Structure acier'],
+  },
+  {
+    terme: 'Structure mixte',
+    categorie: 'Construction',
+    definition:
+      "Structure où deux matériaux travaillent ensemble dans un même élément, par exemple l'acier et le béton. Par extension, bâtiment qui combine plusieurs familles de structure.",
+    aussi: ['Mixte', 'Plancher mixte'],
+  },
+  {
+    terme: 'Eurocodes',
+    categorie: 'Réglementation',
+    definition:
+      "Normes européennes de calcul des structures (EN 1990 à EN 1999), déclinées en France par des annexes nationales. Elles disent comment calculer, pas comment exécuter.",
+    aussi: ['Eurocode', 'EN 1990', 'EN 1992', 'EN 1993', 'EN 1995', 'EN 1996'],
+  },
+  {
+    terme: 'DTU',
+    developpe: 'Document Technique Unifié',
+    categorie: 'Réglementation',
+    definition:
+      "Document de référence qui précise comment exécuter un type d'ouvrage dans les règles de l'art (par exemple le NF DTU 31.2 pour l'ossature bois). Ce n'est pas une loi : les marchés le reprennent comme référence contractuelle.",
+    aussi: ['NF DTU', 'DTU 20.1', 'DTU 21', 'DTU 31.2'],
+  },
+  {
+    terme: "Familles d'habitation",
+    categorie: 'Réglementation',
+    definition:
+      "Classement en quatre familles des bâtiments d'habitation pour la sécurité incendie (arrêté du 31 janvier 1986), selon leur hauteur et leur forme. Au-delà de 50 m, c'est le régime des immeubles de grande hauteur.",
+    aussi: ['1re famille', '2e famille', '3e famille', '4e famille', 'IGH'],
+  },
 ];
