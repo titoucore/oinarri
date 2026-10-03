@@ -13,6 +13,7 @@ import { gererNotes } from './api-notes.js';
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
 import { gererRevisions } from './api-revisions.js';
+import { gererScenarios } from './api-scenarios.js';
 import { gererTermes } from './api-termes.js';
 import { reponseIcone } from './lib/icones.js';
 import { lireSession } from './lib/sessions.js';
@@ -27,6 +28,7 @@ const ROUTES_UTILISATEUR = new Map([
   ['/api/progression', gererProgression],
   ['/api/quiz', gererQuiz],
   ['/api/revisions', gererRevisions],
+  ['/api/scenarios', gererScenarios],
   ['/api/termes', gererTermes],
 ]);
 
