@@ -1,0 +1,176 @@
+---
+import Base from '../layouts/Base.astro';
+import { termes } from '../data/glossaire.js';
+import { identifiant, normaliser } from '../lib/texte.js';
+
+// Chaque terme reçoit son ancre et un texte de recherche (terme, sigle développé, variantes, définition).
+const liste = termes
+  .map((t) => ({
+    ...t,
+    id: identifiant(t.terme),
+    recherche: normaliser(
+      [t.terme, t.developpe, ...(t.aussi ?? []), t.definition].filter(Boolean).join(' '),
+    ),
+  }))
+  .sort((a, b) => a.terme.localeCompare(b.terme, 'fr', { sensitivity: 'base' }));
+
+// Regroupement par lettre initiale (sans accent) ; les chiffres vont sous « # ».
+const groupesParLettre = new Map();
+for (const terme of liste) {
+  const initiale = normaliser(terme.terme).charAt(0).toUpperCase();
+  const lettre = /[A-Z]/.test(initiale) ? initiale : '#';
+  if (!groupesParLettre.has(lettre)) groupesParLettre.set(lettre, []);
+  groupesParLettre.get(lettre).push(terme);
+}
+const groupes = [...groupesParLettre.entries()];
+---
+
+<Base
+  title="Glossaire — Oinarri"
+  description="Les mots du bâtiment, de la promotion immobilière et du logement social, expliqués simplement."
+>
+  <a class="retour" href="/">Accueil</a>
+  <h1>Glossaire</h1>
+  <p class="lead">
+    Les mots du bâtiment, de la promotion immobilière et du logement social, expliqués simplement.
+  </p>
+
+  <div class="glossaire">
+    <label class="g-label" for="g-recherche">Rechercher un terme</label>
+    <input
+      id="g-recherche"
+      type="search"
+      placeholder="Ex. maître d'ouvrage, DO, G2…"
+      autocomplete="off"
+      autocapitalize="none"
+    />
+
+    <nav class="g-lettres" aria-label="Aller à une lettre">
+      {
+        groupes.map(([lettre]) => (
+          <a href={`#lettre-${lettre === '#' ? 'chiffres' : lettre}`}>{lettre}</a>
+        ))
+      }
+    </nav>
+
+    <p class="g-vide" id="g-vide" hidden>Aucun terme ne correspond à ta recherche.</p>
+
+    {
+      groupes.map(([lettre, items]) => (
+        <section class="g-groupe" id={`lettre-${lettre === '#' ? 'chiffres' : lettre}`}>
+          <h2>{lettre}</h2>
+          {items.map((t) => (
+            <article class="g-terme" id={t.id} data-recherche={t.recherche}>
+              <h3>
+                {t.terme}
+                {t.developpe && <span class="g-developpe"> ({t.developpe})</span>}
+              </h3>
+              <p class="g-categorie">{t.categorie}</p>
+              <p class="g-definition">{t.definition}</p>
+            </article>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style is:global>
+  .glossaire [hidden] {
+    display: none !important;
+  }
+
+  .glossaire .g-label {
+    display: block;
+    margin: 0 0 0.35rem;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .glossaire input[type='search'] {
+    width: 100%;
+    max-width: 28rem;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+
+  .glossaire .g-lettres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 1.25rem 0 0.5rem;
+  }
+
+  .glossaire .g-lettres a {
+    display: inline-block;
+    min-width: 2rem;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+  }
+
+  .glossaire .g-lettres a[data-inactif='true'] {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .glossaire .g-vide {
+    margin: 1.5rem 0;
+    color: var(--ink-600);
+  }
+
+  .glossaire .g-groupe h2 {
+    margin: 2rem 0 0.75rem;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    border-top: 1px solid var(--ink-100);
+  }
+
+  .glossaire .g-terme {
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    scroll-margin-top: 1rem;
+  }
+
+  /* Le terme atteint par un lien (ancre) est mis en évidence. */
+  .glossaire .g-terme:target {
+    border-color: var(--ink-900);
+    background: var(--ink-50);
+  }
+
+  .glossaire .g-terme h3 {
+    margin: 0 0 0.15rem;
+    font-size: 1.05rem;
+  }
+
+  .glossaire .g-developpe {
+    font-weight: 400;
+    color: var(--ink-600);
+  }
+
+  .glossaire .g-categorie {
+    margin: 0 0 0.4rem;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .glossaire .g-definition {
+    margin: 0;
+    line-height: 1.65;
+  }
+</style>
+
+<script>
+  import '../scripts/glossaire.js';
+</script>
