@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 6 de Nouvelles méthodes de construction : Règles professionnelles et assurabilité.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que faut-il, selon l'AQC, pour qu'un procédé soit une « technique courante » aux yeux des assureurs ?"
+    choix:
+      - "Qu'il soit utilisé depuis plus de dix ans"
+      - "Un référentiel produit, un référentiel de mise en œuvre et un usage dans le domaine d'emploi"
+      - "Un label délivré par l'État"
+      - "L'accord écrit du maître d'ouvrage"
+    reponse: 1
+    explication: "On doit disposer simultanément d'un référentiel produit (normes, ETE), d'un référentiel de mise en œuvre (NF DTU, règles professionnelles acceptées par la C2P, Avis Technique en liste verte, ATEx favorable…) et d'un usage dans le domaine d'emploi prévu."
+
+  - type: vf
+    affirmation: "Une technique non courante ne peut pas être assurée."
+    reponse: false
+    explication: "Une technique non courante reste assurable après analyse de risque par l'assureur. Elle doit être déclarée, et l'assureur peut demander une attestation spécifique de chantier, voire une surprime."
+
+  - type: qcm
+    question: "Quelle instance examine les règles professionnelles et tient la liste verte ?"
+    choix:
+      - "Le CSTB seul"
+      - "La C2P, commission de l'AQC"
+      - "Le ministère du Logement"
+      - "Le contrôleur technique"
+    reponse: 1
+    explication: "La C2P (Commission Prévention Produits mis en œuvre), au sein de l'Agence Qualité Construction, examine et accepte les règles professionnelles et classe en liste verte les Avis Techniques et DTA sans risque aggravé. Elle réunit entreprises, fabricants, assureurs, CSTB, experts et contrôleurs techniques."
+
+  - type: ouverte
+    question: "Un chantier prévoit une technique non courante. Que doivent faire le maître d'ouvrage et son maître d'œuvre ?"
+    modele: "Vérifier que les entreprises vont bien mettre en œuvre des techniques courantes. Si ce n'est pas le cas, le maître d'ouvrage doit le déclarer à son assureur dommages-ouvrage, qui fixe les conditions d'acceptation. En cas de réponse positive, l'assureur exige une attestation spécifique de chantier garantissant la responsabilité décennale de l'entreprise concernée, et les entreprises déclarent aussi la technique à leur assureur. Une surprime est possible."
+
+approfondir:
+  - type: qcm
+    question: "Les règles professionnelles de la construction en paille (3e édition, RFCP) sont-elles acceptées par la C2P ?"
+    choix:
+      - "Non, la paille relève toujours de la technique non courante"
+      - "Oui, depuis le 1er juillet 2018 : technique courante"
+      - "Seulement pour les maisons individuelles"
+      - "Seulement avec une ATEx"
+    reponse: 1
+    explication: "La liste des règles professionnelles de la C2P (mise à jour en janvier 2026) indique « Construction en paille, remplissage isolant et support d'enduit », 3e édition, acceptée le 1er juillet 2018. Reste à respecter le domaine d'emploi défini par ces règles."
+
+  - type: qcm
+    question: "À quoi correspond une ATEx « de cas B » ?"
+    choix:
+      - "Plusieurs chantiers, à la demande de l'industriel"
+      - "Un chantier précis"
+      - "La reprise d'une ATEx sur un autre chantier"
+      - "Un Avis Technique de longue durée"
+    reponse: 1
+    explication: "Cas A : plusieurs chantiers, demandée en général par l'industriel. Cas B : un chantier précis. Cas C : mise en œuvre sur un autre chantier d'un procédé ayant déjà une ATEx de cas B favorable, demandée par le titulaire de celle-ci."
+
+  - type: vf
+    affirmation: "Un produit qui possède un Avis Technique en liste verte est en technique courante quel que soit son usage."
+    reponse: false
+    explication: "Disposer d'un Avis Technique ne suffit pas : encore faut-il utiliser le produit selon son domaine d'emploi (support, famille de bâtiment, localisation, hauteur…). Hors de ce domaine, on retombe en technique non courante."
+
+  - type: qcm
+    question: "Les six guides de bonnes pratiques de la terre crue figurent-ils dans la liste des règles professionnelles acceptées par la C2P (page AQC de janvier 2026) ?"
+    choix:
+      - "Oui, tous les six"
+      - "Non : pour la terre crue, la liste cite les enduits (2012) et les blocs de terre comprimée de Mayotte"
+      - "Seulement le guide du pisé"
+      - "La liste ne mentionne aucune technique en terre"
+    reponse: 1
+    explication: "La page consultée cite, avec suivi du retour d'expérience, « Mise en œuvre des enduits sur supports composés de terre crue » (2012) et « Blocs de Terre Comprimée Mayotte » (2022). Les six guides n'y figurent pas. D'autres listes de l'AQC (recommandations professionnelles de grands programmes) n'ont pas été vérifiées ici."
+
+expert:
+  - type: vf
+    affirmation: "Toutes les évaluations techniques doivent être délivrées avant la passation du marché, y compris l'ATEx favorable."
+    reponse: false
+    explication: "Selon l'AQC, les évaluations doivent être délivrées au plus tard avant la passation du marché, sauf l'ATEx favorable, qui peut l'être au plus tard au jour de la réception de l'ouvrage. Il est pourtant conseillé de la lancer le plus en amont possible."
+
+  - type: ouverte
+    question: "L'architecte d'Arbola propose des murs porteurs en pisé sur quatre niveaux. Quelle démarche suit-on pour l'assurabilité ?"
+    modele: "Vérifier d'abord s'il existe un référentiel couvrant ce domaine d'emploi (hauteur, famille de bâtiment, localisation) : pas de règles professionnelles acceptées par la C2P pour le pisé porteur repérées dans la liste consultée. Sans référentiel, la technique est non courante : le maître d'ouvrage la déclare à l'assureur dommages-ouvrage, les entreprises à leur assureur, avec attestation spécifique de chantier. Il faut préparer le dossier (essais, feu, séisme, retours d'expérience), envisager une ATEx de cas B pour ce chantier précis, associer le contrôleur technique et anticiper délai et surprime."
