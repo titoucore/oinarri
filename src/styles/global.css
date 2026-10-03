@@ -68,6 +68,60 @@ a { color: inherit; }
   }
 }
 
+/* --- En-tête et logo --- */
+
+.entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  width: 42px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.logo-stroke-1 { stroke: var(--ink-900); }
+.logo-stroke-2 { stroke: var(--ink-600); }
+.logo-stroke-3 { stroke: var(--ink-200); }
+
+.logo-text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.theme-toggle {
+  border: 1px solid var(--ink-200);
+  background: none;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-600);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.theme-toggle svg { width: 17px; height: 17px; }
+
+.icon-moon { display: none; }
+:root[data-theme="dark"] .icon-sun { display: none; }
+:root[data-theme="dark"] .icon-moon { display: block; }
+
 /* --- Bande de couleur en haut de page (accueil, listes de chapitres, cours) --- */
 
 /* Sur la bande, les couleurs d'encre sont inversées : texte clair sur aplat foncé.
