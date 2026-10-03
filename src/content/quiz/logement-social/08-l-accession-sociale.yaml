@@ -1,0 +1,70 @@
+# Mini-quiz du chapitre 8 de Bailleurs sociaux et logement social : L'accession sociale.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Dans un bail réel solidaire, que possède l'acquéreur ?"
+    choix:
+      - "Le logement et le terrain"
+      - "Le logement seulement, le terrain reste à l'organisme de foncier solidaire"
+      - "Le terrain seulement"
+      - "Rien, il est locataire"
+    reponse: 1
+    explication: "L'acquéreur détient des droits réels sur le bâti ; l'OFS garde la propriété du terrain et perçoit une redevance."
+
+  - type: qcm
+    question: "Quelle est la durée d'un bail réel solidaire ?"
+    choix:
+      - "De 3 à 9 ans"
+      - "De 18 à 99 ans"
+      - "Exactement 30 ans"
+      - "Elle est illimitée"
+    reponse: 1
+    explication: "Le bail dure de 18 à 99 ans et sa durée est rechargée à chaque revente ou transmission."
+
+  - type: vf
+    affirmation: "Dans le PSLA, le ménage occupe d'abord le logement en location puis peut lever l'option d'achat."
+    reponse: true
+    explication: "La location-accession se fait en deux temps : une phase locative avec une redevance, puis la levée d'option qui rend propriétaire."
+
+  - type: ouverte
+    question: "Qu'est-ce qui distingue le PSLA, le BRS et la vente HLM ?"
+    modele: "Le PSLA est un achat en deux temps (louer puis lever l'option) pour un logement neuf. Le BRS est l'achat du logement sans le terrain, avec une redevance et une revente encadrée. La vente HLM est la vente d'un logement du parc existant de l'organisme, avec priorité au locataire en place."
+
+approfondir:
+  - type: qcm
+    question: "Pendant combien de temps la garantie de rachat du PSLA peut-elle être mise en jeu après la levée d'option ?"
+    choix:
+      - "1 an"
+      - "5 ans"
+      - "15 ans"
+      - "30 ans"
+    reponse: 2
+    explication: "Selon l'ANIL, elle peut être mise en jeu dans les quinze ans à compter de la levée de l'option, aux conditions prévues par la loi."
+
+  - type: vf
+    affirmation: "Un logement HLM occupé ne peut être vendu qu'à son locataire, s'il l'occupe depuis au moins deux ans."
+    reponse: true
+    explication: "Avec des exceptions possibles, par exemple au conjoint ou aux descendants et ascendants sur demande du locataire."
+
+  - type: qcm
+    question: "Depuis combien de temps un logement doit-il être construit ou acquis par l'organisme pour pouvoir être vendu (cas général) ?"
+    choix:
+      - "Plus de 2 ans"
+      - "Plus de 10 ans"
+      - "Plus de 30 ans"
+      - "Aucune condition d'âge"
+    reponse: 1
+    explication: "L'article L443-7 du CCH vise les logements construits ou acquis depuis plus de dix ans (quinze ans pour les logements PLS)."
+
+expert:
+  - type: vf
+    affirmation: "Les sources divergent sur la décote d'un logement en BRS par rapport au marché libre."
+    reponse: true
+    explication: "Des acteurs annoncent 20 à 40 %, d'autres 30 à 50 %. La décote dépend de la zone, de l'OFS et du montage : il faut la vérifier opération par opération."
+
+  - type: ouverte
+    question: "Pourquoi faut-il vérifier la règle de fixation du prix pour une vente HLM en 2026 ?"
+    modele: "Parce que la loi ELAN de 2018 a laissé le prix libre, sans évaluation obligatoire du service des Domaines, mais un décret de 2026 est évoqué dans la presse juridique comme ayant modifié le cadre. Je n'ai pas pu le vérifier sur le texte : il faut lire les articles L443-7 et suivants du CCH dans leur version actuelle."
