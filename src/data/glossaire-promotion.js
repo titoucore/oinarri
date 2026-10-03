@@ -516,4 +516,50 @@ export const termes = [
       "Écart entre le logement livré et ce que prévoyait le contrat : surface, matériaux, équipements.",
     aussi: ['Non-conformité', 'Défauts de conformité'],
   },
+  {
+    terme: 'Accession sociale',
+    categorie: 'Logement social',
+    definition:
+      "Achat de sa résidence principale neuve à un prix inférieur à celui du marché libre. Les programmes sont réalisés par des organismes HLM ou certaines de leurs filiales et vendus à des ménages sous conditions de ressources.",
+    aussi: ['Accession sociale à la propriété'],
+  },
+  {
+    terme: 'Achèvement',
+    categorie: 'Juridique',
+    definition:
+      "Stade où un immeuble vendu sur plan est réputé achevé : les ouvrages sont exécutés et les éléments d'équipement indispensables à son utilisation, conformément à sa destination, sont installés (article R261-1). Les défauts de conformité ne sont pas pris en compte, et le constat de l'achèvement ne vaut pas reconnaissance de conformité.",
+    aussi: ['Immeuble achevé'],
+  },
+  {
+    terme: 'Procès-verbal de livraison',
+    categorie: 'Juridique',
+    definition:
+      "Document signé à la remise des clés, après la visite du logement, qui consigne les défauts de conformité et les vices apparents relevés par l'acquéreur. Il ne se confond pas avec le procès-verbal de réception des travaux.",
+    aussi: ['PV de livraison'],
+  },
+  {
+    terme: 'Garantie de rachat',
+    categorie: 'Logement social',
+    definition:
+      "Engagement de l'organisme HLM qui vend en accession sociale de racheter le logement de l'acquéreur en résidence principale dans des conditions définies au contrat. Sa durée varie selon les sources (souvent 15 ans).",
+  },
+  {
+    terme: 'Garantie de relogement',
+    categorie: 'Logement social',
+    definition:
+      "Engagement de l'organisme HLM qui vend en accession sociale de reloger l'acquéreur en difficulté, par exemple dans son patrimoine locatif, dans des conditions définies au contrat.",
+  },
+  {
+    terme: 'Assurance revente',
+    categorie: 'Logement social',
+    definition:
+      "Assurance que l'organisme HLM fait souscrire à l'acquéreur en résidence principale, pour l'indemniser de la moins-value en cas de revente à perte pendant une durée définie au contrat.",
+  },
+  {
+    terme: 'Dossier des ouvrages exécutés',
+    categorie: 'Construction',
+    definition:
+      "Dossier remis à la fin du chantier, avec les plans conformes à l'exécution et les notices des équipements installés. Il sert à l'entretien et aux interventions futures.",
+    aussi: ['DOE'],
+  },
 ];
