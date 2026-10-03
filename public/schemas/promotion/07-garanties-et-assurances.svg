@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img">
+<title>Après la réception : trois garanties et deux assurances</title>
+<desc>Une frise de dix ans à partir de la réception : la garantie de parfait achèvement dure un an, la garantie biennale de bon fonctionnement deux ans, la garantie décennale dix ans. Dessous, deux assurances : la responsabilité décennale, souscrite par chaque constructeur, et la dommages-ouvrage, souscrite par le maître d'ouvrage ou le vendeur avant l'ouverture du chantier.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="430" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="40" y="30" fill="#444441">Après la réception : trois garanties, deux assurances</text>
+
+<path d="M60 64 H620" stroke="#B4B2A9" stroke-width="1.5"/>
+<path d="M60 58 V70 M116 58 V70 M172 58 V70 M620 58 V70" stroke="#5F5E5A" stroke-width="1.5"/>
+<text class="ts" x="60" y="52" text-anchor="middle" fill="#444441">Réception</text>
+<text class="ts" x="116" y="52" text-anchor="middle" fill="#444441">1 an</text>
+<text class="ts" x="172" y="52" text-anchor="middle" fill="#444441">2 ans</text>
+<text class="ts" x="620" y="52" text-anchor="end" fill="#444441">10 ans</text>
+
+<rect x="60" y="84" width="56" height="32" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="ts" x="124" y="100" dominant-baseline="central" fill="#712B13">Parfait achèvement · tous les désordres signalés</text>
+
+<rect x="60" y="124" width="112" height="32" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="ts" x="180" y="140" dominant-baseline="central" fill="#444441">Bon fonctionnement · équipements dissociables</text>
+
+<rect x="60" y="164" width="560" height="32" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="72" y="180" dominant-baseline="central" fill="#085041">Décennale · solidité de l'ouvrage ou impropriété à sa destination</text>
+
+<text class="th" x="40" y="232" fill="#444441">Deux assurances à ne pas confondre</text>
+
+<rect x="40" y="244" width="290" height="116" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="56" y="266" fill="#444441">Assurance décennale</text>
+<text class="ts" x="56" y="292" fill="#444441">Souscrite par chaque constructeur</text>
+<text class="ts" x="56" y="312" fill="#444441">Couvre sa garantie décennale envers</text>
+<text class="ts" x="56" y="332" fill="#444441">le maître d'ouvrage et les acquéreurs</text>
+
+<rect x="350" y="244" width="290" height="116" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="366" y="266" fill="#085041">Assurance dommages-ouvrage</text>
+<text class="ts" x="366" y="288" fill="#085041">Souscrite par le maître d'ouvrage ou le</text>
+<text class="ts" x="366" y="306" fill="#085041">vendeur, avant l'ouverture du chantier</text>
+<text class="ts" x="366" y="324" fill="#085041">Préfinance les réparations décennales,</text>
+<text class="ts" x="366" y="342" fill="#085041">sans attendre de connaître le responsable</text>
+
+<text class="ts" x="40" y="388" fill="#5F5E5A">La dommages-ouvrage ne couvre pas l'achèvement des travaux (chapitres 5 et 6).</text>
+<text class="ts" x="40" y="408" fill="#5F5E5A">Le vendeur non constructeur ajoute une assurance CNR ; la tous risques chantier est facultative.</text>
+</svg>
