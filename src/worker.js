@@ -11,6 +11,7 @@ import { gererCompte } from './api-compte.js';
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
 import { gererRevisions } from './api-revisions.js';
+import { reponseIcone } from './lib/icones.js';
 import { lireSession } from './lib/sessions.js';
 
 // Routes de données : elles exigent une session. Chemin -> gestionnaire.
@@ -65,6 +66,10 @@ function avecEntetes(reponse) {
 
 async function router(request, env, ctx) {
   const url = new URL(request.url);
+
+  // Icônes de l'application : publiques (iOS les télécharge sans session).
+  const icone = reponseIcone(url.pathname, request.method);
+  if (icone) return icone;
 
   if (url.pathname === '/api/sante') {
     return reponseJson({ app: 'oinarri', ok: true, date: new Date().toISOString() });
