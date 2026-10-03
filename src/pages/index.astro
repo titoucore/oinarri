@@ -27,7 +27,7 @@ const chapitresDisponibles = parcours.flatMap((p) =>
 const idsCartes = (await listerCartes()).map((c) => c.carte);
 ---
 
-<Base title="Oinarri — comprendre le bâtiment">
+<Base title="Oinarri — comprendre le bâtiment" large>
   <section id="accueil">
     <!-- Le contenu reste invisible tant que les données personnelles n'ont pas été reçues,
          puis apparaît d'un coup. Filet de sécurité : au bout de 2,5 s, on l'affiche quand même. -->
@@ -129,6 +129,9 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     font-size: 15px;
     color: var(--ink-600);
   }
+  .form-prenom {
+    max-width: 34rem;
+  }
   .form-prenom label {
     display: block;
     font-size: 14px;
@@ -208,8 +211,9 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
 
   .parcours {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
     gap: 10px;
-    max-width: 34rem;
+    max-width: 48rem;
     margin: 0 0 1.5rem;
   }
   .parcours-lien {
