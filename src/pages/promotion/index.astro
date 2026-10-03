@@ -3,13 +3,16 @@ import Base from '../../layouts/Base.astro';
 import { chapitres } from '../../data/promotion.js';
 ---
 
-<Base title="Promotion immobilière — Oinarri" large>
-  <a class="retour" href="/">Accueil</a>
-  <h1>La promotion immobilière</h1>
-  <p class="lead">
-    Comment naît une opération, du terrain à la livraison. La Résidence Arbola sert de fil rouge,
-    avec l'organisme dans le rôle de maître d'ouvrage et de vendeur.
-  </p>
+<Base title="Promotion immobilière — Oinarri" large bande etiquette={['PROMO-', 'TION']}>
+  <Fragment slot="bande">
+    <a class="retour" href="/">Accueil</a>
+    <p class="chiffre-evide" aria-hidden="true">02</p>
+    <h1>La promotion immobilière</h1>
+    <p class="lead">
+      Comment naît une opération, du terrain à la livraison. La Résidence Arbola sert de fil rouge,
+      avec l'organisme dans le rôle de maître d'ouvrage et de vendeur.
+    </p>
+  </Fragment>
 
   <ol class="chapitres">
     {
