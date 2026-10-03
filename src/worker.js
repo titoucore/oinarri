@@ -8,6 +8,7 @@
 import { gererAccueil } from './api-accueil.js';
 import { gererAuth } from './api-auth.js';
 import { gererCompte } from './api-compte.js';
+import { gererNotes } from './api-notes.js';
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
 import { gererRevisions } from './api-revisions.js';
@@ -19,6 +20,7 @@ const ROUTES_UTILISATEUR = new Map([
   ['/api/accueil', gererAccueil],
   ['/api/compte', gererCompte],
   ['/api/compte/export', gererCompte],
+  ['/api/notes', gererNotes],
   ['/api/progression', gererProgression],
   ['/api/quiz', gererQuiz],
   ['/api/revisions', gererRevisions],
