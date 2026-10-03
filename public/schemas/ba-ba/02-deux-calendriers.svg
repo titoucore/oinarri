@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 372" role="img">
+<title>Deux calendriers en parallèle : le droit et le chantier</title>
+<desc>Avant le chantier : certificat d'urbanisme, permis de construire, recours des tiers. Au début du chantier : déclaration d'ouverture de chantier. À la fin : déclaration d'achèvement et contrôle de la mairie. Après la réception, les garanties de 1, 2 et 10 ans, représentées à l'échelle.</desc>
+<style>
+text{font-family:'Space Grotesk',system-ui,sans-serif}
+.th{font-size:14px;font-weight:500}
+.ts{font-size:12px}
+.teal rect{fill:#E1F5EE;stroke:#0F6E56;stroke-width:.5}.teal .th{fill:#085041}.teal .ts{fill:#0F6E56}
+.coral rect{fill:#FAECE7;stroke:#993C1D;stroke-width:.5}.coral .th{fill:#712B13}.coral .ts{fill:#993C1D}
+.gray rect{fill:#F1EFE8;stroke:#5F5E5A;stroke-width:.5}.gray .th{fill:#444441}.gray .ts{fill:#5F5E5A}
+.lab{font-size:14px;font-weight:500}
+.note{font-size:12px;fill:#5F5E5A}
+</style>
+<rect width="680" height="372" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="lab" x="40" y="24" fill="#085041">Droit et administration</text>
+<g class="teal"><rect x="40" y="34" width="88" height="50" rx="8"/><text class="th" x="46" y="52" dominant-baseline="central">Certificat</text><text class="ts" x="46" y="70" dominant-baseline="central">d'urbanisme</text></g>
+<g class="teal"><rect x="134" y="34" width="90" height="50" rx="8"/><text class="th" x="140" y="52" dominant-baseline="central">Permis</text><text class="ts" x="140" y="70" dominant-baseline="central">2 à 3 mois</text></g>
+<g class="teal"><rect x="230" y="34" width="116" height="50" rx="8"/><text class="th" x="236" y="52" dominant-baseline="central">Recours</text><text class="ts" x="236" y="70" dominant-baseline="central">des tiers, 2 mois</text></g>
+<g class="teal"><rect x="352" y="34" width="74" height="50" rx="8"/><text class="th" x="358" y="52" dominant-baseline="central">DOC</text><text class="ts" x="358" y="70" dominant-baseline="central">ouverture</text></g>
+<g class="teal"><rect x="432" y="34" width="90" height="50" rx="8"/><text class="th" x="438" y="52" dominant-baseline="central">DAACT</text><text class="ts" x="438" y="70" dominant-baseline="central">achèvement</text></g>
+<g class="teal"><rect x="528" y="34" width="112" height="50" rx="8"/><text class="th" x="534" y="52" dominant-baseline="central">Contrôle</text><text class="ts" x="534" y="70" dominant-baseline="central">mairie : 3 mois</text></g>
+<text class="lab" x="40" y="108" fill="#444441">Ce qui se construit</text>
+<g class="gray"><rect x="40" y="118" width="306" height="50" rx="8"/><text class="th" x="46" y="136" dominant-baseline="central">Études et choix des entreprises</text><text class="ts" x="46" y="154" dominant-baseline="central">Sol, plans, marchés : rien n'est construit</text></g>
+<g class="coral"><rect x="352" y="118" width="170" height="50" rx="8"/><text class="th" x="358" y="136" dominant-baseline="central">Chantier</text><text class="ts" x="358" y="154" dominant-baseline="central">voir le schéma suivant</text></g>
+<g class="gray"><rect x="528" y="118" width="112" height="50" rx="8"/><text class="th" x="534" y="136" dominant-baseline="central">Réception</text><text class="ts" x="534" y="154" dominant-baseline="central">le MOA accepte</text></g>
+<text class="note" x="40" y="186">Partie haute : l'ordre des étapes, pas leur durée.</text>
+<line x1="40" y1="200" x2="640" y2="200" stroke="#D3D1C7"/>
+<text class="lab" x="40" y="222" fill="#444441">Après la réception : durée des garanties, à l'échelle</text>
+<line x1="40" y1="232" x2="40" y2="344" stroke="#5F5E5A" stroke-dasharray="4 3"/>
+<g class="gray"><rect x="40" y="240" width="50" height="26" rx="6"/></g>
+<text class="ts" x="98" y="253" dominant-baseline="central" fill="#444441">Parfait achèvement : 1 an</text>
+<g class="gray"><rect x="40" y="274" width="100" height="26" rx="6"/></g>
+<text class="ts" x="148" y="287" dominant-baseline="central" fill="#444441">Biennale (équipements) : 2 ans</text>
+<g class="gray"><rect x="40" y="308" width="500" height="26" rx="6"/></g>
+<text class="ts" x="50" y="321" dominant-baseline="central" fill="#444441">Décennale : 10 ans</text>
+<text class="note" x="40" y="358">La barre de 10 ans est dix fois plus longue que celle de 1 an.</text>
+</svg>
