@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>L'humidité dans une paroi biosourcée</title>
+<desc>La vapeur d'eau traverse des couches perméables de l'intérieur vers l'extérieur. Une couche étanche côté froid ou de l'eau liquide font monter l'humidité dans l'isolant, dont la conductivité thermique augmente.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="ts" x="40" y="38" fill="#5F5E5A">Intérieur : chaud, humide</text>
+<text class="ts" x="640" y="38" text-anchor="end" fill="#5F5E5A">Extérieur : froid</text>
+<rect x="40" y="56" width="120" height="110" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="100" y="104" text-anchor="middle" dominant-baseline="central" fill="#444441">Finition</text>
+<text class="ts" x="100" y="126" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">perméable</text>
+<rect x="160" y="56" width="80" height="110" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="200" y="104" text-anchor="middle" dominant-baseline="central" fill="#712B13">Frein-</text>
+<text class="th" x="200" y="124" text-anchor="middle" dominant-baseline="central" fill="#712B13">vapeur</text>
+<rect x="240" y="56" width="220" height="110" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="350" y="104" text-anchor="middle" dominant-baseline="central" fill="#085041">Isolant biosourcé</text>
+<text class="ts" x="350" y="126" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">hygroscopique : il capte et rend</text>
+<rect x="460" y="56" width="90" height="110" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="505" y="104" text-anchor="middle" dominant-baseline="central" fill="#444441">Pare-pluie</text>
+<text class="ts" x="505" y="126" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">perméable</text>
+<rect x="550" y="56" width="90" height="110" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="595" y="104" text-anchor="middle" dominant-baseline="central" fill="#444441">Bardage</text>
+<text class="ts" x="595" y="126" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">ventilé</text>
+<path d="M60 196 H606" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="606,190 620,196 606,202" fill="#0F6E56"/>
+<text class="ts" x="340" y="218" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">La vapeur d'eau sort vers l'extérieur (cas courant en hiver)</text>
+<rect x="40" y="240" width="600" height="70" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="260" dominant-baseline="central" fill="#712B13">Le piège</text>
+<text class="ts" x="60" y="282" dominant-baseline="central" fill="#993C1D">Une couche étanche côté froid, ou de l'eau liquide qui entre : l'humidité s'accumule,</text>
+<text class="ts" x="60" y="299" dominant-baseline="central" fill="#993C1D">l'isolant isole moins bien (λ plus élevé) et le mur peut s'abîmer.</text>
+</svg>
