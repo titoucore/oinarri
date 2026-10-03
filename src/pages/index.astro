@@ -2,12 +2,14 @@
 import Base from '../layouts/Base.astro';
 import * as baba from '../data/ba-ba.js';
 import * as promotion from '../data/promotion.js';
+import * as logementSocial from '../data/logement-social.js';
 import { listerCartes } from '../lib/cartes.js';
 
 // Les parcours affichés sur l'accueil, dans l'ordre.
 const parcours = [
   { titre: 'B.A.-BA du bâtiment', href: '/ba-ba/', plan: baba },
   { titre: 'Promotion immobilière', href: '/promotion/', plan: promotion },
+  { titre: 'Bailleurs sociaux et logement social', href: '/logement-social/', plan: logementSocial },
 ].map((p) => {
   const dispo = p.plan.disponibles.length;
   return {
