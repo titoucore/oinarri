@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import { chapitres } from '../../data/promotion.js';
+---
+
+<Base title="Promotion immobilière — Oinarri">
+  <a class="retour" href="/">Accueil</a>
+  <h1>La promotion immobilière</h1>
+  <p class="lead">
+    Comment naît une opération, du terrain à la livraison. La Résidence Arbola sert de fil rouge,
+    avec l'organisme dans le rôle de maître d'ouvrage et de vendeur.
+  </p>
+
+  <ol class="chapitres">
+    {
+      chapitres.map((c) => (
+        <li class="chapitre" data-cours={c.cours}>
+          <div class="chapitre-corps">
+            <p class="chapitre-titre">
+              {c.href ? <a class="chapitre-lien" href={c.href}>{c.titre}</a> : c.titre}
+            </p>
+            <p class="chapitre-desc">{c.desc}</p>
+          </div>
+          {c.href ? (
+            <span class="etiquette etiquette-ok">Disponible</span>
+          ) : (
+            <span class="etiquette">À venir</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</Base>
+
+<style>
+  .chapitre-lien {
+    text-decoration: none;
+  }
+
+  .chapitre-lien:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .etiquette-ok {
+    border-style: solid;
+    border-color: var(--ink-900);
+    color: var(--ink-900);
+  }
+</style>
+
+<script>
+  import { chargerProgression, libelleEtat } from '../../scripts/progression.js';
+
+  async function afficherAvancement() {
+    const progression = await chargerProgression();
+    if (!progression) return;
+    for (const element of document.querySelectorAll('li[data-cours]')) {
+      const texte = libelleEtat(progression.get(element.dataset.cours));
+      const etiquette = element.querySelector('.etiquette');
+      if (texte && etiquette) etiquette.textContent = texte;
+    }
+  }
+
+  afficherAvancement();
+</script>
