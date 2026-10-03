@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img">
+<title>Conductivité thermique de quelques matériaux biosourcés</title>
+<desc>Ordres de grandeur du lambda en watts par mètre-kelvin : liège et lin 0,037, fibre de bois souple et ouate de cellulose 0,038, laine de chanvre 0,039, fibre de bois rigide 0,045, paille sur chant 0,052, béton de chanvre environ 0,1. Plus la barre est courte, mieux le matériau isole à épaisseur égale.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:13px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="410" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="40" y="30" dominant-baseline="central" fill="#444441">Conductivité thermique λ (W/(m·K)) : plus la barre est courte, mieux ça isole</text>
+<text class="ts" x="40" y="68" dominant-baseline="central" fill="#444441">Liège expansé (panneau)</text><rect x="250" y="56" width="123" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="381" y="68" dominant-baseline="central" fill="#085041">0,037</text>
+<text class="ts" x="40" y="104" dominant-baseline="central" fill="#444441">Laine de lin</text><rect x="250" y="92" width="123" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="381" y="104" dominant-baseline="central" fill="#085041">0,037</text>
+<text class="ts" x="40" y="140" dominant-baseline="central" fill="#444441">Fibre de bois (souple)</text><rect x="250" y="128" width="127" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="385" y="140" dominant-baseline="central" fill="#085041">0,038</text>
+<text class="ts" x="40" y="176" dominant-baseline="central" fill="#444441">Ouate de cellulose (vrac)</text><rect x="250" y="164" width="127" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="385" y="176" dominant-baseline="central" fill="#085041">0,038</text>
+<text class="ts" x="40" y="212" dominant-baseline="central" fill="#444441">Laine de chanvre</text><rect x="250" y="200" width="130" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="388" y="212" dominant-baseline="central" fill="#085041">0,039</text>
+<text class="ts" x="40" y="248" dominant-baseline="central" fill="#444441">Fibre de bois (rigide)</text><rect x="250" y="236" width="150" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="408" y="248" dominant-baseline="central" fill="#085041">0,045</text>
+<text class="ts" x="40" y="284" dominant-baseline="central" fill="#444441">Paille (bottes sur chant)</text><rect x="250" y="272" width="173" height="24" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/><text class="ts" x="431" y="284" dominant-baseline="central" fill="#085041">0,052</text>
+<text class="ts" x="40" y="320" dominant-baseline="central" fill="#444441">Béton de chanvre</text><rect x="250" y="308" width="333" height="24" rx="4" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/><text class="ts" x="591" y="320" dominant-baseline="central" fill="#712B13">≈ 0,1</text>
+<text class="ts" x="340" y="364" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Ordres de grandeur : les valeurs exactes se lisent sur la fiche du produit.</text>
+<text class="ts" x="340" y="384" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Le béton de chanvre remplit un mur et apporte de l'inertie, il n'est pas un simple isolant.</text>
+</svg>
