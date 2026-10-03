@@ -1,0 +1,70 @@
+# Mini-quiz du chapitre 9 de Bailleurs sociaux et logement social : Gérer et entretenir le parc.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "À partir de quelle date la location des logements classés G au DPE est-elle interdite (hexagone) ?"
+    choix:
+      - "1er janvier 2023"
+      - "1er janvier 2025"
+      - "1er janvier 2028"
+      - "1er janvier 2034"
+    reponse: 1
+    explication: "G depuis le 1er janvier 2025, F à partir de 2028 et E à partir de 2034, y compris dans le parc locatif social, selon le ministère."
+
+  - type: vf
+    affirmation: "L'interdiction de location des passoires thermiques ne concerne pas le parc social."
+    reponse: false
+    explication: "Le ministère rappelle que la loi Climat et Résilience s'applique aussi au parc locatif social."
+
+  - type: qcm
+    question: "Quel prêt de la Banque des Territoires est dédié à la rénovation thermique des logements sociaux les plus énergivores ?"
+    choix:
+      - "Le PLAI"
+      - "L'éco-prêt"
+      - "Le PSLA"
+      - "Le prêt à taux zéro"
+    reponse: 1
+    explication: "L'éco-prêt peut être complété par le prêt PAM. Le PLAI et le PLUS financent des logements neufs."
+
+  - type: ouverte
+    question: "Pourquoi les logements neufs d'Arbola sont-ils moins exposés aux interdictions de louer que le parc ancien ?"
+    modele: "Parce qu'ils sont construits avec les exigences de la RE2020, donc avec de bonnes performances énergétiques, alors que l'enjeu du calendrier d'interdiction concerne surtout le parc ancien classé E, F ou G. Cela ne dispense pas d'entretenir : les garanties de parfait achèvement, biennale et décennale couvrent les premières années."
+
+approfondir:
+  - type: vf
+    affirmation: "Une rénovation lourde de logements sociaux anciens peut ouvrir droit à une exonération de taxe foncière de longue durée."
+    reponse: true
+    explication: "C'est l'article 1384 C bis du CGI : 15 ans, portés à 25 ans pour les demandes d'agrément déposées entre le 1er janvier 2024 et le 31 décembre 2026."
+
+  - type: qcm
+    question: "Quelle condition de départ s'applique aux logements éligibles à ce régime ?"
+    choix:
+      - "Avoir moins de 5 ans"
+      - "Être achevés et logement locatif social depuis au moins 40 ans"
+      - "Être situés en zone rurale"
+      - "Être classés A ou B au DPE"
+    reponse: 1
+    explication: "Les logements doivent être achevés et constituer des logements locatifs sociaux depuis au moins quarante ans, avec une performance dégradée avant travaux et élevée après."
+
+  - type: qcm
+    question: "Qu'est-ce que l'ANCOLS publie chaque année ?"
+    choix:
+      - "Le calendrier des loyers"
+      - "Un rapport public annuel de contrôle"
+      - "La liste des locataires"
+      - "Les plafonds de ressources"
+    reponse: 1
+    explication: "Elle contrôle les organismes et publie un rapport public annuel de contrôle."
+
+expert:
+  - type: vf
+    affirmation: "Une convention d'utilité sociale peut conduire à des sanctions en cas de manquement grave."
+    reponse: true
+    explication: "La convention fixe des engagements avec des indicateurs ; en cas de manquement grave, le ministre peut notamment prononcer une pénalité."
+
+  - type: ouverte
+    question: "Pourquoi un bailleur peut-il consacrer plus de moyens à la rénovation qu'à la construction neuve ?"
+    modele: "Parce que le calendrier d'interdiction de location impose de traiter les logements classés F et G, puis E, et que cela concerne un très grand nombre de logements du parc existant. Les aides existent (TVA réduite, exonération de taxe foncière, éco-prêt, Seconde vie) mais le coût total est très élevé et les moyens du bailleur sont limités."
