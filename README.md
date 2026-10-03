@@ -17,21 +17,33 @@ en partant de zéro. Publiée sur oinarri.etika.eus.
 |---|---|
 | `src/content/<parcours>/` | Cours en Markdown (`01-qui-intervient.md`) |
 | `src/content/quiz/<parcours>/` | Mini-quiz YAML, même nom de fichier que le cours |
-| `src/data/` | Plan du parcours (`ba-ba.js`), niveaux, informations légales (`legal.js`) |
+| `src/data/` | Plan du parcours (`ba-ba.js`), niveaux, glossaire (`glossaire.js`), informations légales (`legal.js`) |
 | `src/pages/` | Pages du site |
 | `src/scripts/` | Code exécuté dans le navigateur |
-| `src/lib/` | Code du Worker : sécurité, sessions, limitation des tentatives, e-mails ; et `cartes.js` (build) |
+| `src/lib/` | Code du Worker : sécurité, sessions, limitation des tentatives, e-mails ; `cartes.js` (build) ; `texte.js` (partagé) |
 | `src/api-*.js` | Routes de l'API, une par fichier |
 
 ## Ajouter un chapitre
 
-1. Écrire `src/content/ba-ba/NN-titre.md` (même structure que le chapitre 1 : Essentiel, Approfondir, Expert).
+1. Écrire `src/content/ba-ba/NN-titre.md` (même structure que le chapitre 1 : Essentiel, Approfondir, Expert, puis Vocabulaire).
 2. Écrire `src/content/quiz/ba-ba/NN-titre.yaml` (qcm, vf, ouverte ; 2 points par question).
 3. Ajouter `href` et `cours` au chapitre dans `src/data/ba-ba.js`.
+4. Ajouter au glossaire les termes de la section Vocabulaire qui n'y sont pas encore.
 
 **Cartes de révision.** Chaque question de quiz devient une carte identifiée par sa position dans le
 fichier YAML (`cours#niveau#numéro`). Ajouter les nouvelles questions à la fin de leur niveau et ne
 jamais réordonner celles qui existent, sous peine de fausser l'historique de révision.
+
+## Glossaire
+
+- Un seul fichier : `src/data/glossaire.js`, une entrée par terme (`terme`, `developpe`, `categorie`,
+  `definition`, `aussi`), au format de la convention `/def`. L'ordre n'a pas d'importance.
+- La page `/glossaire/` est générée à la construction : recherche, lettres, une ancre par terme
+  (`/glossaire/#maitre-d-ouvrage`, calculée par `identifiant()` dans `src/lib/texte.js`).
+- Dans un cours, la section « Vocabulaire » (liste séparée par « · ») devient cliquable : chaque élément
+  qui correspond à un terme ou à une variante (`aussi`) du glossaire renvoie vers son entrée.
+  Le contenu entre parenthèses est ignoré pour la correspondance. Ailleurs dans un cours, on met un
+  lien Markdown à la main : `[maître d'ouvrage](/glossaire/#maitre-d-ouvrage)`.
 
 ## Connexion
 
