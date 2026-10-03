@@ -30,17 +30,21 @@ export const chapitres = [
   },
   {
     titre: 'Le financement',
-    desc: 'Fonds propres, crédit, pré-commercialisation et garantie d\'achèvement.',
+    desc: "Fonds propres, crédit, pré-commercialisation et garantie d'achèvement.",
     href: '/promotion/05-le-financement/',
     cours: 'promotion/05-le-financement',
   },
   {
     titre: 'La VEFA',
-    desc: "Le contrat, les paiements par étapes et les protections de l'acquéreur.",
+    desc: 'La vente sur plan : réservation, paiements par étapes et protections de l\'acquéreur.',
+    href: '/promotion/06-la-vefa/',
+    cours: 'promotion/06-la-vefa',
   },
   {
     titre: 'Garanties et assurances',
-    desc: 'Achèvement, parfait achèvement, biennale, décennale, dommages-ouvrage.',
+    desc: 'Parfait achèvement, biennale, décennale, dommages-ouvrage et assurances du vendeur.',
+    href: '/promotion/07-garanties-et-assurances/',
+    cours: 'promotion/07-garanties-et-assurances',
   },
   {
     titre: 'Commercialisation, livraison et réception',
