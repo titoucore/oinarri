@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img">
+<title>Les réseaux qui desservent un terrain à bâtir</title>
+<desc>Vue de dessus d'une parcelle avec son bâtiment et la voirie. Six réseaux enterrés sous la voie se raccordent au bâtiment par des branchements : eaux usées, eaux pluviales, eau potable (réseaux humides), électricité, gaz et télécoms (réseaux secs).</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}.note{font-size:12px;fill:#5F5E5A}</style>
+<rect width="680" height="430" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="40" width="360" height="260" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text class="ts" x="52" y="60" fill="#5F5E5A">Parcelle</text>
+<rect x="130" y="90" width="180" height="90" rx="4" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.5"/><text class="th" x="220" y="135" text-anchor="middle" dominant-baseline="central" fill="#444441">Bâtiment</text>
+<rect x="20" y="300" width="400" height="96" fill="#E8E6DD"/><text class="ts" x="30" y="388" fill="#444441">Voirie (domaine public)</text>
+<path d="M20 300 H420" stroke="#5F5E5A" stroke-width="1.5"/>
+<path d="M20 318 H148 V180" stroke="#993C1D" stroke-width="2" fill="none" stroke-linejoin="round" />
+<circle cx="148" cy="318" r="3.5" fill="#993C1D"/>
+<path d="M20 329 H176 V180" stroke="#185FA5" stroke-width="2" fill="none" stroke-linejoin="round" />
+<circle cx="176" cy="329" r="3.5" fill="#185FA5"/>
+<path d="M20 340 H204 V180" stroke="#0F6E56" stroke-width="2" fill="none" stroke-linejoin="round" />
+<circle cx="204" cy="340" r="3.5" fill="#0F6E56"/>
+<path d="M20 351 H232 V180" stroke="#BA7517" stroke-width="2" fill="none" stroke-linejoin="round" stroke-dasharray="6 3"/>
+<circle cx="232" cy="351" r="3.5" fill="#BA7517"/>
+<path d="M20 362 H260 V180" stroke="#7A6A00" stroke-width="2" fill="none" stroke-linejoin="round" stroke-dasharray="6 3"/>
+<circle cx="260" cy="362" r="3.5" fill="#7A6A00"/>
+<path d="M20 373 H288 V180" stroke="#534AB7" stroke-width="2" fill="none" stroke-linejoin="round" stroke-dasharray="6 3"/>
+<circle cx="288" cy="373" r="3.5" fill="#534AB7"/>
+<text class="th" x="450" y="52" fill="#444441">Réseaux humides</text>
+<text class="th" x="450" y="196" fill="#444441">Réseaux secs</text>
+<path d="M450 76 h32" stroke="#993C1D" stroke-width="2" /><text class="ts" x="492" y="76" dominant-baseline="central" fill="#444441">Eaux usées</text>
+<path d="M450 116 h32" stroke="#185FA5" stroke-width="2" /><text class="ts" x="492" y="116" dominant-baseline="central" fill="#444441">Eaux pluviales</text>
+<path d="M450 156 h32" stroke="#0F6E56" stroke-width="2" /><text class="ts" x="492" y="156" dominant-baseline="central" fill="#444441">Eau potable</text>
+<path d="M450 220 h32" stroke="#BA7517" stroke-width="2" stroke-dasharray="6 3"/><text class="ts" x="492" y="220" dominant-baseline="central" fill="#444441">Électricité</text>
+<path d="M450 260 h32" stroke="#7A6A00" stroke-width="2" stroke-dasharray="6 3"/><text class="ts" x="492" y="260" dominant-baseline="central" fill="#444441">Gaz</text>
+<path d="M450 300 h32" stroke="#534AB7" stroke-width="2" stroke-dasharray="6 3"/><text class="ts" x="492" y="300" dominant-baseline="central" fill="#444441">Télécoms</text>
+<text class="note" x="450" y="350">Tout réseau enterré se déclare</text>
+<text class="note" x="450" y="366">avant les travaux (DT).</text>
+</svg>
