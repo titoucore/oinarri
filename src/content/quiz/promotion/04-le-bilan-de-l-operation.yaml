@@ -1,0 +1,108 @@
+# Mini-quiz du chapitre 4 de Promotion immobilière : Le bilan de l'opération.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+# Les chiffres d'Arbola sont fictifs.
+
+essentiel:
+  - type: qcm
+    question: "Comment se calcule la marge d'une opération ?"
+    choix:
+      - "Recettes moins dépenses"
+      - "Dépenses moins recettes"
+      - "Prix du terrain divisé par le prix de vente"
+      - "Recettes plus dépenses"
+    reponse: 0
+    explication: "Le bilan met face à face les recettes (prix de vente des logements) et les dépenses. La marge est ce qui reste : recettes moins dépenses."
+
+  - type: qcm
+    question: "Dans le bilan fictif d'Arbola, quel est le plus gros poste de dépenses ?"
+    choix:
+      - "Le foncier"
+      - "Les travaux"
+      - "Les frais financiers"
+      - "Les honoraires techniques"
+    reponse: 1
+    explication: "Les travaux représentent près des deux tiers des dépenses (1 480 000 € sur 2 240 000 €). Le foncier vient loin derrière, avec 320 000 €."
+
+  - type: vf
+    affirmation: "Le bilan d'une opération s'établit une seule fois, avant le début des travaux."
+    reponse: false
+    explication: "Il se met à jour à chaque étape : faisabilité, avant-projet, consultation des entreprises, chantier, bilan définitif. On suit l'écart entre le prévu et le réalisé."
+
+  - type: qcm
+    question: "Que comprend la charge foncière ?"
+    choix:
+      - "Seulement le prix d'achat du terrain"
+      - "Le prix d'achat, les frais d'acquisition et parfois la démolition ou la dépollution"
+      - "Le coût de construction des logements"
+      - "Les honoraires de l'architecte"
+    reponse: 1
+    explication: "La charge foncière est la part du prix de revient qui correspond au terrain : prix d'achat, frais d'acquisition, et parfois démolition ou dépollution."
+
+  - type: ouverte
+    question: "Cite quatre postes de dépenses d'un bilan d'opération."
+    modele: "Le foncier, les travaux, les honoraires techniques (architecte, bureaux d'études, contrôleur technique, SPS), les assurances, les taxes et raccordements, les frais financiers, la commercialisation et la gestion."
+
+approfondir:
+  - type: qcm
+    question: "Quelle surface sert à délivrer le permis de construire et à calculer la taxe d'aménagement ?"
+    choix:
+      - "La surface habitable"
+      - "La surface utile"
+      - "La surface de plancher"
+      - "La surface du terrain"
+    reponse: 2
+    explication: "La surface de plancher relève du code de l'urbanisme (article R111-22). Elle sert au permis, à la densité de construction et à l'assiette de la taxe d'aménagement (article L331-10)."
+
+  - type: qcm
+    question: "Comment définit-on la surface utile d'un logement ?"
+    choix:
+      - "La surface habitable plus la moitié de la surface des annexes"
+      - "La surface de plancher moins 10 %"
+      - "La surface habitable moins les annexes"
+      - "La surface du terrain divisée par le nombre de logements"
+    reponse: 0
+    explication: "L'article R331-10 du code de la construction et de l'habitation ajoute à la surface habitable la moitié de la surface des annexes. La surface utile est donc toujours égale ou supérieure à la surface habitable."
+
+  - type: vf
+    affirmation: "Le taux réduit de TVA de 5,5 % s'applique à toute vente de logement neuf."
+    reponse: false
+    explication: "Il concerne l'accession sociale, sous conditions : dispositif (par exemple le PSLA), localisation (par exemple un quartier prioritaire de la politique de la ville), plafonds de ressources de l'acquéreur et plafonds de prix. Hors de ces cas, le taux normal de 20 % s'applique."
+
+  - type: qcm
+    question: "En unité, comment s'expriment les plafonds de prix du PSLA ?"
+    choix:
+      - "En euros TTC par logement"
+      - "En euros hors taxes par m² de surface utile"
+      - "En euros par m² de surface de plancher"
+      - "En euros par pièce"
+    reponse: 1
+    explication: "Les plafonds de prix applicables sont ceux du prêt social de location-accession, exprimés en euros hors taxes par m² de surface utile. Ils sont revalorisés chaque année."
+
+  - type: ouverte
+    question: "Pourquoi un même immeuble donne-t-il trois surfaces différentes, et laquelle sert à fixer le prix en accession sociale encadrée ?"
+    modele: "Chaque surface répond à un usage : la surface de plancher (urbanisme) sert au permis et à la taxe d'aménagement ; la surface habitable (code de la construction) exclut notamment murs, cloisons et annexes ; la surface utile ajoute la moitié des annexes à la surface habitable. En accession sociale encadrée, le prix s'exprime en euros hors taxes par m² de surface utile."
+
+expert:
+  - type: qcm
+    question: "Recettes : 1 000 000 €. Coûts hors foncier : 780 000 €. Marge visée : 60 000 €. Quelle est la charge foncière maximale ?"
+    choix:
+      - "160 000 €"
+      - "220 000 €"
+      - "340 000 €"
+      - "1 840 000 €"
+    reponse: 0
+    explication: "Bilan à rebours : charge foncière maximale = recettes − coûts hors foncier − marge visée = 1 000 000 − 780 000 − 60 000 = 160 000 €."
+
+  - type: vf
+    affirmation: "En accession sociale encadrée, on peut rééquilibrer une opération déficitaire en relevant simplement le prix de vente."
+    reponse: false
+    explication: "Les prix sont plafonnés. Les leviers sont donc les coûts, le foncier (cession à prix réduit), la surface et le choix du dispositif."
+
+  - type: ouverte
+    question: "Pourquoi dit-on que le terrain est la variable d'ajustement du bilan ?"
+    modele: "Les recettes sont fixées par le marché ou par des plafonds, et les coûts de construction sont peu négociables. Quand les recettes baissent ou que les travaux augmentent, la différence se répercute sur le prix que l'on peut payer pour le terrain, d'où la promesse de vente sous conditions et la négociation tardive du prix foncier."
