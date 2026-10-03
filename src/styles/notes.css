@@ -1,0 +1,388 @@
+/* Surlignages et notes : couleur du surlignage, barre de sélection, marge de notes (grand écran),
+   tiroir de notes (écran étroit), cartes de notes et page « Mes notes ». */
+
+:root {
+  --surlignage: rgba(240, 200, 60, 0.38);
+  --surlignage-fort: rgba(240, 200, 60, 0.7);
+  --surlignage-bord: #d9a920;
+}
+
+:root[data-theme='dark'] {
+  --surlignage: rgba(240, 200, 60, 0.3);
+  --surlignage-fort: rgba(240, 200, 60, 0.55);
+  --surlignage-bord: #c9a227;
+}
+
+/* --- Passage surligné --- */
+
+mark.surlignage {
+  background: var(--surlignage);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 1px;
+  cursor: pointer;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 0.15s ease;
+}
+
+mark.surlignage.actif,
+mark.surlignage.flash {
+  background: var(--surlignage-fort);
+}
+
+/* --- Barre qui apparaît sous (ou sur) la sélection --- */
+
+.barre-selection {
+  position: absolute;
+  z-index: 70;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--ink-900);
+  color: var(--paper);
+}
+
+.barre-selection[hidden] {
+  display: none;
+}
+
+.barre-selection button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 7px;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.barre-selection button:hover {
+  background: rgba(128, 128, 128, 0.3);
+}
+
+/* --- Message bref --- */
+
+.notes-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  z-index: 80;
+  max-width: calc(100vw - 2rem);
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--ink-900);
+  color: var(--paper);
+  font-size: 14px;
+  transform: translateX(-50%);
+}
+
+.notes-toast[hidden] {
+  display: none;
+}
+
+/* --- Zone des notes d'un cours --- */
+
+.notes-marge {
+  font-size: 14px;
+}
+
+/* Tant que le script n'a pas choisi la présentation, rien ne s'affiche. */
+.notes-marge:not([data-mode]) {
+  display: none;
+}
+
+.notes-entete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 0.75rem;
+}
+
+.notes-titre {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-600);
+}
+
+.notes-toutes {
+  font-size: 13px;
+  color: var(--ink-600);
+  text-underline-offset: 3px;
+}
+
+.notes-fermer {
+  display: none;
+  padding: 6px 4px;
+  border: none;
+  background: none;
+  color: var(--ink-600);
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.notes-vide {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-600);
+}
+
+.notes-vide[hidden] {
+  display: none;
+}
+
+/* Grand écran : les cartes se placent en face de leur passage. */
+.notes-marge[data-mode='marge'] .notes-liste {
+  position: relative;
+}
+
+.notes-marge[data-mode='marge'] .note-carte {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Écran étroit : les notes sont dans un tiroir qui monte du bas. */
+.notes-marge[data-mode='tiroir'] {
+  position: fixed;
+  z-index: 60;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding: 1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--ink-900);
+  border-radius: 16px 16px 0 0;
+  background: var(--paper);
+  transform: translateY(105%);
+  visibility: hidden;
+  transition: transform 0.2s ease, visibility 0.2s;
+}
+
+.notes-marge[data-mode='tiroir'][data-ouvert='true'] {
+  transform: none;
+  visibility: visible;
+}
+
+.notes-marge[data-mode='tiroir'] .notes-fermer {
+  display: inline-block;
+}
+
+.notes-marge[data-mode='tiroir'] .note-carte + .note-carte {
+  margin-top: 10px;
+}
+
+.notes-bouton {
+  position: fixed;
+  z-index: 55;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--ink-900);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.notes-bouton[hidden] {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .notes-bouton,
+  .notes-voile {
+    display: none !important;
+  }
+}
+
+.notes-voile {
+  position: fixed;
+  z-index: 59;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.notes-voile[hidden] {
+  display: none;
+}
+
+/* --- Carte d'une note --- */
+
+.note-carte {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 12px;
+  background: var(--paper);
+  font-size: 14px;
+}
+
+.note-carte[data-actif='true'] {
+  border-color: var(--ink-900);
+}
+
+.note-citation {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem;
+  padding: 0 0 0 0.6rem;
+  border: none;
+  border-left: 3px solid var(--surlignage-bord);
+  background: none;
+  color: var(--ink-600);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+button.note-citation {
+  cursor: pointer;
+}
+
+.note-orpheline {
+  margin: 0 0 0.5rem;
+  font-size: 12px;
+  color: var(--ink-600);
+  font-style: italic;
+}
+
+.note-orpheline[hidden] {
+  display: none;
+}
+
+/* 16 px : en dessous, Safari sur iPad zoome la page quand on touche la zone de texte. */
+.note-texte {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--ink-100);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink-900);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  overflow: hidden;
+}
+
+.note-pied {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 0.4rem;
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+.note-statut {
+  flex: 1;
+  min-width: 0;
+}
+
+.note-lien {
+  color: var(--ink-600);
+  text-underline-offset: 3px;
+}
+
+.note-supprimer {
+  padding: 4px 0;
+  border: none;
+  background: none;
+  color: var(--ink-600);
+  font-family: inherit;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* --- Page « Mes notes » --- */
+
+.mes-notes-recherche {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 0 0.35rem;
+  padding: 10px 12px;
+  border: 1px solid var(--ink-200);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink-900);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.mes-notes-compte {
+  margin: 0 0 1.5rem;
+  font-size: 13px;
+  color: var(--ink-600);
+}
+
+.mes-notes-vide {
+  margin: 1.5rem 0;
+  max-width: 34rem;
+  color: var(--ink-600);
+}
+
+.mes-notes-groupe {
+  margin: 2rem 0 0;
+}
+
+.mes-notes-groupe[hidden] {
+  display: none;
+}
+
+.mes-notes-groupe h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+}
+
+.mes-notes-groupe h2 a {
+  text-decoration: none;
+}
+
+.mes-notes-groupe h2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.mes-notes-parcours {
+  margin: 0 0 0.75rem;
+  font-size: 13px;
+  color: var(--ink-600);
+}
+
+.mes-notes-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mes-notes-liste .note-carte[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  mark.surlignage,
+  .notes-marge[data-mode='tiroir'] {
+    transition: none;
+  }
+}
