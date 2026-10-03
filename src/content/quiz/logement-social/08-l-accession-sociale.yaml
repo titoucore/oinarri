@@ -66,5 +66,5 @@ expert:
     explication: "Des acteurs annoncent 20 à 40 %, d'autres 30 à 50 %. La décote dépend de la zone, de l'OFS et du montage : il faut la vérifier opération par opération."
 
   - type: ouverte
-    question: "Pourquoi faut-il vérifier la règle de fixation du prix pour une vente HLM en 2026 ?"
-    modele: "Parce que la loi ELAN de 2018 a laissé le prix libre, sans évaluation obligatoire du service des Domaines, mais un décret de 2026 est évoqué dans la presse juridique comme ayant modifié le cadre. Je n'ai pas pu le vérifier sur le texte : il faut lire les articles L443-7 et suivants du CCH dans leur version actuelle."
+    question: "Que change le décret n° 2026-826 du 25 août 2026 pour les organismes HLM ?"
+    modele: "Il modifie l'article D443-34 du CCH pour permettre aux organismes HLM de vendre certains logements qu'ils produisent en vue de la vente à des personnes physiques qui les louent dans le dispositif « Relance logement » (statut du bailleur privé de la loi de finances pour 2026). Il ne modifie pas le régime de vente du parc locatif social existant, qui relève de l'article L443-7 et suivants."
