@@ -1,14 +1,27 @@
 ---
 import Base from '../layouts/Base.astro';
-import { disponibles } from '../data/ba-ba.js';
+import * as baba from '../data/ba-ba.js';
+import * as promotion from '../data/promotion.js';
 import { listerCartes } from '../lib/cartes.js';
 
+// Les parcours affichés sur l'accueil, dans l'ordre.
+const parcours = [
+  { titre: 'B.A.-BA du bâtiment', href: '/ba-ba/', plan: baba },
+  { titre: 'Promotion immobilière', href: '/promotion/', plan: promotion },
+].map((p) => {
+  const dispo = p.plan.disponibles.length;
+  return {
+    titre: p.titre,
+    href: p.href,
+    etat: `${dispo} chapitre${dispo > 1 ? 's' : ''} disponible${dispo > 1 ? 's' : ''} sur ${p.plan.chapitres.length}`,
+    chapitres: p.plan.disponibles,
+  };
+});
+
 // Seuls les chapitres disponibles servent à « reprendre où on en est ».
-const chapitresDisponibles = disponibles.map((c) => ({
-  titre: c.titre,
-  href: c.href,
-  cours: c.cours,
-}));
+const chapitresDisponibles = parcours.flatMap((p) =>
+  p.chapitres.map((c) => ({ titre: c.titre, href: c.href, cours: c.cours })),
+);
 
 // Identifiants des cartes de révision existantes (pour ignorer d'éventuelles cartes orphelines).
 const idsCartes = (await listerCartes()).map((c) => c.carte);
@@ -62,7 +75,7 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     <a
       class="reprise"
       id="reprise"
-      href="/ba-ba/"
+      href="#parcours"
       data-chapitres={JSON.stringify(chapitresDisponibles)}
       hidden
     >
@@ -82,7 +95,16 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
       <span class="reprise-titre" id="revision-texte"></span>
     </a>
 
-    <a class="cta" href="/ba-ba/">Commencer le B.A.-BA</a>
+    <nav class="parcours" id="parcours" aria-label="Parcours de formation">
+      {
+        parcours.map((p) => (
+          <a class="parcours-lien" href={p.href}>
+            <span class="parcours-titre">{p.titre}</span>
+            <span class="parcours-etat">{p.etat}</span>
+          </a>
+        ))
+      }
+    </nav>
 
     <p class="note">
       Chaque cours part d'un cas concret, se lit à trois niveaux (essentiel, approfondir, expert) et
@@ -178,6 +200,35 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     margin-top: 2px;
   }
   .reprise-etat {
+    display: block;
+    font-size: 14px;
+    color: var(--ink-600);
+    margin-top: 2px;
+  }
+
+  .parcours {
+    display: grid;
+    gap: 10px;
+    max-width: 34rem;
+    margin: 0 0 1.5rem;
+  }
+  .parcours-lien {
+    display: block;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--ink-200);
+    border-radius: 12px;
+    text-decoration: none;
+  }
+  .parcours-lien:hover,
+  .parcours-lien:focus-visible {
+    border-color: var(--ink-900);
+  }
+  .parcours-titre {
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .parcours-etat {
     display: block;
     font-size: 14px;
     color: var(--ink-600);
