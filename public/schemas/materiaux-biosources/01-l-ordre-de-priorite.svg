@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" role="img">
+<title>L'ordre de priorité pour les produits et les déchets</title>
+<desc>De la meilleure à la moins bonne option : éviter le déchet (dont le réemploi), préparer en vue de la réutilisation, recycler, valoriser autrement (par exemple en énergie), éliminer.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="400" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="43" dominant-baseline="central" fill="#085041">Éviter le déchet (prévention)</text><text class="ts" x="60" y="63" dominant-baseline="central" fill="#0F6E56">Dont le réemploi : même usage, sans que le produit soit devenu un déchet</text>
+<rect x="40" y="92" width="540" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="111" dominant-baseline="central" fill="#085041">Préparer en vue de la réutilisation</text><text class="ts" x="60" y="131" dominant-baseline="central" fill="#0F6E56">Contrôler, nettoyer ou réparer un déchet pour l'utiliser de nouveau</text>
+<rect x="40" y="160" width="480" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="179" dominant-baseline="central" fill="#444441">Recycler</text><text class="ts" x="60" y="199" dominant-baseline="central" fill="#5F5E5A">Retraiter les déchets pour en refaire de la matière</text>
+<rect x="40" y="228" width="420" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="247" dominant-baseline="central" fill="#712B13">Valoriser autrement</text><text class="ts" x="60" y="267" dominant-baseline="central" fill="#993C1D">Par exemple produire de l'énergie</text>
+<rect x="40" y="296" width="360" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="315" dominant-baseline="central" fill="#712B13">Éliminer</text><text class="ts" x="60" y="335" dominant-baseline="central" fill="#993C1D">Dernier recours</text>
+<text class="ts" x="340" y="376" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Ordre fixé par l'article L541-1 du code de l'environnement</text>
+</svg>
