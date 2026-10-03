@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 4 de Nouvelles méthodes de construction : Le comportement physique.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que veut dire qu'un matériau est « hygroscopique » ?"
+    choix:
+      - "Il repousse l'eau et ne se mouille jamais"
+      - "Il capte l'humidité de l'air, la stocke et la restitue"
+      - "Il ne laisse jamais passer la vapeur d'eau"
+      - "Il ne brûle pas"
+    reponse: 1
+    explication: "Un matériau hygroscopique a un réseau de pores qui capte l'humidité de l'air, la stocke et la rend quand l'air s'assèche. C'est le cas des matériaux biosourcés, d'après la documentation Renoptim."
+
+  - type: vf
+    affirmation: "Quand un isolant biosourcé prend l'humidité, sa conductivité thermique augmente : il isole moins bien."
+    reponse: true
+    explication: "L'eau absorbée augmente la conductivité thermique du matériau par rapport à son état sec. Plus λ est élevé, moins le matériau isole à épaisseur égale."
+
+  - type: qcm
+    question: "Qu'appelle-t-on le déphasage thermique d'une paroi ?"
+    choix:
+      - "Le retard avec lequel la chaleur du dehors traverse la paroi"
+      - "La différence entre la température de jour et celle de nuit"
+      - "La quantité de chaleur perdue par mètre carré"
+      - "Le nombre d'heures de chauffage dans l'année"
+    reponse: 0
+    explication: "Le déphasage est le décalage dans le temps entre le pic de chaleur à l'extérieur et son arrivée à l'intérieur. Il dépend surtout de l'épaisseur, de la densité et de la chaleur massique des matériaux."
+
+  - type: ouverte
+    question: "Quelle différence y a-t-il entre la réaction au feu et la résistance au feu ?"
+    modele: "La réaction au feu qualifie un matériau : contribue-t-il à l'incendie, produit-il de la fumée ou des gouttes enflammées (Euroclasse de A1 à F) ? La résistance au feu qualifie un élément de construction (un mur, un plancher) : pendant combien de temps reste-t-il stable (R), étanche aux flammes et aux gaz (E), isolant (I) ? Exemple : EI 120 = coupe-feu pendant deux heures."
+
+approfondir:
+  - type: qcm
+    question: "Dans la RE2020, que mesure l'indicateur DH ?"
+    choix:
+      - "Les degrés-heures d'inconfort en été"
+      - "La consommation de chauffage"
+      - "Les émissions de carbone de la construction"
+      - "Le bruit entre deux logements"
+    reponse: 0
+    explication: "Le DH (degré-heure) additionne, heure par heure, l'écart entre la température ressentie dans le logement et une température de confort. Il mesure donc l'inconfort estival."
+
+  - type: vf
+    affirmation: "Dans la RE2020, un logement qui dépasse le seuil haut de confort d'été (1 250 DH dans le cas général) est non conforme."
+    reponse: true
+    explication: "Sous 350 DH, le confort d'été est jugé bon. Entre 350 et 1 250 DH, le bâtiment reste conforme. Au-dessus du seuil haut, il ne l'est plus. Ce seuil haut peut être relevé selon la zone climatique ou la présence d'une climatisation."
+
+  - type: qcm
+    question: "Entre deux logements d'un immeuble neuf, quel est l'isolement acoustique minimal aux bruits aériens fixé par l'arrêté du 30 juin 1999 ?"
+    choix:
+      - "DnT,A d'au moins 40 dB"
+      - "DnT,A d'au moins 45 dB"
+      - "DnT,A d'au moins 53 dB"
+      - "DnT,A d'au moins 65 dB"
+    reponse: 2
+    explication: "L'arrêté du 30 juin 1999 relatif aux caractéristiques acoustiques des bâtiments d'habitation exige DnT,A supérieur ou égal à 53 dB entre le local d'un logement et la pièce d'un autre logement."
+
+  - type: qcm
+    question: "À quelle vitesse moyenne un bois massif exposé au feu carbonise-t-il, d'après l'Ineris ?"
+    choix:
+      - "Environ 0,07 mm par minute"
+      - "Environ 0,7 mm par minute"
+      - "Environ 7 mm par minute"
+      - "Environ 70 mm par minute"
+    reponse: 1
+    explication: "La vitesse de carbonisation du bois est de l'ordre de 0,7 mm par minute en moyenne, selon la nature du bois et les conditions. La couche carbonisée protège le cœur de la pièce, qui garde sa résistance."
+
+expert:
+  - type: vf
+    affirmation: "Pour le confort d'été d'un bâtiment complet, le choix de l'isolant pèse autant que les protections solaires et la ventilation de nuit."
+    reponse: false
+    explication: "Les modélisations de Buildwise et de l'EMPA montrent que le type d'isolant a peu d'impact une fois intégré dans le bâtiment. Les protections solaires, la ventilation nocturne et la finition intérieure comptent beaucoup plus. L'énergie qui entre par une fenêtre ensoleillée est de 100 à 200 fois celle qui traverse une paroi (ordre de grandeur)."
+
+  - type: ouverte
+    question: "Un mur en paille protégé par un enduit a bien résisté au feu lors d'un essai. Pourquoi ne peut-on pas en conclure que « la paille résiste au feu » ?"
+    modele: "Les essais mesurent la résistance d'une paroi complète (paille, enduit, ossature, parements), pas celle d'un matériau seul. Le résultat dépend de l'intégrité de la face exposée : tant que l'enduit tient, il protège les couches derrière ; quand il cède, elles sont exposées. Il faut donc un procès-verbal d'essai pour la composition exacte envisagée, et se méfier du feu couvant. Pour l'assurabilité, voir le chapitre 6."
