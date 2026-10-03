@@ -113,7 +113,7 @@ export const termes = [
     terme: 'Label bâtiment biosourcé',
     categorie: 'Biosourcé',
     definition:
-      "Label prévu par l'article D171-6 du code de la construction et de l'habitation, délivré par un organisme conventionné avec l'État. Depuis l'arrêté du 2 juillet 2024, ses trois niveaux reposent sur la quantité de carbone biogénique stocké par mètre carré de surface de référence.",
+      "Label prévu par l'article D171-6 du code de la construction et de l'habitation, délivré par un organisme conventionné avec l'État. Depuis l'arrêté du 2 juillet 2024, ses trois niveaux reposent sur la quantité de carbone biogénique stocké par mètre carré de surface de référence (en habitation : 15, 25 et 45 kgC/m²).",
     aussi: ['Bâtiment biosourcé', 'Label biosourcé'],
   },
   {
@@ -364,5 +364,43 @@ export const termes = [
     definition:
       "Combustion sans flamme qui s'installe dans les matériaux poreux (isolants fibreux, paille) et se propage à l'intérieur d'une paroi. Elle se vérifie par des essais spécifiques.",
     aussi: ['Couvant', 'Combustion couvante'],
+  },
+  {
+    terme: 'FDES',
+    developpe: 'Fiche de Déclaration Environnementale et Sanitaire',
+    categorie: 'Réglementation',
+    definition:
+      "Carte d'identité environnementale d'un produit de construction, établie par son fabricant selon la norme NF EN 15804 et vérifiée par une tierce partie indépendante. Elle sert de donnée d'entrée au calcul carbone de la RE2020 et se consulte dans la base INIES. Elle déclare, elle ne certifie pas un niveau.",
+    aussi: ['Fiche de déclaration environnementale et sanitaire', 'FDES collective', 'Déclaration environnementale'],
+  },
+  {
+    terme: 'PEP',
+    developpe: 'Profil Environnemental Produit',
+    categorie: 'Réglementation',
+    definition:
+      "Équivalent de la FDES pour les équipements du bâtiment (ventilation, électricité, chauffage…). Il alimente aussi le calcul carbone de la RE2020.",
+    aussi: ['Profil environnemental produit', 'PEP Ecopassport'],
+  },
+  {
+    terme: 'INIES',
+    categorie: 'Réglementation',
+    definition:
+      "Base de données publique et gratuite qui rassemble les FDES, les PEP et les données environnementales par défaut utilisées pour le calcul carbone des bâtiments. Elle est créée en 2004.",
+    aussi: ['Base INIES', 'inies.fr'],
+  },
+  {
+    terme: 'Donnée environnementale par défaut',
+    developpe: 'DED',
+    categorie: 'Réglementation',
+    definition:
+      "Valeur mise à disposition par le ministère pour un produit qui n'a pas de FDES. Elle est majorée : elle pénalise le projet et incite les fabricants à déclarer.",
+    aussi: ['DED', 'Données par défaut', 'Donnée par défaut', 'Données environnementales par défaut'],
+  },
+  {
+    terme: 'Unité fonctionnelle',
+    categorie: 'Concepts',
+    definition:
+      "Ce que l'ACV d'un produit mesure et compare : par exemple 1 m² de mur pendant une durée de vie donnée. Deux FDES ne se comparent que si leur unité fonctionnelle et leur durée de vie sont les mêmes.",
+    aussi: ['Unités fonctionnelles'],
   },
 ];
