@@ -1,6 +1,6 @@
 ---
 titre: Les modes constructifs
-description: Comment un bâtiment tient debout : le chemin des charges, les quatre grandes familles de structure (béton armé, maçonnerie, bois, métal), les règles qui les encadrent et les critères de choix.
+description: "Comment un bâtiment tient debout : le chemin des charges, les quatre grandes familles de structure (béton armé, maçonnerie, bois, métal), les règles qui les encadrent et les critères de choix."
 parcours: ba-ba
 ordre: 3
 niveau: Débutant
