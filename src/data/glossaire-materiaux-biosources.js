@@ -201,4 +201,75 @@ export const termes = [
       "Capacité d'une couche de matériau à s'opposer au passage de la chaleur, notée R en m².K/W. Elle vaut l'épaisseur divisée par la conductivité thermique.",
     aussi: ['R', 'Résistance thermique R'],
   },
+  {
+    terme: 'Terre crue',
+    categorie: 'Géosourcé',
+    definition:
+      "Terre utilisée sans cuisson pour construire. Elle associe de l'argile (le liant), des limons et du sable, parfois des fibres. On la met en œuvre par compactage, empilement, moulage ou remplissage.",
+    aussi: ['Construction en terre crue', 'Construction en terre', 'Murs en terre'],
+  },
+  {
+    terme: 'Pisé',
+    categorie: 'Géosourcé',
+    definition:
+      "Technique de mur en terre crue compactée par couches entre deux banches (coffrages). Le mur est porteur, très sensible à l'eau liquide, mais capable de réguler l'humidité de l'air. Il repose sur un soubassement en pierre.",
+    aussi: ['Mur en pisé', 'Murs en pisé', 'Maison en pisé'],
+  },
+  {
+    terme: 'Bauge',
+    categorie: 'Géosourcé',
+    definition:
+      "Technique de mur en terre crue mêlée à des fibres (paille, par exemple), à de l'eau et parfois à du sable, empilée en boules puis dressée en mur. Très présente en Bretagne, en Normandie et dans l'Ouest.",
+    aussi: ['Mur en bauge', 'Murs en bauge'],
+  },
+  {
+    terme: 'Adobe',
+    categorie: 'Géosourcé',
+    definition:
+      "Brique de terre crue moulée et séchée au soleil ou à l'air, maçonnée avec un mortier de terre. On parle aussi de brique de terre crue.",
+    aussi: ['Brique de terre crue', 'Briques de terre crue', 'Briques en terre crue'],
+  },
+  {
+    terme: 'Bloc de terre comprimée',
+    developpe: 'BTC',
+    categorie: 'Géosourcé',
+    definition:
+      "Brique de terre crue fabriquée à la presse, plus régulière et plus industrialisée que l'adobe. Elle sert à bâtir des murs de maçonnerie.",
+    aussi: ['BTC', 'Blocs de terre comprimée', 'Brique de terre comprimée'],
+  },
+  {
+    terme: 'Torchis',
+    categorie: 'Géosourcé',
+    definition:
+      "Mélange de terre et de fibres végétales qui remplit une ossature en pans de bois (le colombage). Il ne porte pas le bâtiment.",
+    aussi: ['Colombage-torchis', 'Pan de bois et torchis'],
+  },
+  {
+    terme: 'Terre allégée',
+    categorie: 'Géosourcé',
+    definition:
+      "Terre mêlée à des fibres ou à des granulats végétaux (paille, par exemple), pour remplir ou doubler un mur. Elle est moins dense, donc plus isolante que la terre pleine.",
+    aussi: ['Terre-paille', 'Mélange terre-paille'],
+  },
+  {
+    terme: 'Guides de bonnes pratiques de la terre crue',
+    categorie: 'Géosourcé',
+    definition:
+      "Six guides rédigés par les professionnels (torchis, brique de terre crue, pisé, bauge, terre allégée, enduits de terre). Ils fixent des performances attendues et servent de référence entre concepteurs, entreprises, contrôleurs et assureurs. Ils ne remplacent pas la formation.",
+    aussi: ['Guides de bonnes pratiques', 'Guide de bonnes pratiques', 'Guides de bonnes pratiques de la construction en terre crue'],
+  },
+  {
+    terme: 'Pierre sèche',
+    categorie: 'Géosourcé',
+    definition:
+      "Technique de mur en pierres assemblées sans mortier, dont la stabilité vient du calage et de l'appareillage des pierres. Ses règles professionnelles sont acceptées par la C2P de l'AQC. Usages actuels surtout en soutènement et en clôture.",
+    aussi: ['Mur en pierre sèche', 'Murs en pierre sèche', 'Pierres sèches'],
+  },
+  {
+    terme: 'Pierre massive',
+    categorie: 'Géosourcé',
+    definition:
+      "Mur porteur en blocs de pierre naturelle, utilisé en construction neuve comme en patrimoine. Le bilan carbone dépend beaucoup de la distance entre la carrière et le chantier.",
+    aussi: ['Pierre massive porteuse', 'Maçonnerie de pierre'],
+  },
 ];
