@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 6 : Le gros œuvre.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que comprend le gros œuvre ?"
+    choix:
+      - "Les peintures et les revêtements de sol"
+      - "La structure : fondations, murs, planchers, escaliers, charpente"
+      - "Uniquement la toiture"
+      - "Les meubles et les équipements"
+    reponse: 1
+    explication: "Le gros œuvre regroupe la structure qui fait tenir le bâtiment debout : fondations, murs, planchers, escaliers, charpente. Les finitions relèvent du second œuvre."
+
+  - type: qcm
+    question: "Dans quel ordre se réalise un voile en béton coulé sur place ?"
+    choix:
+      - "Bétonnage, coffrage, ferraillage, décoffrage"
+      - "Coffrage, ferraillage, bétonnage, décoffrage"
+      - "Ferraillage, décoffrage, coffrage, bétonnage"
+      - "Décoffrage, bétonnage, ferraillage, coffrage"
+    reponse: 1
+    explication: "On monte le coffrage, on place les armatures (ferraillage), on coule le béton, puis on retire le coffrage une fois le béton assez durci."
+
+  - type: vf
+    affirmation: "Un plancher en béton est souvent ceinturé par un chaînage."
+    reponse: true
+    explication: "Le chaînage est une armature continue qui ceinture le bâtiment au niveau des planchers. Il lie les murs entre eux et améliore la tenue de l'ensemble."
+
+  - type: qcm
+    question: "À quoi sert un linteau ?"
+    choix:
+      - "À isoler une fenêtre"
+      - "À reprendre les charges au-dessus d'une ouverture"
+      - "À fermer une porte"
+      - "À évacuer l'eau de pluie"
+    reponse: 1
+    explication: "Le linteau est une poutre posée au-dessus d'une porte ou d'une fenêtre : elle reprend les charges du mur et les reporte sur les côtés."
+
+  - type: ouverte
+    question: "Pourquoi un mur porteur ne se perce-t-il pas sans étude ?"
+    modele: "Parce qu'il fait partie du chemin des charges : il porte les planchers et la toiture. En ouvrir une partie sans le renforcer (linteau, étaiement) peut provoquer des fissures voire un effondrement. Seul un bureau d'études structure peut dire comment faire."
+
+approfondir:
+  - type: qcm
+    question: "Que signifie C25/30 pour un béton ?"
+    choix:
+      - "25 jours de séchage sur 30"
+      - "Résistance caractéristique à 28 jours : 25 MPa sur cylindre, 30 MPa sur cube"
+      - "25 % de ciment, 30 % de sable"
+      - "Un béton de 25 à 30 cm d'épaisseur"
+    reponse: 1
+    explication: "La classe C25/30 est définie par la norme NF EN 206/CN : 25 MPa de résistance caractéristique à la compression mesurée sur cylindre à 28 jours, 30 MPa sur cube."
+
+  - type: vf
+    affirmation: "La résistance d'un béton se vérifie par des essais de compression sur des éprouvettes."
+    reponse: true
+    explication: "On prélève du béton frais, on fabrique des éprouvettes, puis on les écrase à 28 jours (norme EN 12390-3) pour vérifier la classe de résistance annoncée."
+
+  - type: qcm
+    question: "Quel NF DTU encadre l'exécution des ouvrages en béton ?"
+    choix:
+      - "NF DTU 21"
+      - "NF DTU 31.2"
+      - "NF DTU 13.3"
+      - "NF DTU 43.1"
+    reponse: 0
+    explication: "Le NF DTU 21 porte sur l'exécution des ouvrages en béton. Le NF DTU 23.1 concerne les murs en béton banché, le 20.1 la maçonnerie de petits éléments."
+
+  - type: qcm
+    question: "Quelle différence entre dalle pleine et plancher à poutrelles et hourdis ?"
+    choix:
+      - "La dalle pleine est coulée d'un seul tenant ; le plancher à poutrelles associe des poutrelles et des éléments de remplissage"
+      - "La dalle pleine est toujours en bois"
+      - "Il n'y en a aucune, c'est le même plancher"
+      - "Les poutrelles sont réservées aux toitures"
+    reponse: 0
+    explication: "Une dalle pleine est une plaque de béton armé coulée sur place ou en éléments. Un plancher à poutrelles associe des poutrelles préfabriquées et des hourdis qui comblent l'intervalle."
+
+  - type: ouverte
+    question: "Pourquoi la préfabrication peut-elle raccourcir un chantier de gros œuvre ?"
+    modele: "Parce que des éléments (prédalles, murs, poutrelles) sont fabriqués en usine pendant que le chantier prépare les fondations. Sur place, on les pose et on les assemble : moins de coffrage et de séchage. Il faut en contrepartie prévoir le transport et le levage."
+
+expert:
+  - type: qcm
+    question: "Quel NF DTU concerne les charpentes en bois ?"
+    choix:
+      - "NF DTU 31.1"
+      - "NF DTU 21"
+      - "NF DTU 13.1"
+      - "NF DTU 20.13"
+    reponse: 0
+    explication: "Le NF DTU 31.1 porte sur la charpente en bois. Le 31.3 concerne les charpentes assemblées par connecteurs métalliques ou goussets."
+
+  - type: vf
+    affirmation: "Les dimensions et armatures d'un plancher se décident librement sur le chantier."
+    reponse: false
+    explication: "Elles sont calculées par le bureau d'études structure (Eurocodes) et figurent sur les plans d'exécution, que la maîtrise d'œuvre vise. L'entreprise les applique."
+
+  - type: ouverte
+    question: "Quels contrôles peut-on prévoir pendant le gros œuvre, et par qui ?"
+    modele: "Le contrôleur technique vérifie la solidité et la conformité à ses missions. La maîtrise d'œuvre contrôle l'exécution (mission DET) et vise les plans d'exécution (mission VISA). Des essais de résistance du béton sur éprouvettes complètent ces contrôles. Les détails dépendent du marché."
