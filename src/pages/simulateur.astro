@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/simulateur.css';
+---
+
+<Base
+  title="Simulateur de bilan — Oinarri"
+  description="Fais varier le prix, le foncier, les travaux ou le taux, et vois la marge d'une opération se recalculer."
+  large
+  bande
+  etiquette={['SIMU-', 'LATEUR']}
+>
+  <Fragment slot="bande">
+    <a class="retour" href="/promotion/">Promotion immobilière</a>
+    <p class="marge-evide" id="marge-evide" aria-hidden="true">…</p>
+    <h1>Le simulateur de bilan</h1>
+    <p class="lead">
+      Change le prix, le terrain, les travaux ou le crédit : la marge ci-dessus se recalcule à chaque
+      saisie.
+    </p>
+    <p class="marge-legende">
+      <span class="etiquette">Valeurs fictives</span>
+      Départ : la Résidence Arbola, une opération inventée pour les cours.
+    </p>
+  </Fragment>
+
+  <div id="simulateur" class="sim">
+    <p class="sim-texte">Chargement du simulateur…</p>
+  </div>
+  <noscript>
+    <p class="sim-texte">Le simulateur a besoin de JavaScript pour calculer le bilan.</p>
+  </noscript>
+</Base>
+
+<script>
+  import '../scripts/simulateur.js';
+</script>
