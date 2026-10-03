@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Un mur en pisé et l'eau</title>
+<desc>Un toit débordant écarte la pluie, un enduit perméable à la vapeur laisse le mur en pisé sécher, un soubassement en pierre le protège de l'eau remontant du sol.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="170" y="30" width="340" height="22" rx="4" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<rect x="200" y="52" width="280" height="150" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<rect x="190" y="52" width="10" height="150" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<rect x="480" y="52" width="10" height="150" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<rect x="190" y="202" width="300" height="50" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<path d="M120 252 H560" stroke="#5F5E5A" stroke-width="1.5"/>
+<text class="th" x="340" y="127" text-anchor="middle" dominant-baseline="central" fill="#712B13">Mur en pisé</text>
+<text class="ts" x="340" y="227" text-anchor="middle" dominant-baseline="central" fill="#444441">Soubassement en pierre</text>
+<text class="ts" x="20" y="34" dominant-baseline="central" fill="#5F5E5A">Toit débordant :</text>
+<text class="ts" x="20" y="52" dominant-baseline="central" fill="#5F5E5A">écarte la pluie</text>
+<path d="M125 42 H168" stroke="#5F5E5A" stroke-width="1"/>
+<text class="ts" x="525" y="110" dominant-baseline="central" fill="#085041">Enduit perméable</text>
+<text class="ts" x="525" y="128" dominant-baseline="central" fill="#085041">à la vapeur d'eau</text>
+<path d="M492 120 H520" stroke="#0F6E56" stroke-width="1"/>
+<text class="ts" x="525" y="222" dominant-baseline="central" fill="#444441">Protège de l'eau</text>
+<text class="ts" x="525" y="240" dominant-baseline="central" fill="#444441">venue du sol</text>
+<path d="M492 230 H520" stroke="#5F5E5A" stroke-width="1"/>
+<text class="ts" x="340" y="284" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Le pisé craint l'eau liquide, mais régule l'humidité de l'air.</text>
+<text class="ts" x="340" y="306" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Un enduit qui l'enferme l'abîme.</text>
+</svg>
