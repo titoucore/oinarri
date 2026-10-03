@@ -45,6 +45,16 @@ const groupes = [...groupesParLettre.entries()];
       autocapitalize="none"
     />
 
+    <!-- Termes ajoutés par l'utilisateur depuis les cours (rempli par glossaire-perso.js). -->
+    <section class="perso-groupe" id="mes-termes" hidden>
+      <h2>Mes termes</h2>
+      <p class="perso-note">
+        Les termes que tu as ajoutés depuis les cours. Ils sont repérés dans le texte comme ceux du
+        glossaire.
+      </p>
+      <div id="mes-termes-liste"></div>
+    </section>
+
     <nav class="g-lettres" aria-label="Aller à une lettre">
       {
         groupes.map(([lettre]) => (
@@ -173,4 +183,5 @@ const groupes = [...groupesParLettre.entries()];
 
 <script>
   import '../scripts/glossaire.js';
+  import '../scripts/glossaire-perso.js';
 </script>
