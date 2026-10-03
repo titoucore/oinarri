@@ -1,6 +1,6 @@
 ---
 titre: Les fondations
-description: Ce qui relie le bâtiment au sol : semelles, radier, pieux, le rôle de l'étude de sol G2, la profondeur hors gel et le risque des sols argileux.
+description: "Ce qui relie le bâtiment au sol : semelles, radier, pieux, le rôle de l'étude de sol G2, la profondeur hors gel et le risque des sols argileux."
 parcours: ba-ba
 ordre: 5
 niveau: Débutant
