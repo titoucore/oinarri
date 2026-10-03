@@ -54,7 +54,7 @@ Le montant dépend de la collectivité qui a la délégation. À titre d'exemple
 
 ### Les conditions de la taxe foncière
 
-Pour bénéficier de l'exonération de taxe foncière sur les propriétés bâties, les prêts de la Banque des Territoires, d'Action Logement et les subventions publiques doivent, d'après une publication de la Banque des Territoires de 2019, représenter la majorité du plan de financement (article 1384 A du CGI).
+L'article 1384 A du CGI (vérifié sur Légifrance le 3 octobre 2026) exonère de taxe foncière sur les propriétés bâties les logements locatifs sociaux neufs affectés à l'habitation principale, lorsqu'ils sont financés à concurrence de **plus de 50 %** au moyen d'un prêt réglementé. La durée de base est de **15 ans** à compter de l'année qui suit l'achèvement.
 
 ### Un deuxième financeur : Action Logement
 
@@ -67,7 +67,7 @@ Selon la Banque des Territoires, le prêt PLS doit représenter au moins 50 % du
 ## Expert
 
 - **TVA : l'article 278 sexies du CGI.** Il fixe le taux selon le financement : 5,5 % pour le PLAI et le renouvellement urbain, 10 % pour les autres logements locatifs sociaux. L'acquisition d'un terrain à bâtir reste à 10 %, la TVA payée étant déductible. Les règles pour les quartiers prioritaires ont des dispositions transitoires jusqu'à fin 2026.
-- **Taxe foncière : 15, 25, 30 ans.** La durée de base est de 15 ans. Elle est portée à 25 ans pour les décisions de subvention ou de prêt prises jusqu'au 31 décembre 2026 : la loi de finances n° 2026-103 du 19 février 2026 n'a pas prorogé cette échéance (Unafo). Une durée plus longue, jusqu'à 30 ans, est mentionnée pour les constructions qui dépassent la réglementation environnementale ; les sources divergent sur son régime exact.
+- **Taxe foncière : 15, 20, 25, 30 ans.** Selon l'article 1384 A, la durée est de 15 ans. Elle passe à **20 ans** si la construction satisfait à des critères de performance énergétique et environnementale supérieurs à la réglementation, à **25 ans** si la décision de subvention ou de prêt aidé est prise entre le 1er juillet 2004 et le **31 décembre 2026**, et à **30 ans** en combinant les deux. La loi de finances n° 2026-103 du 19 février 2026 n'a pas prorogé cette échéance du 31 décembre 2026 (Unafo). Pour une décision en 2027, la durée retombe donc en principe à 15 ou 20 ans, sauf nouvelle loi.
 - **Compensation aux collectivités.** La loi de finances pour 2022 a prévu une compensation intégrale par l'État de la perte de taxe foncière pour les logements agréés entre le 1er janvier 2021 et le 30 juin 2026 (budget.gouv). À revérifier pour la suite.
 
 ## Cas pratiques
@@ -110,9 +110,9 @@ PLAI · PLUS · PLS · Banque des Territoires · Action Logement · Décision de
 Vérifié le 3 octobre 2026.
 
 - Taux et durées des prêts : Banque des Territoires (pages sur les prêts PLAI, PLUS, PLS et le blog des prêts long terme).
-- Subventions, TFPB, prêts Action Logement : ministère de la Transition écologique (« Les aides financières au logement », avril 2025) ; décisions d'agrément 2026 publiées par Lorient Agglomération.
+- Subventions, prêts Action Logement : ministère de la Transition écologique (« Les aides financières au logement », avril 2025) ; décisions d'agrément 2026 publiées par Lorient Agglomération.
 - TVA : article 278 sexies du CGI, BOFiP, flash juridique de l'USH sur les quartiers prioritaires (juin 2024).
-- TFPB : article 1384 A du CGI, fiche du ministère, Unafo sur la loi de finances 2026.
-- Avantages fiscaux et compensation : publication de la Banque des Territoires (2019), annexe budgétaire de 2023.
+- Taxe foncière : article 1384 A du CGI sur Légifrance (lu le 3 octobre 2026), fiche du ministère, Unafo sur la loi de finances 2026.
+- Compensation : annexe budgétaire de 2023.
 
-À contrôler sur Légifrance et le BOFiP : le taux de TVA et ses cas d'exception ; la durée exacte de l'exonération de taxe foncière selon la date de décision ; la règle du PLS à 50 % du prix de revient ; l'évolution après le 31 décembre 2026.
+À contrôler sur Légifrance et le BOFiP : le taux de TVA et ses cas d'exception ; la règle du PLS à 50 % du prix de revient ; l'évolution après le 31 décembre 2026.
