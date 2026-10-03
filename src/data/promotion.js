@@ -13,6 +13,8 @@ export const chapitres = [
   {
     titre: 'Le foncier',
     desc: 'Trouver, sécuriser et purger un terrain.',
+    href: '/promotion/02-le-foncier/',
+    cours: 'promotion/02-le-foncier',
   },
   {
     titre: "L'urbanisme",
