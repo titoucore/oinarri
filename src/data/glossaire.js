@@ -57,7 +57,7 @@ export const termes = [
     categorie: 'Construction',
     definition:
       "Classement des études de sol défini par la norme NF P94-500 : G1 (étude préalable, avant la conception), G2 (étude de conception, qui précise les fondations), G3 (étude et suivi d'exécution), G4 (supervision de l'exécution) et G5 (diagnostic).",
-    aussi: ['G1', 'G2', 'G3', 'G4', 'G5', 'NF P94-500'],
+    aussi: ['G1', 'G2', 'G3', 'G4', 'G5', 'NF P94-500', 'Étude G2'],
   },
   {
     terme: 'Architecte',
@@ -275,7 +275,7 @@ export const termes = [
     terme: 'Gros œuvre',
     categorie: 'Construction',
     definition:
-      "Les travaux qui font tenir le bâtiment debout : fondations, murs, planchers, charpente. Ils précèdent le second œuvre.",
+      "Les travaux qui font tenir le bâtiment debout : fondations, murs, planchers, escaliers, charpente. Ils précèdent le second œuvre.",
   },
   {
     terme: 'Second œuvre',
@@ -440,5 +440,356 @@ export const termes = [
     definition:
       "Classement en quatre familles des bâtiments d'habitation pour la sécurité incendie (arrêté du 31 janvier 1986), selon leur hauteur et leur forme. Au-delà de 50 m, c'est le régime des immeubles de grande hauteur.",
     aussi: ['1re famille', '2e famille', '3e famille', '4e famille', 'IGH'],
+  },
+  {
+    terme: 'VRD',
+    developpe: 'Voirie et Réseaux Divers',
+    categorie: 'Construction',
+    definition:
+      "Les voies d'accès, trottoirs, stationnements et réseaux enterrés (eau, assainissement, électricité, gaz, télécoms) qui desservent un bâtiment.",
+  },
+  {
+    terme: 'Terrassement',
+    categorie: 'Construction',
+    definition:
+      "Travaux qui modèlent le terrain pour accueillir le bâtiment : décapage, déblais et remblais, plateforme, fouilles.",
+    aussi: ['Fouilles'],
+  },
+  {
+    terme: 'Décapage',
+    categorie: 'Construction',
+    definition:
+      "Première étape du terrassement : on enlève la terre végétale, souvent stockée pour les espaces verts.",
+  },
+  {
+    terme: 'Déblais et remblais',
+    categorie: 'Construction',
+    definition:
+      "Déblayer, c'est enlever de la terre là où le terrain est trop haut ; remblayer, c'est en apporter là où il est trop bas. Le bilan des deux pèse sur le coût du terrassement.",
+    aussi: ['Déblais', 'Remblais', 'Remblai', 'Déblai'],
+  },
+  {
+    terme: 'Plateforme',
+    categorie: 'Construction',
+    definition:
+      "Surface plane, stable et portante préparée avant les fondations, sur laquelle démarre le chantier.",
+  },
+  {
+    terme: 'Branchement',
+    categorie: 'Construction',
+    definition:
+      "Liaison entre le bâtiment et un réseau public (eau, assainissement, électricité, gaz, télécoms).",
+    aussi: ['Raccordement'],
+  },
+  {
+    terme: 'Réseaux humides',
+    categorie: 'Construction',
+    definition: "Les réseaux d'eau : eau potable, eaux usées et eaux pluviales.",
+  },
+  {
+    terme: 'Réseaux secs',
+    categorie: 'Construction',
+    definition: "Les réseaux d'énergie et de communication : électricité, gaz et télécoms.",
+  },
+  {
+    terme: 'DT',
+    developpe: 'Déclaration de projet de Travaux',
+    categorie: 'Réglementation',
+    definition:
+      "Déclaration que le maître d'ouvrage adresse aux exploitants de réseaux avant de lancer la consultation des entreprises, pour savoir ce qui est enterré dans l'emprise des travaux. Elle se valide environ 3 mois.",
+    aussi: ['Déclaration de projet de travaux'],
+  },
+  {
+    terme: 'DICT',
+    developpe: "Déclaration d'Intention de Commencement de Travaux",
+    categorie: 'Réglementation',
+    definition:
+      "Déclaration que l'entreprise qui exécute les travaux adresse aux exploitants de réseaux avant de commencer à creuser.",
+    aussi: ["Déclaration d'intention de commencement de travaux"],
+  },
+  {
+    terme: 'Guichet unique',
+    categorie: 'Réglementation',
+    definition:
+      "Téléservice national (reseaux-et-canalisations.gouv.fr, géré par l'Ineris) qui indique gratuitement quels exploitants de réseaux sont concernés par des travaux.",
+    aussi: ['Guichet unique des réseaux'],
+  },
+  {
+    terme: 'Assainissement collectif',
+    categorie: 'Construction',
+    definition:
+      "Collecte et traitement des eaux usées par un réseau public. Le raccordement est obligatoire dans un délai de deux ans après sa mise en service.",
+    aussi: ['Tout-à-l\'égout'],
+  },
+  {
+    terme: 'Assainissement non collectif',
+    categorie: 'Construction',
+    definition:
+      "Dispositif individuel de traitement des eaux usées, nécessaire quand le bâtiment n'est pas relié à un réseau public.",
+    aussi: ['ANC', 'Fosse septique'],
+  },
+  {
+    terme: 'Eaux usées',
+    categorie: 'Construction',
+    definition:
+      "Eaux sales issues des usages domestiques (cuisine, salle de bains, WC). Elles vont au réseau d'assainissement.",
+    aussi: ['EU'],
+  },
+  {
+    terme: 'Eaux pluviales',
+    categorie: 'Construction',
+    definition:
+      "Eaux de pluie ruisselant sur les toitures et les sols. La collectivité fixe les conditions de rejet, souvent pour limiter le débit qui quitte la parcelle.",
+    aussi: ['EP'],
+  },
+  {
+    terme: 'Fondations',
+    categorie: 'Construction',
+    definition:
+      "Partie du bâtiment qui reçoit les charges des murs ou des poteaux et les répartit dans le sol.",
+    aussi: ['Fondation'],
+  },
+  {
+    terme: 'Semelle filante',
+    categorie: 'Construction',
+    definition:
+      "Bande continue de béton armé placée sous un mur, sur toute sa longueur.",
+    aussi: ['Semelle'],
+  },
+  {
+    terme: 'Semelle isolée',
+    categorie: 'Construction',
+    definition:
+      "Plot de béton armé placé sous un poteau. Les semelles isolées sont souvent reliées par des longrines.",
+  },
+  {
+    terme: 'Radier',
+    categorie: 'Construction',
+    definition:
+      "Grande dalle de béton armé placée sous tout le bâtiment. Utile quand le sol porte peu.",
+  },
+  {
+    terme: 'Pieux',
+    categorie: 'Construction',
+    definition:
+      "Colonnes de béton ou d'acier enfoncées en profondeur pour chercher un sol plus résistant. Ce sont des fondations profondes.",
+    aussi: ['Pieu', 'Fondation profonde', 'Fondations profondes'],
+  },
+  {
+    terme: 'Fondation superficielle',
+    categorie: 'Construction',
+    definition:
+      "Fondation peu profonde : semelles filantes, semelles isolées ou radier. Le NF DTU 13.1 en fixe les règles.",
+    aussi: ['Fondations superficielles'],
+  },
+  {
+    terme: 'Longrine',
+    categorie: 'Construction',
+    definition:
+      "Poutre de béton armé qui relie des fondations entre elles (semelles isolées ou pieux).",
+    aussi: ['Longrines'],
+  },
+  {
+    terme: 'Vide sanitaire',
+    categorie: 'Construction',
+    definition:
+      "Espace ventilé entre le sol et le premier plancher, qui éloigne le plancher de l'humidité du sol.",
+  },
+  {
+    terme: 'Dallage',
+    categorie: 'Construction',
+    definition:
+      "Dalle de béton posée directement sur le sol, par exemple au rez-de-chaussée. Le NF DTU 13.3 en fixe les règles.",
+  },
+  {
+    terme: 'Profondeur hors gel',
+    categorie: 'Construction',
+    definition:
+      "Profondeur sous laquelle le gel n'atteint pas le sol. Les fondations descendent plus bas pour ne pas bouger au gel. La valeur dépend de la région.",
+    aussi: ['Hors gel'],
+  },
+  {
+    terme: 'Retrait-gonflement des argiles',
+    categorie: 'Construction',
+    definition:
+      "Phénomène du sol : les argiles gonflent quand elles s'humidifient et se rétractent quand elles sèchent, ce qui peut déplacer les fondations et fissurer le bâtiment.",
+    aussi: ['RGA', 'Argiles', 'Sol argileux'],
+  },
+  {
+    terme: 'Loi ELAN',
+    developpe: "Évolution du Logement, de l'Aménagement et du Numérique",
+    categorie: 'Réglementation',
+    definition:
+      "Loi n° 2018-1021 du 23 novembre 2018. Son article 68 a créé un dispositif de prévention du retrait-gonflement des argiles pour les terrains à bâtir et les constructions neuves.",
+    aussi: ['ELAN'],
+  },
+  {
+    terme: 'Dalle pleine',
+    categorie: 'Construction',
+    definition:
+      "Plancher formé d'une plaque de béton armé, coulée d'un seul tenant ou assemblée à partir d'éléments préfabriqués.",
+  },
+  {
+    terme: 'Poutrelles et hourdis',
+    categorie: 'Construction',
+    definition:
+      "Plancher formé de poutrelles préfabriquées qui portent des éléments de remplissage (les hourdis), recouverts d'une dalle de compression.",
+    aussi: ['Poutrelle', 'Hourdis', 'Plancher à poutrelles'],
+  },
+  {
+    terme: 'Chaînage',
+    categorie: 'Construction',
+    definition:
+      "Armature continue qui ceinture le bâtiment au niveau des planchers et lie les murs entre eux.",
+    aussi: ['Chaînages'],
+  },
+  {
+    terme: 'Linteau',
+    categorie: 'Construction',
+    definition:
+      "Poutre posée au-dessus d'une porte ou d'une fenêtre : elle reprend les charges du mur et les reporte sur les côtés.",
+  },
+  {
+    terme: 'Charpente',
+    categorie: 'Construction',
+    definition:
+      "Ossature de la toiture, en bois ou en métal, qui porte la couverture.",
+  },
+  {
+    terme: 'Couverture',
+    categorie: 'Construction',
+    definition:
+      "Partie supérieure de la toiture qui protège de la pluie : tuiles, ardoises, bacs ou toiture-terrasse avec étanchéité.",
+  },
+  {
+    terme: 'Coffrage',
+    categorie: 'Construction',
+    definition:
+      "Moule provisoire dans lequel on coule le béton pour lui donner sa forme. On le retire après durcissement (décoffrage).",
+    aussi: ['Décoffrage', 'Banche'],
+  },
+  {
+    terme: 'Bétonnage',
+    categorie: 'Construction',
+    definition: "Opération qui consiste à couler et à compacter le béton dans le coffrage.",
+  },
+  {
+    terme: 'Classe de résistance',
+    categorie: 'Matériaux',
+    definition:
+      "Désignation d'un béton selon sa résistance à la compression à 28 jours. C25/30 signifie 25 MPa mesurés sur cylindre et 30 MPa sur cube (norme NF EN 206/CN).",
+    aussi: ['C25/30', 'C30/37', 'Résistance caractéristique'],
+  },
+  {
+    terme: 'Éprouvette',
+    categorie: 'Matériaux',
+    definition:
+      "Échantillon de béton (cylindre ou cube) qu'on écrase en laboratoire pour vérifier la résistance annoncée.",
+    aussi: ['Éprouvettes'],
+  },
+  {
+    terme: 'DCE',
+    developpe: 'Dossier de Consultation des Entreprises',
+    categorie: 'Juridique',
+    definition:
+      "Dossier remis aux entreprises pour qu'elles remettent une offre : règlement de la consultation, pièces écrites, plans, bordereaux.",
+    aussi: ['Dossier de consultation des entreprises'],
+  },
+  {
+    terme: 'Règlement de la consultation',
+    categorie: 'Juridique',
+    definition:
+      "Pièce du DCE qui fixe les règles du jeu de la consultation : délais, contenu des offres, critères de choix et pondération.",
+    aussi: ['RC'],
+  },
+  {
+    terme: 'CCAP',
+    developpe: 'Cahier des Clauses Administratives Particulières',
+    categorie: 'Juridique',
+    definition:
+      "Pièce du marché qui précise les règles administratives propres à ce marché : délais, pénalités, paiement, garantie.",
+  },
+  {
+    terme: 'CCTP',
+    developpe: 'Cahier des Clauses Techniques Particulières',
+    categorie: 'Juridique',
+    definition:
+      "Pièce du marché qui décrit les ouvrages à réaliser, les matériaux et les modes d'exécution, lot par lot.",
+  },
+  {
+    terme: "Acte d'engagement",
+    categorie: 'Juridique',
+    definition:
+      "Document par lequel l'entreprise s'engage sur son prix et ses délais, et que le maître d'ouvrage signe pour conclure le marché.",
+  },
+  {
+    terme: 'Lot',
+    categorie: 'Juridique',
+    definition:
+      "Part d'un marché de travaux confiée à une entreprise, en général par corps d'état (gros œuvre, charpente, plomberie…).",
+    aussi: ['Lots', 'Allotissement'],
+  },
+  {
+    terme: 'MAPA',
+    developpe: 'Marché À Procédure Adaptée',
+    categorie: 'Juridique',
+    definition:
+      "Procédure de commande publique dont l'acheteur fixe librement les modalités dans le respect des principes de la commande publique. Elle s'applique entre le seuil de dispense et le seuil européen.",
+    aussi: ['Procédure adaptée'],
+  },
+  {
+    terme: 'Procédure formalisée',
+    categorie: 'Juridique',
+    definition:
+      "Procédure aux règles strictes (appel d'offres, dialogue compétitif…), obligatoire à partir des seuils européens. Pour les travaux, le seuil est de 5 404 000 € HT en 2026-2027.",
+    aussi: ['Appel d\'offres', 'Seuils européens'],
+  },
+  {
+    terme: 'Offre anormalement basse',
+    categorie: 'Juridique',
+    definition:
+      "Offre dont le prix paraît trop bas pour être sérieux. L'acheteur doit demander à l'entreprise de justifier son prix avant de la rejeter ou de la retenir.",
+    aussi: ['OAB'],
+  },
+  {
+    terme: 'Avenant',
+    categorie: 'Juridique',
+    definition:
+      "Acte qui modifie un marché en cours d'exécution, dans des cas encadrés. Il ne peut pas changer la nature globale du marché.",
+  },
+  {
+    terme: 'Ordre de service',
+    categorie: 'Juridique',
+    definition:
+      "Instruction écrite du maître d'ouvrage ou de la maîtrise d'œuvre à l'entreprise. Le premier ordre de service fait démarrer le chantier.",
+    aussi: ['OS'],
+  },
+  {
+    terme: 'Retenue de garantie',
+    categorie: 'Juridique',
+    definition:
+      "Part des sommes dues à l'entreprise retenue pour garantir la levée des réserves. Elle ne peut pas dépasser 5 % du montant du marché et est remboursée dans les trente jours après l'expiration du délai de garantie.",
+  },
+  {
+    terme: 'CCAG-Travaux',
+    developpe: 'Cahier des Clauses Administratives Générales applicable aux marchés publics de Travaux',
+    categorie: 'Juridique',
+    definition:
+      "Document de référence approuvé par arrêté du 30 mars 2021, auquel un marché de travaux peut faire référence pour l'exécution, les délais, les prix et la réception.",
+    aussi: ['CCAG', 'CCAG Travaux'],
+  },
+  {
+    terme: 'Acompte',
+    categorie: 'Juridique',
+    definition:
+      "Paiement partiel d'un marché de travaux, versé au fur et à mesure de l'avancement sur la base de situations de travaux que la maîtrise d'œuvre vérifie.",
+    aussi: ['Acomptes', 'Situation de travaux'],
+  },
+  {
+    terme: 'Marché public',
+    categorie: 'Juridique',
+    definition:
+      "Contrat conclu à titre onéreux par un acheteur soumis à la commande publique pour répondre à ses besoins en travaux, fournitures ou services.",
+    aussi: ['Marchés publics', 'Commande publique'],
   },
 ];
