@@ -44,12 +44,12 @@ Valeurs de l'avis des loyers 2026, en euros par mètre carré de surface utile e
 
 ### Le calcul pour Arbola
 
-Le **coefficient de structure** vaut 0,77 × (1 + nombre de logements × 20 m² / surface utile totale).
+Le **coefficient de structure** vaut 0,77 × (1 + nombre de logements × 20 m² / surface utile totale). Il compense le fait que les petits logements coûtent plus cher au mètre carré.
 
-- **Trois PLUS** : surface utile de chacun = 62 + 6 = 68 m², soit 204 m². Coefficient = 0,77 × (1 + 60 / 204) = environ 0,9965. Prix au m² = 6,49 × 0,9965 = environ 6,47 euros. Loyer maximal par logement = 68 × 6,47 = environ **440 euros par mois**.
-- **Un PLAI** : surface utile = 45 + 6 = 51 m². Pour simplifier, on traite le logement comme une opération seule et on retient 48 m². Coefficient = 0,77 × (1 + 20 / 48) = environ 1,0908. Prix au m² = 5,77 × 1,0908 = environ 6,29 euros. Loyer maximal = 48 × 6,29 = environ **302 euros par mois**.
+- **Trois PLUS.** Surface utile de chacun : 62 + 6 (la moitié de la cave) = 68 m², soit 204 m² au total. Coefficient = 0,77 × (1 + 60 / 204) = environ 0,9965. Prix au m² = 6,49 × 0,9965 = environ 6,47 euros. Loyer maximal par logement = 68 × 6,47 = environ **440 euros par mois**.
+- **Un PLAI.** Surface utile : 45 + 6 = 51 m². Coefficient = 0,77 × (1 + 20 / 51) = environ 1,072. Prix au m² = 5,77 × 1,072 = environ 6,19 euros. Loyer maximal = 51 × 6,19 = environ **316 euros par mois**.
 
-Ces calculs servent d'exercice. Dans une vraie convention mixte, on calcule le loyer de chaque financement avec son propre coefficient de structure et on peut signer une seule convention pour plusieurs produits.
+Ces calculs servent d'exercice : chaque financement est calculé séparément, avec son propre coefficient de structure. Depuis 2025, on peut signer une seule convention pour plusieurs produits (PLAI, PLUS, PLS) avec un loyer maximal pour chacun.
 
 ## Approfondir
 
