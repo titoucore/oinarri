@@ -8,10 +8,12 @@
 import { gererAccueil } from './api-accueil.js';
 import { gererAuth } from './api-auth.js';
 import { gererCompte } from './api-compte.js';
+import { gererExpliquer } from './api-expliquer.js';
 import { gererNotes } from './api-notes.js';
 import { gererProgression } from './api-progression.js';
 import { gererQuiz } from './api-quiz.js';
 import { gererRevisions } from './api-revisions.js';
+import { gererTermes } from './api-termes.js';
 import { reponseIcone } from './lib/icones.js';
 import { lireSession } from './lib/sessions.js';
 
@@ -20,10 +22,12 @@ const ROUTES_UTILISATEUR = new Map([
   ['/api/accueil', gererAccueil],
   ['/api/compte', gererCompte],
   ['/api/compte/export', gererCompte],
+  ['/api/expliquer', gererExpliquer],
   ['/api/notes', gererNotes],
   ['/api/progression', gererProgression],
   ['/api/quiz', gererQuiz],
   ['/api/revisions', gererRevisions],
+  ['/api/termes', gererTermes],
 ]);
 
 // Pages accessibles sans être connecté. Tout le reste exige une session.
