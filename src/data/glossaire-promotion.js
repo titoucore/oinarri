@@ -197,4 +197,60 @@ export const termes = [
       "Organisme agréé qui reste propriétaire du terrain et le met à disposition de ménages par des baux réels solidaires.",
     aussi: ['OFS'],
   },
+  {
+    terme: 'Zonage',
+    categorie: 'Urbanisme',
+    definition:
+      "Découpage du territoire d'une commune en zones par le PLU : urbaines (U), à urbaniser (AU), agricoles (A) et naturelles (N). Chaque zone a son règlement.",
+    aussi: ['Zone U', 'Zone AU', 'Zone A', 'Zone N'],
+  },
+  {
+    terme: 'Règlement du PLU',
+    categorie: 'Urbanisme',
+    definition:
+      "Partie du PLU qui fixe, zone par zone, ce qu'on a le droit de construire : usages autorisés, implantation, hauteur, emprise, stationnement, espaces verts.",
+    aussi: ['Règlement de zone'],
+  },
+  {
+    terme: "Orientation d'aménagement et de programmation",
+    categorie: 'Urbanisme',
+    definition:
+      "Pièce du PLU qui précise l'esprit attendu sur un secteur donné (accès, formes urbaines, espaces publics). Un projet doit être compatible avec elle.",
+    aussi: ['OAP'],
+  },
+  {
+    terme: 'Cristallisation des règles',
+    categorie: 'Urbanisme',
+    definition:
+      "Effet du certificat d'urbanisme : si le permis est demandé dans les 18 mois, les règles d'urbanisme, taxes et limitations au droit de propriété qui figuraient au certificat ne peuvent pas être remises en cause, sauf celles qui protègent la sécurité ou la salubrité publiques.",
+    aussi: ['Cristallisation', 'Règles figées'],
+  },
+  {
+    terme: 'Permis tacite',
+    categorie: 'Urbanisme',
+    definition:
+      "Permis réputé accordé quand la mairie ne notifie aucune décision à l'issue du délai d'instruction. Il a la même valeur qu'un permis exprès.",
+    aussi: ['Permis de construire tacite', 'Accord tacite'],
+  },
+  {
+    terme: 'Intérêt à agir',
+    categorie: 'Urbanisme',
+    definition:
+      "Condition pour contester un permis : la construction doit affecter directement les conditions d'occupation, d'utilisation ou de jouissance du bien du requérant. Un voisin immédiat peut le justifier, un habitant éloigné plus difficilement.",
+    aussi: ['Qualité pour agir'],
+  },
+  {
+    terme: 'Retrait du permis',
+    categorie: 'Urbanisme',
+    definition:
+      "Décision par laquelle la commune annule elle-même un permis illégal. Elle ne le peut que dans les trois mois suivant la décision, et doit la notifier au bénéficiaire avant la fin de ce délai.",
+    aussi: ['Retrait', "Retrait d'un permis"],
+  },
+  {
+    terme: 'Permis modificatif',
+    categorie: 'Urbanisme',
+    definition:
+      "Permis qui adapte un projet déjà autorisé, par exemple pour corriger une irrégularité réparable relevée par le juge.",
+    aussi: ['PC modificatif', 'Modificatif'],
+  },
 ];
