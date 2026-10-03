@@ -25,6 +25,8 @@ export const chapitres = [
   {
     titre: 'Le comportement physique',
     desc: "Hygrothermie, inertie, confort d'été, acoustique et résistance au feu.",
+    href: '/materiaux-biosources/04-le-comportement-physique/',
+    cours: 'materiaux-biosources/04-le-comportement-physique',
   },
   {
     titre: 'Mesurer et réglementer',
