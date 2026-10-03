@@ -49,6 +49,12 @@ for (const [parcours, plan] of [
   <script is:inline type="application/json" id="cours-data" set:html={JSON.stringify(cours)} />
 </Base>
 
+<style is:global>
+  .mes-notes-recherche[hidden] {
+    display: none;
+  }
+</style>
+
 <script>
   import '../scripts/mes-notes.js';
 </script>
