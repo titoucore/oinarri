@@ -25,8 +25,10 @@ function afficherPrenom(moi) {
   }
 }
 
-// « Reprendre où j'en suis » : le premier chapitre disponible non terminé,
-// affiché seulement si l'utilisateur a déjà validé quelque chose.
+// « Reprendre où j'en suis », tous parcours confondus :
+// 1. le chapitre commencé (non terminé) le plus récemment ;
+// 2. à défaut, le premier chapitre disponible non terminé.
+// Affiché seulement si l'utilisateur a déjà validé quelque chose.
 function afficherReprise(progression) {
   const bloc = document.getElementById('reprise');
   if (!bloc) return;
@@ -36,14 +38,22 @@ function afficherReprise(progression) {
 
   const titre = document.getElementById('reprise-titre');
   const etat = document.getElementById('reprise-etat');
-  const cible = chapitres.find((c) => !progression.get(c.cours)?.termine);
+
+  const entames = chapitres
+    .filter((c) => progression.has(c.cours) && !progression.get(c.cours).termine)
+    .sort((a, b) =>
+      (progression.get(b.cours).mis_a_jour || '').localeCompare(
+        progression.get(a.cours).mis_a_jour || '',
+      ),
+    );
+  const cible = entames[0] ?? chapitres.find((c) => !progression.get(c.cours)?.termine);
 
   if (cible) {
     bloc.href = cible.href;
     titre.textContent = cible.titre;
     etat.textContent = libelleEtat(progression.get(cible.cours)) || 'Pas encore commencé';
   } else {
-    bloc.href = '/ba-ba/';
+    bloc.href = '#parcours';
     titre.textContent = 'Tous les chapitres disponibles sont terminés';
     etat.textContent = 'Les suivants arrivent.';
   }
