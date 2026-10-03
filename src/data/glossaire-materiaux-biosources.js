@@ -272,4 +272,97 @@ export const termes = [
       "Mur porteur en blocs de pierre naturelle, utilisé en construction neuve comme en patrimoine. Le bilan carbone dépend beaucoup de la distance entre la carrière et le chantier.",
     aussi: ['Pierre massive porteuse', 'Maçonnerie de pierre'],
   },
+  {
+    terme: 'Hygroscopique',
+    categorie: 'Matériaux',
+    definition:
+      "Se dit d'un matériau qui capte l'humidité de l'air, la stocke dans ses pores et la restitue quand l'air s'assèche. C'est le cas des matériaux biosourcés. L'eau absorbée augmente leur conductivité thermique.",
+    aussi: ['Hygroscopicité', 'Matériau hygroscopique', 'Matériaux hygroscopiques'],
+  },
+  {
+    terme: "Perméabilité à la vapeur d'eau",
+    categorie: 'Matériaux',
+    definition:
+      "Capacité d'un matériau à laisser passer la vapeur d'eau. Une paroi doit en général laisser sortir la vapeur plus facilement qu'elle ne la laisse entrer. « Respirant » et « perspirant » sont des appellations courantes, sans valeur technique précise.",
+    aussi: ['Perspirant', 'Perspirance', 'Respirant', 'Perméable à la vapeur', 'Perméable à la vapeur d\'eau', 'Diffusion de vapeur'],
+  },
+  {
+    terme: 'Frein-vapeur',
+    categorie: 'Matériaux',
+    definition:
+      "Membrane ou revêtement posé côté intérieur d'une paroi, qui ralentit le passage de la vapeur d'eau vers l'isolant pour limiter la condensation. Il freine la vapeur sans l'arrêter complètement.",
+    aussi: ['Freins-vapeur', 'Membrane frein-vapeur'],
+  },
+  {
+    terme: 'Condensation interstitielle',
+    categorie: 'Construction',
+    definition:
+      "Condensation de la vapeur d'eau à l'intérieur d'une paroi, là où la température passe sous le point de rosée. Elle mouille l'isolant et peut abîmer la structure.",
+    aussi: ['Point de rosée', 'Condensation dans la paroi'],
+  },
+  {
+    terme: 'Inertie thermique',
+    categorie: 'Thermique',
+    definition:
+      "Capacité d'une paroi ou d'un bâtiment à stocker la chaleur puis à la restituer lentement. Elle vient surtout de la masse des matériaux et limite les écarts de température, en particulier en été.",
+    aussi: ['Inertie', 'Forte inertie'],
+  },
+  {
+    terme: 'Déphasage thermique',
+    categorie: 'Thermique',
+    definition:
+      "Retard avec lequel la chaleur extérieure traverse une paroi. Il dépend de l'épaisseur, de la densité et de la chaleur massique des matériaux.",
+    aussi: ['Déphasage'],
+  },
+  {
+    terme: 'Degrés-heures',
+    developpe: 'DH',
+    categorie: 'Thermique',
+    definition:
+      "Indicateur de confort d'été de la RE2020 : somme, heure par heure, de l'écart entre la température ressentie et une température de confort. Sous 350 DH, le confort est jugé bon ; au-dessus de 1 250 DH (cas général), le bâtiment est non conforme.",
+    aussi: ['DH', "Degrés-heures d'inconfort", 'Degré-heure', "Confort d'été"],
+  },
+  {
+    terme: 'Isolement acoustique',
+    developpe: 'DnT,A',
+    categorie: 'Réglementation',
+    definition:
+      "Mesure en décibels de l'atténuation du bruit entre deux locaux. Entre deux logements neufs, l'arrêté du 30 juin 1999 exige un DnT,A d'au moins 53 dB. Contre les bruits de l'extérieur, le DnT,A,tr minimal est de 30 dB.",
+    aussi: ['DnT,A', 'DnT,A,tr', 'Isolement acoustique standardisé pondéré', 'NRA', 'Nouvelle réglementation acoustique'],
+  },
+  {
+    terme: 'Masse-ressort-masse',
+    categorie: 'Concepts',
+    definition:
+      "Principe d'isolation acoustique : deux parois séparées par un matériau souple (air ou isolant) isolent mieux qu'une seule, à poids égal. Il permet de réaliser des parois légères performantes.",
+    aussi: ['Masse ressort masse', 'Loi masse-ressort-masse'],
+  },
+  {
+    terme: 'Réaction au feu',
+    categorie: 'Réglementation',
+    definition:
+      "Comportement d'un matériau face au feu : alimente-t-il l'incendie, produit-il de la fumée ou des gouttes enflammées ? Elle se classe en Euroclasses, de A1 (incombustible) à F.",
+    aussi: ['Classement au feu'],
+  },
+  {
+    terme: 'Résistance au feu',
+    categorie: 'Réglementation',
+    definition:
+      "Durée pendant laquelle un élément de construction (mur, plancher) remplit sa fonction : R pour la stabilité, E pour l'étanchéité aux flammes et aux gaz, I pour l'isolation. EI 120 signifie coupe-feu pendant deux heures.",
+    aussi: ['REI', 'EI', 'Coupe-feu', 'Stable au feu'],
+  },
+  {
+    terme: 'Euroclasse',
+    categorie: 'Réglementation',
+    definition:
+      "Classement européen de la réaction au feu, de A1 (incombustible) à F. Les indices s (fumée) et d (gouttes enflammées) le précisent : B-s1,d0 signifie bonne réaction, peu de fumée et pas de gouttes enflammées.",
+    aussi: ['Euroclasses', 'B-s1,d0'],
+  },
+  {
+    terme: 'Feu couvant',
+    categorie: 'Matériaux',
+    definition:
+      "Combustion sans flamme qui s'installe dans les matériaux poreux (isolants fibreux, paille) et se propage à l'intérieur d'une paroi. Elle se vérifie par des essais spécifiques.",
+    aussi: ['Couvant', 'Combustion couvante'],
+  },
 ];
