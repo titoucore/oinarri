@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 5 de Nouvelles méthodes de construction : Mesurer et réglementer.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que mesure l'indicateur Ic construction de la RE2020 ?"
+    choix:
+      - "La consommation de chauffage du bâtiment"
+      - "L'impact carbone des produits de construction et du chantier, en kg CO₂e par m²"
+      - "Le confort d'été"
+      - "La quantité de carbone stocké dans le bois"
+    reponse: 1
+    explication: "L'Ic construction additionne l'impact carbone des produits de construction, des équipements et de leur mise en œuvre sur le chantier. L'Ic énergie, lui, mesure celui des consommations d'énergie."
+
+  - type: vf
+    affirmation: "Une FDES est obligatoire pour mettre un produit de construction sur le marché en France."
+    reponse: false
+    explication: "Les textes n'imposent pas de déclaration environnementale pour la mise sur le marché. Mais sans FDES propre au produit, le calcul RE2020 utilise une donnée par défaut, plus défavorable."
+
+  - type: qcm
+    question: "Dans quelle base de données publique trouve-t-on les FDES et les données par défaut utilisées pour la RE2020 ?"
+    choix:
+      - "Légifrance"
+      - "INIES"
+      - "Cadastre.gouv"
+      - "Géorisques"
+    reponse: 1
+    explication: "La base INIES rassemble les FDES (produits de construction), les PEP (équipements) et les données environnementales par défaut mises à disposition par le ministère."
+
+  - type: ouverte
+    question: "En quoi la méthode d'ACV dynamique de la RE2020 est-elle favorable aux matériaux biosourcés ? Pourquoi cela ne suffit-il pas à dire qu'un matériau biosourcé est toujours meilleur pour le carbone ?"
+    modele: "L'ACV dynamique valorise le stockage temporaire du carbone : un matériau qui a capté du carbone en poussant le garde, et ne le réémet qu'en fin de vie. Cela avantage le bois et les biosourcés. Mais le résultat dépend de la donnée de chaque produit : selon une présentation de la DREAL Occitanie (2021), les isolants biosourcés ne sont pas toujours les plus performants sur le volet carbone. Il faut comparer des FDES précises, pas se fier à l'origine du matériau."
+
+approfondir:
+  - type: qcm
+    question: "Quel est le seuil moyen d'Ic construction pour un logement collectif dont le permis est déposé en 2026 (avant modulations) ?"
+    choix:
+      - "740 kg CO₂e/m²"
+      - "650 kg CO₂e/m²"
+      - "580 kg CO₂e/m²"
+      - "490 kg CO₂e/m²"
+    reponse: 1
+    explication: "Le palier 2025-2027 fixe 650 kg CO₂e/m² en logement collectif (530 en maison individuelle). Les paliers suivants sont 580 dès 2028 et 490 dès 2031. Les valeurs sont moyennes, avant modulations."
+
+  - type: vf
+    affirmation: "Depuis l'arrêté du 2 juillet 2024, les niveaux du label bâtiment biosourcé reposent sur la quantité de carbone biogénique stocké par m² de surface de référence."
+    reponse: true
+    explication: "Chaque niveau exige une quantité minimale de carbone biogénique stocké, en kgC/m² de surface de référence, selon l'usage principal du bâtiment."
+
+  - type: qcm
+    question: "Quelle quantité de carbone biogénique stocké faut-il pour le 3e niveau du label dans un bâtiment d'habitation ?"
+    choix:
+      - "15 kgC/m²"
+      - "25 kgC/m²"
+      - "36 kgC/m²"
+      - "45 kgC/m²"
+    reponse: 3
+    explication: "Pour un bâtiment d'habitation, l'arrêté du 2 juillet 2024 fixe 15, 25 et 45 kgC/m² pour les niveaux 1, 2 et 3. Les niveaux 2 et 3 exigent aussi des produits biosourcés en isolation."
+
+  - type: qcm
+    question: "Une demande de label biosourcé a été déposée en juin 2024. Quel texte s'applique ?"
+    choix:
+      - "L'arrêté du 19 décembre 2012"
+      - "L'arrêté du 2 juillet 2024"
+      - "L'arrêté du 4 août 2021"
+      - "Aucun : le label n'existait pas encore"
+    reponse: 0
+    explication: "L'arrêté du 2 juillet 2024 abroge celui du 19 décembre 2012, mais les demandes déposées avant le 31 août 2024 restent régies par l'ancien texte. Le nouveau s'applique aux demandes à compter du 1er septembre 2024."
+
+expert:
+  - type: vf
+    affirmation: "Quand un produit n'a pas de FDES, la donnée environnementale par défaut qui le remplace est plus favorable que la moyenne."
+    reponse: false
+    explication: "Les données par défaut sont majorées : elles pénalisent le projet. L'intérêt est d'inciter les fabricants à déclarer. Le niveau de pénalité évolue selon les paliers de la RE2020 (à contrôler)."
+
+  - type: ouverte
+    question: "Un bureau d'études annonce un Ic construction de 560 pour la version biosourcée d'Arbola et de 700 pour la version béton. Que faut-il vérifier avant de comparer ces deux chiffres ?"
+    modele: "Que les deux calculs reposent sur les mêmes hypothèses : même surface, mêmes périmètre et durée de vie (50 ans), même part de données par défaut ou de FDES spécifiques, mêmes modulations. Il faut aussi vérifier la qualité des FDES utilisées (vérifiées par tierce partie, même unité fonctionnelle) et rappeler que le calcul est conventionnel : il sert à vérifier un seuil, pas à mesurer l'empreinte réelle du bâtiment."
