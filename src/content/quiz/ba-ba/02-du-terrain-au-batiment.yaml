@@ -1,0 +1,102 @@
+# Mini-quiz du chapitre 2 : Du terrain au bâtiment.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quel document renseigne sur les règles applicables à un terrain, sans autoriser aucun travaux ?"
+    choix:
+      - "Le permis de construire"
+      - "Le certificat d'urbanisme"
+      - "La déclaration d'ouverture de chantier"
+      - "La déclaration d'achèvement des travaux"
+    reponse: 1
+    explication: "Le certificat d'urbanisme informe (version CUa) ou dit si un projet précis est réalisable (version CUb). Il est valable 18 mois et n'autorise aucun travaux : seul le permis de construire autorise."
+
+  - type: vf
+    affirmation: "Le délai de recours des tiers commence le jour où la mairie signe l'arrêté de permis."
+    reponse: false
+    explication: "Il court à partir du premier jour d'un affichage continu de 2 mois sur le terrain. Sans affichage régulier, le délai de recours ne commence pas."
+
+  - type: qcm
+    question: "Quel est l'ordre correct des premières étapes physiques d'un chantier ?"
+    choix:
+      - "Fondations, terrassement, structure, toiture"
+      - "Terrassement, fondations, structure, toiture"
+      - "Structure, fondations, terrassement, toiture"
+      - "Terrassement, structure, toiture, fondations"
+    reponse: 1
+    explication: "On creuse d'abord (terrassement), on relie le bâtiment au sol (fondations), on monte la structure, puis on pose la toiture. L'ordre est imposé par la physique du bâtiment."
+
+  - type: qcm
+    question: "Que signifie « hors d'eau » ?"
+    choix:
+      - "La toiture est posée : il ne pleut plus à l'intérieur"
+      - "Les fondations sont terminées"
+      - "Les fenêtres sont posées"
+      - "Le logement est livré à l'acquéreur"
+    reponse: 0
+    explication: "Hors d'eau : la toiture est posée. Hors d'air : les fenêtres et portes extérieures sont posées. À partir de là, le second œuvre peut avancer à l'abri de la pluie."
+
+  - type: ouverte
+    question: "Explique pourquoi on parle de deux calendriers pour une opération, et donne un moment où ils se croisent."
+    modele: "Le calendrier du droit (certificat d'urbanisme, permis, recours, déclarations, réception, garanties) avance en parallèle de celui du chantier (terrassement, fondations, structure, hors d'eau, hors d'air, finitions). Ils se croisent par exemple à l'ouverture du chantier (déclaration d'ouverture en mairie) ou à la fin des travaux (déclaration d'achèvement, puis réception qui déclenche les garanties). Autre exemple : la mise hors d'eau, qui permet d'appeler 70 % du prix en VEFA."
+
+approfondir:
+  - type: qcm
+    question: "Quel est le délai d'instruction d'un permis de construire pour un immeuble collectif, sans cas particulier ?"
+    choix:
+      - "1 mois"
+      - "2 mois"
+      - "3 mois"
+      - "6 mois"
+    reponse: 2
+    explication: "Le délai est de 2 mois pour une maison individuelle et de 3 mois pour les autres projets. Certaines situations l'allongent (zone protégée, avis extérieur), et le récépissé indique le délai applicable."
+
+  - type: vf
+    affirmation: "Si la mairie n'a rien notifié à la fin du premier mois suivant le dépôt, le délai d'instruction annoncé dans le récépissé ne peut plus être modifié."
+    reponse: true
+    explication: "C'est ce qu'indiquent les récépissés de dépôt. Dans le premier mois, la mairie peut réclamer des pièces ou majorer le délai ; passé ce mois, le délai annoncé est figé."
+
+  - type: qcm
+    question: "En VEFA, jusqu'à quel pourcentage cumulé du prix peut-on appeler à la mise hors d'eau ?"
+    choix:
+      - "35 %"
+      - "70 %"
+      - "95 %"
+      - "100 %"
+    reponse: 1
+    explication: "Les plafonds cumulés sont de 35 % à l'achèvement des fondations, 70 % à la mise hors d'eau et 95 % à l'achèvement de l'immeuble. Le solde est dû à la mise à disposition du logement."
+
+  - type: vf
+    affirmation: "La déclaration d'achèvement des travaux (DAACT) et la réception des travaux sont la même formalité."
+    reponse: false
+    explication: "La DAACT relève de l'urbanisme : elle est déposée en mairie, qui contrôle ensuite la conformité. La réception relève du droit civil : le maître d'ouvrage accepte l'ouvrage, avec ou sans réserves, et les garanties démarrent."
+
+  - type: ouverte
+    question: "Le permis d'Arbola est accordé le 3 juin et affiché dès le 5 juin sans interruption. Quand le délai de recours des tiers prend-il fin, et pourquoi le projet n'est-il pas encore totalement sécurisé à cette date ?"
+    modele: "Le recours des tiers prend fin vers le 5 août (2 mois à partir du premier jour d'affichage continu). Mais la mairie peut encore retirer le permis, si elle le juge illégal, pendant 3 mois après sa date, soit jusqu'au 3 septembre environ. Le permis n'est vraiment purgé qu'après ces deux délais."
+
+expert:
+  - type: qcm
+    question: "Quel événement fait partir les garanties de 1 an, 2 ans et 10 ans ?"
+    choix:
+      - "L'obtention du permis de construire"
+      - "La déclaration d'ouverture de chantier"
+      - "La réception des travaux"
+      - "Le dépôt de la déclaration d'achèvement"
+    reponse: 2
+    explication: "Le point de départ commun est la réception des travaux (article 1792-6 du Code civil). La DAACT, elle, relève de l'urbanisme et ne déclenche pas les garanties."
+
+  - type: vf
+    affirmation: "Un permis purgé de tout recours garantit qu'aucun voisin ne pourra plus rien contester devant un juge."
+    reponse: false
+    explication: "Le permis est délivré sous réserve du droit des tiers : il vérifie la conformité aux règles d'urbanisme, mais ne règle pas les litiges de droit civil (servitudes, troubles de voisinage…) qui peuvent être portés devant les tribunaux civils."
+
+  - type: ouverte
+    question: "Distingue la DAACT, la réception et la livraison d'un logement vendu en VEFA : à quel droit appartient chacune, et que déclenche-t-elle ?"
+    modele: "La DAACT relève de l'urbanisme : le bénéficiaire du permis déclare en mairie l'achèvement et la conformité des travaux, ce qui déclenche le contrôle de la mairie (3 mois, 5 mois dans certains cas). La réception relève du droit civil : le maître d'ouvrage accepte l'ouvrage avec ou sans réserves, ce qui déclenche les garanties (1, 2 et 10 ans). La livraison concerne l'acquéreur : remise du logement, constatation de sa conformité au contrat, et solde du prix."
