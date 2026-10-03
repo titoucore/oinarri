@@ -433,4 +433,87 @@ export const termes = [
     definition:
       "Financements de long terme, souvent remboursés tard, que les banques traitent comme proches des fonds propres. Un organisme peut s'en servir pour renforcer son apport.",
   },
+  {
+    terme: 'Contrat de réservation',
+    categorie: 'Juridique',
+    definition:
+      "Avant-contrat de la vente en l'état futur d'achèvement : le vendeur s'engage à réserver un logement à l'acquéreur, qui peut verser un dépôt de garantie plafonné. En secteur protégé, c'est le seul avant-contrat autorisé.",
+    aussi: ['Contrat préliminaire', 'Avant-contrat de VEFA'],
+  },
+  {
+    terme: 'Dépôt de garantie',
+    categorie: 'Juridique',
+    definition:
+      "Somme que le réservataire peut verser en contrepartie de la réservation d'un logement vendu sur plan : au plus 5 % du prix prévisionnel si la vente est conclue dans l'année, 2 % jusqu'à deux ans, rien au-delà. Versé sur un compte spécial, il est restitué dans les cas prévus par la loi.",
+    aussi: ['Dépôt de garantie en VEFA'],
+  },
+  {
+    terme: 'Délai de rétractation',
+    categorie: 'Juridique',
+    definition:
+      "Dix jours pendant lesquels l'acquéreur peut renoncer à la réservation d'un logement vendu sur plan, sans motif ni pénalité, à compter du lendemain de la première présentation de la lettre qui lui notifie le contrat. Le dépôt de garantie lui est alors restitué.",
+    aussi: ['Rétractation', 'Droit de rétractation'],
+  },
+  {
+    terme: 'Secteur protégé',
+    categorie: 'Juridique',
+    definition:
+      "Régime de la vente d'un immeuble à construire destiné à l'habitation (ou à l'habitation et à un usage professionnel), qui protège l'acquéreur : contrat de réservation encadré, mentions obligatoires, paiements échelonnés, garantie d'achèvement.",
+    aussi: ['Secteur libre'],
+  },
+  {
+    terme: 'Garantie de remboursement',
+    categorie: 'Assurance',
+    definition:
+      "Garantie qui assure à l'acquéreur le remboursement des sommes versées si le contrat de vente est résolu faute d'achèvement de l'immeuble. Elle est une alternative à la garantie d'achèvement.",
+  },
+  {
+    terme: 'Garantie intrinsèque',
+    categorie: 'Assurance',
+    definition:
+      "Ancienne forme de garantie d'achèvement, fondée sur les fonds propres du vendeur plutôt que sur un garant extérieur. Elle n'est plus admise pour les opérations récentes de vente en l'état futur d'achèvement (date d'effet à vérifier).",
+    aussi: ['GFA intrinsèque'],
+  },
+  {
+    terme: 'Consignation du solde',
+    categorie: 'Juridique',
+    definition:
+      "À la livraison d'un logement vendu sur plan, si l'acquéreur constate des défauts de conformité ou des vices apparents, il peut déposer le solde de 5 % du prix à la Caisse des dépôts plutôt que de le payer au vendeur, jusqu'à la correction des défauts.",
+    aussi: ['Consignation'],
+  },
+  {
+    terme: 'Retard légitime',
+    categorie: 'Juridique',
+    definition:
+      "Clause fréquente d'un contrat de vente sur plan qui prévoit des causes de report de la date de livraison, par exemple des intempéries. Le contrat de réservation précise aussi les pénalités en cas de retard.",
+    aussi: ['Clause de retard légitime', 'Cause légitime de retard'],
+  },
+  {
+    terme: 'Constructeur non réalisateur',
+    categorie: 'Assurance',
+    definition:
+      "Vendeur d'un immeuble qu'il a fait construire sans l'exécuter lui-même, comme un promoteur. Il répond des désordres décennaux comme un constructeur, et la loi du 4 janvier 1978 prévoit une assurance pour cela.",
+    aussi: ['CNR'],
+  },
+  {
+    terme: 'Tous risques chantier',
+    categorie: 'Assurance',
+    definition:
+      "Assurance facultative qui couvre les dommages survenant pendant le chantier (tempête, incendie, vol…), que la dommages-ouvrage ne couvre pas.",
+    aussi: ['TRC'],
+  },
+  {
+    terme: 'Vices apparents',
+    categorie: 'Juridique',
+    definition:
+      "Défauts visibles au moment de la livraison d'un logement. En vente sur plan, le vendeur n'en est pas déchargé avant la réception ou, au plus tard, avant l'expiration d'un mois après la prise de possession (article 1642-1 du Code civil, à vérifier).",
+    aussi: ['Vice apparent', 'Défauts de conformité apparents'],
+  },
+  {
+    terme: 'Défaut de conformité',
+    categorie: 'Juridique',
+    definition:
+      "Écart entre le logement livré et ce que prévoyait le contrat : surface, matériaux, équipements.",
+    aussi: ['Non-conformité', 'Défauts de conformité'],
+  },
 ];
