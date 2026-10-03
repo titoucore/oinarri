@@ -17,6 +17,7 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
 // Parcours et numéro se lisent dans l'identifiant du cours : « promotion/02-le-foncier ».
 const [parcours, fichier = ''] = entry.id.split('/');
 const numero = fichier.slice(0, 2);
+const aUnNumero = /^[0-9][0-9]$/.test(numero);
 const ETIQUETTES = {
   'ba-ba': ['B.A.-', 'BA'],
   promotion: ['PROMO-', 'TION'],
@@ -24,10 +25,10 @@ const ETIQUETTES = {
 const etiquette = ETIQUETTES[parcours] ?? null;
 ---
 
-<Base title={`${titre} — Oinarri`} description={description} large bande etiquette={etiquette}>
+<Base title={`${titre} — Oinarri`} description={description} large={true} bande={true} etiquette={etiquette}>
   <Fragment slot="bande">
     <a class="retour" href={retour.href}>{retour.libelle}</a>
-    {/^\d{2}$/.test(numero) && <p class="chiffre-evide" aria-hidden="true">{numero}</p>}
+    {aUnNumero && <p class="chiffre-evide" aria-hidden="true">{numero}</p>}
     <h1>{titre}</h1>
   </Fragment>
 
@@ -42,8 +43,6 @@ const etiquette = ETIQUETTES[parcours] ?? null;
         <slot />
       </article>
     </div>
-    <!-- Notes du chapitre : marge à droite du texte (grand écran) ou tiroir (écran étroit).
-         Le script de surlignage choisit la présentation et révèle la zone. -->
     <aside class="notes-marge" id="notes-marge" aria-label="Notes de ce chapitre">
       <div class="notes-entete">
         <p class="notes-titre">Notes</p>
