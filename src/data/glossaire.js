@@ -192,4 +192,116 @@ export const termes = [
     definition:
       "Mission par laquelle la maîtrise d'œuvre assiste le maître d'ouvrage au moment de la réception des travaux.",
   },
+  {
+    terme: 'PLU',
+    developpe: "Plan Local d'Urbanisme",
+    categorie: 'Urbanisme',
+    definition:
+      "Document de la commune ou de l'intercommunalité qui fixe les règles de construction sur chaque terrain : zones, usages autorisés, implantation, hauteurs. Il détermine ce qu'on a le droit de construire.",
+    aussi: ["Plan local d'urbanisme"],
+  },
+  {
+    terme: "Certificat d'urbanisme",
+    categorie: 'Urbanisme',
+    definition:
+      "Document délivré par la mairie qui indique les règles d'urbanisme applicables à un terrain. Le certificat d'information (CUa) renseigne ; le certificat opérationnel (CUb) dit en plus si un projet précis est réalisable. Il est valable 18 mois et n'autorise aucun travaux.",
+    aussi: ['CU', 'CUa', 'CUb'],
+  },
+  {
+    terme: 'Permis de construire',
+    categorie: 'Urbanisme',
+    definition:
+      "Autorisation d'urbanisme nécessaire pour bâtir. La mairie dispose de 2 mois (maison individuelle) ou de 3 mois (autres projets) pour répondre, sauf cas qui allongent le délai.",
+    aussi: ['PC', 'Permis'],
+  },
+  {
+    terme: 'Recours des tiers',
+    categorie: 'Urbanisme',
+    definition:
+      "Possibilité pour un voisin ou une association de contester un permis devant le juge administratif, pendant 2 mois à compter du premier jour d'un affichage continu de 2 mois sur le terrain. Un permis dont les délais de recours et de retrait sont écoulés est dit « purgé ».",
+    aussi: ['Purge', 'Permis purgé', 'Affichage du permis', 'Recours'],
+  },
+  {
+    terme: 'DOC',
+    developpe: "Déclaration d'Ouverture de Chantier",
+    categorie: 'Urbanisme',
+    definition:
+      "Déclaration que le bénéficiaire d'un permis dépose en mairie dès le commencement des travaux.",
+    aussi: ["Déclaration d'ouverture de chantier"],
+  },
+  {
+    terme: 'DAACT',
+    developpe: "Déclaration Attestant l'Achèvement et la Conformité des Travaux",
+    categorie: 'Urbanisme',
+    definition:
+      "Déclaration déposée en mairie par le bénéficiaire du permis quand les travaux sont terminés. La mairie dispose ensuite de 3 mois (5 mois dans certains cas) pour contester la conformité. Elle ne se confond pas avec la réception.",
+  },
+  {
+    terme: 'Réception des travaux',
+    categorie: 'Juridique',
+    definition:
+      "Acte par lequel le maître d'ouvrage déclare accepter l'ouvrage, avec ou sans réserves. Elle déclenche les garanties de parfait achèvement (1 an), biennale (2 ans) et décennale (10 ans).",
+    aussi: ['Réception'],
+  },
+  {
+    terme: 'Réserves',
+    categorie: 'Juridique',
+    definition:
+      "Défauts constatés au moment de la réception et consignés dans le procès-verbal. L'entreprise doit les corriger : c'est la levée des réserves.",
+    aussi: ['Levée des réserves'],
+  },
+  {
+    terme: 'OPR',
+    developpe: 'Opérations Préalables à la Réception',
+    categorie: 'Construction',
+    definition:
+      "Visite de contrôle organisée avant la réception, pendant laquelle la maîtrise d'œuvre et les entreprises relèvent ce qui reste à corriger. C'est un usage de la profession.",
+  },
+  {
+    terme: 'Garantie de parfait achèvement',
+    categorie: 'Juridique',
+    definition:
+      "Garantie d'un an après la réception : l'entrepreneur répare tous les désordres signalés à la réception ou dans l'année qui suit, quelles que soient leur importance et leur nature.",
+    aussi: ['GPA', 'Parfait achèvement'],
+  },
+  {
+    terme: 'Garantie biennale',
+    categorie: 'Juridique',
+    definition:
+      "Garantie de deux ans minimum après la réception : l'entrepreneur répare ou remplace un élément d'équipement qui ne fonctionne pas correctement.",
+    aussi: ['Garantie de bon fonctionnement', 'Biennale'],
+  },
+  {
+    terme: 'Gros œuvre',
+    categorie: 'Construction',
+    definition:
+      "Les travaux qui font tenir le bâtiment debout : fondations, murs, planchers, charpente. Ils précèdent le second œuvre.",
+  },
+  {
+    terme: 'Second œuvre',
+    categorie: 'Construction',
+    definition:
+      "Les travaux d'équipement et d'aménagement une fois la structure posée : cloisons, réseaux, isolation, revêtements, peintures.",
+  },
+  {
+    terme: "Hors d'eau",
+    categorie: 'Construction',
+    definition:
+      "Stade du chantier où la toiture est posée : il ne pleut plus à l'intérieur. En VEFA, il permet d'appeler jusqu'à 70 % du prix.",
+    aussi: ["Mise hors d'eau"],
+  },
+  {
+    terme: "Hors d'air",
+    categorie: 'Construction',
+    definition:
+      "Stade du chantier où les fenêtres et les portes extérieures sont posées : le bâtiment est clos. C'est un usage de chantier, que la loi ne définit pas.",
+  },
+  {
+    terme: 'VEFA',
+    developpe: "Vente en l'État Futur d'Achèvement",
+    categorie: 'Promotion',
+    definition:
+      "Vente d'un logement qui n'est pas encore terminé. Le prix se paie par étapes selon l'avancement du chantier, avec des plafonds cumulés : 35 % aux fondations, 70 % hors d'eau, 95 % à l'achèvement.",
+    aussi: ["Vente en l'état futur d'achèvement", 'Vente sur plan'],
+  },
 ];
