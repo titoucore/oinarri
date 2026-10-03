@@ -1,6 +1,7 @@
 // Page d'un cours : à la fin de chaque niveau (Essentiel, Approfondir, Expert),
 // on insère le mini-quiz puis le bouton de validation du niveau.
 // Valider un niveau inscrit ses questions de quiz comme cartes de révision.
+// La section « Vocabulaire » devient cliquable : chaque terme connu mène au glossaire.
 
 import {
   NIVEAUX,
@@ -10,11 +11,50 @@ import {
 } from './progression.js';
 import { chargerResultatsQuiz, creerQuiz } from './quiz.js';
 import { chargerRevisions, inscrireCartes, cartesJusquaNiveau } from './revisions.js';
+import { termes } from '../data/glossaire.js';
+import { identifiant, normaliser } from '../lib/texte.js';
+
+// Transforme la liste « Terme · Terme · Terme » de la section Vocabulaire en liens vers le glossaire.
+// Un élément sans entrée dans le glossaire reste du texte simple. Le contenu entre parenthèses
+// est ignoré pour la recherche (« Géotechnicien (G1 à G5) » retrouve « Géotechnicien »).
+function lierVocabulaire() {
+  const titre = document.getElementById('vocabulaire');
+  const paragraphe = titre?.nextElementSibling;
+  if (!paragraphe || paragraphe.tagName !== 'P') return;
+
+  const index = new Map();
+  for (const t of termes) {
+    const id = identifiant(t.terme);
+    index.set(normaliser(t.terme), id);
+    for (const variante of t.aussi ?? []) index.set(normaliser(variante), id);
+  }
+
+  const elements = paragraphe.textContent
+    .split('·')
+    .map((texte) => texte.trim())
+    .filter(Boolean);
+  paragraphe.replaceChildren();
+
+  elements.forEach((texte, i) => {
+    if (i > 0) paragraphe.append(' · ');
+    const id = index.get(normaliser(texte.replace(/\(.*?\)/g, '')));
+    if (id) {
+      const lien = document.createElement('a');
+      lien.href = `/glossaire/#${id}`;
+      lien.textContent = texte;
+      paragraphe.append(lien);
+    } else {
+      paragraphe.append(texte);
+    }
+  });
+}
 
 async function initialiser() {
   const article = document.querySelector('.cours');
   if (!article) return;
   const cours = article.dataset.cours;
+
+  lierVocabulaire();
 
   let quiz = {};
   try {
