@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Les trois rôles des matériaux biosourcés dans un mur</title>
+<desc>Porter avec le bois, remplir et isoler avec la paille, le chanvre, la ouate de cellulose, la fibre de bois, le liège ou le lin, protéger et finir avec des enduits et un bardage.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="60" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="46" dominant-baseline="central" fill="#085041">Porter : la structure</text><text class="ts" x="60" y="66" dominant-baseline="central" fill="#0F6E56">Bois massif, bois lamellé-collé, panneaux massifs (CLT), ossature bois</text>
+<path d="M340 85 V97" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="98" width="600" height="60" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="120" dominant-baseline="central" fill="#712B13">Remplir et isoler</text><text class="ts" x="60" y="140" dominant-baseline="central" fill="#993C1D">Paille, béton de chanvre, ouate de cellulose, fibre de bois, liège, lin</text>
+<path d="M340 159 V171" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="172" width="600" height="60" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="194" dominant-baseline="central" fill="#444441">Protéger et finir</text><text class="ts" x="60" y="214" dominant-baseline="central" fill="#5F5E5A">Enduits à la chaux et au chanvre, bardage bois</text>
+<text class="ts" x="340" y="262" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Un même mur combine souvent les trois rôles.</text>
+<text class="ts" x="340" y="284" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Le béton de chanvre remplit et isole, mais ne porte pas.</text>
+</svg>
