@@ -1,0 +1,102 @@
+# Mini-quiz du chapitre 1 de Promotion immobilière : Le promoteur et le cycle d'une opération.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Au sens juridique, qui est un promoteur immobilier ?"
+    choix:
+      - "Celui qui construit avec ses propres salariés"
+      - "La personne liée à un maître d'ouvrage par un contrat de promotion immobilière"
+      - "L'architecte qui conçoit le projet"
+      - "Le propriétaire du terrain"
+    reponse: 1
+    explication: "Au sens strict, le promoteur est celui qui s'engage, par un contrat de promotion immobilière, à faire réaliser un programme de construction pour un maître d'ouvrage et à accomplir pour lui des démarches juridiques, administratives et financières."
+
+  - type: vf
+    affirmation: "Quand un organisme fait construire pour son propre compte puis vend les logements, il est lié par un contrat de promotion immobilière."
+    reponse: false
+    explication: "Le CPI suppose deux personnes : un maître d'ouvrage et un promoteur. Ici, l'organisme est lui-même maître d'ouvrage et vendeur. On parle de promotion au sens courant. Le cadre exact reste à confirmer avec le service juridique."
+
+  - type: qcm
+    question: "Quelle est la première étape du cycle d'une opération ?"
+    choix:
+      - "La livraison"
+      - "L'étude du terrain (faisabilité)"
+      - "L'ordre de service"
+      - "La levée des réserves"
+    reponse: 1
+    explication: "On commence par étudier le terrain : combien de logements, à quel coût, à quel prix de vente. Ce n'est qu'ensuite qu'on sécurise le terrain, qu'on demande le permis et qu'on lance les travaux."
+
+  - type: vf
+    affirmation: "Le promoteur supporte les aléas de l'opération : permis contesté, travaux plus chers, ventes plus lentes."
+    reponse: true
+    explication: "Il avance de l'argent avant d'être payé et en porte le risque. C'est ce qui distingue son rôle de celui d'un simple conseil."
+
+  - type: ouverte
+    question: "Qui supporte le risque financier si les logements d'Arbola ne trouvent pas preneur ?"
+    modele: "L'organisme, parce qu'il est à la fois maître d'ouvrage et vendeur : il décide, finance et signe les contrats, donc il porte le risque. Les entreprises sont payées pour leurs travaux et les acquéreurs n'achètent que s'ils le souhaitent."
+
+approfondir:
+  - type: qcm
+    question: "Quel article du Code civil définit le contrat de promotion immobilière ?"
+    choix:
+      - "L'article 1792"
+      - "L'article 1831-1"
+      - "L'article 1601-3"
+      - "L'article 1382"
+    reponse: 1
+    explication: "Le CPI est défini à l'article 1831-1 du Code civil, repris à l'article L221-1 du code de la construction et de l'habitation."
+
+  - type: vf
+    affirmation: "Le contrat de promotion immobilière doit être établi par écrit."
+    reponse: true
+    explication: "Le CPI est établi par écrit et publié au service de publicité foncière. L'article L222-3 du CCH précise ses mentions obligatoires."
+
+  - type: qcm
+    question: "Qu'est-ce qui distingue le CPI de la maîtrise d'ouvrage déléguée ?"
+    choix:
+      - "Le promoteur s'engage sur le prix, le délai et l'objet de sa mission"
+      - "Le mandataire n'agit jamais au nom du maître d'ouvrage"
+      - "Seule la maîtrise d'ouvrage déléguée est écrite"
+      - "Il n'y a aucune différence"
+    reponse: 0
+    explication: "Dans les deux cas, on agit au nom du maître d'ouvrage. Mais le promoteur lié par un CPI prend un engagement sur le prix, le délai et l'objet, ce que ne comporte pas, en principe, une maîtrise d'ouvrage déléguée."
+
+  - type: qcm
+    question: "D'après un organisme de formation, combien de temps dure en général une opération à partir de la validation du terrain ?"
+    choix:
+      - "Environ 3 mois"
+      - "Entre 18 mois et deux ans"
+      - "Plus de dix ans"
+      - "Exactement 12 mois"
+    reponse: 1
+    explication: "C'est un ordre de grandeur donné par une source de formation, pas un délai légal. Un recours ou un chantier complexe peut allonger la durée."
+
+  - type: ouverte
+    question: "Cite trois risques d'une opération de promotion et l'étape où chacun apparaît."
+    modele: "Par exemple : un recours contre le permis (obtention du permis), des coûts de travaux qui montent (bilan et chantier), des ventes trop lentes (commercialisation), un financement insuffisant (lancement), des défauts après la remise des clés (livraison)."
+
+expert:
+  - type: vf
+    affirmation: "Le promoteur lié par un CPI est tenu des obligations prévues aux articles 1792 à 1792-3 du Code civil."
+    reponse: true
+    explication: "L'article 1831-1 le dit expressément : le promoteur est notamment tenu des obligations des articles 1792 à 1792-3, c'est-à-dire de la responsabilité des constructeurs."
+
+  - type: qcm
+    question: "Comment le Code civil qualifie-t-il le contrat de promotion immobilière ?"
+    choix:
+      - "Un contrat de vente"
+      - "Un mandat d'intérêt commun"
+      - "Un contrat de bail"
+      - "Un contrat de société"
+    reponse: 1
+    explication: "L'article 1831-1 parle d'un mandat d'intérêt commun : le promoteur agit au nom du maître d'ouvrage, mais aussi dans son propre intérêt, puisqu'il est rémunéré et engagé sur le prix et le délai."
+
+  - type: ouverte
+    question: "Pourquoi ne peut-on pas affirmer sans vérifier qu'un organisme HLM qui construit et vend agit dans le même cadre qu'un promoteur privé ?"
+    modele: "Parce que le cadre dépend du statut de l'organisme (office public, société, coopérative), du produit vendu et de la nature du contrat utilisé. Sans maître d'ouvrage distinct, il n'y a pas de CPI. Le régime exact se vérifie avec le service juridique. Ce cours donne des repères, pas un avis."
