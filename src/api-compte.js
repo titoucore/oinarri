@@ -8,8 +8,8 @@
 //                                supprime le compte (le mot de passe est toujours exigé)
 //
 // « Progression » = avancement par niveau + scores de quiz + cartes de révision.
-// Les notes, surlignages et termes personnels n'en font pas partie : réinitialiser la progression
-// les conserve. Ils sont en revanche inclus dans l'export et effacés avec le compte.
+// Les notes, surlignages, termes personnels et scénarios du simulateur n'en font pas partie :
+// réinitialiser la progression les conserve. Ils sont en revanche inclus dans l'export et effacés avec le compte.
 // Chaque requête ne touche que les lignes de l'utilisateur identifié.
 
 import { obtenirPoivre, verifierMotDePasse } from './lib/securite.js';
@@ -85,7 +85,7 @@ export async function gererCompte(request, env, utilisateur, url) {
   if (url.pathname === '/api/compte/export') {
     if (request.method !== 'GET') return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
     const donnees = await lireDonnees(env, utilisateur.id);
-    const [notes, termes] = await base.batch([
+    const [notes, termes, scenarios] = await base.batch([
       base
         .prepare(
           `SELECT cours, section, passage, note, cree_le, mis_a_jour
@@ -98,6 +98,12 @@ export async function gererCompte(request, env, utilisateur, url) {
            FROM termes_perso WHERE utilisateur_id = ? ORDER BY cle`,
         )
         .bind(utilisateur.id),
+      base
+        .prepare(
+          `SELECT nom, donnees, version_format, cree_le, mis_a_jour
+           FROM scenarios WHERE utilisateur_id = ? ORDER BY nom`,
+        )
+        .bind(utilisateur.id),
     ]);
     const export_ = {
       application: 'Oinarri',
@@ -108,6 +114,15 @@ export async function gererCompte(request, env, utilisateur, url) {
       cartes_de_revision: donnees.revisions,
       notes: notes.results,
       termes_personnels: termes.results,
+      scenarios_simulateur: scenarios.results.map((s) => {
+        let contenu = s.donnees;
+        try {
+          contenu = JSON.parse(s.donnees);
+        } catch {
+          // contenu laissé tel quel s'il n'est pas lisible
+        }
+        return { ...s, donnees: contenu };
+      }),
     };
     return new Response(JSON.stringify(export_, null, 2), {
       headers: {
@@ -209,6 +224,7 @@ export async function gererCompte(request, env, utilisateur, url) {
         base.prepare('DELETE FROM revisions WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM notes WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM termes_perso WHERE utilisateur_id = ?').bind(id),
+        base.prepare('DELETE FROM scenarios WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM sessions WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM jetons WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM utilisateurs WHERE id = ?').bind(id),
