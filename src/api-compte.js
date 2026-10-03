@@ -8,6 +8,8 @@
 //                                supprime le compte (le mot de passe est toujours exigé)
 //
 // « Progression » = avancement par niveau + scores de quiz + cartes de révision.
+// Les notes et surlignages n'en font pas partie : réinitialiser la progression les conserve.
+// Ils sont en revanche inclus dans l'export et effacés avec le compte.
 // Chaque requête ne touche que les lignes de l'utilisateur identifié.
 
 import { obtenirPoivre, verifierMotDePasse } from './lib/securite.js';
@@ -83,6 +85,13 @@ export async function gererCompte(request, env, utilisateur, url) {
   if (url.pathname === '/api/compte/export') {
     if (request.method !== 'GET') return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
     const donnees = await lireDonnees(env, utilisateur.id);
+    const { results: notes } = await base
+      .prepare(
+        `SELECT cours, section, passage, note, cree_le, mis_a_jour
+         FROM notes WHERE utilisateur_id = ? ORDER BY cours, id`,
+      )
+      .bind(utilisateur.id)
+      .all();
     const export_ = {
       application: 'Oinarri',
       exporte_le: new Date().toISOString(),
@@ -90,6 +99,7 @@ export async function gererCompte(request, env, utilisateur, url) {
       progression: donnees.progression,
       resultats_quiz: donnees.quiz,
       cartes_de_revision: donnees.revisions,
+      notes,
     };
     return new Response(JSON.stringify(export_, null, 2), {
       headers: {
@@ -189,6 +199,7 @@ export async function gererCompte(request, env, utilisateur, url) {
         base.prepare('DELETE FROM progression WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM resultats_quiz WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM revisions WHERE utilisateur_id = ?').bind(id),
+        base.prepare('DELETE FROM notes WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM sessions WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM jetons WHERE utilisateur_id = ?').bind(id),
         base.prepare('DELETE FROM utilisateurs WHERE id = ?').bind(id),
