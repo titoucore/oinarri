@@ -36,7 +36,9 @@ export const chapitres = [
   },
   {
     titre: 'Règles professionnelles et assurabilité',
-    desc: "Règles de l'art, ATEx, Pass'Innovation et garanties d'assurance.",
+    desc: "Règles de l'art, règles professionnelles, Avis Technique, ATEx et assurance : technique courante ou non.",
+    href: '/materiaux-biosources/06-regles-professionnelles-et-assurabilite/',
+    cours: 'materiaux-biosources/06-regles-professionnelles-et-assurabilite',
   },
   {
     titre: 'Réemploi, réutilisation, recyclage',
