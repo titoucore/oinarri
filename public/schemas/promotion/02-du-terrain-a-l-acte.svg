@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 370" role="img">
+<title>De la prospection du terrain à l'acte authentique</title>
+<desc>Cinq étapes : étudier le terrain et ses contraintes, obtenir l'accord de la collectivité (délibération et avis du Domaine), signer une promesse de vente sous conditions suspensives, déposer le permis et purger les risques (préemption, recours, retrait), signer l'acte authentique chez le notaire.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="370" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="50" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="50" text-anchor="middle" dominant-baseline="central" fill="#085041">1</text>
+<text class="th" x="88" y="42" dominant-baseline="central" fill="#085041">Étudier le terrain</text><text class="ts" x="88" y="60" dominant-baseline="central" fill="#0F6E56">Urbanisme, sol, pollution, archéologie, servitudes, réseaux</text>
+<path d="M64 77 V89" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="90" width="600" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="116" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="116" text-anchor="middle" dominant-baseline="central" fill="#085041">2</text>
+<text class="th" x="88" y="108" dominant-baseline="central" fill="#085041">Accord de la collectivité</text><text class="ts" x="88" y="126" dominant-baseline="central" fill="#0F6E56">Délibération motivée du conseil municipal, avis du Domaine</text>
+<path d="M64 143 V155" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="156" width="600" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="182" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="182" text-anchor="middle" dominant-baseline="central" fill="#085041">3</text>
+<text class="th" x="88" y="174" dominant-baseline="central" fill="#085041">Promesse de vente</text><text class="ts" x="88" y="192" dominant-baseline="central" fill="#0F6E56">Sous conditions suspensives, chacune avec une date limite</text>
+<path d="M64 209 V221" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="222" width="600" height="52" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="64" cy="248" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="64" y="248" text-anchor="middle" dominant-baseline="central" fill="#712B13">4</text>
+<text class="th" x="88" y="240" dominant-baseline="central" fill="#712B13">Permis et purges</text><text class="ts" x="88" y="258" dominant-baseline="central" fill="#993C1D">Permis obtenu, préemption écartée, recours et retrait purgés</text>
+<path d="M64 275 V287" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="288" width="600" height="52" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="64" cy="314" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="64" y="314" text-anchor="middle" dominant-baseline="central" fill="#444441">5</text>
+<text class="th" x="88" y="306" dominant-baseline="central" fill="#444441">Acte authentique</text><text class="ts" x="88" y="324" dominant-baseline="central" fill="#5F5E5A">Signature chez le notaire : l'organisme devient propriétaire</text>
+</svg>
