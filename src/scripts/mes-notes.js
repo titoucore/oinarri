@@ -27,7 +27,7 @@ async function demarrer() {
   let notes;
   try {
     notes = await lireNotes();
-  } catch (e) {
+  } catch {
     erreur.textContent = "Impossible de charger tes notes pour l'instant. Réessaie dans un instant.";
     erreur.hidden = false;
     return;
@@ -45,8 +45,18 @@ async function demarrer() {
     ...[...parCours.keys()].filter((c) => !(c in infos)),
   ];
 
-  const entrees = []; // { carte, note, zone, groupe }
-  const groupes = [];
+  const entrees = []; // { carte, note, zone }
+  const groupes = []; // { groupe, entrees }
+  let totalTexte = '';
+
+  function majCompte() {
+    const nombre = entrees.length;
+    const chapitres = new Set(entrees.map((e) => e.note.cours)).size;
+    vide.hidden = nombre > 0;
+    recherche.hidden = nombre === 0;
+    totalTexte = nombre ? `${pluriel(nombre, 'note')} dans ${pluriel(chapitres, 'chapitre')}` : '';
+    compte.textContent = totalTexte;
+  }
 
   for (const cours of ordre) {
     const info = infos[cours];
@@ -102,16 +112,6 @@ async function demarrer() {
     }
   }
 
-  function majCompte() {
-    const nombre = entrees.length;
-    const chapitres = new Set(entrees.map((e) => e.note.cours)).size;
-    vide.hidden = nombre > 0;
-    recherche.hidden = nombre === 0;
-    compte.textContent = nombre
-      ? `${pluriel(nombre, 'note')} dans ${pluriel(chapitres, 'chapitre')}`
-      : '';
-  }
-
   recherche.addEventListener('input', () => {
     const q = normaliser(recherche.value);
     let visibles = 0;
@@ -127,11 +127,10 @@ async function demarrer() {
     }
     compte.textContent = q
       ? `${pluriel(visibles, 'note')} correspond${visibles > 1 ? 'ent' : ''} à ta recherche`
-      : compte.dataset.total ?? compte.textContent;
+      : totalTexte;
   });
 
   majCompte();
-  compte.dataset.total = compte.textContent;
 }
 
 if (racine && compte && recherche && vide && erreur) demarrer();
