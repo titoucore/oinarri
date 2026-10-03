@@ -2,7 +2,9 @@
 // on insère le mini-quiz puis le bouton de validation du niveau.
 // Valider un niveau inscrit ses questions de quiz comme cartes de révision.
 // La section « Vocabulaire » devient cliquable : chaque terme connu mène au glossaire.
+// Les termes du glossaire dans le texte sont repérés par termes.js.
 
+import './termes.js';
 import {
   NIVEAUX,
   LIBELLES,
