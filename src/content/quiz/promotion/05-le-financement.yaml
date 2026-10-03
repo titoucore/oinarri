@@ -1,0 +1,108 @@
+# Mini-quiz du chapitre 5 de Promotion immobilière : Le financement.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+# Les chiffres d'Arbola sont fictifs.
+
+essentiel:
+  - type: qcm
+    question: "Pourquoi faut-il financer une opération de construction ?"
+    choix:
+      - "Parce que les dépenses partent bien avant les encaissements"
+      - "Parce que la loi interdit de payer les travaux avec les recettes"
+      - "Parce que le terrain doit toujours être emprunté"
+      - "Parce que la marge est négative"
+    reponse: 0
+    explication: "Une opération dépense d'abord (terrain, études, travaux) et n'encaisse qu'ensuite (paiements des acquéreurs, solde à la livraison). Le plan de financement couvre ce décalage."
+
+  - type: qcm
+    question: "Quelles sont les trois sources de financement d'une opération ?"
+    choix:
+      - "Les fonds propres, le crédit de l'opération, les paiements des acquéreurs"
+      - "Le permis, le terrain, les assurances"
+      - "Les honoraires, les taxes, les frais financiers"
+      - "Le notaire, la mairie, le préfet"
+    reponse: 0
+    explication: "Le financement repose sur l'articulation des fonds propres, du crédit de l'opération et des paiements des acquéreurs, qui arrivent par étapes en vente sur plan."
+
+  - type: vf
+    affirmation: "Le besoin de financement d'Arbola est égal au total des dépenses de son bilan (2 240 000 €)."
+    reponse: true
+    explication: "Le besoin couvre toutes les dépenses du bilan. Il se finance ici par 440 000 € de fonds propres (environ 20 %) et 1 800 000 € de crédit (environ 80 %)."
+
+  - type: qcm
+    question: "Pourquoi la banque exige-t-elle de la pré-commercialisation ?"
+    choix:
+      - "Pour savoir quel taux appliquer à l'organisme"
+      - "Pour s'assurer que la demande existe avant de prêter de l'argent"
+      - "Pour choisir l'architecte"
+      - "Pour fixer le prix du terrain"
+    reponse: 1
+    explication: "La banque prête avant de savoir si les logements seront vendus. Des logements déjà réservés montrent que la demande existe et rassurent le financeur."
+
+  - type: ouverte
+    question: "Quelles trois exigences la banque pose-t-elle pour financer une opération ?"
+    modele: "Des fonds propres (l'emprunteur s'engage lui-même), de la pré-commercialisation (une part des logements réservés avant le démarrage), et une garantie d'achèvement (les travaux pourront être terminés si l'opération s'arrête)."
+
+approfondir:
+  - type: qcm
+    question: "Sur quoi portent les intérêts d'une ouverture de crédit ?"
+    choix:
+      - "Sur le plafond de l'enveloppe, dès le premier jour"
+      - "Sur les sommes réellement tirées"
+      - "Sur le prix de vente des logements"
+      - "Sur la marge de l'opération"
+    reponse: 1
+    explication: "L'organisme tire les sommes au fur et à mesure de ses dépenses. Les intérêts portent sur les sommes réellement tirées, pas sur le plafond ; la banque se rémunère différemment sur les fonds en attente de tirage."
+
+  - type: vf
+    affirmation: "Les seuils de fonds propres et de pré-commercialisation fixés par les banques sont des règles légales."
+    reponse: false
+    explication: "Ce sont des exigences des banques, qui varient selon le programme, l'emprunteur et l'époque. Les documents de la profession citent des ordres de grandeur : environ 15 à 20 % de fonds propres, 30 à 50 % de pré-commercialisation."
+
+  - type: qcm
+    question: "Dans quel cas la garantie financière d'achèvement est-elle obligatoire ?"
+    choix:
+      - "Pour tout achat de terrain"
+      - "Pour toute vente en l'état futur d'achèvement (VEFA) dans le secteur protégé"
+      - "Pour toute location"
+      - "Uniquement pour les organismes HLM"
+    reponse: 1
+    explication: "L'article L261-10-1 du code de la construction et de l'habitation oblige le vendeur en VEFA à souscrire une garantie financière d'achèvement ou de remboursement. Le régime détaillé est vu au chapitre 6."
+
+  - type: qcm
+    question: "Qui délivre une garantie d'achèvement dite « extrinsèque » ?"
+    choix:
+      - "Le vendeur lui-même, avec ses fonds propres"
+      - "Un établissement financier ou une assurance"
+      - "Le notaire"
+      - "La mairie"
+    reponse: 1
+    explication: "La garantie extrinsèque est apportée par un tiers, banque ou assureur. Depuis l'ordonnance du 3 octobre 2013, elle est la règle : elle protège même si le vendeur est défaillant."
+
+  - type: ouverte
+    question: "Décris le PSLA en quelques traits."
+    modele: "C'est un prêt conventionné consenti à un opérateur (organisme HLM, SEM, promoteur) pour financer des logements neufs vendus en location-accession. L'opérateur doit avoir obtenu un agrément et signé une convention avec l'État. Le prêt est soumis à des plafonds (ressources, loyer, prix de vente) et peut être transféré à l'accédant à la levée de l'option."
+
+expert:
+  - type: qcm
+    question: "Un crédit de 1 800 000 € est presque entièrement tiré, au taux fictif de 3,5 %. Quel surcoût d'intérêts pour 3 mois de retard ?"
+    choix:
+      - "Environ 6 000 €"
+      - "Environ 16 000 €"
+      - "Environ 63 000 €"
+      - "Environ 160 000 €"
+    reponse: 1
+    explication: "1 800 000 € × 3,5 % × 3/12 ≈ 15 750 €, soit environ 16 000 €. C'est 40 % de la marge fictive d'Arbola (40 000 €)."
+
+  - type: vf
+    affirmation: "Le taux d'intérêt utilisé dans ce chapitre peut servir de référence pour un vrai bilan."
+    reponse: false
+    explication: "Le taux est fictif. Les taux et conditions évoluent avec le marché et dépendent de l'emprunteur : il faut toujours les vérifier au moment du financement."
+
+  - type: ouverte
+    question: "Pourquoi un retard de chantier pèse-t-il lourd sur la marge d'une opération comme Arbola ?"
+    modele: "Quand le crédit est presque entièrement tiré, chaque mois de retard ajoute des intérêts sur un encours élevé, alors que la marge de l'organisme est faible. Trois mois de retard coûtent environ 40 % de la marge fictive d'Arbola."
