@@ -1,0 +1,478 @@
+/* Simulateur de bilan. Mêmes variables que le reste du site : le thème sombre suit tout seul. */
+
+/* --- Grand chiffre de la bande : la marge, recalculée en direct --- */
+
+.marge-evide {
+  margin: 0 0 -0.1em;
+  font-size: clamp(3.4rem, 13vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--ink-900);
+  user-select: none;
+}
+
+/* Marge négative : le chiffre passe en plein, pour qu'on le remarque. */
+.marge-evide[data-negatif='true'] {
+  color: var(--ink-900);
+}
+
+.marge-legende {
+  margin: 0 0 1.25rem;
+  font-size: 14px;
+  color: var(--ink-600);
+}
+
+/* --- Structure --- */
+
+.sim-carte {
+  margin: 0 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--ink-100);
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.sim-carte h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.sim-grille {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  .sim-grille {
+    grid-template-columns: minmax(0, 1fr) 23rem;
+    align-items: start;
+  }
+
+  .sim-resultats {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+/* --- Champs et boutons --- */
+
+.sim-carte input[type='text'],
+.sim-carte select {
+  min-width: 0;
+  padding: 9px 11px;
+  font-family: inherit;
+  font-size: 16px; /* 16 px minimum : évite le zoom automatique d'iOS */
+  border: 1px solid var(--ink-200);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink-900);
+}
+
+.sim-carte input[aria-invalid='true'] {
+  border: 1px dashed var(--ink-900);
+}
+
+.sim-bouton {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--ink-900);
+  background: var(--ink-900);
+  color: var(--paper);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sim-bouton-2 {
+  background: none;
+  color: var(--ink-900);
+}
+
+.sim-lien {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 2px;
+  border: none;
+  background: none;
+  color: var(--ink-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.sim-lien:hover {
+  color: var(--ink-900);
+}
+
+.sim-carte button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* --- Bloc scénarios --- */
+
+.sim-rangee {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sim-rangee input,
+.sim-rangee select {
+  flex: 1;
+}
+
+.sim-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 16px;
+}
+
+.sim-statut {
+  min-height: 1.3em;
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ink-600);
+}
+
+.sim-statut[data-erreur='true'] {
+  color: var(--ink-900);
+  font-weight: 700;
+}
+
+.sim-avertissement {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ink-600);
+}
+
+/* --- Lignes de saisie --- */
+
+.sim-titre-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sim-ligne {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 12px;
+  align-items: start;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--ink-100);
+}
+
+h2 + .sim-ligne,
+.sim-titre-ligne + .sim-ligne {
+  border-top: 0;
+}
+
+.sim-ligne-texte label,
+.sim-libelle {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.sim-aide,
+.sim-note {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--ink-600);
+}
+
+.sim-note {
+  font-variant-numeric: tabular-nums;
+}
+
+.sim-entree {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: end;
+}
+
+.sim-entree input {
+  width: 8.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sim-unite {
+  max-width: 5.5rem;
+  font-size: 12.5px;
+  line-height: 1.2;
+  color: var(--ink-600);
+}
+
+.sim-calcule {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 30rem) {
+  .sim-ligne {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sim-entree {
+    justify-self: stretch;
+  }
+
+  .sim-entree input {
+    flex: 1;
+    width: auto;
+  }
+
+  .sim-unite {
+    max-width: 6rem;
+  }
+}
+
+/* --- Postes de dépenses (repliables) --- */
+
+.sim-poste {
+  border-top: 1px solid var(--ink-100);
+}
+
+.sim-titre-ligne + .sim-poste {
+  border-top: 0;
+}
+
+.sim-poste summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0.5rem 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.sim-poste summary::-webkit-details-marker {
+  display: none;
+}
+
+.sim-poste summary::before {
+  content: '';
+  flex: none;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-right: 0.15rem;
+  border-right: 2px solid var(--ink-600);
+  border-bottom: 2px solid var(--ink-600);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.sim-poste[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.sim-poste-nom {
+  flex: 1;
+  font-weight: 700;
+}
+
+.sim-poste-chiffres {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-variant-numeric: tabular-nums;
+}
+
+.sim-poste-total {
+  font-weight: 700;
+}
+
+.sim-poste-ratio {
+  font-size: 12.5px;
+  color: var(--ink-600);
+}
+
+.sim-poste > .sim-ligne {
+  padding-left: 1.1rem;
+}
+
+/* --- Résultats --- */
+
+.sim-res {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--ink-100);
+  font-size: 15px;
+}
+
+h2 + .sim-res {
+  border-top: 0;
+}
+
+.sim-valeur {
+  font-weight: 500;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sim-res-fort {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sim-res-fort .sim-valeur {
+  font-weight: 700;
+}
+
+.sim-valeur[data-negatif='true'] {
+  text-decoration: underline dashed;
+  text-underline-offset: 4px;
+}
+
+.sim-alerte {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid var(--ink-900);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sim-alerte[hidden] {
+  display: none;
+}
+
+/* Répartition des dépenses : barres horizontales proportionnelles au poste le plus lourd. */
+.sim-barres {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sim-barre {
+  display: grid;
+  grid-template-columns: 8.4rem minmax(0, 1fr) 2.6rem;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.sim-barre-piste {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--ink-100);
+  overflow: hidden;
+}
+
+.sim-barre-remplie {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: var(--ink-900);
+  transition: width 0.2s ease;
+}
+
+.sim-barre-valeur {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bilan à rebours : trois colonnes (libellé, marge nulle, marge cible). */
+.sim-rebours-ligne {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5.6rem 5.6rem;
+  gap: 6px;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--ink-100);
+  font-size: 13.5px;
+}
+
+.sim-rebours-entete {
+  border-top: 0;
+  font-weight: 700;
+}
+
+.sim-col {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sim-texte {
+  margin: 0 0 0.5rem;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-800);
+}
+
+/* --- Barre de résumé (téléphone et tablette en portrait) --- */
+
+.sim-resume {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 12px 12px 0 0;
+  background: var(--ink-900);
+  color: var(--paper);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 64rem) {
+  .sim-resume {
+    display: none;
+  }
+}
+
+/* --- Limites --- */
+
+.sim-limites {
+  margin-top: 1rem;
+}
+
+.sim-limites summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sim-limites ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.sim-limites li {
+  margin-bottom: 0.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sim-poste summary::before,
+  .sim-barre-remplie {
+    transition: none;
+  }
+}
