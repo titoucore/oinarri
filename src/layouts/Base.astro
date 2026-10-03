@@ -4,12 +4,18 @@ import '../styles/global.css';
 import '@fontsource/space-grotesk/latin-400.css';
 import '@fontsource/space-grotesk/latin-500.css';
 import '@fontsource/space-grotesk/latin-700.css';
+import Entete from '../components/Entete.astro';
 
 const {
   title = 'Oinarri',
   description = "Formation en ligne pour comprendre le bâtiment, la promotion immobilière et le logement social, en partant de zéro.",
   // Page large : accueil, listes de chapitres et cours (voir global.css).
   large = false,
+  // Page avec bande de couleur : l'en-tête et le contenu du slot « bande » s'y placent,
+  // et le contenu principal commence en la chevauchant.
+  bande = false,
+  // Étiquette du parcours à côté du logo, par exemple ['PROMO-', 'TION'].
+  etiquette = null,
 } = Astro.props;
 ---
 
@@ -42,31 +48,19 @@ const {
     </script>
   </head>
   <body>
-    <div class:list={['page', { 'page-large': large }]}>
-      <header class="entete">
-        <a class="logo" href="/" aria-label="Oinarri, accueil">
-          <svg class="logo-icon" viewBox="0 0 44 32" fill="none" stroke-width="6" stroke-linecap="round" aria-hidden="true">
-            <line class="logo-stroke-1" x1="13" y1="5" x2="31" y2="5" />
-            <line class="logo-stroke-2" x1="8" y1="16" x2="36" y2="16" />
-            <line class="logo-stroke-3" x1="3" y1="27" x2="41" y2="27" />
-          </svg>
-          <span class="logo-text">Oinarri</span>
-        </a>
-        <div class="entete-droite">
-          <a class="lien-entete" href="/glossaire/">Glossaire</a>
-          <a class="lien-entete lien-notes" href="/notes/">Mes notes</a>
-          <a class="lien-entete" href="/compte/">Mon compte</a>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer de thème">
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-            </svg>
-          </button>
+    {
+      bande && (
+        <div class="bande">
+          <div class:list={['page', { 'page-large': large }, 'bande-interne']}>
+            <Entete etiquette={etiquette} />
+            <slot name="bande" />
+          </div>
         </div>
-      </header>
+      )
+    }
+
+    <div class:list={['page', { 'page-large': large }, { 'page-sous-bande': bande }]}>
+      {!bande && <Entete etiquette={etiquette} />}
 
       <main>
         <slot />
@@ -94,29 +88,6 @@ const {
 </html>
 
 <style>
-  .entete-droite {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .lien-entete {
-    font-size: 14px;
-    color: var(--ink-600);
-    text-underline-offset: 3px;
-  }
-
-  .lien-entete:hover {
-    color: var(--ink-900);
-  }
-
-  /* Sur téléphone, la place manque : « Mes notes » est alors accessible depuis le tiroir de notes d'un cours. */
-  @media (max-width: 40rem) {
-    .lien-notes {
-      display: none;
-    }
-  }
-
   .lien-confidentialite {
     display: inline-block;
     margin-left: 0.5rem;
