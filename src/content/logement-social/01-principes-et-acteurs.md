@@ -112,6 +112,6 @@ Vérifié le 3 octobre 2026.
 - Principes et service d'intérêt général : articles L411 et L411-2 du CCH sur Légifrance (versions consultées anciennes : 2008 et 2017).
 - ANCOLS : rapports publics de l'agence relayés par vie-publique.fr.
 - Financeurs : Banque des Territoires (publication « Éclairages » de 2019), ministère de la Transition écologique (« Les aides financières au logement », avril 2025), Cour des comptes (note sur Action Logement, 2020).
-- Aides à la pierre : question à la juridiction administrative et fiche de l'Anil sur les prêts subventionnés.
+- Aides à la pierre : rapport du 119e Congrès des notaires (2023) sur les prêts subventionnés PLUS et PLAI, et fiche de l'Anil.
 
 À contrôler sur Légifrance : la version en vigueur de L411 et L411-2 ; le nombre exact de résidences principales ; la nature exacte de la délégation locale des aides à la pierre pour une opération donnée.
