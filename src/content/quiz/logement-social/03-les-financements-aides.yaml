@@ -1,0 +1,80 @@
+# Mini-quiz du chapitre 3 de Bailleurs sociaux et logement social : Les financements aidés.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quel financement est destiné aux ménages les plus modestes ?"
+    choix:
+      - "Le PLS"
+      - "Le PLUS"
+      - "Le PLAI"
+      - "Le PSLA"
+    reponse: 2
+    explication: "Le PLAI, prêt locatif aidé d'intégration, vise les ménages en grande précarité. C'est le plus aidé et celui dont les loyers sont les plus bas."
+
+  - type: vf
+    affirmation: "Le PLS est subventionné par l'État comme le PLUS et le PLAI."
+    reponse: false
+    explication: "Des subventions sont accordées pour les logements PLUS et PLAI. Le PLS bénéficie d'un prêt et d'avantages fiscaux, mais pas de cette subvention."
+
+  - type: qcm
+    question: "Quel taux de TVA s'applique à la construction de logements financés en PLAI ?"
+    choix:
+      - "20 %"
+      - "10 %"
+      - "5,5 %"
+      - "2,1 %"
+    reponse: 2
+    explication: "Le PLAI bénéficie du taux de 5,5 %. Le PLUS et le PLS relèvent du taux de 10 %, sauf cas particuliers comme le renouvellement urbain."
+
+  - type: qcm
+    question: "Quel est le taux du prêt PLUS de la Banque des Territoires ?"
+    choix:
+      - "Taux du Livret A moins 0,20 %"
+      - "Taux du Livret A plus 0,60 %"
+      - "Taux du Livret A plus 1,11 %"
+      - "Un taux fixe de 1 %"
+    reponse: 1
+    explication: "PLAI à Livret A moins 0,20 %, PLUS à Livret A plus 0,60 %, PLS à Livret A plus 1,11 %."
+
+  - type: ouverte
+    question: "Pourquoi le bailleur d'Arbola peut-il choisir de mélanger un PLAI et des PLUS dans la même opération ?"
+    modele: "Parce que chaque produit répond à un public différent : le PLAI loge les ménages les plus modestes avec des loyers plus bas, le PLUS le logement social ordinaire. Mélanger permet de diversifier les occupants et d'équilibrer l'opération, le PLAI étant plus aidé (subvention, TVA à 5,5 %) mais moins rémunérateur en loyers."
+
+approfondir:
+  - type: qcm
+    question: "Quelle est la durée maximale d'amortissement du prêt sur la partie bâti ?"
+    choix:
+      - "15 ans"
+      - "25 ans"
+      - "40 ans"
+      - "99 ans"
+    reponse: 2
+    explication: "Jusqu'à 40 ans pour le bâti. Pour la partie foncière, la durée va jusqu'à 50 ans et peut aller jusqu'à 80 ans selon les cas."
+
+  - type: vf
+    affirmation: "Les travaux peuvent commencer avant la décision de financement et d'agrément."
+    reponse: false
+    explication: "Les travaux ne doivent pas avoir commencé avant l'octroi de la décision d'aide à la pierre, sinon l'opération perd le droit à l'aide."
+
+  - type: qcm
+    question: "Pour quelles décisions de financement l'exonération de taxe foncière est-elle de 25 ans ?"
+    choix:
+      - "Celles prises jusqu'au 31 décembre 2026"
+      - "Toutes, sans limite de date"
+      - "Uniquement celles de 2026"
+      - "Aucune, elle est de 10 ans"
+    reponse: 0
+    explication: "La durée de base est de 15 ans ; elle est portée à 25 ans pour les décisions de subvention ou de prêt jusqu'au 31 décembre 2026, d'après le législateur et l'Unafo. Cette date est à surveiller."
+
+expert:
+  - type: vf
+    affirmation: "La loi de finances pour 2026 a prolongé jusqu'à fin 2028 l'exonération de taxe foncière de 25 ans."
+    reponse: false
+    explication: "Un amendement avait proposé de la reconduire jusqu'en 2028, mais cette prolongation n'a pas été retenue dans la version finale de la loi n° 2026-103 du 19 février 2026."
+
+  - type: ouverte
+    question: "Pourquoi les logements PLUS sont-ils parfois à 5,5 % de TVA alors que la règle générale est de 10 % ?"
+    modele: "Parce que l'article 278 sexies du CGI prévoit le taux de 5,5 % pour le PLUS lorsqu'il est prévu par une convention de renouvellement urbain (zone ANRU). Hors de ce cas, le PLUS et le PLS restent à 10 %. Les règles pour les quartiers prioritaires ont aussi des dispositions transitoires jusqu'à fin 2026."
