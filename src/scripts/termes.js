@@ -2,35 +2,25 @@
 // Au chargement, la première occurrence de chaque terme dans chaque section (titre de niveau 2)
 // est soulignée en pointillé. Un clic ouvre une bulle avec la définition et un lien vers le glossaire.
 // Sont ignorés : les titres, les liens, la section « Vocabulaire » (déjà cliquable) et les sources.
+// Les termes personnels de l'utilisateur (ajoutés depuis un cours) sont repérés de la même façon.
 
 import '../styles/termes.css';
 import { termes } from '../data/glossaire.js';
 import { identifiant, normaliser } from '../lib/texte.js';
+import { lireTermesPerso } from './termes-perso-api.js';
 
 const article = document.querySelector('.cours');
 
 // ---------- Index des formes reconnues ----------
 
-const parForme = new Map(); // forme normalisée -> terme
-const souples = []; // formes cherchées sans tenir compte de la casse
-const sensibles = []; // sigles (« PLU », « DO ») : cherchés en respectant la casse
-
-function enregistrer(forme, terme) {
-  const n = normaliser(forme);
-  if (n.length < 2 || parForme.has(n)) return;
-  parForme.set(n, terme);
-  const sigle = forme === forme.toUpperCase() && /[A-Z]/.test(forme) && forme.length <= 6;
-  (sigle ? sensibles : souples).push(forme);
-}
-
-// Les termes eux-mêmes d'abord, pour qu'ils l'emportent sur la variante d'un autre terme.
-for (const t of termes) enregistrer(t.terme, t);
-for (const t of termes) {
-  if (t.developpe) enregistrer(t.developpe, t);
-  for (const v of t.aussi ?? []) enregistrer(v, t);
-}
+let tous = [...termes]; // glossaire du site, puis termes personnels
+let parForme = new Map(); // forme normalisée -> terme
+let parId = new Map(); // identifiant (ancre) -> terme
+let reSouple = null; // formes cherchées sans tenir compte de la casse
+let reSigle = null; // sigles (« PLU », « DO ») : cherchés en respectant la casse
 
 const ESPACES = '[\\s\\u00a0\\u202f]+';
+const EST_LETTRE = /[\p{L}\p{N}]/u;
 
 function motif(forme) {
   return forme
@@ -47,9 +37,35 @@ function fabriquer(liste, drapeaux) {
   return new RegExp(`(?:${triees.map(motif).join('|')})(?:s|x)?`, drapeaux);
 }
 
-const reSouple = fabriquer(souples, 'giu');
-const reSigle = fabriquer(sensibles, 'gu');
-const EST_LETTRE = /[\p{L}\p{N}]/u;
+function construireIndex() {
+  parForme = new Map();
+  parId = new Map();
+  const souples = [];
+  const sensibles = [];
+
+  function enregistrer(forme, terme) {
+    const n = normaliser(forme);
+    if (n.length < 2 || parForme.has(n)) return;
+    parForme.set(n, terme);
+    const sigle = forme === forme.toUpperCase() && /[A-Z]/.test(forme) && forme.length <= 6;
+    (sigle ? sensibles : souples).push(forme);
+  }
+
+  for (const t of tous) {
+    const id = identifiant(t.terme);
+    if (!parId.has(id)) parId.set(id, t);
+  }
+  // Les termes eux-mêmes d'abord, pour qu'ils l'emportent sur la variante d'un autre terme.
+  // Le glossaire du site passe avant les termes personnels : en cas de doublon, le site gagne.
+  for (const t of tous) enregistrer(t.terme, t);
+  for (const t of tous) {
+    if (t.developpe) enregistrer(t.developpe, t);
+    for (const v of t.aussi ?? []) enregistrer(v, t);
+  }
+
+  reSouple = fabriquer(souples, 'giu');
+  reSigle = fabriquer(sensibles, 'gu');
+}
 
 function termeDe(brut) {
   let n = normaliser(brut);
@@ -120,12 +136,33 @@ function traiter(bloc, vus) {
   }
 }
 
+// Peut être rappelée (après l'ajout d'un terme) : les termes déjà marqués dans une section
+// ne le sont pas une seconde fois.
 function marquer() {
-  const vus = new Set();
-  let ignorer = false;
-  for (const bloc of [...article.children]) {
+  const blocs = [...article.children];
+
+  const deja = new Map(); // numéro de section -> termes déjà marqués
+  let section = 0;
+  for (const bloc of blocs) {
     if (bloc.tagName === 'H2') {
-      vus.clear();
+      section++;
+      continue;
+    }
+    for (const span of bloc.querySelectorAll('.terme')) {
+      const t = parId.get(span.dataset.terme);
+      if (!t) continue;
+      if (!deja.has(section)) deja.set(section, new Set());
+      deja.get(section).add(t);
+    }
+  }
+
+  section = 0;
+  let vus = new Set(deja.get(0) ?? []);
+  let ignorer = false;
+  for (const bloc of blocs) {
+    if (bloc.tagName === 'H2') {
+      section++;
+      vus = new Set(deja.get(section) ?? []);
       const titre = normaliser(bloc.textContent);
       ignorer = titre === 'vocabulaire' || titre.startsWith('sources');
       continue;
@@ -137,7 +174,6 @@ function marquer() {
 
 // ---------- Bulle de définition ----------
 
-const parId = new Map(termes.map((t) => [identifiant(t.terme), t]));
 let bulle = null;
 let declencheur = null;
 
@@ -180,7 +216,7 @@ function ouvrir(span) {
 
   const categorie = document.createElement('p');
   categorie.className = 'terme-bulle-categorie';
-  categorie.textContent = t.categorie;
+  categorie.textContent = t.perso ? `${t.categorie} · ton glossaire` : t.categorie;
 
   const definition = document.createElement('p');
   definition.className = 'terme-bulle-definition';
@@ -188,7 +224,7 @@ function ouvrir(span) {
 
   const lien = document.createElement('a');
   lien.className = 'terme-bulle-lien';
-  lien.href = `/glossaire/#${span.dataset.terme}`;
+  lien.href = t.perso ? '/glossaire/#mes-termes' : `/glossaire/#${span.dataset.terme}`;
   lien.textContent = 'Voir dans le glossaire';
 
   bulle.append(titre, categorie, definition, lien);
@@ -203,8 +239,41 @@ function basculer(span) {
   else ouvrir(span);
 }
 
-if (article) {
+// ---------- Démarrage ----------
+
+async function demarrer() {
+  try {
+    const perso = await lireTermesPerso();
+    tous = [
+      ...termes,
+      ...perso.map((p) => ({
+        terme: p.terme,
+        categorie: p.categorie,
+        definition: p.definition,
+        perso: true,
+      })),
+    ];
+  } catch {
+    // Sans le glossaire personnel, le glossaire du site reste utilisable.
+  }
+  construireIndex();
   marquer();
+}
+
+if (article) {
+  construireIndex();
+  demarrer();
+
+  // Un terme vient d'être ajouté depuis une explication : on le repère tout de suite dans le cours.
+  window.addEventListener('oinarri:terme-ajoute', (e) => {
+    const p = e.detail;
+    tous = [
+      ...tous,
+      { terme: p.terme, categorie: p.categorie, definition: p.definition, perso: true },
+    ];
+    construireIndex();
+    marquer();
+  });
 
   article.addEventListener('click', (e) => {
     const span = e.target.closest?.('.terme');
