@@ -27,20 +27,9 @@ const chapitresDisponibles = parcours.flatMap((p) =>
 const idsCartes = (await listerCartes()).map((c) => c.carte);
 ---
 
-<Base title="Oinarri — comprendre le bâtiment" large>
-  <section id="accueil">
-    <!-- Le contenu reste invisible tant que les données personnelles n'ont pas été reçues,
-         puis apparaît d'un coup. Filet de sécurité : au bout de 2,5 s, on l'affiche quand même. -->
-    <script is:inline>
-      (function () {
-        var s = document.getElementById('accueil');
-        s.classList.add('attente');
-        setTimeout(function () {
-          s.classList.remove('attente');
-        }, 2500);
-      })();
-    </script>
-
+<Base title="Oinarri — comprendre le bâtiment" large bande>
+  <Fragment slot="bande">
+    <!-- Salutation ou question du prénom : révélées par accueil.js quand les données sont reçues. -->
     <div class="perso" id="perso" hidden>
       <p class="salut" id="salut" hidden></p>
       <form class="form-prenom" id="form-prenom" hidden>
@@ -66,11 +55,25 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
       <div class="assise assise-3"></div>
     </div>
 
-    <h1>Comprendre le bâtiment, des fondations à la toiture</h1>
+    <h1 class="accueil-titre">Comprendre le bâtiment, des fondations à la toiture</h1>
     <p class="lead">
       Une formation en ligne pour adultes, qui part de zéro : qui construit, comment, avec quelles
       règles et à quel prix.
     </p>
+  </Fragment>
+
+  <section id="accueil">
+    <!-- Le contenu reste invisible tant que les données personnelles n'ont pas été reçues,
+         puis apparaît d'un coup. Filet de sécurité : au bout de 2,5 s, on l'affiche quand même. -->
+    <script is:inline>
+      (function () {
+        var s = document.getElementById('accueil');
+        s.classList.add('attente');
+        setTimeout(function () {
+          s.classList.remove('attente');
+        }, 2500);
+      })();
+    </script>
 
     <a
       class="reprise"
@@ -114,11 +117,19 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
 </Base>
 
 <style>
+  /* Les cartes de l'accueil débordent de la bande de couleur. */
   #accueil {
+    position: relative;
+    z-index: 1;
+    margin-top: calc(-1 * var(--chevauche));
     transition: opacity 0.25s ease;
   }
   #accueil.attente {
     opacity: 0;
+  }
+
+  .accueil-titre {
+    max-width: 15em;
   }
 
   .perso {
@@ -147,7 +158,7 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     min-width: 0;
     padding: 9px 11px;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid var(--ink-200);
     border-radius: 8px;
     background: var(--paper);
@@ -182,6 +193,7 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     padding: 0.9rem 1rem;
     border: 1px solid var(--ink-900);
     border-radius: 12px;
+    background: var(--paper);
     text-decoration: none;
   }
   .revision-lien {
@@ -221,6 +233,7 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     padding: 0.9rem 1rem;
     border: 1px solid var(--ink-200);
     border-radius: 12px;
+    background: var(--paper);
     text-decoration: none;
   }
   .parcours-lien:hover,
