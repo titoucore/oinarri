@@ -16,6 +16,10 @@ const { Content } = await render(entry);
 // Mini-quiz du chapitre (même identifiant que le cours), transmis au navigateur en JSON.
 const quiz = await getEntry('quiz', entry.id);
 const quizJson = JSON.stringify(quiz?.data ?? {}).replace(/</g, '\\u003c');
+
+// Les chapitres sur le bilan et le financement renvoient vers le simulateur.
+const AVEC_SIMULATEUR = ['promotion/04-le-bilan-de-l-operation', 'promotion/05-le-financement'];
+const lienSimulateur = AVEC_SIMULATEUR.includes(entry.id);
 ---
 
 <Chapitre
@@ -24,4 +28,51 @@ const quizJson = JSON.stringify(quiz?.data ?? {}).replace(/</g, '\\u003c');
   retour={{ href: '/promotion/', libelle: 'Promotion immobilière' }}
 >
   <Content />
+  {
+    lienSimulateur && (
+      <aside class="simulateur-lien" data-sans-glossaire>
+        <p class="simulateur-lien-titre">Fais varier les chiffres toi-même</p>
+        <p class="simulateur-lien-texte">
+          Le simulateur reprend le bilan de la Résidence Arbola : change le prix, le terrain, les
+          travaux ou le crédit et vois la marge se recalculer.
+        </p>
+        <a class="simulateur-lien-bouton" href="/simulateur/">
+          Ouvrir le simulateur de bilan
+        </a>
+      </aside>
+    )
+  }
 </Chapitre>
+
+<style is:global>
+  .simulateur-lien {
+    margin: 2.5rem 0 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--ink-900);
+    border-radius: 12px;
+  }
+
+  .cours .simulateur-lien p {
+    margin: 0 0 0.5rem;
+  }
+
+  .cours .simulateur-lien .simulateur-lien-titre {
+    font-weight: 700;
+  }
+
+  .cours .simulateur-lien .simulateur-lien-texte {
+    font-size: 15px;
+    color: var(--ink-600);
+  }
+
+  .simulateur-lien-bouton {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 8px;
+    background: var(--ink-900);
+    color: var(--paper);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+</style>
