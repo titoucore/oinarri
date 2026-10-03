@@ -1,6 +1,6 @@
 ---
 titre: Terrassement et VRD
-description: Préparer le terrain : décapage, déblais et remblais, fouilles, puis les réseaux (voirie et réseaux divers) qui desservent le bâtiment, avec les déclarations obligatoires avant de creuser.
+description: "Préparer le terrain : décapage, déblais et remblais, fouilles, puis les réseaux (voirie et réseaux divers) qui desservent le bâtiment, avec les déclarations obligatoires avant de creuser."
 parcours: ba-ba
 ordre: 4
 niveau: Débutant
