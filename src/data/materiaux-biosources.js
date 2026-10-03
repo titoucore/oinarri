@@ -19,6 +19,8 @@ export const chapitres = [
   {
     titre: 'Les matériaux géosourcés',
     desc: 'La terre crue et la pierre : techniques, atouts et limites.',
+    href: '/materiaux-biosources/03-les-materiaux-geosources/',
+    cours: 'materiaux-biosources/03-les-materiaux-geosources',
   },
   {
     titre: 'Le comportement physique',
