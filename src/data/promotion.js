@@ -24,7 +24,9 @@ export const chapitres = [
   },
   {
     titre: "Le bilan de l'opération",
-    desc: 'Charge foncière, prix de revient, marge.',
+    desc: 'Recettes, dépenses, marge, surfaces et TVA.',
+    href: '/promotion/04-le-bilan-de-l-operation/',
+    cours: 'promotion/04-le-bilan-de-l-operation',
   },
   {
     titre: 'Le financement',
