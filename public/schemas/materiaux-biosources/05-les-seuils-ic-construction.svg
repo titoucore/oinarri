@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>L'escalier des seuils carbone de la RE2020</title>
+<desc>Ic construction moyen avant modulations, en kg CO₂e par m², selon l'année de dépôt du permis. Logement collectif : 740, 650, 580, 490. Maison individuelle : 640, 530, 475, 415.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="40" y="28" dominant-baseline="central" fill="#444441">Ic construction moyen, avant modulations (kg CO₂e par m²)</text>
+<rect x="40" y="46" width="14" height="14" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="60" y="54" dominant-baseline="central" fill="#085041">Logement collectif</text>
+<rect x="200" y="46" width="14" height="14" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="ts" x="220" y="54" dominant-baseline="central" fill="#712B13">Maison individuelle</text>
+<path d="M60 270 H640" stroke="#5F5E5A" stroke-width="1"/>
+<rect x="80" y="92" width="55" height="178" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="107" y="82" text-anchor="middle" fill="#085041">740</text>
+<rect x="140" y="116" width="55" height="154" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="ts" x="167" y="106" text-anchor="middle" fill="#712B13">640</text>
+<text class="ts" x="137" y="292" text-anchor="middle" fill="#444441">dès 2022</text>
+<rect x="220" y="114" width="55" height="156" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="247" y="104" text-anchor="middle" fill="#085041">650</text>
+<rect x="280" y="143" width="55" height="127" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="ts" x="307" y="133" text-anchor="middle" fill="#712B13">530</text>
+<text class="ts" x="277" y="292" text-anchor="middle" fill="#444441">dès 2025</text>
+<rect x="360" y="131" width="55" height="139" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="387" y="121" text-anchor="middle" fill="#085041">580</text>
+<rect x="420" y="156" width="55" height="114" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="ts" x="447" y="146" text-anchor="middle" fill="#712B13">475</text>
+<text class="ts" x="417" y="292" text-anchor="middle" fill="#444441">dès 2028</text>
+<rect x="500" y="152" width="55" height="118" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="527" y="142" text-anchor="middle" fill="#085041">490</text>
+<rect x="560" y="170" width="55" height="100" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="ts" x="587" y="160" text-anchor="middle" fill="#712B13">415</text>
+<text class="ts" x="557" y="292" text-anchor="middle" fill="#444441">dès 2031</text>
+<text class="ts" x="340" y="316" text-anchor="middle" fill="#5F5E5A">Année de dépôt du permis. Valeurs à relire sur les textes officiels.</text>
+</svg>
