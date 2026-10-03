@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" role="img">
+<title>Les cinq temps de la vie d'un bâtiment</title>
+<desc>Production des matériaux, construction sur le chantier, exploitation, fin de vie, puis possibilités de recyclage ou de réemploi au-delà du bâtiment. La RE2020 calcule l'impact carbone sur 50 ans.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="450" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="60" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="46" dominant-baseline="central" fill="#085041">1. Production</text><text class="ts" x="60" y="66" dominant-baseline="central" fill="#0F6E56">Extraire les matières premières, fabriquer les matériaux et les équipements</text>
+<path d="M340 85 V97" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="98" width="600" height="60" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="120" dominant-baseline="central" fill="#085041">2. Construction</text><text class="ts" x="60" y="140" dominant-baseline="central" fill="#0F6E56">Transporter les produits et les mettre en œuvre sur le chantier</text>
+<path d="M340 159 V171" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="172" width="600" height="60" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="194" dominant-baseline="central" fill="#712B13">3. Exploitation</text><text class="ts" x="60" y="214" dominant-baseline="central" fill="#993C1D">Chauffer, ventiler, éclairer, entretenir et remplacer les produits usés</text>
+<path d="M340 233 V245" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="246" width="600" height="60" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="268" dominant-baseline="central" fill="#444441">4. Fin de vie</text><text class="ts" x="60" y="288" dominant-baseline="central" fill="#5F5E5A">Déconstruire, trier et traiter les déchets</text>
+<path d="M340 307 V319" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="40" y="320" width="600" height="60" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5" stroke-dasharray="4 3"/>
+<text class="th" x="60" y="342" dominant-baseline="central" fill="#444441">5. Au-delà du bâtiment</text><text class="ts" x="60" y="362" dominant-baseline="central" fill="#5F5E5A">Possibilités de réemploi, de réutilisation ou de recyclage des matériaux</text>
+<text class="ts" x="340" y="404" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">La RE2020 calcule l'impact carbone sur 50 ans, avec deux indicateurs :</text>
+<text class="ts" x="340" y="424" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Ic construction (produits, équipements, chantier) et Ic énergie (consommations)</text>
+</svg>
