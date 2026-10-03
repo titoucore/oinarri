@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" role="img">
+<title>Comment se calcule le loyer maximal d'un logement conventionné</title>
+<desc>Le loyer maximal de zone est multiplié par un coefficient de structure et par une marge locale pour donner le prix au mètre carré de l'opération, puis par la surface utile du logement et son coefficient propre.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="400" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="44" dominant-baseline="central" fill="#085041">1. Loyer maximal de zone</text><text class="ts" x="60" y="64" dominant-baseline="central" fill="#0F6E56">Fixé chaque année par l'avis des loyers, selon le financement et la zone</text>
+<text class="th" x="340" y="94" text-anchor="middle" fill="#5F5E5A">multiplié par</text>
+<rect x="40" y="108" width="600" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="128" dominant-baseline="central" fill="#085041">2. Coefficient de structure</text><text class="ts" x="60" y="148" dominant-baseline="central" fill="#0F6E56">0,77 x (1 + nombre de logements x 20 m2 / surface utile totale)</text>
+<text class="th" x="340" y="178" text-anchor="middle" fill="#5F5E5A">multiplié par (1 + marge locale)</text>
+<rect x="40" y="192" width="600" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="60" y="212" dominant-baseline="central" fill="#712B13">3. Prix au m2 de l'opération</text><text class="ts" x="60" y="232" dominant-baseline="central" fill="#993C1D">Marge locale : 15 % au plus en PLUS et PLAI, aucune en PLS</text>
+<text class="th" x="340" y="262" text-anchor="middle" fill="#5F5E5A">multiplié par</text>
+<rect x="40" y="276" width="600" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="296" dominant-baseline="central" fill="#444441">4. Surface utile du logement et son coefficient propre</text><text class="ts" x="60" y="316" dominant-baseline="central" fill="#5F5E5A">Surface utile = surface habitable + la moitié des annexes</text>
+<text class="th" x="340" y="352" text-anchor="middle" fill="#444441">Résultat : loyer maximal mensuel du logement</text>
+<text class="ts" x="340" y="378" text-anchor="middle" fill="#5F5E5A">Valeurs de zone 2026 : à revérifier chaque année</text>
+</svg>
