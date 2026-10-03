@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 3 : Les modes constructifs.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Dans quel ordre les charges descendent-elles dans un bâtiment ?"
+    choix:
+      - "Sol, fondations, murs, planchers, toiture"
+      - "Toiture, planchers, murs ou poteaux, fondations, sol"
+      - "Planchers, toiture, fondations, murs, sol"
+      - "Toiture, fondations, planchers, murs, sol"
+    reponse: 1
+    explication: "La descente de charges suit un chemin unique : toiture, planchers, murs ou poteaux, fondations, puis sol. C'est pourquoi les fondations dépendent à la fois de la structure et de l'étude du sol."
+
+  - type: qcm
+    question: "Pourquoi noie-t-on des armatures en acier dans le béton ?"
+    choix:
+      - "Pour le colorer"
+      - "Parce que le béton résiste mal à la traction et que l'acier la reprend"
+      - "Pour le rendre plus léger"
+      - "Parce que l'acier résiste moins bien que le béton à la compression"
+    reponse: 1
+    explication: "Le béton résiste bien à la compression (quand on l'écrase) mais mal à la traction (quand on l'étire). L'acier des armatures reprend les efforts de traction."
+
+  - type: vf
+    affirmation: "Dans une structure en poteaux-poutres, les murs sont obligatoirement porteurs."
+    reponse: false
+    explication: "C'est l'inverse : les poteaux et les poutres portent, et les murs ferment ou séparent sans porter. C'est ce qui permet des plans plus libres."
+
+  - type: qcm
+    question: "Parmi ces matériaux, lequel est appelé couramment « parpaing » ?"
+    choix:
+      - "Un bloc de béton"
+      - "Une brique de terre cuite"
+      - "Une poutre en acier"
+      - "Un panneau de bois"
+    reponse: 0
+    explication: "Le parpaing est un bloc de béton, un petit élément de maçonnerie assemblé au mortier. La brique de terre cuite est une autre famille de petits éléments."
+
+  - type: ouverte
+    question: "Explique ce qu'est le contreventement et pourquoi un bâtiment en a besoin."
+    modele: "Le contreventement est l'ensemble des éléments qui empêchent le bâtiment de se déformer ou de bouger sous les efforts horizontaux, surtout le vent. Une structure ne doit pas seulement porter les charges verticales : elle doit aussi rester stable."
+
+approfondir:
+  - type: qcm
+    question: "Les Eurocodes servent à :"
+    choix:
+      - "Exécuter les ouvrages sur le chantier"
+      - "Calculer les structures"
+      - "Fixer les prix des matériaux"
+      - "Attribuer les marchés"
+    reponse: 1
+    explication: "Les Eurocodes sont des normes européennes de calcul des structures, déclinées en France par des annexes nationales. Les NF DTU, eux, précisent comment exécuter."
+
+  - type: qcm
+    question: "Quel NF DTU concerne la construction de bâtiments à ossature en bois ?"
+    choix:
+      - "NF DTU 20.1"
+      - "NF DTU 21"
+      - "NF DTU 31.2"
+      - "NF DTU 13.1"
+    reponse: 2
+    explication: "Le NF DTU 31.2 porte sur la construction de maisons et bâtiments à ossature en bois. Le 20.1 concerne la maçonnerie de petits éléments, le 21 l'exécution des ouvrages en béton."
+
+  - type: vf
+    affirmation: "Le meilleur mode constructif est toujours celui qui coûte le moins cher."
+    reponse: false
+    explication: "Aucune famille ne gagne sur tous les plans. On compare coût, délai, acoustique, tenue au feu, flexibilité des plans, impact carbone, entreprises locales et assurabilité."
+
+  - type: qcm
+    question: "Dans quelle famille d'habitation classe-t-on en principe une résidence collective en R+2, comme Arbola ?"
+    choix:
+      - "1re famille"
+      - "2e famille"
+      - "3e famille B"
+      - "4e famille"
+    reponse: 1
+    explication: "Un petit collectif de ce type relève en principe de la 2e famille. Le classement précis se vérifie avec l'architecte et le contrôleur technique."
+
+  - type: ouverte
+    question: "Pourquoi un NF DTU et un Eurocode ne répondent-ils pas à la même question ? Donne un exemple avec une poutre en bois."
+    modele: "L'Eurocode (ici l'Eurocode 5, EN 1995) sert à calculer et dimensionner la poutre : c'est le travail du bureau d'études. Le NF DTU (par exemple le 31.1 pour la charpente en bois) dit comment l'exécuter et la mettre en œuvre correctement : c'est le référentiel de l'entreprise et du contrôle d'exécution."
+
+expert:
+  - type: qcm
+    question: "Que faut-il toujours citer avec un Eurocode en France ?"
+    choix:
+      - "Son annexe nationale"
+      - "Le prix du document"
+      - "Le nom de l'architecte"
+      - "La date du permis"
+    reponse: 0
+    explication: "Un Eurocode laisse à chaque État le choix de certains paramètres. En France, ces choix figurent dans les annexes nationales : on cite donc l'Eurocode avec son annexe."
+
+  - type: vf
+    affirmation: "Un NF DTU a la même valeur qu'une loi : y déroger est interdit."
+    reponse: false
+    explication: "Un NF DTU est une référence de bonne exécution que les marchés reprennent comme document contractuel. Ce n'est pas une loi. Son rôle exact dans l'assurance sera traité dans le module assurance."
+
+  - type: ouverte
+    question: "Pourquoi le classement incendie d'un bâtiment d'habitation dépend-il de sa hauteur et pas seulement du matériau de structure ?"
+    modele: "L'arrêté du 31 janvier 1986 classe les habitations en quatre familles selon leur hauteur (plancher bas du logement le plus haut) et leur forme, car l'évacuation et l'intervention des secours sont plus difficiles à mesure qu'on monte. Plus la famille est élevée, plus les exigences de résistance au feu augmentent, quel que soit le matériau. Au-delà de 50 m, on passe au régime des immeubles de grande hauteur."
