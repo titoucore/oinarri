@@ -109,6 +109,13 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
       }
     </nav>
 
+    <a class="outil-lien" href="/simulateur/">
+      <span class="parcours-titre">Simulateur de bilan</span>
+      <span class="parcours-etat">
+        Fais varier le prix, le terrain ou le crédit et vois la marge d'une opération se recalculer.
+      </span>
+    </a>
+
     <p class="note">
       Chaque cours part d'un cas concret, se lit à trois niveaux (essentiel, approfondir, expert) et
       se termine par un quiz pour vérifier ce que tu retiens.
@@ -226,9 +233,10 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
     gap: 10px;
     max-width: 48rem;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1rem;
   }
-  .parcours-lien {
+  .parcours-lien,
+  .outil-lien {
     display: block;
     padding: 0.9rem 1rem;
     border: 1px solid var(--ink-200);
@@ -236,8 +244,15 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
     background: var(--paper);
     text-decoration: none;
   }
+  .outil-lien {
+    max-width: 48rem;
+    margin: 0 0 1.5rem;
+    border-style: dashed;
+  }
   .parcours-lien:hover,
-  .parcours-lien:focus-visible {
+  .parcours-lien:focus-visible,
+  .outil-lien:hover,
+  .outil-lien:focus-visible {
     border-color: var(--ink-900);
   }
   .parcours-titre {
