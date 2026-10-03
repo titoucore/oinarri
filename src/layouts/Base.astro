@@ -54,6 +54,7 @@ const {
         </a>
         <div class="entete-droite">
           <a class="lien-entete" href="/glossaire/">Glossaire</a>
+          <a class="lien-entete lien-notes" href="/notes/">Mes notes</a>
           <a class="lien-entete" href="/compte/">Mon compte</a>
           <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer de thème">
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -107,6 +108,13 @@ const {
 
   .lien-entete:hover {
     color: var(--ink-900);
+  }
+
+  /* Sur téléphone, la place manque : « Mes notes » est alors accessible depuis le tiroir de notes d'un cours. */
+  @media (max-width: 40rem) {
+    .lien-notes {
+      display: none;
+    }
   }
 
   .lien-confidentialite {
