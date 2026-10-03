@@ -1,0 +1,97 @@
+# Mini-quiz du chapitre 2 de Promotion immobilière : Le foncier.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Pourquoi signe-t-on une promesse de vente avant l'acte authentique ?"
+    choix:
+      - "Pour devenir propriétaire immédiatement"
+      - "Pour bloquer le terrain tout en se protégeant par des conditions, comme l'obtention du permis"
+      - "Pour éviter de passer chez le notaire"
+      - "Pour fixer le prix des travaux"
+    reponse: 1
+    explication: "La promesse bloque le terrain pendant qu'on vérifie qu'il est constructible, qu'on obtient le permis et qu'on écarte les risques. Si une condition n'est pas remplie, l'acheteur peut renoncer sans pénalité."
+
+  - type: vf
+    affirmation: "L'acte authentique est signé avant l'obtention du permis de construire."
+    reponse: false
+    explication: "En général, on signe d'abord une promesse sous conditions, puis l'acte authentique une fois les conditions levées, dont l'obtention du permis purgé de tout recours."
+
+  - type: qcm
+    question: "Parmi ces situations, laquelle n'est PAS une origine habituelle d'un terrain ?"
+    choix:
+      - "Une cession par une collectivité"
+      - "Un achat à un propriétaire privé"
+      - "Un lot cédé par un aménageur dans une ZAC"
+      - "Un terrain attribué automatiquement par le préfet"
+    reponse: 3
+    explication: "Un terrain vient d'une collectivité, d'un propriétaire privé, d'un aménageur ou du patrimoine de l'organisme. Le préfet n'attribue pas de terrains aux opérateurs."
+
+  - type: vf
+    affirmation: "Le foncier pèse sur toute l'opération, car la taille et les règles du terrain décident du nombre de logements possibles."
+    reponse: true
+    explication: "Le terrain et son règlement d'urbanisme déterminent ce qu'on peut construire, donc le prix de revient et le prix de vente."
+
+  - type: ouverte
+    question: "Cite quatre vérifications à faire sur un terrain avant de s'engager."
+    modele: "L'urbanisme (constructibilité et nombre de logements), le sol (pollution, nature, vestiges archéologiques), les servitudes, les réseaux (eau, assainissement, électricité) et le prix au regard du bilan de l'opération."
+
+approfondir:
+  - type: qcm
+    question: "Que faut-il, au minimum, pour qu'une commune cède un terrain à un organisme ?"
+    choix:
+      - "Une simple décision du maire"
+      - "Une délibération motivée du conseil municipal, et l'avis du Domaine au-delà d'un seuil"
+      - "L'accord du préfet"
+      - "Un appel d'offres obligatoire"
+    reponse: 1
+    explication: "L'article L2241-1 du CGCT exige une délibération motivée du conseil municipal. L'avis du Domaine est requis au-delà d'un seuil fixé par arrêté. Le détail se vérifie avec le service juridique."
+
+  - type: vf
+    affirmation: "L'avis du Domaine lie la commune : elle ne peut jamais vendre à un autre prix."
+    reponse: false
+    explication: "Cet avis ne lie pas la commune, qui peut s'en écarter sous le contrôle du juge, avec une justification. Elle peut même vendre sous la valeur vénale pour un motif d'intérêt général, avec des contreparties suffisantes."
+
+  - type: qcm
+    question: "Quelle est la différence entre une promesse unilatérale et une promesse synallagmatique ?"
+    choix:
+      - "Dans la promesse unilatérale, seul le vendeur est engagé : l'acheteur garde le choix d'acheter"
+      - "La promesse unilatérale est toujours gratuite"
+      - "La promesse synallagmatique n'engage personne"
+      - "Il n'y a aucune différence"
+    reponse: 0
+    explication: "La promesse unilatérale engage le vendeur, l'acheteur levant ou non l'option. La promesse synallagmatique (le compromis) engage les deux parties à conclure la vente, sous réserve des conditions suspensives."
+
+  - type: vf
+    affirmation: "Sur un terrain classé en secteur d'information sur les sols (SIS), le dossier de permis doit contenir une attestation d'un bureau d'études certifié."
+    reponse: true
+    explication: "L'article L556-2 du code de l'environnement prévoit une étude de sols et une attestation qui garantit sa réalisation et sa prise en compte dans la conception du projet."
+
+  - type: ouverte
+    question: "Où l'étude géotechnique préalable est-elle obligatoire à la vente d'un terrain, et qui doit la fournir ?"
+    modele: "Pour la vente d'un terrain non bâti constructible situé en zone d'exposition moyenne ou forte au retrait-gonflement des argiles. C'est le vendeur qui la fournit ; elle est annexée à la promesse de vente ou, à défaut, à l'acte authentique. L'obligation s'applique même si l'acquéreur est une collectivité."
+
+expert:
+  - type: vf
+    affirmation: "La décote jusqu'à 100 % prévue à l'article L3211-7 du CGCP s'applique aux terrains des communes."
+    reponse: false
+    explication: "Cet article concerne les terrains du domaine privé de l'État. Le fondement des cessions à prix réduit par une commune relève de la jurisprudence et n'a pas été confirmé par une source dédiée dans ce chapitre."
+
+  - type: qcm
+    question: "Avec un bail réel solidaire (BRS), que fait l'acquéreur ?"
+    choix:
+      - "Il achète le logement mais pas le terrain, ce qui baisse le prix"
+      - "Il loue le logement sans jamais l'acheter"
+      - "Il achète le terrain mais pas le logement"
+      - "Il devient propriétaire de tout l'immeuble"
+    reponse: 0
+    explication: "Le foncier reste à un organisme de foncier solidaire (OFS). L'acquéreur achète les murs du logement. Le détail relève du module sur les bailleurs sociaux."
+
+  - type: ouverte
+    question: "Pourquoi la différence entre domaine public et domaine privé d'une collectivité compte-t-elle pour une cession ?"
+    modele: "Un bien du domaine public ne peut pas être cédé tel quel : il faut d'abord le déclasser, ce qui peut allonger le calendrier. Un terrain du domaine privé se cède plus directement, après délibération. La procédure exacte est à vérifier avec le service juridique."
