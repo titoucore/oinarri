@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 7 : Les marchés et les appels d'offres.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que signifie DCE ?"
+    choix:
+      - "Dossier de consultation des entreprises"
+      - "Déclaration de conformité des ensembles"
+      - "Décompte des charges d'exploitation"
+      - "Direction des chantiers et des entreprises"
+    reponse: 0
+    explication: "Le DCE est le dossier remis aux entreprises pour qu'elles remettent une offre : règlement de la consultation, pièces écrites, plans, bordereaux."
+
+  - type: qcm
+    question: "Dans quel ordre se déroule une consultation d'entreprises ?"
+    choix:
+      - "Signature, offres, analyse, dossier"
+      - "Dossier, publicité, remise des offres, analyse, attribution, signature, ordre de service"
+      - "Ordre de service, dossier, offres, signature"
+      - "Analyse, dossier, publicité, offres"
+    reponse: 1
+    explication: "On prépare le dossier, on publie l'avis, on reçoit les offres, on les analyse et on les classe, on attribue, on signe le marché, puis on donne l'ordre de service qui lance le chantier."
+
+  - type: vf
+    affirmation: "L'entreprise la moins chère est toujours choisie."
+    reponse: false
+    explication: "Le choix se fait selon les critères annoncés dans le règlement de la consultation : prix, mais aussi valeur technique, délais ou performance environnementale. Le prix seul n'est qu'un critère parmi d'autres, quand le règlement le prévoit."
+
+  - type: qcm
+    question: "Qui signe le marché avec l'entreprise ?"
+    choix:
+      - "L'architecte"
+      - "Le maître d'ouvrage"
+      - "Le contrôleur technique"
+      - "Le géotechnicien"
+    reponse: 1
+    explication: "Comme vu au chapitre 1, les entreprises sont liées par contrat au maître d'ouvrage, pas à la maîtrise d'œuvre."
+
+  - type: ouverte
+    question: "Pourquoi les critères de choix doivent-ils être annoncés avant la remise des offres ?"
+    modele: "Pour que tous les candidats sachent comment ils seront jugés et soient traités de la même façon. On ne peut pas changer les règles après avoir lu les offres. C'est un principe de transparence et d'égalité de traitement de la commande publique."
+
+approfondir:
+  - type: qcm
+    question: "Selon les sources consultées en 2026, au-dessous de quel montant HT un marché de travaux peut-il être passé sans publicité ni mise en concurrence préalables ?"
+    choix:
+      - "40 000 €"
+      - "100 000 €"
+      - "1 million d'euros"
+      - "5 404 000 €"
+    reponse: 1
+    explication: "Plusieurs sources indiquent que le seuil de dispense de 100 000 € HT pour les travaux a été pérennisé en 2026 (décret n° 2025-1386). Cette valeur est à confirmer sur Légifrance, car une source la donnait comme supprimée."
+
+  - type: qcm
+    question: "Quel est le seuil européen de procédure formalisée pour les marchés de travaux en 2026-2027 ?"
+    choix:
+      - "143 000 € HT"
+      - "216 000 € HT"
+      - "5 404 000 € HT"
+      - "10 millions d'euros HT"
+    reponse: 2
+    explication: "Selon l'avis de la Direction des affaires juridiques de Bercy, le seuil pour les marchés de travaux passe de 5 538 000 € HT à 5 404 000 € HT pour la période 2026-2027."
+
+  - type: vf
+    affirmation: "La retenue de garantie ne peut pas dépasser 5 % du montant du marché."
+    reponse: true
+    explication: "L'article R2191-33 du code de la commande publique prévoit que la retenue de garantie ne peut pas dépasser 5 % du montant initial du marché, augmenté des modifications. Elle est remboursée dans les trente jours suivant l'expiration du délai de garantie."
+
+  - type: qcm
+    question: "Qu'est-ce que le CCAG-Travaux ?"
+    choix:
+      - "Un catalogue de prix des matériaux"
+      - "Le cahier des clauses administratives générales applicable aux marchés publics de travaux"
+      - "Un contrat d'assurance"
+      - "Une norme technique de béton"
+    reponse: 1
+    explication: "Le CCAG-Travaux dans sa version de 2021 (arrêté du 30 mars 2021) fixe des règles administratives générales auxquelles les marchés de travaux peuvent faire référence."
+
+  - type: ouverte
+    question: "Pourquoi découpe-t-on souvent un marché de travaux en lots ?"
+    modele: "Pour ouvrir la consultation à des entreprises de tailles différentes, notamment locales et spécialisées, et pour comparer les offres corps d'état par corps d'état. Le maître d'ouvrage signe alors avec chaque entreprise. Le choix entre lots séparés et entreprise générale dépend du cadre juridique et des objectifs."
+
+expert:
+  - type: qcm
+    question: "Quel est le montant minimal d'un marché pour qu'une avance puisse être exigée selon le code de la commande publique ?"
+    choix:
+      - "Plus de 10 000 € HT"
+      - "Plus de 50 000 € HT, avec un délai d'exécution supérieur à deux mois"
+      - "Plus de 500 000 € HT"
+      - "Aucune condition"
+    reponse: 1
+    explication: "Selon les sources consultées, le titulaire a droit à une avance lorsque le marché dépasse 50 000 € HT et que le délai d'exécution excède deux mois. Les taux sont encadrés par le code."
+
+  - type: vf
+    affirmation: "La loi MOP s'applique à tout marché de construction d'un organisme HLM, y compris en accession."
+    reponse: false
+    explication: "Ce point reste ouvert dans Oinarri (chapitre 1) : l'article L2411-1 cite les organismes HLM pour les logements locatifs aidés par l'État, l'application à l'accession est à vérifier. Les règles de la commande publique dépendent aussi du statut de l'organisme."
+
+  - type: ouverte
+    question: "Pourquoi le statut d'un organisme HLM (office public, société, coopérative) compte-t-il pour passer ses marchés ?"
+    modele: "Les règles de la commande publique s'appliquent à ceux qui ont la qualité de pouvoir adjudicateur, ce qui dépend du statut et du financement. Le régime applicable à chaque organisme (et à chaque opération, notamment en accession) doit donc être vérifié avec le service juridique ou marchés. Ce cours donne des repères, pas un avis."
