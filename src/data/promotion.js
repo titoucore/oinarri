@@ -30,7 +30,9 @@ export const chapitres = [
   },
   {
     titre: 'Le financement',
-    desc: 'Fonds propres, crédit et garanties financières.',
+    desc: 'Fonds propres, crédit, pré-commercialisation et garantie d\'achèvement.',
+    href: '/promotion/05-le-financement/',
+    cours: 'promotion/05-le-financement',
   },
   {
     titre: 'La VEFA',
