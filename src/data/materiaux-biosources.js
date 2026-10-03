@@ -31,6 +31,8 @@ export const chapitres = [
   {
     titre: 'Mesurer et réglementer',
     desc: 'RE2020, analyse de cycle de vie, FDES, base INIES et labels.',
+    href: '/materiaux-biosources/05-mesurer-et-reglementer/',
+    cours: 'materiaux-biosources/05-mesurer-et-reglementer',
   },
   {
     titre: 'Règles professionnelles et assurabilité',
