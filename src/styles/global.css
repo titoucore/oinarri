@@ -7,10 +7,13 @@
   --ink-100: #D3D1C7;
   --ink-50:  #F1EFE8;
   --paper:   #FFFFFF;
+  --bande:   #2C2C2A;
   --radius: 10px;
   --page-w: 680px;
   --page-large-w: 72rem;
   --lecture-w: 44rem;
+  /* Hauteur dont une carte déborde de la bande de couleur. */
+  --chevauche: 3.25rem;
 }
 
 :root[data-theme="dark"] {
@@ -22,6 +25,11 @@
   --ink-100: #45443F;
   --ink-50:  #242320;
   --paper:   #181715;
+  --bande:   #3A3935;
+}
+
+@media (max-width: 40rem) {
+  :root { --chevauche: 2.25rem; }
 }
 
 * { box-sizing: border-box; }
@@ -60,59 +68,70 @@ a { color: inherit; }
   }
 }
 
-/* --- En-tête et logo --- */
+/* --- Bande de couleur en haut de page (accueil, listes de chapitres, cours) --- */
 
-.entete {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 3rem;
+/* Sur la bande, les couleurs d'encre sont inversées : texte clair sur aplat foncé.
+   Tout ce qui s'y trouve (logo, liens, titres) suit sans autre réglage. */
+.bande {
+  --ink-900: #F1EFE8;
+  --ink-800: #D9D7CE;
+  --ink-600: #B4B2A9;
+  --ink-400: #8A8880;
+  --ink-200: #5F5E5A;
+  --ink-100: #45443F;
+  --ink-50:  #242320;
+  --paper: var(--bande);
+  background: var(--bande);
+  color: var(--ink-900);
+  transition: background-color 0.15s ease;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: inherit;
+/* Le bas de la bande laisse la place à la carte qui la chevauche. */
+.page.bande-interne {
+  padding-bottom: calc(var(--chevauche) + 2.5rem);
 }
 
-.logo-icon {
-  width: 42px;
-  height: auto;
-  flex-shrink: 0;
+.page.page-sous-bande {
+  padding-top: 0;
 }
 
-.logo-stroke-1 { stroke: var(--ink-900); }
-.logo-stroke-2 { stroke: var(--ink-600); }
-.logo-stroke-3 { stroke: var(--ink-200); }
+.bande .entete {
+  margin-bottom: 2.5rem;
+}
 
-.logo-text {
-  font-weight: 700;
-  font-size: 30px;
+.bande h1 {
+  position: relative;
+  margin: 0 0 1rem;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
   line-height: 1;
-  letter-spacing: -0.5px;
+  letter-spacing: -1.8px;
 }
 
-.theme-toggle {
-  border: 1px solid var(--ink-200);
-  background: none;
-  border-radius: 999px;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ink-600);
-  cursor: pointer;
-  flex-shrink: 0;
+.bande .lead {
+  max-width: 36rem;
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-.theme-toggle svg { width: 17px; height: 17px; }
+/* Grand chiffre ou mot évidé : seul le contour est tracé. Réservé aux très grandes tailles,
+   où le trait reste lisible. Le titre plein passe devant et le chevauche. */
+.chiffre-evide {
+  margin: 0 0 -0.32em;
+  font-size: clamp(5.5rem, 22vw, 11rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--ink-900);
+  user-select: none;
+}
 
-.icon-moon { display: none; }
-:root[data-theme="dark"] .icon-sun { display: none; }
-:root[data-theme="dark"] .icon-moon { display: block; }
+/* Carte qui déborde de la bande sur la page. */
+.carte-bande {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(-1 * var(--chevauche));
+}
 
 /* --- Accueil --- */
 
@@ -181,6 +200,13 @@ h2 {
   gap: 8px;
 }
 
+/* Sous une bande, la première rangée de cartes déborde sur l'aplat. */
+.page-sous-bande .chapitres {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(-1 * var(--chevauche));
+}
+
 /* Grands écrans : les chapitres se répartissent sur deux colonnes ou plus. */
 .page-large .chapitres {
   display: grid;
@@ -196,6 +222,7 @@ h2 {
   gap: 14px;
   border: 1px solid var(--ink-100);
   border-radius: 12px;
+  background: var(--paper);
   padding: 0.9rem 1rem;
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
@@ -281,6 +308,7 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   body { transition: none; }
+  .bande { transition: none; }
   .chapitre { transition: none; }
   .chapitre:has(.chapitre-lien):hover { transform: none; }
 }
