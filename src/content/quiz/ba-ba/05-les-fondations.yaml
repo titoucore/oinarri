@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 5 : Les fondations.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "À quoi servent les fondations ?"
+    choix:
+      - "À décorer le bas du bâtiment"
+      - "À répartir les charges du bâtiment dans le sol"
+      - "À isoler thermiquement le bâtiment"
+      - "À protéger du bruit"
+    reponse: 1
+    explication: "Les fondations reçoivent les charges descendues par les murs ou les poteaux et les répartissent dans le sol, qui doit pouvoir les supporter."
+
+  - type: qcm
+    question: "Quel type de fondation est une bande continue sous un mur ?"
+    choix:
+      - "Une semelle isolée"
+      - "Un radier"
+      - "Une semelle filante"
+      - "Un pieu"
+    reponse: 2
+    explication: "La semelle filante court sous un mur sur toute sa longueur. La semelle isolée se place sous un poteau, le radier est une dalle sous tout le bâtiment, le pieu est une fondation profonde."
+
+  - type: vf
+    affirmation: "Un pieu est une fondation superficielle."
+    reponse: false
+    explication: "Le pieu est une fondation profonde : il descend chercher en profondeur un sol plus résistant. Semelles et radier sont des fondations superficielles."
+
+  - type: qcm
+    question: "Quelle étude de sol précise le type et la profondeur des fondations ?"
+    choix:
+      - "G1"
+      - "G2"
+      - "G5"
+      - "Aucune, c'est l'entreprise qui décide"
+    reponse: 1
+    explication: "La G2 est l'étude géotechnique de conception : elle précise le type et la profondeur des fondations. La G1 est l'étude préalable."
+
+  - type: ouverte
+    question: "Explique pourquoi on ne choisit pas les fondations avant de connaître le sol."
+    modele: "Les fondations répartissent les charges dans le sol. Si le sol porte bien, des semelles suffisent. S'il porte peu ou s'il est instable, il faut un radier ou des pieux. Sans étude de sol, on risque des fondations sous-dimensionnées, donc des fissures ou des tassements."
+
+approfondir:
+  - type: qcm
+    question: "Quel phénomène du sol provoque des désordres sur les maisons en zone argileuse ?"
+    choix:
+      - "Le retrait-gonflement des argiles"
+      - "La condensation"
+      - "Le pont thermique"
+      - "L'effet de serre"
+    reponse: 0
+    explication: "Les argiles gonflent quand elles s'humidifient et se rétractent quand elles sèchent, ce qui peut faire bouger les fondations et fissurer le bâtiment."
+
+  - type: qcm
+    question: "Quel texte a créé en 2018 le dispositif de protection contre le retrait-gonflement des argiles pour les constructions neuves ?"
+    choix:
+      - "La loi ELAN"
+      - "La loi MOP"
+      - "La loi SRU"
+      - "La loi Carrez"
+    reponse: 0
+    explication: "L'article 68 de la loi ELAN (loi n° 2018-1021) a créé ce dispositif. Il est codifié dans le code de la construction et de l'habitation et précisé par un arrêté du 22 juillet 2020."
+
+  - type: vf
+    affirmation: "Les fondations doivent descendre sous la profondeur atteinte par le gel."
+    reponse: true
+    explication: "Une fondation trop haute peut bouger quand le sol gèle. On l'ancre donc plus bas que la profondeur de gel de la région. La valeur dépend du lieu et de l'étude de sol."
+
+  - type: qcm
+    question: "Quel NF DTU encadre les fondations superficielles ?"
+    choix:
+      - "NF DTU 13.1"
+      - "NF DTU 31.2"
+      - "NF DTU 20.1"
+      - "NF DTU 43.1"
+    reponse: 0
+    explication: "Le NF DTU 13.1 concerne les fondations superficielles. Le 13.2 concerne les fondations profondes et le 13.3 les dallages."
+
+  - type: ouverte
+    question: "Dans quel cas un radier ou des pieux peuvent-ils être préférés à des semelles ?"
+    modele: "Quand le sol de surface porte peu ou présente des risques (sol compressible, argiles, remblais). Un radier répartit la charge sur toute l'emprise du bâtiment. Des pieux traversent la couche faible pour chercher un sol plus résistant. Le choix dépend de l'étude de sol G2."
+
+expert:
+  - type: qcm
+    question: "Que fait la longrine ?"
+    choix:
+      - "Elle relie des fondations entre elles"
+      - "Elle porte la toiture"
+      - "Elle isole le vide sanitaire"
+      - "Elle remplace le mur"
+    reponse: 0
+    explication: "La longrine est une poutre en béton armé qui relie des semelles isolées ou des pieux, et reprend les efforts entre eux."
+
+  - type: vf
+    affirmation: "Le dispositif ELAN sur les argiles s'applique obligatoirement à tous les bâtiments collectifs, sans exception."
+    reponse: false
+    explication: "D'après les sources consultées, le dispositif vise la vente de terrains à bâtir et la construction de maisons individuelles dans les zones exposées. Son application à un immeuble collectif est à vérifier, mais une étude G2 reste nécessaire pour le dimensionnement."
+
+  - type: ouverte
+    question: "Pourquoi un bâtiment collectif R+2 sur sol argileux reste-t-il concerné par le risque, même si le dispositif ELAN vise surtout les maisons ?"
+    modele: "Le phénomène physique est le même : les argiles bougent avec l'humidité et peuvent déplacer les fondations, quel que soit le bâtiment. L'étude G2 reste indispensable pour choisir le type et la profondeur des fondations, et le contrôleur technique ou le bureau d'études en tiennent compte. Le cadre légal précis est à vérifier."
