@@ -1,0 +1,102 @@
+# Mini-quiz du chapitre 4 : Terrassement et VRD.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que signifie VRD ?"
+    choix:
+      - "Voirie et réseaux divers"
+      - "Ventilation, rénovation, démolition"
+      - "Vente en risque déclaré"
+      - "Vérification des réseaux dormants"
+    reponse: 0
+    explication: "VRD signifie voirie et réseaux divers : les voies, les trottoirs et les réseaux enterrés (eau, assainissement, électricité, gaz, télécoms) qui desservent un bâtiment."
+
+  - type: qcm
+    question: "Dans quel ordre se déroule en général un terrassement ?"
+    choix:
+      - "Remblai, décapage, fouilles"
+      - "Décapage de la terre végétale, déblais et remblais, plateforme, fouilles"
+      - "Fouilles, décapage, plateforme"
+      - "Plateforme, fouilles, décapage"
+    reponse: 1
+    explication: "On enlève d'abord la terre végétale (décapage), on modèle le terrain en déblayant ou remblayant, on prépare une plateforme stable, puis on creuse les fouilles. C'est un usage de chantier."
+
+  - type: vf
+    affirmation: "Les eaux pluviales et les eaux usées vont toujours dans le même réseau."
+    reponse: false
+    explication: "Elles sont en principe séparées. Les eaux usées vont au réseau d'assainissement. Les conditions de rejet des eaux pluviales sont fixées par la collectivité, souvent en limitant le rejet à la parcelle."
+
+  - type: qcm
+    question: "Quels réseaux sont dits secs ?"
+    choix:
+      - "Eaux usées, eaux pluviales, eau potable"
+      - "Électricité, gaz, télécoms"
+      - "Uniquement l'électricité"
+      - "Aucun : tous sont humides"
+    reponse: 1
+    explication: "Les réseaux secs sont l'électricité, le gaz et les télécoms. Les réseaux humides sont l'eau potable, les eaux usées et les eaux pluviales."
+
+  - type: ouverte
+    question: "Pourquoi déclare-t-on les travaux avant de creuser, et qui le fait ?"
+    modele: "Parce que des réseaux enterrés peuvent se trouver dans l'emprise des travaux, et les endommager est dangereux. Le maître d'ouvrage fait une déclaration de projet de travaux (DT) ; l'entreprise qui exécute fait une déclaration d'intention de commencement de travaux (DICT). Les deux passent par le guichet unique des réseaux."
+
+approfondir:
+  - type: qcm
+    question: "Qui adresse la DT, déclaration de projet de travaux, aux exploitants de réseaux ?"
+    choix:
+      - "L'entreprise de terrassement"
+      - "Le maître d'ouvrage (responsable de projet)"
+      - "Le contrôleur technique"
+      - "Le voisin"
+    reponse: 1
+    explication: "La DT est faite par le maître d'ouvrage, avant le lancement de la consultation des entreprises. L'entreprise qui exécute fait ensuite sa propre DICT avant de commencer."
+
+  - type: vf
+    affirmation: "Le marquage-piquetage des réseaux enterrés est à la charge du maître d'ouvrage."
+    reponse: true
+    explication: "Le maître d'ouvrage procède au marquage-piquetage des réseaux enterrés dans l'emprise des travaux, d'après la réglementation anti-endommagement."
+
+  - type: qcm
+    question: "Quel est le délai de raccordement au réseau public d'eaux usées après sa mise en service (article L1331-1 du code de la santé publique) ?"
+    choix:
+      - "Un an"
+      - "Deux ans"
+      - "Cinq ans"
+      - "Aucun délai"
+    reponse: 1
+    explication: "Le raccordement est obligatoire dans un délai de deux ans à compter de la mise en service du réseau. Pour un immeuble construit après la mise en service du réseau, il est obligatoire sans délai."
+
+  - type: vf
+    affirmation: "Le raccordement au réseau pluvial est toujours obligatoire."
+    reponse: false
+    explication: "D'après les règlements d'assainissement consultés, il n'est pas obligatoire : la collectivité fixe les conditions de rejet au cas par cas. Le propriétaire reste responsable des dégâts que causent les eaux pluviales quittant son terrain."
+
+  - type: ouverte
+    question: "Pourquoi réalise-t-on un bilan des déblais et remblais avant de terrasser ?"
+    modele: "Pour savoir si la terre excavée suffit à remblayer ailleurs sur le terrain, ou s'il faut en évacuer ou en apporter. Cela pèse sur le coût (transport, mise en décharge, achat de matériaux) et sur le planning."
+
+expert:
+  - type: qcm
+    question: "Les ouvrages nécessaires pour amener les eaux usées à la partie publique du branchement sont à la charge :"
+    choix:
+      - "De la commune"
+      - "Des propriétaires"
+      - "Du concessionnaire d'électricité"
+      - "Du géomètre"
+    reponse: 1
+    explication: "L'article L1331-4 du code de la santé publique met à la charge exclusive des propriétaires les ouvrages qui amènent les eaux usées à la partie publique du branchement."
+
+  - type: vf
+    affirmation: "Une étude géotechnique est inutile pour le terrassement : elle ne concerne que les fondations."
+    reponse: false
+    explication: "L'étude de sol renseigne aussi sur la stabilité des talus, la nature des terres à déblayer, la présence d'eau et la portance de la plateforme. Elle sert donc dès le terrassement."
+
+  - type: ouverte
+    question: "Que doit faire une entreprise si, en creusant, elle découvre un réseau qui n'était pas signalé ?"
+    modele: "Elle doit arrêter les travaux à proximité et signaler l'anomalie au maître d'ouvrage et à l'exploitant du réseau, conformément à la réglementation anti-endommagement. La suite se décide avec eux avant de reprendre. Les règles précises sont à vérifier dans les textes en vigueur et le guide technique."
