@@ -37,7 +37,7 @@ Un **organisme de foncier solidaire (OFS)**, agréé par le préfet de région, 
 
 ### La vente HLM
 
-Un organisme HLM peut vendre des logements construits ou acquis depuis **plus de dix ans** (quinze ans pour les logements PLS). Un logement occupé ne peut être vendu qu'à son locataire, s'il l'occupe depuis au moins deux ans. Un logement vacant est proposé dans un ordre de priorité fixé par la loi : d'abord des personnes physiques sous plafonds, dont les locataires du parc social du département et les gardiens d'immeuble de l'organisme, puis les collectivités.
+Un organisme HLM peut vendre des logements construits ou acquis depuis **plus de dix ans** (quinze ans pour les logements PLS). Un logement occupé ne peut être vendu qu'à son locataire, s'il l'occupe depuis au moins deux ans. Un logement vacant est proposé dans un ordre de priorité fixé par la loi : d'abord des personnes physiques sous plafonds, dont les locataires du parc social du département et les gardiens d'immeuble de l'organisme, puis les collectivités. Le prix de vente est librement fixé par l'organisme propriétaire (article L443-7 et suivants du CCH, vérifié sur Légifrance).
 
 ## Approfondir
 
@@ -45,20 +45,20 @@ Un organisme HLM peut vendre des logements construits ou acquis depuis **plus de
 
 Les travaux importants, les changements d'usage et la revente sont soumis à l'accord de l'OFS. Il dispose d'un droit de préemption sur le bâti à chaque mutation, avec indemnisation. La revente est encadrée : le candidat doit remplir les mêmes conditions de ressources, ce qui maintient le caractère social du logement et préserve l'aide publique investie dans le foncier.
 
-### Les plafonds
+### Les plafonds 2026
 
-Les plafonds de ressources du PSLA et du BRS sont fixés par arrêté (celui du 24 février 2026 est cité). Par exemple, de 33 771 euros pour une personne en zone B2 ou C jusqu'à 121 650 euros pour six personnes en zone A bis, selon un site spécialisé. Ceux du BRS sont au maximum égaux à ceux du PSLA.
+Les plafonds de ressources du PSLA et du BRS sont fixés par l'arrêté du 24 février 2026, entré en vigueur le 8 mars 2026 (ANIL). Par exemple, 38 844 euros pour une personne seule en zone A, A bis ou B1 et 33 771 euros en zone B2 ou C, jusqu'à 121 650 euros pour six personnes en zone A bis, selon plusieurs sites qui recoupent leurs chiffres. Ceux du BRS sont au maximum égaux à ceux du PSLA. Les plafonds de prix de vente du PSLA existent aussi, par zone, en euros par mètre carré de surface utile.
 
 ### Les contreparties d'une vente HLM
 
-La loi ELAN a laissé le prix libre, sans évaluation obligatoire des Domaines, et a ajouté des clauses anti-spéculation : par exemple, si le ménage revend dans les cinq ans, il doit proposer d'abord le logement à l'organisme. Les logements vendus restent comptés dans le décompte SRU pendant dix ans selon une publication spécialisée. Le plan de vente figure dans la convention d'utilité sociale.
+La loi ELAN a laissé le prix libre, sans évaluation obligatoire du service des Domaines, et a ajouté des clauses anti-spéculation : par exemple, si le ménage revend dans les cinq ans, il doit proposer d'abord le logement à l'organisme. Les logements vendus restent comptés dans le décompte SRU pendant dix ans selon une publication spécialisée. Le plan de vente figure dans la convention d'utilité sociale.
 
 ## Expert
 
 - **Phase locative.** Selon des sites spécialisés, elle dure de 6 à 48 mois, et le prix de levée d'option est minoré d'au moins 1 % par année de phase locative. À vérifier sur la loi du 12 juillet 1984 et le CCH.
 - **Taxe foncière.** Les logements financés en PSLA bénéficient d'une exonération de 15 ans selon plusieurs sources de promoteurs. À confirmer.
 - **Décote en BRS.** Les sources divergent : de 20 à 40 % pour certains, 30 à 50 % pour d'autres. Elle dépend de l'OFS et de la zone.
-- **Évolution possible du cadre.** Un décret de 2026 est évoqué par la presse juridique comme ayant modifié le cadre de la vente HLM, notamment le rôle de l'évaluation des Domaines. Je ne l'ai pas vérifié.
+- **Décret n° 2026-826 du 25 août 2026.** Vérifié sur Légifrance : il modifie l'article D443-34 du CCH pour permettre aux organismes HLM de vendre certains logements qu'ils produisent en vue de la vente à des personnes physiques qui les louent, dans le dispositif « Relance logement » (statut du bailleur privé de la loi de finances pour 2026). Il ne change pas le régime de vente du parc locatif social existant (article L443-7).
 
 ## Cas pratiques
 
@@ -90,16 +90,17 @@ PSLA · Location-accession · Bail réel solidaire · Organisme de foncier solid
 
 ## Attention
 
-- Plusieurs conditions (durée de la phase locative, décote, plafonds) viennent de sites non officiels : vérifie-les avant de les utiliser.
-- Un décret de 2026 pourrait avoir modifié la vente HLM.
+- Plusieurs conditions (durée de la phase locative, décote, taxe foncière du PSLA) viennent de sites non officiels : vérifie-les avant de les utiliser.
+- Le décret de 2026 sur la vente HLM concerne la vente à des investisseurs de logements produits pour la vente, pas la vente du parc locatif.
 - Ce chapitre ne dit pas quel dispositif est utilisé pour les huit logements d'Arbola : c'est un choix de montage.
 
 ## Sources et vérification
 
 Vérifié le 3 octobre 2026.
 
-- PSLA : ANIL (fiche sur le prêt social location-accession) ; plusieurs sites spécialisés pour les plafonds 2026 et la durée de la phase locative.
+- PSLA : ANIL (fiche sur le prêt social location-accession et fiche sur les plafonds 2026) ; plusieurs sites spécialisés pour les plafonds et la durée de la phase locative.
 - BRS et OFS : ANIL, DREAL Pays de la Loire (fiche sur les rôles de l'OFS et du BRS), plusieurs agglomérations et un site d'État sur le BRS.
-- Vente HLM : article L443-7 et suivants du CCH (Légifrance) ; fiche d'une préfecture (Manche) ; analyses de la loi ELAN (Espacité, Weblex) ; presse juridique sur un décret de 2026.
+- Vente HLM : articles L443-7 et suivants du CCH (Légifrance, extrait lu le 3 octobre 2026) ; fiche d'une préfecture (Manche) ; analyses de la loi ELAN (Espacité, Weblex).
+- Décret n° 2026-826 du 25 août 2026 : texte sur Légifrance (modification de D443-34) et commentaires (Coop'HLM, Le Monde du droit).
 
-À contrôler sur Légifrance : les articles L443-7 à L443-15-5 dans leur version actuelle ; le décret de 2026 sur la vente de logements sociaux ; l'arrêté du 24 février 2026 sur les plafonds ; la loi du 12 juillet 1984 sur la location-accession.
+À contrôler sur Légifrance : les articles L443-7 à L443-15-5 dans leur version actuelle (ordre de priorité, clauses de revente) ; le texte de l'arrêté du 24 février 2026 ; la loi du 12 juillet 1984 sur la location-accession.
