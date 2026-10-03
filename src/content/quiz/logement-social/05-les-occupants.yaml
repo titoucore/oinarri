@@ -1,0 +1,65 @@
+# Mini-quiz du chapitre 5 de Bailleurs sociaux et logement social : Les occupants.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quelle instance décide de l'attribution d'un logement social ?"
+    choix:
+      - "Le maire de la commune"
+      - "La commission d'attribution (CALEOL) de l'organisme"
+      - "La CAF"
+      - "Le préfet, toujours"
+    reponse: 1
+    explication: "C'est la CALEOL de chaque organisme qui attribue, logement par logement. L'État, les collectivités et Action Logement peuvent proposer des candidats comme réservataires."
+
+  - type: vf
+    affirmation: "En principe, la commission examine au moins trois candidatures pour chaque logement."
+    reponse: true
+    explication: "Elle examine au moins trois dossiers, décide en les classant ou non, et motive tout refus. Il y a des exceptions prévues par la loi."
+
+  - type: qcm
+    question: "À partir de quel dépassement des plafonds de ressources le supplément de loyer de solidarité est-il dû ?"
+    choix:
+      - "Dès le premier euro"
+      - "À partir de 20 %"
+      - "À partir de 50 %"
+      - "À partir de 100 %"
+    reponse: 1
+    explication: "Aucun surloyer n'est exigible quand le dépassement est inférieur à 20 %."
+
+  - type: ouverte
+    question: "Un ménage de deux personnes loue un PLUS en province. Le plafond PLUS est de 31 254 euros. À partir de quel revenu un surloyer est-il possible ?"
+    modele: "31 254 x 1,20 = environ 37 505 euros. En dessous, aucun surloyer. Au-dessus, le montant se calcule avec la surface habitable, le coefficient de dépassement et la valeur de référence de la zone, et loyer plus surloyer ne dépasse pas 30 % des ressources."
+
+approfondir:
+  - type: vf
+    affirmation: "Le plafond de ressources du PLS est égal à celui du PLUS majoré de 30 %."
+    reponse: true
+    explication: "Pour une personne seule en province en 2026, 23 403 euros en PLUS donnent environ 30 424 euros en PLS."
+
+  - type: vf
+    affirmation: "Le surloyer s'applique partout, sans exception."
+    reponse: false
+    explication: "Il n'est pas applicable dans les quartiers prioritaires de la politique de la ville ni dans les zones de revitalisation rurale, et un programme local de l'habitat peut définir d'autres zones d'exclusion."
+
+  - type: qcm
+    question: "Quel plafond limite le cumul du loyer principal et du surloyer ?"
+    choix:
+      - "10 % des ressources du foyer"
+      - "30 % des ressources du foyer"
+      - "50 % des ressources du foyer"
+      - "Aucun plafond"
+    reponse: 1
+    explication: "L'article R441-20 du CCH plafonne le total à 30 % des ressources de l'ensemble des personnes vivant au foyer."
+
+expert:
+  - type: vf
+    affirmation: "La cotation de la demande décide automatiquement quel candidat obtient le logement."
+    reponse: false
+    explication: "La cotation est une aide à la décision. La commission tient aussi compte de la situation personnelle des candidats et des caractéristiques du logement."
+
+  - type: ouverte
+    question: "Pourquoi un ménage peut-il remplir les conditions d'accès à un logement social et se le voir refuser ?"
+    modele: "Parce que respecter les plafonds est nécessaire mais pas suffisant : la commission classe les candidats selon leur situation, l'adéquation entre le logement et la composition du ménage, les priorités légales (dont les ménages DALO) et le taux d'effort. Elle motive sa décision."
