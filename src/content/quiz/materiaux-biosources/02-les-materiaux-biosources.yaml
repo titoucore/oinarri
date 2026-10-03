@@ -1,0 +1,73 @@
+# Mini-quiz du chapitre 2 de Nouvelles méthodes de construction : Les matériaux biosourcés.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quel est le système constructif en bois le plus répandu pour les maisons individuelles en bois en France ?"
+    choix:
+      - "L'ossature bois"
+      - "Les poteaux-poutres"
+      - "Les madriers empilés"
+      - "Le CLT"
+    reponse: 0
+    explication: "Selon le ministère de l'Agriculture, l'ossature bois concerne 85 % des maisons individuelles en bois. Le NF DTU 31.2 en fixe les règles."
+
+  - type: vf
+    affirmation: "Le béton de chanvre est un matériau porteur qui peut remplacer la structure d'un bâtiment."
+    reponse: false
+    explication: "Le béton de chanvre (chènevotte et chaux) est un matériau de remplissage isolant, non porteur. Il s'associe à une structure, souvent en bois."
+
+  - type: qcm
+    question: "Un isolant a une conductivité thermique (λ) plus faible qu'un autre. Que peut-on en conclure ?"
+    choix:
+      - "Il isole mieux à épaisseur égale"
+      - "Il isole moins bien à épaisseur égale"
+      - "Il est plus lourd"
+      - "Il est moins cher"
+    reponse: 0
+    explication: "Plus λ est petit, moins le matériau laisse passer la chaleur. La conductivité ne dit rien du poids ni du prix."
+
+  - type: ouverte
+    question: "Dans un mur à ossature bois rempli de bottes de paille, qui porte, et qui isole ?"
+    modele: "L'ossature en bois porte le bâtiment. Les bottes de paille remplissent l'ossature et isolent, et servent de support à l'enduit. La paille ne porte pas."
+
+approfondir:
+  - type: qcm
+    question: "Quelle est la masse volumique minimale d'une botte de paille utilisée en construction d'après les règles CP 2012 ?"
+    choix:
+      - "40 kg/m³"
+      - "80 kg/m³"
+      - "120 kg/m³"
+      - "200 kg/m³"
+    reponse: 1
+    explication: "Les bottes doivent avoir une masse volumique de 80 à 120 kg/m³, avec une humidité inférieure à 20 %."
+
+  - type: vf
+    affirmation: "Respecter les règles professionnelles de la construction en paille dispense de respecter les DTU, normes et Eurocodes sur la structure en bois."
+    reponse: false
+    explication: "Les règles CP 2012 portent sur le remplissage et le support d'enduit. La structure en bois reste soumise aux DTU, normes et Eurocodes."
+
+  - type: qcm
+    question: "Comment calcule-t-on la résistance thermique R d'une couche de matériau ?"
+    choix:
+      - "R = épaisseur × λ"
+      - "R = épaisseur ÷ λ"
+      - "R = λ ÷ épaisseur"
+      - "R = épaisseur + λ"
+    reponse: 1
+    explication: "R = e / λ, avec e en mètres et λ en W/(m·K). Par exemple 0,30 m d'un isolant de λ 0,04 donne R = 7,5 m².K/W."
+
+expert:
+  - type: vf
+    affirmation: "La conductivité thermique d'un isolant fibreux augmente quand il s'humidifie."
+    reponse: true
+    explication: "L'eau conduit mieux la chaleur que l'air. Un isolant mouillé isole moins bien, d'où l'importance de protéger les parois de l'eau liquide."
+
+  - type: ouverte
+    question: "Pourquoi la conductivité thermique seule ne suffit-elle pas pour choisir un isolant biosourcé ?"
+    modele: "Parce que le choix demande une analyse multicritère : comportement à l'humidité (perméabilité à la vapeur d'eau), tenue au feu, confort d'été, acoustique, impact carbone, coût, mise en œuvre, disponibilité locale et assurabilité. Le Cerema insiste sur cette analyse multicritère."
