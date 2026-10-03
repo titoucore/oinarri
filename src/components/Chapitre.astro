@@ -1,6 +1,8 @@
 ---
 // Mise en page d'un cours, commune à tous les parcours.
 // Le contenu Markdown du cours arrive par le <slot />.
+// Le titre et le numéro du chapitre vont dans la bande de couleur ; la carte « niveau / vérification »
+// déborde de la bande sur la page.
 import Base from '../layouts/Base.astro';
 
 const { entry, quizJson, retour } = Astro.props;
@@ -11,15 +13,28 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
   year: 'numeric',
   timeZone: 'UTC',
 });
+
+// Parcours et numéro se lisent dans l'identifiant du cours : « promotion/02-le-foncier ».
+const [parcours, fichier = ''] = entry.id.split('/');
+const numero = fichier.slice(0, 2);
+const ETIQUETTES = {
+  'ba-ba': ['B.A.-', 'BA'],
+  promotion: ['PROMO-', 'TION'],
+};
+const etiquette = ETIQUETTES[parcours] ?? null;
 ---
 
-<Base title={`${titre} — Oinarri`} description={description} large>
+<Base title={`${titre} — Oinarri`} description={description} large bande etiquette={etiquette}>
+  <Fragment slot="bande">
+    <a class="retour" href={retour.href}>{retour.libelle}</a>
+    {/^\d{2}$/.test(numero) && <p class="chiffre-evide" aria-hidden="true">{numero}</p>}
+    <h1>{titre}</h1>
+  </Fragment>
+
   <div class="mise">
     <nav class="sommaire" id="sommaire" aria-label="Dans ce chapitre" hidden></nav>
     <div class="lecture">
-      <a class="retour" href={retour.href}>{retour.libelle}</a>
-      <h1>{titre}</h1>
-      <p class="meta">
+      <p class="meta carte-bande">
         <span class="etiquette">{niveau}</span>
         <span>Dernière vérification : {date}</span>
       </p>
@@ -147,14 +162,19 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     font-weight: 500;
   }
 
+  /* Carte « niveau / dernière vérification » : elle déborde de la bande de couleur. */
   .meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+    background: var(--paper);
     font-size: 13px;
     color: var(--ink-600);
-    margin: 0 0 2rem;
+    margin-bottom: 2rem;
   }
 
   .cours {
@@ -169,8 +189,8 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
   }
 
   .cours h2 {
-    font-size: 1.4rem;
-    letter-spacing: -0.3px;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
     margin: 2.5rem 0 0.75rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--ink-100);
