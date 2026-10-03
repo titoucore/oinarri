@@ -28,16 +28,16 @@ verifie_le: 2026-10-03
 
 ### Ce que dit la loi sur la VEFA
 
-L'article L433-2 du CCH encadre l'achat en VEFA par les organismes HLM. Dans le texte consulté, il peut acquérir :
+L'article L433-2 du CCH (version en vigueur depuis le 21 février 2026, lue sur Légifrance le 3 octobre 2026) permet à un organisme HLM ou à une SEM d'acquérir en VEFA :
 
-- des ouvrages de bâtiment auprès d'un autre organisme HLM ;
+- des ouvrages de bâtiment auprès d'un autre organisme HLM ou d'une autre SEM ;
 - des logements inclus dans un programme de construction, à condition que ce programme ait été établi par un tiers et que les demandes de permis de construire aient déjà été déposées.
 
-Pour Arbola, le vendeur est un organisme : le premier cas s'applique, sous réserve de vérifier la version en vigueur.
+Pour Arbola, le vendeur est un organisme HLM : le premier cas s'applique.
 
 ### La VEFA inversée
 
-Dans l'autre sens, l'organisme HLM peut **vendre** des logements à une personne privée. Ces logements doivent faire partie d'un programme composé majoritairement de logements sociaux, dans la limite de **30 %** du programme, et la vente se fait en bloc. Cela permet de rendre une opération équilibrée en mixant des produits.
+Dans l'autre sens, l'organisme HLM peut **vendre** des logements à une personne privée, si ces logements font partie d'un programme composé majoritairement de logements sociaux, dans la limite de **30 %** de ce programme. Les logements doivent être sur des terrains publics cédés dans certaines conditions ou dans une commune d'une zone d'urbanisation continue de plus de 50 000 habitants. La vente est soumise à l'**autorisation du préfet** et à des critères de production et de rénovation de logements locatifs sociaux. Elle permet d'équilibrer une opération en mixant des produits.
 
 ## Approfondir
 
@@ -84,23 +84,23 @@ VEFA HLM · VEFA inversée · Maîtrise d'ouvrage directe · ANRU · NPNRU · PN
 
 - Trois voies : construire, acheter en VEFA, acquérir de l'existant.
 - L433-2 : programme établi par un tiers, permis déposés.
-- VEFA inversée : 30 % au plus, programme majoritairement social.
+- VEFA inversée : 30 % au plus, programme majoritairement social, autorisation du préfet.
 - NPNRU : 14,2 milliards d'euros, 8 d'Action Logement.
 - Reconstitution de l'offre : remplacer les logements démolis.
 
 ## Attention
 
-- La rédaction de l'article L433-2 consultée est ancienne : lis la version en vigueur.
 - Les montants du NPNRU varient selon les sources (12 ou 14,2 milliards selon qu'on compte l'équivalent-subvention).
 - Le troisième programme n'est pas adopté à notre connaissance.
+- Le texte de L433-2 ne dit pas comment qualifier précisément une vente entre deux organismes HLM dans un programme monté par l'un d'eux : à confirmer avec le service juridique.
 - Les cas d'Arbola sont fictifs.
 
 ## Sources et vérification
 
 Vérifié le 3 octobre 2026.
 
-- VEFA HLM : article L433-2 du CCH (extraits cités par l'USH, le Cerema, le Moniteur et l'avocat Cheuvreux) ; rapport du Congrès des notaires 2023 sur la VEFA inversée ; fiche du Cerema.
-- Renouvellement urbain : ANRU (bilan du PNRU, programme NPNRU), ministère de l'Intérieur et de l'Aménagement du territoire (fiche ANRU), Sénat (projet de loi et rapport de contrôle sur le NPNRU).
+- VEFA HLM : article L433-2 du CCH sur Légifrance (version en vigueur depuis le 21 février 2026) ; analyses de l'USH, du Cerema, du Moniteur et du cabinet Cheuvreux ; rapport du Congrès des notaires 2023 sur la VEFA inversée.
+- Renouvellement urbain : ANRU (bilan du PNRU, programme NPNRU), ministère de l'Aménagement du territoire (fiche ANRU), Sénat (projet de loi et rapport de contrôle sur le NPNRU).
 - Financement et TVA : chapitre 3 de ce module.
 
-À contrôler sur Légifrance : la rédaction actuelle de L433-2 (conditions, 30 %, zones) ; la qualification de la vente entre deux organismes HLM ; l'état du projet de loi sur le troisième programme.
+À contrôler sur Légifrance : la qualification d'une vente entre deux organismes HLM ; l'état du projet de loi sur le troisième programme.
