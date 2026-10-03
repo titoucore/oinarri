@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" role="img">
+<title>Trois voies pour accéder à la propriété avec un bailleur social</title>
+<desc>Le PSLA (louer puis acheter), le bail réel solidaire (acheter le logement sans le terrain) et la vente HLM (acheter un logement du parc existant).</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:15px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="400" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="24" y="24" width="206" height="352" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="127" y="50" text-anchor="middle" fill="#085041">PSLA</text>
+<text class="ts" x="127" y="76" text-anchor="middle" fill="#0F6E56">Louer d'abord,</text><text class="ts" x="127" y="94" text-anchor="middle" fill="#0F6E56">acheter ensuite</text>
+<text class="ts" x="127" y="140" text-anchor="middle" fill="#085041">Logement</text><text class="ts" x="127" y="158" text-anchor="middle" fill="#0F6E56">Neuf</text>
+<text class="ts" x="127" y="204" text-anchor="middle" fill="#085041">Étape clé</text><text class="ts" x="127" y="222" text-anchor="middle" fill="#0F6E56">La levée d'option</text>
+<text class="ts" x="127" y="268" text-anchor="middle" fill="#085041">Protection</text><text class="ts" x="127" y="286" text-anchor="middle" fill="#0F6E56">Rachat et relogement</text>
+<text class="ts" x="127" y="304" text-anchor="middle" fill="#0F6E56">pendant 15 ans</text>
+<rect x="237" y="24" width="206" height="352" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="340" y="50" text-anchor="middle" fill="#712B13">BRS</text>
+<text class="ts" x="340" y="76" text-anchor="middle" fill="#993C1D">Acheter le logement,</text><text class="ts" x="340" y="94" text-anchor="middle" fill="#993C1D">pas le terrain</text>
+<text class="ts" x="340" y="140" text-anchor="middle" fill="#712B13">Logement</text><text class="ts" x="340" y="158" text-anchor="middle" fill="#993C1D">Neuf ou existant</text>
+<text class="ts" x="340" y="204" text-anchor="middle" fill="#712B13">Étape clé</text><text class="ts" x="340" y="222" text-anchor="middle" fill="#993C1D">Bail de 18 à 99 ans</text>
+<text class="ts" x="340" y="268" text-anchor="middle" fill="#712B13">Contrepartie</text><text class="ts" x="340" y="286" text-anchor="middle" fill="#993C1D">Redevance foncière</text>
+<text class="ts" x="340" y="304" text-anchor="middle" fill="#993C1D">et revente encadrée</text>
+<rect x="450" y="24" width="206" height="352" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="553" y="50" text-anchor="middle" fill="#444441">Vente HLM</text>
+<text class="ts" x="553" y="76" text-anchor="middle" fill="#5F5E5A">Acheter un logement</text><text class="ts" x="553" y="94" text-anchor="middle" fill="#5F5E5A">du parc existant</text>
+<text class="ts" x="553" y="140" text-anchor="middle" fill="#444441">Logement</text><text class="ts" x="553" y="158" text-anchor="middle" fill="#5F5E5A">Plus de 10 ans</text>
+<text class="ts" x="553" y="204" text-anchor="middle" fill="#444441">Étape clé</text><text class="ts" x="553" y="222" text-anchor="middle" fill="#5F5E5A">Priorité au locataire</text>
+<text class="ts" x="553" y="268" text-anchor="middle" fill="#444441">Contrepartie</text><text class="ts" x="553" y="286" text-anchor="middle" fill="#5F5E5A">Revente encadrée</text>
+<text class="ts" x="553" y="304" text-anchor="middle" fill="#5F5E5A">les premières années</text>
+<text class="ts" x="340" y="392" text-anchor="middle" fill="#5F5E5A">Conditions à vérifier : elles évoluent chaque année</text>
+</svg>
