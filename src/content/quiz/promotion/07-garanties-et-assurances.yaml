@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 7 de Promotion immobilière : Garanties et assurances.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quelle est la durée de la garantie de parfait achèvement ?"
+    choix:
+      - "1 an"
+      - "2 ans"
+      - "5 ans"
+      - "10 ans"
+    reponse: 0
+    explication: "La garantie de parfait achèvement dure un an après la réception : l'entrepreneur répare tous les désordres signalés à la réception ou dans l'année qui suit, quelles que soient leur importance et leur nature."
+
+  - type: qcm
+    question: "Que couvre la garantie biennale, qui dure deux ans ?"
+    choix:
+      - "La solidité des fondations"
+      - "Le bon fonctionnement des éléments d'équipement dissociables"
+      - "La peinture des murs"
+      - "Le prix du terrain"
+    reponse: 1
+    explication: "L'article 1792-3 du Code civil impose à l'entrepreneur de réparer ou de remplacer, pendant deux ans à compter de la réception, un élément d'équipement qui ne fonctionne pas correctement."
+
+  - type: vf
+    affirmation: "La garantie décennale couvre les dommages qui compromettent la solidité de l'ouvrage ou le rendent impropre à sa destination."
+    reponse: true
+    explication: "La garantie décennale engage la responsabilité des constructeurs pendant dix ans après la réception pour ces dommages (article 1792 du Code civil)."
+
+  - type: qcm
+    question: "Qui doit souscrire l'assurance dommages-ouvrage, et quand ?"
+    choix:
+      - "Chaque entreprise, après la réception"
+      - "Le maître d'ouvrage (ou le vendeur), avant l'ouverture du chantier"
+      - "L'acquéreur, à la livraison"
+      - "La mairie, avec le permis"
+    reponse: 1
+    explication: "L'article L242-1 du code des assurances oblige toute personne qui, comme propriétaire de l'ouvrage, vendeur ou mandataire, fait réaliser des travaux de construction, à souscrire cette assurance avant l'ouverture du chantier."
+
+  - type: ouverte
+    question: "Quelle différence entre l'assurance décennale et la dommages-ouvrage ?"
+    modele: "L'assurance décennale est souscrite par chaque constructeur pour couvrir sa responsabilité décennale. La dommages-ouvrage est souscrite par le maître d'ouvrage (ou le vendeur) avant le chantier et préfinance les réparations des dommages de nature décennale sans attendre de savoir qui est responsable."
+
+approfondir:
+  - type: qcm
+    question: "Que fait l'assurance dommages-ouvrage en cas de dommage de nature décennale ?"
+    choix:
+      - "Elle attend le jugement avant de payer"
+      - "Elle préfinance les réparations en dehors de toute recherche de responsabilités"
+      - "Elle rembourse seulement les entreprises"
+      - "Elle ne couvre que les incendies"
+    reponse: 1
+    explication: "La dommages-ouvrage garantit, en dehors de toute recherche des responsabilités, le paiement de la totalité des travaux de réparation des dommages de nature décennale. L'assureur se retourne ensuite contre les responsables."
+
+  - type: vf
+    affirmation: "La dommages-ouvrage couvre l'achèvement des travaux si le vendeur devient défaillant."
+    reponse: false
+    explication: "Elle ne garantit pas le non-achèvement du chantier. C'est le rôle de la garantie financière d'achèvement, vue aux chapitres 5 et 6."
+
+  - type: qcm
+    question: "À quoi sert l'assurance « constructeur non réalisateur » (CNR) ?"
+    choix:
+      - "À assurer le vendeur qui n'a pas construit lui-même, comme un promoteur"
+      - "À assurer les ouvriers du chantier"
+      - "À couvrir le prix du terrain"
+      - "À remplacer le permis de construire"
+    reponse: 0
+    explication: "Le vendeur d'un immeuble qu'il a fait construire sans l'exécuter lui-même répond de plein droit des désordres décennaux comme un constructeur. La loi du 4 janvier 1978 prévoit une assurance pour cela."
+
+  - type: qcm
+    question: "Dans quel délai l'acquéreur d'une VEFA doit-il signaler les défauts apparents ?"
+    choix:
+      - "À la livraison ou au plus tard un mois après la prise de possession"
+      - "Dans les dix ans"
+      - "Avant la signature de l'acte"
+      - "Jamais : ils sont couverts d'office"
+    reponse: 0
+    explication: "L'article 1642-1 du Code civil ne décharge pas le vendeur des vices de construction ou défauts de conformité apparents avant la réception, ou au plus tard avant l'expiration d'un mois après la prise de possession. Le détail est à vérifier."
+
+  - type: ouverte
+    question: "Pourquoi l'organisme, à la fois maître d'ouvrage et vendeur d'Arbola, doit-il souscrire la dommages-ouvrage ?"
+    modele: "L'article L242-1 du code des assurances vise toute personne qui, en qualité de propriétaire de l'ouvrage, de vendeur ou de mandataire, fait réaliser des travaux de construction. L'organisme est les deux : il doit donc souscrire cette assurance avant l'ouverture du chantier, pour son compte ou pour celui des propriétaires successifs."
+
+expert:
+  - type: qcm
+    question: "À partir de quand courent les garanties de parfait achèvement, biennale et décennale ?"
+    choix:
+      - "Du dépôt du permis"
+      - "De la signature du contrat de réservation"
+      - "De la réception des travaux"
+      - "Du premier appel de fonds"
+    reponse: 2
+    explication: "Les trois garanties courent à compter de la réception des travaux, qui ne se confond pas avec la livraison (chapitre 8)."
+
+  - type: vf
+    affirmation: "L'absence de dommages-ouvrage supprime la responsabilité des constructeurs en cas de dommage."
+    reponse: false
+    explication: "Selon une réponse ministérielle, la non-souscription de la dommages-ouvrage n'enlève rien à la responsabilité du constructeur, lui-même soumis à une obligation d'assurance décennale."
+
+  - type: ouverte
+    question: "Compare la dommages-ouvrage et la garantie financière d'achèvement : que couvre chacune ?"
+    modele: "La dommages-ouvrage préfinance la réparation des dommages de nature décennale après la réception. La garantie financière d'achèvement protège l'acquéreur avant la fin du chantier : elle assure le versement des sommes nécessaires pour achever l'immeuble si le vendeur est défaillant. Elles ne se remplacent pas."
