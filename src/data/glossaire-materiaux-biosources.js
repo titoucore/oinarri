@@ -403,4 +403,74 @@ export const termes = [
       "Ce que l'ACV d'un produit mesure et compare : par exemple 1 m² de mur pendant une durée de vie donnée. Deux FDES ne se comparent que si leur unité fonctionnelle et leur durée de vie sont les mêmes.",
     aussi: ['Unités fonctionnelles'],
   },
+  {
+    terme: 'Technique courante',
+    developpe: 'TC',
+    categorie: 'Assurance',
+    definition:
+      "Notion d'assurance : procédé qui dispose d'un référentiel produit, d'un référentiel de mise en œuvre (NF DTU, règles professionnelles acceptées par la C2P, Avis Technique en liste verte, ATEx favorable…) et qui est employé dans son domaine d'emploi. Elle est couverte par défaut par les contrats d'assurance décennale.",
+    aussi: ['TC', 'Techniques courantes'],
+  },
+  {
+    terme: 'Technique non courante',
+    developpe: 'TNC',
+    categorie: 'Assurance',
+    definition:
+      "Procédé qui ne remplit pas les conditions de la technique courante : pas de référentiel reconnu, Avis Technique hors liste verte, usage hors du domaine d'emploi. Il se déclare à l'assureur, reste assurable après analyse de risque et peut entraîner une surprime.",
+    aussi: ['TNC', 'Techniques non courantes'],
+  },
+  {
+    terme: "Domaine d'emploi",
+    categorie: 'Assurance',
+    definition:
+      "Limites dans lesquelles un procédé est reconnu : type de support, famille de bâtiment, localisation, hauteur, conditions climatiques. Hors de ce cadre, même un procédé sous Avis Technique redevient une technique non courante.",
+    aussi: ["Domaines d'emploi"],
+  },
+  {
+    terme: 'AQC',
+    developpe: 'Agence Qualité Construction',
+    categorie: 'Assurance',
+    definition:
+      "Organisme de prévention des désordres dans le bâtiment. Il observe les sinistres et abrite la C2P, qui examine les règles professionnelles et tient la liste verte.",
+    aussi: ['Agence Qualité Construction'],
+  },
+  {
+    terme: 'C2P',
+    developpe: 'Commission Prévention Produits mis en œuvre',
+    categorie: 'Assurance',
+    definition:
+      "Commission de l'AQC qui réunit entreprises, fabricants, assureurs, experts, contrôleurs techniques et CSTB. Elle examine les règles professionnelles, classe en liste verte les Avis Techniques sans risque aggravé et peut mettre un procédé en observation.",
+    aussi: ['Commission Prévention Produits', 'Commission Prévention Produits mis en œuvre'],
+  },
+  {
+    terme: 'Liste verte',
+    categorie: 'Assurance',
+    definition:
+      "Liste tenue par la C2P des produits et procédés sous Avis Technique ou DTA en cours de validité, non mis en observation. Ils sont considérés comme techniques courantes par les assureurs.",
+    aussi: ['Liste verte de la C2P', 'Mise en observation'],
+  },
+  {
+    terme: 'Avis Technique',
+    developpe: 'ATec',
+    categorie: 'Assurance',
+    definition:
+      "Évaluation volontaire d'un procédé innovant, instruite par le CSTB et validée par une commission (la CCFAT). Le Document Technique d'Application (DTA) en est une variante. Sur la liste verte de la C2P, il rend le procédé technique courante dans son domaine d'emploi.",
+    aussi: ['ATec', 'DTA', "Document Technique d'Application", 'Avis Techniques'],
+  },
+  {
+    terme: 'ATEx',
+    developpe: "Appréciation Technique d'Expérimentation",
+    categorie: 'Assurance',
+    definition:
+      "Évaluation rapide, délivrée par le CSTB, d'une technique innovante. Cas A : plusieurs chantiers. Cas B : un chantier précis. Cas C : reprise d'une ATEx de cas B sur un autre chantier. Seule une ATEx favorable ouvre la voie à l'assurabilité.",
+    aussi: ["Appréciation technique d'expérimentation", 'ATEx favorable', 'ATEx cas B'],
+  },
+  {
+    terme: 'CSTB',
+    developpe: 'Centre Scientifique et Technique du Bâtiment',
+    categorie: 'Assurance',
+    definition:
+      "Établissement public de recherche et d'évaluation du bâtiment. Il instruit les Avis Techniques et délivre les ATEx.",
+    aussi: ['Centre scientifique et technique du bâtiment'],
+  },
 ];
