@@ -1,15 +1,17 @@
 // Surlignages et notes dans un cours.
 //
-// - Sélectionner du texte fait apparaître une barre « Surligner » (souris et doigt).
+// - Sélectionner du texte fait apparaître une barre « Surligner · Expliquer » (souris et doigt).
 // - Un surlignage est enregistré avec le passage, quelques mots de contexte et une note facultative.
 // - Les notes s'affichent dans la marge de droite, en face de leur passage (grand écran),
 //   ou dans un tiroir (écran étroit).
 // - Si le cours change et que le passage n'existe plus, la note est conservée, marquée « introuvable ».
+// - « Expliquer » transmet la sélection à expliquer.js (événement « oinarri:expliquer »).
 //
 // Le texte du cours est repéré par sa position dans le texte brut (index), pas par le HTML :
 // les termes du glossaire ou d'autres surlignages ne perturbent donc pas la recherche.
 
 import '../styles/notes.css';
+import './expliquer.js';
 import { lireNotes, creerNote } from './notes-api.js';
 import { creerCarte } from './note-carte.js';
 
@@ -21,7 +23,7 @@ const bouton = document.getElementById('notes-bouton');
 const compte = document.getElementById('notes-compte');
 const voile = document.getElementById('notes-voile');
 
-const IGNORES = '.quiz, .validation, .terme-bulle';
+const IGNORES = '.quiz, .validation, .terme-bulle, .explication';
 const CONTEXTE = 40;
 const MAX_PASSAGE = 2000;
 
@@ -337,7 +339,10 @@ async function demarrer() {
   const boutonSurligner = document.createElement('button');
   boutonSurligner.type = 'button';
   boutonSurligner.textContent = 'Surligner';
-  barre.append(boutonSurligner);
+  const boutonExpliquer = document.createElement('button');
+  boutonExpliquer.type = 'button';
+  boutonExpliquer.textContent = 'Expliquer';
+  barre.append(boutonSurligner, boutonExpliquer);
   document.body.append(barre);
 
   let rangeCourant = null;
@@ -405,6 +410,21 @@ async function demarrer() {
     masquerBarre();
     getSelection()?.removeAllRanges();
     if (range) surligner(range);
+  });
+  boutonExpliquer.addEventListener('click', () => {
+    const range = rangeCourant;
+    masquerBarre();
+    if (!range) return;
+    const r = range.getBoundingClientRect();
+    const detail = {
+      texte: range.toString().replace(/\s+/g, ' ').trim(),
+      rect: {
+        left: r.left + window.scrollX,
+        bottom: r.bottom + window.scrollY,
+      },
+    };
+    getSelection()?.removeAllRanges();
+    window.dispatchEvent(new CustomEvent('oinarri:expliquer', { detail }));
   });
 
   // ----- Interactions -----
