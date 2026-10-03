@@ -27,12 +27,29 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
         <slot />
       </article>
     </div>
+    <!-- Notes du chapitre : marge à droite du texte (grand écran) ou tiroir (écran étroit).
+         Le script de surlignage choisit la présentation et révèle la zone. -->
+    <aside class="notes-marge" id="notes-marge" aria-label="Notes de ce chapitre">
+      <div class="notes-entete">
+        <p class="notes-titre">Notes</p>
+        <a class="notes-toutes" href="/notes/">Toutes mes notes</a>
+        <button class="notes-fermer" type="button">Fermer</button>
+      </div>
+      <p class="notes-vide" id="notes-vide">
+        Sélectionne un passage du cours, puis touche « Surligner » pour le garder avec une note.
+      </p>
+      <div class="notes-liste" id="notes-liste"></div>
+    </aside>
+    <button class="notes-bouton" id="notes-bouton" type="button" aria-expanded="false" aria-controls="notes-marge">
+      Notes<span id="notes-compte"></span>
+    </button>
+    <div class="notes-voile" id="notes-voile" hidden></div>
   </div>
   <script is:inline type="application/json" id="quiz-data" set:html={quizJson} />
 </Base>
 
 <style is:global>
-  /* --- Mise en page : sommaire à gauche (grand écran), texte au centre --- */
+  /* --- Mise en page : sommaire (très grand écran), texte, notes --- */
 
   .mise {
     display: block;
@@ -47,17 +64,38 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     display: none;
   }
 
+  /* Le bouton du tiroir de notes n'existe que lorsque le script a choisi la présentation « tiroir ». */
+  .notes-bouton {
+    display: none;
+  }
+
+  .notes-marge[data-mode='tiroir'] ~ .notes-bouton {
+    display: block;
+  }
+
+  /* Grand écran : texte à gauche, notes à droite, en face des passages. */
   @media (min-width: 64rem) {
     .mise {
       display: grid;
-      grid-template-columns: 13rem minmax(0, var(--lecture-w));
+      grid-template-columns: minmax(0, var(--lecture-w)) minmax(14rem, 18rem);
       justify-content: center;
-      column-gap: 3rem;
-      align-items: start;
+      column-gap: 2rem;
     }
 
     .mise .lecture {
       margin-inline: 0;
+    }
+
+    .sommaire {
+      align-self: start;
+    }
+  }
+
+  /* Très grand écran (iPad Pro 12,9" en paysage, ordinateur) : le sommaire s'ajoute à gauche. */
+  @media (min-width: 84rem) {
+    .mise {
+      grid-template-columns: 13rem minmax(0, var(--lecture-w)) 18rem;
+      column-gap: 2.5rem;
     }
 
     .sommaire:not([hidden]) {
@@ -383,4 +421,5 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
 <script>
   import '../scripts/chapitre.js';
   import '../scripts/sommaire.js';
+  import '../scripts/surlignage.js';
 </script>
