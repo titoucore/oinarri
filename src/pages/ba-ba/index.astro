@@ -3,13 +3,16 @@ import Base from '../../layouts/Base.astro';
 import { chapitres } from '../../data/ba-ba.js';
 ---
 
-<Base title="B.A.-BA du bâtiment — Oinarri" large>
-  <a class="retour" href="/">Accueil</a>
-  <h1>Le B.A.-BA du bâtiment</h1>
-  <p class="lead">
-    Les fondamentaux, dans l'ordre. Chaque chapitre ouvrira sur un cas concret avant d'expliquer
-    la règle.
-  </p>
+<Base title="B.A.-BA du bâtiment — Oinarri" large bande etiquette={['B.A.-', 'BA']}>
+  <Fragment slot="bande">
+    <a class="retour" href="/">Accueil</a>
+    <p class="chiffre-evide" aria-hidden="true">01</p>
+    <h1>Le B.A.-BA du bâtiment</h1>
+    <p class="lead">
+      Les fondamentaux, dans l'ordre. Chaque chapitre ouvrira sur un cas concret avant d'expliquer
+      la règle.
+    </p>
+  </Fragment>
 
   <ol class="chapitres">
     {
