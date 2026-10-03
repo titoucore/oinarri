@@ -1,6 +1,6 @@
 ---
 titre: Les marchés et les appels d'offres
-description: Comment les entreprises sont choisies et engagées : le dossier de consultation, les seuils de procédure en 2026, l'analyse des offres, les pièces du marché, le paiement et la retenue de garantie.
+description: "Comment les entreprises sont choisies et engagées : le dossier de consultation, les seuils de procédure en 2026, l'analyse des offres, les pièces du marché, le paiement et la retenue de garantie."
 parcours: ba-ba
 ordre: 7
 niveau: Débutant
