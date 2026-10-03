@@ -13,6 +13,8 @@ export const chapitres = [
   {
     titre: 'Les matériaux biosourcés',
     desc: 'Bois, paille, chanvre, ouate de cellulose, liège, lin : origines et usages.',
+    href: '/materiaux-biosources/02-les-materiaux-biosources/',
+    cours: 'materiaux-biosources/02-les-materiaux-biosources',
   },
   {
     titre: 'Les matériaux géosourcés',
