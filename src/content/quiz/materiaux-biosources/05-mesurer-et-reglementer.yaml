@@ -34,7 +34,7 @@ essentiel:
 
   - type: ouverte
     question: "En quoi la méthode d'ACV dynamique de la RE2020 est-elle favorable aux matériaux biosourcés ? Pourquoi cela ne suffit-il pas à dire qu'un matériau biosourcé est toujours meilleur pour le carbone ?"
-    modele: "L'ACV dynamique valorise le stockage temporaire du carbone : un matériau qui a capté du carbone en poussant le garde, et ne le réémet qu'en fin de vie. Cela avantage le bois et les biosourcés. Mais le résultat dépend de la donnée de chaque produit : selon une présentation de la DREAL Occitanie (2021), les isolants biosourcés ne sont pas toujours les plus performants sur le volet carbone. Il faut comparer des FDES précises, pas se fier à l'origine du matériau."
+    modele: "L'ACV dynamique valorise le stockage temporaire du carbone : un matériau qui a capté du carbone en poussant le garde tant qu'il reste en place et ne le réémet qu'en fin de vie. Cela avantage le bois et les biosourcés. Mais le résultat dépend de la donnée de chaque produit : selon une présentation de la DREAL Occitanie (2021), les isolants biosourcés ne sont pas toujours les plus performants sur le volet carbone. Il faut comparer des FDES précises, pas se fier à l'origine du matériau."
 
 approfondir:
   - type: qcm
