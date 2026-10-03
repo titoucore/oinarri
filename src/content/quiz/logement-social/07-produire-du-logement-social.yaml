@@ -1,0 +1,70 @@
+# Mini-quiz du chapitre 7 de Bailleurs sociaux et logement social : Produire du logement social.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que signifie produire en maîtrise d'ouvrage directe ?"
+    choix:
+      - "Acheter des logements déjà construits par un tiers"
+      - "Acheter le terrain, faire concevoir et construire soi-même"
+      - "Vendre ses logements à un promoteur"
+      - "Rénover un immeuble ancien"
+    reponse: 1
+    explication: "L'organisme est maître d'ouvrage : il achète le terrain, choisit l'équipe de conception et les entreprises, et reste propriétaire."
+
+  - type: vf
+    affirmation: "Un organisme HLM peut acheter en VEFA des logements à un promoteur."
+    reponse: true
+    explication: "L'article L433-2 du CCH encadre cette pratique : les logements doivent être inclus dans un programme de construction établi par un tiers et les demandes de permis déjà déposées."
+
+  - type: qcm
+    question: "Près de quel part des logements locatifs sociaux neufs vient d'une acquisition en VEFA par un organisme HLM ?"
+    choix:
+      - "Un sur dix"
+      - "Près d'un sur deux"
+      - "Presque tous"
+      - "Aucun"
+    reponse: 1
+    explication: "Selon une question parlementaire rapportée par la presse spécialisée, près d'un logement social neuf sur deux est issu d'une VEFA. À actualiser."
+
+  - type: ouverte
+    question: "Pourquoi un bailleur achète-t-il en VEFA plutôt que de construire lui-même ?"
+    modele: "Parce que cela évite de trouver et de monter l'opération : le terrain, le permis et la construction sont portés par un promoteur, et l'organisme achète des logements dans un programme existant. Cela permet aussi aux communes soumises à la loi SRU d'augmenter leur parc, et à l'organisme de produire dans des quartiers où il n'a pas de foncier."
+
+approfondir:
+  - type: qcm
+    question: "Dans la VEFA inversée, quelle part maximale d'un programme l'organisme peut-il vendre à une personne privée ?"
+    choix:
+      - "10 %"
+      - "30 %"
+      - "60 %"
+      - "100 %"
+    reponse: 1
+    explication: "Au plus 30 % des logements du programme, qui doit être composé majoritairement de logements sociaux et situé dans certaines zones."
+
+  - type: vf
+    affirmation: "Un organisme HLM peut acheter la totalité d'un programme en VEFA, sous conditions."
+    reponse: true
+    explication: "Une réponse ministérielle admet la « VEFA 100 % » si l'organisme saisit une opportunité immobilière sans exercer d'influence déterminante sur les caractéristiques des ouvrages."
+
+  - type: qcm
+    question: "Qui finance le NPNRU, selon l'ANRU, à hauteur de 8 milliards d'euros ?"
+    choix:
+      - "L'État"
+      - "Action Logement"
+      - "Les communes"
+      - "La CAF"
+    reponse: 1
+    explication: "Selon l'ANRU, le NPNRU repose sur 8 milliards d'euros d'Action Logement, 2,7 milliards des bailleurs via la CGLLS et 1,2 milliard de l'État."
+
+expert:
+  - type: vf
+    affirmation: "Le troisième programme de renouvellement urbain (2026-2040) est définitivement adopté."
+    reponse: false
+    explication: "Il figure dans un projet de loi relatif à la relance et à la décentralisation du logement, en discussion au Sénat dans les sources consultées. Son adoption est à vérifier."
+
+  - type: ouverte
+    question: "Qu'est-ce que la reconstitution de l'offre dans un projet de renouvellement urbain ?"
+    modele: "C'est la reconstruction de logements sociaux pour remplacer ceux qui sont démolis dans le quartier. Elle se fait en partie hors du quartier concerné, pour ne pas reconcentrer le logement social. Dans le programme précédent, 43 % de ces logements ont été produits hors des quartiers prioritaires."
