@@ -25,18 +25,26 @@ export const chapitres = [
   {
     titre: 'Terrassement et VRD',
     desc: 'Préparer le terrain et le raccorder aux réseaux.',
+    href: '/ba-ba/04-terrassement-et-vrd/',
+    cours: 'ba-ba/04-terrassement-et-vrd',
   },
   {
     titre: 'Les fondations',
     desc: 'Ce qui relie le bâtiment au sol.',
+    href: '/ba-ba/05-les-fondations/',
+    cours: 'ba-ba/05-les-fondations',
   },
   {
     titre: 'Le gros œuvre',
     desc: 'La structure : murs, planchers, charpente.',
+    href: '/ba-ba/06-le-gros-oeuvre/',
+    cours: 'ba-ba/06-le-gros-oeuvre',
   },
   {
     titre: "Les marchés et les appels d'offres",
     desc: 'Comment les entreprises sont choisies et engagées.',
+    href: '/ba-ba/07-marches-et-appels-d-offres/',
+    cours: 'ba-ba/07-marches-et-appels-d-offres',
   },
 ];
 
