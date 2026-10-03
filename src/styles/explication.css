@@ -1,0 +1,161 @@
+/* Panneau « Explication » d'un passage sélectionné, et glossaire personnel. */
+
+.explication {
+  position: absolute;
+  z-index: 75;
+  width: min(26rem, calc(100vw - 24px));
+  padding: 1rem;
+  border: 1px solid var(--ink-900);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink-900);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.explication-titre {
+  margin: 0 0 0.35rem;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-600);
+}
+
+.explication-texte {
+  margin: 0 0 0.6rem;
+  white-space: pre-line;
+}
+
+.explication-avertissement {
+  margin: 0 0 0.25rem;
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+.explication-reste {
+  margin: 0 0 0.75rem;
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+.explication-erreur {
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.explication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.explication-bouton {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--ink-900);
+  border-radius: 8px;
+  background: var(--ink-900);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.explication-bouton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.explication-bouton-secondaire {
+  background: none;
+  color: var(--ink-900);
+}
+
+/* --- Formulaire d'ajout / de modification d'un terme --- */
+
+.terme-formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.terme-formulaire label {
+  display: block;
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-600);
+}
+
+/* 16 px : en dessous, Safari sur iPad zoome la page quand on touche un champ. */
+.terme-formulaire input,
+.terme-formulaire select,
+.terme-formulaire textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--ink-200);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink-900);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.terme-formulaire textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.terme-formulaire-erreur {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.terme-formulaire-erreur[hidden] {
+  display: none;
+}
+
+/* --- Page Glossaire : mes termes --- */
+
+.perso-groupe {
+  margin: 1.5rem 0 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ink-100);
+}
+
+.perso-groupe[hidden] {
+  display: none;
+}
+
+.perso-groupe h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.perso-note {
+  margin: 0 0 1rem;
+  font-size: 13px;
+  color: var(--ink-600);
+}
+
+.perso-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 0.5rem;
+}
+
+.perso-lien-action {
+  padding: 4px 0;
+  border: none;
+  background: none;
+  color: var(--ink-600);
+  font-family: inherit;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
