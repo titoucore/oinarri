@@ -13,20 +13,102 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
 });
 ---
 
-<Base title={`${titre} — Oinarri`} description={description}>
-  <a class="retour" href={retour.href}>{retour.libelle}</a>
-  <h1>{titre}</h1>
-  <p class="meta">
-    <span class="etiquette">{niveau}</span>
-    <span>Dernière vérification : {date}</span>
-  </p>
-  <article class="cours" data-cours={entry.id}>
-    <slot />
-  </article>
+<Base title={`${titre} — Oinarri`} description={description} large>
+  <div class="mise">
+    <nav class="sommaire" id="sommaire" aria-label="Dans ce chapitre" hidden></nav>
+    <div class="lecture">
+      <a class="retour" href={retour.href}>{retour.libelle}</a>
+      <h1>{titre}</h1>
+      <p class="meta">
+        <span class="etiquette">{niveau}</span>
+        <span>Dernière vérification : {date}</span>
+      </p>
+      <article class="cours" data-cours={entry.id}>
+        <slot />
+      </article>
+    </div>
+  </div>
   <script is:inline type="application/json" id="quiz-data" set:html={quizJson} />
 </Base>
 
 <style is:global>
+  /* --- Mise en page : sommaire à gauche (grand écran), texte au centre --- */
+
+  .mise {
+    display: block;
+  }
+
+  .lecture {
+    max-width: var(--lecture-w);
+    margin-inline: auto;
+  }
+
+  .sommaire {
+    display: none;
+  }
+
+  @media (min-width: 64rem) {
+    .mise {
+      display: grid;
+      grid-template-columns: 13rem minmax(0, var(--lecture-w));
+      justify-content: center;
+      column-gap: 3rem;
+      align-items: start;
+    }
+
+    .mise .lecture {
+      margin-inline: 0;
+    }
+
+    .sommaire:not([hidden]) {
+      display: block;
+      position: sticky;
+      top: 2rem;
+      max-height: calc(100vh - 4rem);
+      overflow-y: auto;
+      padding-top: 0.25rem;
+    }
+  }
+
+  .sommaire-titre {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-600);
+    margin: 0 0 0.75rem;
+  }
+
+  .sommaire-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--ink-100);
+  }
+
+  .sommaire-liste li {
+    margin: 0;
+  }
+
+  .sommaire-liste a {
+    display: block;
+    padding: 5px 0 5px 12px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--ink-600);
+    text-decoration: none;
+  }
+
+  .sommaire-liste a:hover {
+    color: var(--ink-900);
+  }
+
+  .sommaire-liste a[aria-current='true'] {
+    border-left-color: var(--ink-900);
+    color: var(--ink-900);
+    font-weight: 500;
+  }
+
   .meta {
     display: flex;
     flex-wrap: wrap;
@@ -42,12 +124,19 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
     line-height: 1.7;
   }
 
+  @media (min-width: 70rem) {
+    .cours {
+      font-size: 17px;
+    }
+  }
+
   .cours h2 {
     font-size: 1.4rem;
     letter-spacing: -0.3px;
     margin: 2.5rem 0 0.75rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--ink-100);
+    scroll-margin-top: 1.5rem;
   }
 
   .cours h2:first-child {
@@ -293,4 +382,5 @@ const date = verifie_le.toLocaleDateString('fr-FR', {
 
 <script>
   import '../scripts/chapitre.js';
+  import '../scripts/sommaire.js';
 </script>
