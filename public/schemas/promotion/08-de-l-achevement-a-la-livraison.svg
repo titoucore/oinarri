@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img">
+<title>De l'achèvement des travaux à la levée des réserves</title>
+<desc>Sept étapes : achèvement des travaux, opérations préalables à la réception, réception des travaux qui fait partir les garanties, livraison au premier acquéreur, réserves et consignation du solde de 5 %, levée des réserves, puis un mois après la prise de possession, dernier délai pour signaler les défauts apparents.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="430" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="40" y="32" fill="#444441">De l'achèvement à la levée des réserves</text>
+
+<rect x="40" y="46" width="600" height="38" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="62" cy="65" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="62" y="65" text-anchor="middle" dominant-baseline="central" fill="#444441">1</text>
+<text class="th" x="86" y="58" dominant-baseline="central" fill="#444441">Achèvement des travaux</text>
+<text class="ts" x="86" y="74" dominant-baseline="central" fill="#5F5E5A">Ouvrages exécutés, équipements indispensables installés</text>
+<text class="ts" x="626" y="65" text-anchor="end" dominant-baseline="central" fill="#444441">DAACT déposée en mairie</text>
+
+<rect x="40" y="90" width="600" height="38" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="62" cy="109" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="62" y="109" text-anchor="middle" dominant-baseline="central" fill="#444441">2</text>
+<text class="th" x="86" y="102" dominant-baseline="central" fill="#444441">Opérations préalables à la réception</text>
+<text class="ts" x="86" y="118" dominant-baseline="central" fill="#5F5E5A">Visite : liste de ce qui reste à corriger</text>
+<text class="ts" x="626" y="109" text-anchor="end" dominant-baseline="central" fill="#444441">OPR</text>
+
+<rect x="40" y="134" width="600" height="38" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="62" cy="153" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="62" y="153" text-anchor="middle" dominant-baseline="central" fill="#712B13">3</text>
+<text class="th" x="86" y="146" dominant-baseline="central" fill="#712B13">Réception des travaux</text>
+<text class="ts" x="86" y="162" dominant-baseline="central" fill="#993C1D">Entre le maître d'ouvrage et les entreprises, avec ou sans réserves</text>
+<text class="ts" x="626" y="153" text-anchor="end" dominant-baseline="central" fill="#712B13">départ des garanties</text>
+
+<rect x="40" y="178" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="197" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="197" text-anchor="middle" dominant-baseline="central" fill="#085041">4</text>
+<text class="th" x="86" y="190" dominant-baseline="central" fill="#085041">Livraison au premier acquéreur</text>
+<text class="ts" x="86" y="206" dominant-baseline="central" fill="#0F6E56">Visite, procès-verbal de livraison, remise des clés</text>
+<text class="ts" x="626" y="197" text-anchor="end" dominant-baseline="central" fill="#085041">solde de 5 % exigible</text>
+
+<rect x="40" y="222" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="241" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="241" text-anchor="middle" dominant-baseline="central" fill="#085041">5</text>
+<text class="th" x="86" y="234" dominant-baseline="central" fill="#085041">Réserves et consignation</text>
+<text class="ts" x="86" y="250" dominant-baseline="central" fill="#0F6E56">Défauts de conformité et vices apparents notés</text>
+<text class="ts" x="626" y="241" text-anchor="end" dominant-baseline="central" fill="#085041">solde consigné si besoin</text>
+
+<rect x="40" y="266" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="285" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="285" text-anchor="middle" dominant-baseline="central" fill="#085041">6</text>
+<text class="th" x="86" y="278" dominant-baseline="central" fill="#085041">Levée des réserves</text>
+<text class="ts" x="86" y="294" dominant-baseline="central" fill="#0F6E56">Les entreprises corrigent, la consignation est levée</text>
+<text class="ts" x="626" y="285" text-anchor="end" dominant-baseline="central" fill="#085041">solde versé</text>
+
+<rect x="40" y="310" width="600" height="38" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="62" cy="329" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="62" y="329" text-anchor="middle" dominant-baseline="central" fill="#444441">7</text>
+<text class="th" x="86" y="322" dominant-baseline="central" fill="#444441">Un mois après la prise de possession</text>
+<text class="ts" x="86" y="338" dominant-baseline="central" fill="#5F5E5A">Dernier délai pour signaler par écrit les défauts apparents</text>
+<text class="ts" x="626" y="329" text-anchor="end" dominant-baseline="central" fill="#444441">fin du premier mois</text>
+
+<text class="ts" x="40" y="376" fill="#5F5E5A">La réception, et non la livraison, fait partir les garanties de parfait achèvement</text>
+<text class="ts" x="40" y="394" fill="#5F5E5A">(1 an), biennale (2 ans) et décennale (10 ans).</text>
+</svg>
