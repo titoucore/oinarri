@@ -5,6 +5,8 @@ async function appeler(methode, corps, requete = '') {
     method: methode,
     headers: corps ? { 'Content-Type': 'application/json' } : undefined,
     body: corps ? JSON.stringify(corps) : undefined,
+    // Une modification partie juste avant que la page passe en arrière-plan doit arriver quand même.
+    keepalive: methode !== 'GET',
   });
   if (!reponse.ok) {
     let message = '';
