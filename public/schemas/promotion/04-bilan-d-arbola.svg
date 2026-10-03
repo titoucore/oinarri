@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 452" role="img">
+<title>Le bilan de la Résidence Arbola (valeurs fictives)</title>
+<desc>Une barre de recettes de 2 280 000 euros hors taxes face à une barre de dépenses et de marge de même longueur : foncier 320 000, travaux 1 480 000, honoraires techniques 180 000, assurances 40 000, taxes 45 000, frais financiers 70 000, commercialisation et gestion 105 000, marge 40 000.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="452" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+
+<text class="th" x="40" y="34" fill="#085041">Ce que rapporte l'opération</text>
+<rect x="40" y="44" width="600" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="52" y="62" dominant-baseline="central" fill="#085041">Recettes : 12 logements · 2 280 000 € HT</text>
+
+<text class="th" x="40" y="118" fill="#444441">Ce qu'elle coûte, et ce qui reste</text>
+<rect x="40" y="128" width="84.2" height="36" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<rect x="124.2" y="128" width="389.5" height="36" fill="#5F5E5A"/>
+<rect x="513.7" y="128" width="47.4" height="36" fill="#888780"/>
+<rect x="561.1" y="128" width="10.5" height="36" fill="#B4B2A9"/>
+<rect x="571.6" y="128" width="11.8" height="36" fill="#D3D1C7"/>
+<rect x="583.4" y="128" width="18.4" height="36" fill="#888780"/>
+<rect x="601.8" y="128" width="27.6" height="36" fill="#B4B2A9"/>
+<rect x="629.4" y="128" width="10.6" height="36" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="82" y="146" text-anchor="middle" dominant-baseline="central" fill="#712B13">Foncier</text>
+<text class="th" x="319" y="146" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">Travaux</text>
+
+<g class="ts">
+<rect x="40" y="206" width="14" height="14" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text x="64" y="214" dominant-baseline="central" fill="#2C2C2A">Foncier (terrain et frais d'acquisition)</text><text x="500" y="214" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">320 000 €</text><text x="640" y="214" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">14,0 %</text>
+
+<rect x="40" y="230" width="14" height="14" fill="#5F5E5A"/>
+<text x="64" y="238" dominant-baseline="central" fill="#2C2C2A">Travaux</text><text x="500" y="238" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">1 480 000 €</text><text x="640" y="238" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">64,9 %</text>
+
+<rect x="40" y="254" width="14" height="14" fill="#888780"/>
+<text x="64" y="262" dominant-baseline="central" fill="#2C2C2A">Honoraires techniques</text><text x="500" y="262" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">180 000 €</text><text x="640" y="262" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">7,9 %</text>
+
+<rect x="40" y="278" width="14" height="14" fill="#B4B2A9"/>
+<text x="64" y="286" dominant-baseline="central" fill="#2C2C2A">Assurances</text><text x="500" y="286" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">40 000 €</text><text x="640" y="286" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">1,8 %</text>
+
+<rect x="40" y="302" width="14" height="14" fill="#D3D1C7"/>
+<text x="64" y="310" dominant-baseline="central" fill="#2C2C2A">Taxes et raccordements</text><text x="500" y="310" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">45 000 €</text><text x="640" y="310" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">2,0 %</text>
+
+<rect x="40" y="326" width="14" height="14" fill="#888780"/>
+<text x="64" y="334" dominant-baseline="central" fill="#2C2C2A">Frais financiers</text><text x="500" y="334" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">70 000 €</text><text x="640" y="334" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">3,1 %</text>
+
+<rect x="40" y="350" width="14" height="14" fill="#B4B2A9"/>
+<text x="64" y="358" dominant-baseline="central" fill="#2C2C2A">Commercialisation et gestion</text><text x="500" y="358" text-anchor="end" dominant-baseline="central" fill="#2C2C2A">105 000 €</text><text x="640" y="358" text-anchor="end" dominant-baseline="central" fill="#5F5E5A">4,6 %</text>
+
+<rect x="40" y="374" width="14" height="14" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text x="64" y="382" dominant-baseline="central" fill="#085041">Marge de l'opération</text><text x="500" y="382" text-anchor="end" dominant-baseline="central" fill="#085041">40 000 €</text><text x="640" y="382" text-anchor="end" dominant-baseline="central" fill="#085041">1,8 %</text>
+</g>
+
+<path d="M40 404 H640" stroke="#D3D1C7" stroke-width="1"/>
+<text class="ts" x="40" y="428" dominant-baseline="central" fill="#5F5E5A">Recettes 2 280 000 € = dépenses 2 240 000 € + marge 40 000 € · valeurs fictives, arrondies, hors taxes</text>
+</svg>
