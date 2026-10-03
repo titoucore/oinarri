@@ -1,0 +1,73 @@
+# Mini-quiz du chapitre 1 de Nouvelles méthodes de construction : Pourquoi changer.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "En 2024 (données provisoires), quelle part des émissions nationales de gaz à effet de serre représentent les émissions directes liées à l'exploitation des bâtiments ?"
+    choix:
+      - "Environ 5 %"
+      - "Environ 15 %"
+      - "Environ 35 %"
+      - "Environ 50 %"
+    reponse: 1
+    explication: "Selon l'ADEME, ces émissions directes (scope 1) représentent 57,1 millions de tonnes équivalent CO2, soit 15,5 % des émissions nationales. Ce chiffre ne compte ni la fabrication des matériaux ni le chantier."
+
+  - type: vf
+    affirmation: "Un matériau biosourcé a forcément un faible impact carbone."
+    reponse: false
+    explication: "Biosourcé décrit l'origine de la matière (la biomasse), pas sa performance. L'impact d'un produit se mesure par une analyse de cycle de vie, produit par produit."
+
+  - type: qcm
+    question: "Une porte est déposée avec soin pendant une rénovation, puis reposée dans un autre logement comme porte. De quoi s'agit-il ?"
+    choix:
+      - "De réemploi"
+      - "De recyclage"
+      - "De valorisation énergétique"
+      - "D'élimination"
+    reponse: 0
+    explication: "Le produit n'est jamais devenu un déchet et il retrouve un usage identique à celui pour lequel il avait été conçu : c'est du réemploi."
+
+  - type: ouverte
+    question: "Explique la différence entre réemploi et réutilisation."
+    modele: "Dans le réemploi, le produit n'est pas un déchet et il sert de nouveau pour un usage identique à celui d'origine. Dans la réutilisation, le produit est devenu un déchet avant d'être utilisé de nouveau, après contrôle, nettoyage ou réparation. L'usage peut alors être différent."
+
+approfondir:
+  - type: qcm
+    question: "Sur quelle durée conventionnelle la RE2020 calcule-t-elle l'impact carbone d'un bâtiment ?"
+    choix:
+      - "20 ans"
+      - "30 ans"
+      - "50 ans"
+      - "100 ans"
+    reponse: 2
+    explication: "L'analyse de cycle de vie de la RE2020 porte sur une durée de vie conventionnelle de 50 ans."
+
+  - type: vf
+    affirmation: "Depuis l'arrêté du 2 juillet 2024, le label Bâtiment biosourcé repose sur la quantité de carbone biogénique stocké par mètre carré."
+    reponse: true
+    explication: "Le nouvel arrêté exprime chaque niveau du label en kgC par m² de surface de référence. L'arrêté de 2012, qui raisonnait en kilogrammes de matière biosourcée par m², est abrogé."
+
+  - type: qcm
+    question: "Selon l'article L541-1 du code de l'environnement, quel mode de traitement vient juste après la préparation en vue de la réutilisation ?"
+    choix:
+      - "L'élimination"
+      - "Le recyclage"
+      - "La valorisation énergétique"
+      - "Le remblayage"
+    reponse: 1
+    explication: "L'ordre est : préparation en vue de la réutilisation, recyclage, autre valorisation (notamment énergétique), puis élimination. La prévention passe avant tout."
+
+expert:
+  - type: vf
+    affirmation: "Brûler du bois de démolition pour produire de la chaleur est du recyclage."
+    reponse: false
+    explication: "Selon l'article L541-1-1, les opérations de valorisation énergétique, de conversion en combustible et de remblayage ne peuvent pas être qualifiées de recyclage."
+
+  - type: ouverte
+    question: "Pourquoi trouve-t-on des chiffres différents (16 %, 23 %, près d'un quart…) pour la part du bâtiment dans les émissions françaises ?"
+    modele: "Parce que les périmètres changent. Les chiffres officiels les plus cités ne comptent que les émissions directes liées à l'exploitation des bâtiments (scope 1). Les chiffres plus élevés ajoutent des émissions indirectes : énergie produite ailleurs, fabrication des matériaux, chantiers. L'année et le caractère provisoire des données comptent aussi."
