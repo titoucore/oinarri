@@ -1,0 +1,70 @@
+# Mini-quiz du chapitre 6 de Bailleurs sociaux et logement social : La loi SRU et la programmation territoriale.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "À partir de quelle taille de commune la loi SRU s'applique-t-elle en général (hors Île-de-France) ?"
+    choix:
+      - "500 habitants"
+      - "3 500 habitants"
+      - "35 000 habitants"
+      - "350 000 habitants"
+    reponse: 1
+    explication: "Elle concerne les communes de plus de 3 500 habitants (1 500 en Île-de-France) situées dans certaines agglomérations ou intercommunalités."
+
+  - type: qcm
+    question: "Quel taux de logements sociaux la loi vise-t-elle pour la plupart des communes concernées ?"
+    choix:
+      - "10 %"
+      - "15 %"
+      - "25 %"
+      - "50 %"
+    reponse: 2
+    explication: "Le taux cible est de 25 % des résidences principales, ou de 20 % pour certaines communes dont la situation locale est moins tendue."
+
+  - type: vf
+    affirmation: "La date butoir de 2025 s'applique toujours telle quelle."
+    reponse: false
+    explication: "Depuis la loi 3DS de 2022, il n'y a plus de date butoir : le rattrapage est glissant, par périodes de trois ans."
+
+  - type: ouverte
+    question: "Une commune compte 4 000 résidences principales et 600 logements sociaux, avec un objectif de 25 %. Combien de logements doit-elle rattraper sur la période triennale avec le taux de référence de 33 % ? (exemple fictif)"
+    modele: "Elle devrait avoir 1 000 logements sociaux (25 % de 4 000). Il lui en manque 400. Un tiers (33 %) du déficit donne environ 132 logements à réaliser sur trois ans."
+
+approfondir:
+  - type: qcm
+    question: "Quel est le taux de rattrapage triennal de référence depuis la loi 3DS ?"
+    choix:
+      - "10 %"
+      - "33 %"
+      - "50 %"
+      - "100 %"
+    reponse: 1
+    explication: "Le taux de référence est de 33 % du déficit par période triennale. Avec un contrat de mixité sociale, il peut descendre à 25 %."
+
+  - type: vf
+    affirmation: "Le constat de carence est prononcé par le préfet."
+    reponse: true
+    explication: "Si une commune n'atteint pas son objectif triennal, le préfet peut prendre un arrêté de carence, qui entraîne notamment une majoration du prélèvement."
+
+  - type: qcm
+    question: "Que contient un contrat de mixité sociale ?"
+    choix:
+      - "La liste des locataires de la commune"
+      - "Les engagements précis de la commune pour atteindre son objectif triennal"
+      - "Le montant du prélèvement pour l'année suivante"
+      - "Le plan local d'urbanisme"
+    reponse: 1
+    explication: "Il est signé avec l'État, pour la période triennale suivante, et définit les engagements de la commune. Il permet un rattrapage un peu moins rapide."
+
+expert:
+  - type: vf
+    affirmation: "D'après une publication spécialisée, les logements sociaux vendus restent comptabilisés pendant dix ans au titre de la loi SRU."
+    reponse: true
+    explication: "Cette information vient d'une publication d'Espacité et reste à confirmer sur le texte ; elle montre le lien entre la vente HLM et la loi SRU."
+
+  - type: ouverte
+    question: "Où en est le bilan triennal 2023-2025 au 3 octobre 2026 ?"
+    modele: "Une instruction du 30 avril 2026 a fixé la méthode. Plus de 1 100 communes soumises à la loi restent déficitaires. Les préfets doivent mener une phase contradictoire à l'automne, puis prendre les arrêtés de carence d'ici fin décembre 2026. À cette date, ces arrêtés ne sont donc pas encore tous pris."
