@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img">
+<title>Une vente sur plan, de la réservation à la livraison (exemple fictif à 200 000 € TTC)</title>
+<desc>Sept étapes : contrat de réservation avec dépôt de garantie plafonné à 5 %, délai de rétractation de 10 jours, acte de vente chez le notaire avec garantie d'achèvement, puis paiements cumulés de 35 % aux fondations, 70 % au hors d'eau, 95 % à l'achèvement, et solde de 5 % à la livraison, qui peut être consigné en cas de défaut de conformité.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="430" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="40" y="32" fill="#444441">Un logement vendu sur plan · exemple fictif à 200 000 € TTC</text>
+
+<rect x="40" y="46" width="600" height="38" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="62" cy="65" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="62" y="65" text-anchor="middle" dominant-baseline="central" fill="#444441">1</text>
+<text class="th" x="86" y="58" dominant-baseline="central" fill="#444441">Contrat de réservation</text>
+<text class="ts" x="86" y="74" dominant-baseline="central" fill="#5F5E5A">Dépôt de garantie sur un compte spécial</text>
+<text class="ts" x="626" y="65" text-anchor="end" dominant-baseline="central" fill="#444441">au plus 10 000 € (5 %)</text>
+
+<rect x="40" y="90" width="600" height="38" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="62" cy="109" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="62" y="109" text-anchor="middle" dominant-baseline="central" fill="#444441">2</text>
+<text class="th" x="86" y="102" dominant-baseline="central" fill="#444441">Délai de rétractation</text>
+<text class="ts" x="86" y="118" dominant-baseline="central" fill="#5F5E5A">10 jours, sans motif, dépôt restitué</text>
+<text class="ts" x="626" y="109" text-anchor="end" dominant-baseline="central" fill="#444441">aucun paiement</text>
+
+<rect x="40" y="134" width="600" height="38" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="62" cy="153" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="62" y="153" text-anchor="middle" dominant-baseline="central" fill="#712B13">3</text>
+<text class="th" x="86" y="146" dominant-baseline="central" fill="#712B13">Acte de vente chez le notaire</text>
+<text class="ts" x="86" y="162" dominant-baseline="central" fill="#993C1D">Garantie d'achèvement justifiée · transfert du sol et des ouvrages</text>
+<text class="ts" x="626" y="153" text-anchor="end" dominant-baseline="central" fill="#712B13">l'acquéreur est propriétaire</text>
+
+<rect x="40" y="178" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="197" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="197" text-anchor="middle" dominant-baseline="central" fill="#085041">4</text>
+<text class="th" x="86" y="190" dominant-baseline="central" fill="#085041">Fondations achevées</text>
+<text class="ts" x="86" y="206" dominant-baseline="central" fill="#0F6E56">Premier appel de fonds</text>
+<text class="ts" x="626" y="197" text-anchor="end" dominant-baseline="central" fill="#085041">cumul ≤ 70 000 € (35 %)</text>
+
+<rect x="40" y="222" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="241" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="241" text-anchor="middle" dominant-baseline="central" fill="#085041">5</text>
+<text class="th" x="86" y="234" dominant-baseline="central" fill="#085041">Hors d'eau</text>
+<text class="ts" x="86" y="250" dominant-baseline="central" fill="#0F6E56">Deuxième appel de fonds</text>
+<text class="ts" x="626" y="241" text-anchor="end" dominant-baseline="central" fill="#085041">cumul ≤ 140 000 € (70 %)</text>
+
+<rect x="40" y="266" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="285" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="285" text-anchor="middle" dominant-baseline="central" fill="#085041">6</text>
+<text class="th" x="86" y="278" dominant-baseline="central" fill="#085041">Achèvement de l'immeuble</text>
+<text class="ts" x="86" y="294" dominant-baseline="central" fill="#0F6E56">Troisième appel de fonds</text>
+<text class="ts" x="626" y="285" text-anchor="end" dominant-baseline="central" fill="#085041">cumul ≤ 190 000 € (95 %)</text>
+
+<rect x="40" y="310" width="600" height="38" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="62" cy="329" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="62" y="329" text-anchor="middle" dominant-baseline="central" fill="#085041">7</text>
+<text class="th" x="86" y="322" dominant-baseline="central" fill="#085041">Livraison</text>
+<text class="ts" x="86" y="338" dominant-baseline="central" fill="#0F6E56">Solde, à consigner en cas de défaut de conformité</text>
+<text class="ts" x="626" y="329" text-anchor="end" dominant-baseline="central" fill="#085041">solde : 10 000 € (5 %)</text>
+
+<text class="ts" x="40" y="376" fill="#5F5E5A">Valeurs fictives. Plafonds cumulés de l'article R261-14 du code de la construction et</text>
+<text class="ts" x="40" y="394" fill="#5F5E5A">de l'habitation : le dépôt de garantie est compris dans les paiements.</text>
+</svg>
