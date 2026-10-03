@@ -19,6 +19,8 @@ export const chapitres = [
   {
     titre: "L'urbanisme",
     desc: "PLU, certificat d'urbanisme, permis de construire et recours.",
+    href: '/promotion/03-l-urbanisme/',
+    cours: 'promotion/03-l-urbanisme',
   },
   {
     titre: "Le bilan de l'opération",
