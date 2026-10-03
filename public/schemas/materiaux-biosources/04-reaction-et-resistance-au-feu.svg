@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Réaction au feu et résistance au feu</title>
+<desc>La réaction au feu qualifie un matériau (Euroclasse de A1 à F). La résistance au feu qualifie un élément de construction (R, E, I et une durée). Le bois carbonise en surface ; pour la paille et le chanvre, un enduit joue l'écran protecteur.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="290" height="170" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="60" y="48" dominant-baseline="central" fill="#085041">Réaction au feu</text>
+<text class="ts" x="60" y="72" dominant-baseline="central" fill="#0F6E56">Elle qualifie le matériau</text>
+<text class="ts" x="60" y="104" dominant-baseline="central" fill="#0F6E56">Classe de A1 (incombustible) à F</text>
+<text class="ts" x="60" y="128" dominant-baseline="central" fill="#0F6E56">Exemple : B-s1,d0 = bonne réaction,</text>
+<text class="ts" x="60" y="146" dominant-baseline="central" fill="#0F6E56">peu de fumée, pas de gouttes</text>
+<text class="ts" x="60" y="164" dominant-baseline="central" fill="#0F6E56">enflammées</text>
+<rect x="350" y="24" width="290" height="170" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="370" y="48" dominant-baseline="central" fill="#712B13">Résistance au feu</text>
+<text class="ts" x="370" y="72" dominant-baseline="central" fill="#993C1D">Elle qualifie l'élément (mur, plancher)</text>
+<text class="ts" x="370" y="104" dominant-baseline="central" fill="#993C1D">R : il porte, il reste stable</text>
+<text class="ts" x="370" y="124" dominant-baseline="central" fill="#993C1D">E : il reste étanche aux flammes et gaz</text>
+<text class="ts" x="370" y="144" dominant-baseline="central" fill="#993C1D">I : il isole (face non exposée)</text>
+<text class="ts" x="370" y="170" dominant-baseline="central" fill="#993C1D">Exemple : EI 120 = coupe-feu 2 heures</text>
+<rect x="40" y="214" width="600" height="96" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="60" y="238" dominant-baseline="central" fill="#444441">Et pour les biosourcés ?</text>
+<text class="ts" x="60" y="262" dominant-baseline="central" fill="#5F5E5A">Bois massif : il carbonise en surface, à environ 0,7 mm par minute.</text>
+<text class="ts" x="60" y="282" dominant-baseline="central" fill="#5F5E5A">Paille, chanvre : un enduit protège ; quand il cède, les couches derrière sont exposées.</text>
+<text class="ts" x="60" y="300" dominant-baseline="central" fill="#5F5E5A">Chaque résultat vaut pour la paroi essayée, pas pour le matériau seul.</text>
+</svg>
