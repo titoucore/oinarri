@@ -1,7 +1,7 @@
 // Plan du parcours « Promotion immobilière », partagé par l'accueil et la liste des chapitres.
-// Plan provisoire : à ajuster avant la rédaction des cours.
 // Un chapitre avec `href` et `cours` est disponible ; sans, il est « À venir ».
 // `cours` = identifiant de la collection de contenu (dossier/fichier sans extension).
+// Le parcours est complet : les huit chapitres sont publiés.
 
 export const chapitres = [
   {
@@ -36,7 +36,7 @@ export const chapitres = [
   },
   {
     titre: 'La VEFA',
-    desc: 'La vente sur plan : réservation, paiements par étapes et protections de l\'acquéreur.',
+    desc: "La vente sur plan : réservation, paiements par étapes et protections de l'acquéreur.",
     href: '/promotion/06-la-vefa/',
     cours: 'promotion/06-la-vefa',
   },
@@ -48,7 +48,9 @@ export const chapitres = [
   },
   {
     titre: 'Commercialisation, livraison et réception',
-    desc: 'De la réservation à la remise des clés.',
+    desc: 'De la mise en vente à la remise des clés : achèvement, réception, livraison et réserves.',
+    href: '/promotion/08-commercialisation-livraison-reception/',
+    cours: 'promotion/08-commercialisation-livraison-reception',
   },
 ];
 
