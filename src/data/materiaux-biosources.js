@@ -1,12 +1,14 @@
 // Plan du parcours « Nouvelles méthodes de construction » (biosourcé, géosourcé, réemploi), partagé par l'accueil et la liste des chapitres.
 // Un chapitre avec `href` et `cours` est disponible ; sans, il est « À venir ».
 // `cours` = identifiant de la collection de contenu (dossier/fichier sans extension).
-// Le parcours est en cours d'écriture : aucun chapitre n'est encore publié.
+// Le parcours est en cours d'écriture : les chapitres sans lien sont à venir.
 
 export const chapitres = [
   {
     titre: 'Pourquoi changer',
     desc: 'Carbone, cycle de vie et vocabulaire : biosourcé, géosourcé, réemploi, réutilisation, recyclage.',
+    href: '/materiaux-biosources/01-pourquoi-changer/',
+    cours: 'materiaux-biosources/01-pourquoi-changer',
   },
   {
     titre: 'Les matériaux biosourcés',
