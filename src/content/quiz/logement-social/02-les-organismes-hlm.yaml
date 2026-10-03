@@ -1,0 +1,70 @@
+# Mini-quiz du chapitre 2 de Bailleurs sociaux et logement social : Les organismes HLM.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Parmi ces structures, laquelle n'a pas la qualité d'organisme HLM ?"
+    choix:
+      - "L'office public de l'habitat"
+      - "L'entreprise sociale pour l'habitat"
+      - "La SACICAP"
+      - "La coopérative d'HLM"
+    reponse: 2
+    explication: "Les SACICAP adhèrent à l'Union sociale pour l'habitat par convention, sans avoir la qualité d'organisme HLM."
+
+  - type: qcm
+    question: "Combien d'organismes (toutes familles confondues) l'USH comptait-elle fin 2023 ?"
+    choix:
+      - "Environ 56"
+      - "Environ 560"
+      - "Environ 5 600"
+      - "Environ 56 000"
+    reponse: 1
+    explication: "L'USH annonce 559 organismes fin 2023, animés par environ 88 000 salariés."
+
+  - type: vf
+    affirmation: "Un office public de l'habitat est rattaché à une collectivité territoriale ou à un groupement de collectivités."
+    reponse: true
+    explication: "C'est ce qui le distingue de l'entreprise sociale pour l'habitat, qui est une société anonyme."
+
+  - type: ouverte
+    question: "À quoi correspond un organisme HLM, et en quoi une SEM agréée s'en distingue-t-elle ?"
+    modele: "Un organisme HLM a l'un des trois statuts prévus (office public, société anonyme d'HLM, coopérative d'HLM). Une SEM agréée n'est pas un organisme HLM, mais elle exerce le même service d'intérêt général pour ses logements sociaux, avec une comptabilité distincte."
+
+approfondir:
+  - type: qcm
+    question: "Quel seuil de logements la loi ELAN a-t-elle fixé pour les groupes d'organismes ?"
+    choix:
+      - "1 200 logements"
+      - "12 000 logements"
+      - "120 000 logements"
+      - "500 logements"
+    reponse: 1
+    explication: "Un organisme de moins de 12 000 logements doit appartenir à un groupe qui en gère au moins 12 000, sauf exceptions."
+
+  - type: qcm
+    question: "Quelles sont les deux façons de former un groupe depuis la loi ELAN ?"
+    choix:
+      - "Une fusion ou une dissolution"
+      - "Un groupe capitalistique ou une société de coordination"
+      - "Une association ou une fondation"
+      - "Un office ou une coopérative"
+    reponse: 1
+    explication: "Le groupe capitalistique repose sur une société qui en contrôle d'autres ; la société de coordination associe des organismes qui gardent leur autonomie juridique."
+
+  - type: vf
+    affirmation: "En entrant dans une société de coordination, un organisme fusionne avec les autres membres."
+    reponse: false
+    explication: "Chaque organisme garde sa personnalité morale et son autonomie ; la société de coordination pilote un projet commun."
+
+expert:
+  - type: vf
+    affirmation: "L'obligation de 12 000 logements ne s'applique pas à un organisme qui est le seul de son département."
+    reponse: true
+    explication: "La loi prévoit des exceptions, dont celle de l'organisme unique de son département, et le cas des organismes d'outre-mer."
+
+  - type: ouverte
+    question: "Distingue un groupe capitalistique d'une société de coordination."
+    modele: "Dans le groupe capitalistique, un actionnaire ou une société mère contrôle directement ou indirectement les autres, qui sont majoritairement des organismes HLM ou SEM. Dans la société de coordination, des organismes détiennent ensemble le capital d'une société à statut HLM, sans rapport de contrôle capitalistique entre eux, et gardent leur autonomie."
