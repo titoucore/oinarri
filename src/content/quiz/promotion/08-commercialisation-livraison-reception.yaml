@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 8 de Promotion immobilière : Commercialisation, livraison et réception.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Qu'est-ce que la réception des travaux ?"
+    choix:
+      - "La remise des clés à l'acquéreur"
+      - "L'acte par lequel le maître d'ouvrage déclare accepter l'ouvrage, avec ou sans réserves"
+      - "Le dépôt du permis de construire"
+      - "Le paiement du solde de 5 %"
+    reponse: 1
+    explication: "L'article 1792-6 du Code civil définit la réception comme l'acte par lequel le maître d'ouvrage déclare accepter l'ouvrage, avec ou sans réserves. Elle est prononcée contradictoirement et fait partir les garanties."
+
+  - type: qcm
+    question: "À quelle condition un immeuble vendu sur plan est-il réputé achevé ?"
+    choix:
+      - "Quand le permis est purgé"
+      - "Quand les ouvrages sont exécutés et que les équipements indispensables à son utilisation sont installés"
+      - "Quand le dernier logement est vendu"
+      - "Quand le solde est payé"
+    reponse: 1
+    explication: "L'article R261-1 du code de la construction et de l'habitation réputé achevé l'immeuble lorsque les ouvrages sont exécutés et que les éléments d'équipement indispensables à l'utilisation, conformément à sa destination, sont installés."
+
+  - type: vf
+    affirmation: "La réception des travaux et la livraison du logement sont le même acte."
+    reponse: false
+    explication: "La réception a lieu entre le maître d'ouvrage et les entreprises ; la livraison, entre le vendeur et l'acquéreur. Elles peuvent avoir lieu le même jour ou à des dates différentes."
+
+  - type: qcm
+    question: "En accession sociale, que vérifie l'organisme chez l'acquéreur ?"
+    choix:
+      - "Son âge et son métier uniquement"
+      - "Ses ressources et l'usage du logement en résidence principale"
+      - "Sa situation de famille uniquement"
+      - "Rien : la vente est libre"
+    reponse: 1
+    explication: "Les programmes d'accession sociale sont vendus à des ménages sous conditions de ressources, qui achètent leur résidence principale. Le prix doit aussi respecter les plafonds du dispositif."
+
+  - type: ouverte
+    question: "Cite les grandes étapes de la commercialisation d'une opération."
+    modele: "Le lancement (documents de vente, grille de prix), la réservation (contrat de réservation et dépôt de garantie), le dossier de l'acquéreur (ressources, financement, usage), puis l'acte de vente chez le notaire."
+
+approfondir:
+  - type: qcm
+    question: "À partir de quel acte courent les garanties de parfait achèvement, biennale et décennale ?"
+    choix:
+      - "De la signature du contrat de réservation"
+      - "De la livraison"
+      - "De la réception des travaux"
+      - "Du dépôt de la DAACT"
+    reponse: 2
+    explication: "Le Code civil fait partir les trois garanties de la réception des travaux. Certaines sources parlent de la livraison, mais c'est la date de réception qu'il faut retenir et demander."
+
+  - type: qcm
+    question: "Dans quel délai maximal l'acquéreur doit-il signaler les défauts apparents ?"
+    choix:
+      - "Avant la réception ou, au plus tard, un mois après la prise de possession"
+      - "Dix ans après la livraison"
+      - "Le jour même de la réservation"
+      - "Jamais : ils sont couverts automatiquement"
+    reponse: 0
+    explication: "L'article 1642-1 du Code civil ne décharge pas le vendeur des vices apparents avant la réception ou, au plus tard, avant l'expiration d'un mois après la prise de possession."
+
+  - type: vf
+    affirmation: "Si l'acquéreur constate des défauts à la livraison, il peut consigner le solde de 5 % à la Caisse des dépôts."
+    reponse: true
+    explication: "L'article R261-14 prévoit cette consignation en cas de défauts de conformité ou de vices apparents. Le solde est libéré une fois les défauts corrigés."
+
+  - type: qcm
+    question: "Que signifie DAACT ?"
+    choix:
+      - "Déclaration d'ouverture de chantier"
+      - "Déclaration attestant l'achèvement et la conformité des travaux"
+      - "Dossier d'assurance de construction"
+      - "Date d'achèvement des appels de fonds"
+    reponse: 1
+    explication: "La DAACT est déposée en mairie à la fin des travaux. La mairie dispose ensuite de trois mois (cinq dans certains cas) pour contester la conformité. Elle ne se confond ni avec la réception ni avec la livraison."
+
+  - type: ouverte
+    question: "Décris le déroulement d'une livraison, de la visite à la levée des réserves."
+    modele: "L'acquéreur visite le logement avec le vendeur, plan et contrat en main. Un procès-verbal de livraison consigne les défauts de conformité et les vices apparents. Le solde de 5 % est payable, mais peut être consigné en cas de défauts. Les entreprises corrigent ensuite, la consignation est levée, et l'acquéreur signale par écrit les défauts apparents dans le délai d'un mois."
+
+expert:
+  - type: vf
+    affirmation: "La constatation de l'achèvement vaut reconnaissance de la conformité du logement au contrat."
+    reponse: false
+    explication: "Selon l'article R261-1, la constatation de l'achèvement n'emporte par elle-même ni reconnaissance de la conformité aux prévisions du contrat, ni renonciation aux droits que l'acquéreur tient de l'article 1642-1 du Code civil."
+
+  - type: qcm
+    question: "En cas de retard de livraison, que prévoit la loi comme pénalité pour le vendeur ?"
+    choix:
+      - "Une pénalité légale automatique"
+      - "Aucune pénalité légale : seules les clauses du contrat jouent"
+      - "L'annulation de la vente"
+      - "Le remboursement du terrain"
+    reponse: 1
+    explication: "Une réponse ministérielle note que le vendeur n'est sanctionné par aucune pénalité légale pour son retard de livraison. Les pénalités prévues au contrat de réservation s'appliquent."
+
+  - type: ouverte
+    question: "Pourquoi la date de réception est-elle essentielle pour l'acquéreur ?"
+    modele: "C'est elle qui fait partir les garanties de parfait achèvement (1 an), biennale (2 ans) et décennale (10 ans). Elle figure dans l'acte de vente et dans le procès-verbal de réception : l'acquéreur a intérêt à la demander pour connaître la durée réelle de ses garanties."
