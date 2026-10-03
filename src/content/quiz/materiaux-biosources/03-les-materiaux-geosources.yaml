@@ -1,0 +1,73 @@
+# Mini-quiz du chapitre 3 de Nouvelles méthodes de construction : Les matériaux géosourcés.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quelle technique de terre crue sert à remplir une ossature en bois ?"
+    choix:
+      - "Le pisé"
+      - "Le torchis"
+      - "L'adobe"
+      - "Le bloc de terre comprimée"
+    reponse: 1
+    explication: "Le torchis remplit une ossature en pans de bois. Le pisé, l'adobe et le bloc de terre comprimée servent à bâtir des murs porteurs ou de maçonnerie."
+
+  - type: vf
+    affirmation: "Le mot « géosourcé » a une définition réglementaire précise dans le code de la construction."
+    reponse: false
+    explication: "Aucune définition réglementaire n'a été repérée. Le mot décrit un usage : des matériaux issus de ressources minérales peu transformées, comme la terre crue ou la pierre."
+
+  - type: qcm
+    question: "Comment réalise-t-on un mur en pisé ?"
+    choix:
+      - "En empilant des briques cuites au four"
+      - "En compactant de la terre entre deux banches"
+      - "En coulant un mélange de chaux et de chanvre"
+      - "En remplissant une ossature avec un mélange de terre et de paille"
+    reponse: 1
+    explication: "Le pisé est de la terre crue compactée par couches entre deux banches (des coffrages), sur un soubassement en pierre."
+
+  - type: ouverte
+    question: "Pourquoi un mur en pisé repose-t-il sur un soubassement en pierre et reçoit-il un enduit perméable à la vapeur d'eau ?"
+    modele: "Le pisé est très sensible à l'eau liquide : le soubassement en pierre le protège de l'eau venue du sol. Mais il sait réguler l'humidité de l'air : l'enduit doit laisser passer la vapeur d'eau, sinon l'humidité reste piégée dans le mur et l'abîme."
+
+approfondir:
+  - type: qcm
+    question: "Combien de guides de bonnes pratiques de la construction en terre crue existent ?"
+    choix:
+      - "Trois"
+      - "Quatre"
+      - "Six"
+      - "Dix"
+    reponse: 2
+    explication: "Six guides : torchis, brique de terre crue, pisé, bauge, terre allégée et enduits de terre."
+
+  - type: vf
+    affirmation: "Les guides de bonnes pratiques de la terre crue sont des manuels pédagogiques qui dispensent de se former."
+    reponse: false
+    explication: "Les guides eux-mêmes précisent qu'ils ne sont pas des manuels pédagogiques et ne remplacent ni la formation ni l'apprentissage. Ils fixent des performances attendues et servent de référence entre les acteurs."
+
+  - type: qcm
+    question: "Que dit la Fédération française du bâtiment du mur en pierre sèche, du point de vue de l'assurance ?"
+    choix:
+      - "Il est toujours exclu de l'assurance"
+      - "Ses règles professionnelles sont acceptées par la C2P : c'est une technique courante pour les assureurs"
+      - "Il exige systématiquement une ATEx"
+      - "Il est réservé aux bâtiments neufs"
+    reponse: 1
+    explication: "Selon la FFB (dossier de septembre 2025), la mise en œuvre de la pierre sèche fait l'objet de règles professionnelles acceptées par la C2P. En dehors de la restauration du patrimoine, ses applications actuelles se limitent aux aménagements extérieurs."
+
+expert:
+  - type: vf
+    affirmation: "On peut isoler un mur en pisé par l'intérieur ou l'extérieur avec n'importe quel isolant sans risque pour le mur."
+    reponse: false
+    explication: "Le Cerema signale que l'isolation d'un mur en pisé est délicate : un isolant ou un enduit peu perméable à la vapeur d'eau risque d'enfermer l'humidité et de faire perdre au pisé sa capacité de régulation."
+
+  - type: ouverte
+    question: "La terre crue conduit assez bien la chaleur (environ 1 W/(m·K) pour 2 000 kg/m³ d'après une thèse). Pourquoi reste-t-elle intéressante pour le confort ?"
+    modele: "Elle compense sa conductivité élevée par une forte capacité thermique et une forte inertie : elle stocke la chaleur et la restitue lentement, ce qui limite les écarts de température. Elle régule aussi l'humidité de l'air. En revanche, un mur en terre ne remplace pas un isolant : pour respecter la réglementation thermique, il faut souvent lui associer une isolation adaptée, avec des matériaux perméables à la vapeur d'eau."
