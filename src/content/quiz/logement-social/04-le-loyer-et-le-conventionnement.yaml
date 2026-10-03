@@ -1,0 +1,75 @@
+# Mini-quiz du chapitre 4 de Bailleurs sociaux et logement social : Le loyer et le conventionnement.
+# Types de question : qcm, vf, ouverte (voir le chapitre 1).
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "De quels éléments le loyer maximal d'un logement conventionné est-il le produit ?"
+    choix:
+      - "Le prix du terrain, le prix des travaux et la marge"
+      - "La surface utile, le prix au m2 de l'opération et le coefficient propre au logement"
+      - "Le revenu du locataire et sa composition familiale"
+      - "Le taux du Livret A et la durée du prêt"
+    reponse: 1
+    explication: "L'article D353-16 du CCH le définit ainsi : surface utile du logement, prix au m2 applicable à l'ensemble de l'immeuble, coefficient propre au logement."
+
+  - type: vf
+    affirmation: "La surface utile est égale à la surface habitable augmentée de la moitié de la surface des annexes."
+    reponse: true
+    explication: "Les annexes (cave, loggia fermée…) comptent pour moitié. Les parkings et terrasses peuvent donner lieu à un loyer accessoire."
+
+  - type: qcm
+    question: "Quel est en 2026 le loyer maximal de zone d'un logement PLUS en zone II ?"
+    choix:
+      - "5,77 euros par m2"
+      - "6,49 euros par m2"
+      - "7,85 euros par m2"
+      - "11,80 euros par m2"
+    reponse: 1
+    explication: "Valeurs de l'avis des loyers 2026 : 6,49 euros par m2 de surface utile pour le PLUS en zone II. 5,77 est la valeur du PLAI."
+
+  - type: ouverte
+    question: "Un logement PLUS en zone II fait 40 m2 habitables, sans annexe. Avec un coefficient de structure et un coefficient propre égaux à 1 et sans marge locale, quel est son loyer maximal mensuel ?"
+    modele: "40 m2 x 6,49 euros = 259,60 euros par mois. En pratique, le coefficient de structure n'est pas exactement égal à 1 : il dépend de la taille moyenne des logements de l'opération."
+
+approfondir:
+  - type: vf
+    affirmation: "En PLS, aucune marge locale à la hausse n'est autorisée pour les opérations neuves."
+    reponse: true
+    explication: "Le loyer maximum de la convention PLS est égal au loyer maximal de base. Les marges locales concernent le PLUS et le PLAI."
+
+  - type: qcm
+    question: "Quelle majoration locale maximale peut être accordée en PLUS ou en PLAI ?"
+    choix:
+      - "5 %"
+      - "15 %"
+      - "30 %"
+      - "50 %"
+    reponse: 1
+    explication: "La majoration accordée est limitée à 15 % et doit correspondre à une amélioration du service rendu ou à une meilleure maîtrise de la quittance."
+
+  - type: qcm
+    question: "Quelle est la durée minimale d'une convention APL conclue par un bailleur social ?"
+    choix:
+      - "3 ans"
+      - "6 ans"
+      - "9 ans"
+      - "30 ans"
+    reponse: 2
+    explication: "La convention dure autant que le prêt, sans pouvoir être inférieure à 9 ans. Ne la confonds pas avec la convention Anah des propriétaires privés, de 6 ou 9 ans."
+
+expert:
+  - type: qcm
+    question: "De combien le produit locatif maximum peut-il dépasser le niveau sans marge ni annexe ?"
+    choix:
+      - "De 5 %"
+      - "De 18 % (25 % si l'ascenseur n'est pas obligatoire)"
+      - "De 40 %"
+      - "Il n'y a aucune limite"
+    reponse: 1
+    explication: "La règle de plafonnement limite à 18 % le dépassement dû aux marges locales et aux annexes importantes, porté à 25 % pour les immeubles avec ascenseur non obligatoire."
+
+  - type: ouverte
+    question: "Que devient le loyer maximal d'une convention en cours au 1er janvier ?"
+    modele: "Il est révisé chaque 1er janvier d'après l'indice de référence des loyers du deuxième trimestre de l'année précédente (article L353-9-2 du CCH). Au 1er janvier 2026, la révision était de plus 1,04 %."
