@@ -1,4 +1,8 @@
-// Glossaire d'Oinarri : un seul fichier, une entrée par terme.
+// Glossaire d'Oinarri : une entrée par terme, un fichier par parcours.
+//
+// Ce fichier contient les termes du B.A.-BA du bâtiment et fusionne ceux des autres parcours
+// (src/data/glossaire-<parcours>.js). Pour un nouveau parcours : créer son fichier, l'importer
+// ci-dessous et l'ajouter à la liste exportée en bas de ce fichier.
 //
 // Champs :
 //   terme       nom du terme (avec majuscule initiale) ; il sert aussi à fabriquer l'ancre
@@ -12,7 +16,9 @@
 // Format des définitions : celui de la convention /def. Pour ajouter un terme, on ajoute
 // une entrée ; l'ordre dans ce fichier n'a pas d'importance (la page trie par ordre alphabétique).
 
-export const termes = [
+import { termes as termesPromotion } from './glossaire-promotion.js';
+
+const termesBatiment = [
   {
     terme: "Maître d'ouvrage",
     categorie: 'Construction',
@@ -793,3 +799,5 @@ export const termes = [
     aussi: ['Marchés publics', 'Commande publique'],
   },
 ];
+
+export const termes = [...termesBatiment, ...termesPromotion];
