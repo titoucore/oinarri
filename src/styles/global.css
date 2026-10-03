@@ -9,6 +9,8 @@
   --paper:   #FFFFFF;
   --radius: 10px;
   --page-w: 680px;
+  --page-large-w: 72rem;
+  --lecture-w: 44rem;
 }
 
 :root[data-theme="dark"] {
@@ -45,6 +47,17 @@ a { color: inherit; }
   max-width: var(--page-w);
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
+}
+
+/* Pages qui profitent des grands écrans : accueil, listes de chapitres, cours. */
+.page.page-large {
+  max-width: var(--page-large-w);
+}
+
+@media (min-width: 64rem) {
+  .page.page-large {
+    padding-inline: 2rem;
+  }
 }
 
 /* --- En-tête et logo --- */
@@ -168,7 +181,15 @@ h2 {
   gap: 8px;
 }
 
+/* Grands écrans : les chapitres se répartissent sur deux colonnes ou plus. */
+.page-large .chapitres {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+  gap: 10px;
+}
+
 .chapitre {
+  position: relative;
   counter-increment: chapitre;
   display: flex;
   align-items: flex-start;
@@ -176,6 +197,7 @@ h2 {
   border: 1px solid var(--ink-100);
   border-radius: 12px;
   padding: 0.9rem 1rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
 }
 
 .chapitre::before {
@@ -197,6 +219,33 @@ h2 {
   font-size: 14px;
   color: var(--ink-600);
   margin: 2px 0 0;
+}
+
+/* Carte entièrement cliquable : le lien du titre s'étend sur toute la carte. */
+.chapitre-lien::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+}
+
+.chapitre:has(.chapitre-lien) {
+  cursor: pointer;
+}
+
+.chapitre:has(.chapitre-lien):hover {
+  border-color: var(--ink-900);
+  transform: translateY(-2px);
+}
+
+.chapitre:has(.chapitre-lien:focus-visible) {
+  border-color: var(--ink-900);
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
+}
+
+.chapitre-lien:focus-visible {
+  outline: none;
 }
 
 .etiquette {
@@ -232,4 +281,6 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   body { transition: none; }
+  .chapitre { transition: none; }
+  .chapitre:has(.chapitre-lien):hover { transform: none; }
 }
