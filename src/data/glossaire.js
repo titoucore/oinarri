@@ -17,6 +17,7 @@
 // une entrée ; l'ordre dans ce fichier n'a pas d'importance (la page trie par ordre alphabétique).
 
 import { termes as termesPromotion } from './glossaire-promotion.js';
+import { termes as termesLogementSocial } from './glossaire-logement-social.js';
 
 const termesBatiment = [
   {
@@ -800,4 +801,4 @@ const termesBatiment = [
   },
 ];
 
-export const termes = [...termesBatiment, ...termesPromotion];
+export const termes = [...termesBatiment, ...termesPromotion, ...termesLogementSocial];
