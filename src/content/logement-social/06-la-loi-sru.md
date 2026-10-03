@@ -22,7 +22,7 @@ verifie_le: 2026-10-03
 
 ### Une obligation pour certaines communes
 
-L'article 55 de la loi du 13 décembre 2000 (loi SRU) impose aux communes de plus de **3 500 habitants** (1 500 en Île-de-France), situées dans certaines agglomérations ou intercommunalités, de disposer d'une part minimale de logements sociaux parmi leurs résidences principales : **25 %**, ou **20 %** pour les communes dont la situation locale est moins tendue. Depuis la loi 3DS du 21 février 2022, il n'y a plus de date butoir : l'obligation est permanente.
+L'article 55 de la loi du 13 décembre 2000 (loi SRU), codifié à l'article L302-5 du CCH, s'applique aux communes de plus de **3 500 habitants** (1 500 en Île-de-France), comprises dans une agglomération ou un EPCI à fiscalité propre de plus de 50 000 habitants qui comprend au moins une commune de plus de 15 000 habitants. Elles doivent disposer d'une part minimale de logements sociaux parmi leurs résidences principales : **25 %**, ou **20 %** pour les communes dont la situation locale est moins tendue. Depuis la loi 3DS du 21 février 2022, il n'y a plus de date butoir : l'obligation est permanente.
 
 ### Un rattrapage par périodes de trois ans
 
@@ -32,7 +32,7 @@ Chaque commune en retard doit rattraper une fraction de son déficit sur chaque 
 
 ### Le calcul pour Arbola
 
-La commune devrait avoir 25 % de 4 000, soit **1 000** logements sociaux. Il lui en manque **400**. Son objectif triennal est de 33 % de 400, soit environ **132** logements à réaliser sur trois ans. Les quatre logements vendus au bailleur comptent pour elle, car ce sont des logements sociaux qui seront en service.
+La commune devrait avoir 25 % de 4 000, soit **1 000** logements sociaux. Il lui en manque **400**. Son objectif triennal est de 33 % de 400, soit environ **132** logements à réaliser sur trois ans. Les quatre logements vendus au bailleur comptent pour elle une fois en service, car ce sont des logements sociaux.
 
 ### Les sanctions
 
@@ -42,11 +42,11 @@ Les communes déficitaires paient un **prélèvement annuel** sur leurs ressourc
 
 ### Le contrat de mixité sociale
 
-Une commune qui rencontre des difficultés peut signer avec l'État un **contrat de mixité sociale** pour la période triennale suivante. Il définit précisément ses engagements. Il lui accorde un rythme de rattrapage un peu moins rapide, mais ne l'exonère pas d'une carence si son bilan précédent la justifie. Pour 2023-2025, le texte d'une étude d'impact du Sénat envisageait aussi d'y faire entrer une part de logement locatif intermédiaire.
+Une commune qui rencontre des difficultés peut signer avec l'État un **contrat de mixité sociale** pour la période triennale suivante. Il définit précisément ses engagements. Il lui accorde un rythme de rattrapage un peu moins rapide, mais ne l'exonère pas d'une carence si son bilan précédent la justifie.
 
-### Des exemptions
+### Des exemptions, renouvelées tous les trois ans
 
-Certaines communes sont exemptées, par exemple pour faible tension ou faible attractivité du territoire, ou parce qu'elles sont soumises à un trait de côte qui les rend inconstructibles. La liste est réexaminée au début de chaque période triennale ; 154 communes étaient exemptées pour 2023-2025.
+Certaines communes sont exemptées, par exemple pour faible tension sur la demande de logement social, pour isolement ou faible attractivité, ou parce qu'elles sont soumises à une contrainte d'inconstructibilité. Un décret fixe la liste au début de chaque période. Pour 2023-2025, 154 communes étaient exemptées. Pour **2026-2028**, le décret n° 2026-38 du 29 janvier 2026 fixe la liste (121 communes d'après un éditeur juridique), modifiée par le décret n° 2026-734 du 1er août 2026, qui ajoute six communes de Guadeloupe. Un autre décret du 29 janvier 2026 (n° 2026-43) fixe les seuils des ratios de tension.
 
 ### La déduction du prélèvement
 
@@ -57,7 +57,7 @@ Les communes peuvent déduire de leur prélèvement certaines dépenses faites p
 - **Où en est le bilan 2023-2025 ?** Une instruction du Gouvernement du 30 avril 2026 (diffusée le 15 mai) fixe la méthode. Plus de 1 100 communes soumises à la loi restent déficitaires sur plus de 2 000. Les arrêtés de carence doivent être pris d'ici fin décembre 2026, après une phase contradictoire. Au 3 octobre 2026, ils ne sont donc pas tous pris.
 - **Le bilan précédent.** Pour 2020-2022, 711 communes n'ont pas atteint leurs objectifs et 341 ont été carencées en 2023 (étude d'impact du Sénat).
 - **Vente HLM et décompte.** Une publication spécialisée indique que les logements sociaux vendus restent comptabilisés pendant dix ans. À confirmer sur le texte.
-- **Logement intermédiaire.** Le projet de loi sur le développement de l'offre de logements abordables prévoyait d'intégrer une part de logement locatif intermédiaire dans le bilan. Le texte promulgué est à vérifier.
+- **Logement intermédiaire.** Un projet de loi de 2024 prévoyait d'intégrer une part de logement locatif intermédiaire dans l'objectif triennal, via le contrat de mixité sociale (au plus 25 % de l'objectif, 40 % avec le PLS). Je n'ai pas pu confirmer son adoption : ne compte pas dessus dans un calcul.
 
 ## Cas pratiques
 
@@ -98,9 +98,10 @@ Loi SRU · Bilan triennal · Constat de carence · Contrat de mixité sociale ·
 
 Vérifié le 3 octobre 2026.
 
+- Champ d'application : article L302-5 du CCH sur Légifrance (version lue le 3 octobre 2026).
+- Exemptions 2026-2028 : décrets n° 2026-38 et n° 2026-43 du 29 janvier 2026 et n° 2026-734 du 1er août 2026 (Légifrance) ; commentaire de SVP.
 - Dispositif, 3DS et taux de rattrapage : ministère de la Transition écologique (fiche sur l'adaptation de l'article 55) et pages de plusieurs préfectures (Seine-Maritime, Seine-et-Marne).
 - Contexte et bilan 2020-2022 : étude d'impact du projet de loi sur les logements abordables et rapport du Sénat.
 - Bilan 2023-2025 : instruction du Gouvernement du 30 avril 2026, relayée par le Moniteur, Maire-info et Cadre de Ville.
-- Exemptions : instruction pour le bilan triennal 2023-2025 (Association des maires de France).
 
-À contrôler sur Légifrance : l'article 55 de la loi SRU codifié (L302-5 et suivants du CCH) ; l'instruction du 30 avril 2026 ; l'intégration du logement intermédiaire ; la durée de décompte des logements vendus.
+À contrôler sur Légifrance : l'instruction du 30 avril 2026 ; l'adoption éventuelle de la loi sur les logements abordables ; la durée de décompte des logements vendus ; la rédaction exacte du seuil en Île-de-France (unité urbaine de Paris dans une version consultée).
