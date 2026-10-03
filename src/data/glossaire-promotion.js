@@ -253,4 +253,122 @@ export const termes = [
       "Permis qui adapte un projet déjà autorisé, par exemple pour corriger une irrégularité réparable relevée par le juge.",
     aussi: ['PC modificatif', 'Modificatif'],
   },
+  {
+    terme: "Bilan d'opération",
+    categorie: 'Promotion',
+    definition:
+      "Tableau qui met face à face les recettes d'une opération (prix de vente des logements) et ses dépenses (foncier, travaux, honoraires, taxes, frais financiers…). La différence est la marge. On le met à jour à chaque étape.",
+    aussi: ['Bilan', 'Bilan prévisionnel', 'Bilan promoteur', "Bilan de l'opération"],
+  },
+  {
+    terme: 'Recettes',
+    categorie: 'Promotion',
+    definition:
+      "Ce que rapporte une opération : essentiellement le prix de vente des logements, calculé sur la surface dans laquelle le prix est exprimé.",
+    aussi: ['Recette'],
+  },
+  {
+    terme: 'Prix de revient',
+    categorie: 'Promotion',
+    definition:
+      "Total de ce que coûte une opération jusqu'à la livraison : foncier, travaux, honoraires, assurances, taxes, frais financiers et frais de commercialisation.",
+    aussi: ['Coût de revient'],
+  },
+  {
+    terme: "Marge de l'opération",
+    categorie: 'Promotion',
+    definition:
+      "Ce qui reste quand les recettes ont payé toutes les dépenses. Pour un promoteur privé, elle rémunère ses fonds propres et le risque pris ; pour un organisme en accession sociale, elle est faible et sert de coussin face aux imprévus.",
+    aussi: ['Marge'],
+  },
+  {
+    terme: 'Surface de plancher',
+    categorie: 'Urbanisme',
+    definition:
+      "Surface définie par le code de l'urbanisme (article R111-22) : somme des surfaces closes et couvertes de chaque niveau, sous plus de 1,80 m de hauteur, calculée à partir du nu intérieur des façades, avec des déductions. Elle sert au permis, à la densité et à la taxe d'aménagement.",
+    aussi: ['SDP'],
+  },
+  {
+    terme: 'Surface habitable',
+    categorie: 'Construction',
+    definition:
+      "Surface définie par le code de la construction et de l'habitation (article R156-1) : surface de plancher construite après déduction des murs, cloisons, marches, cages d'escalier, gaines et embrasures. Les caves, garages, terrasses et balcons n'y sont pas comptés.",
+    aussi: ['SHAB', 'Surface loi Boutin'],
+  },
+  {
+    terme: 'Surface utile',
+    categorie: 'Logement social',
+    definition:
+      "Surface habitable augmentée de la moitié de la surface des annexes (article R331-10 du code de la construction et de l'habitation). Les plafonds de prix de l'accession sociale s'expriment par mètre carré de surface utile.",
+  },
+  {
+    terme: 'TVA',
+    developpe: 'Taxe sur la Valeur Ajoutée',
+    categorie: 'Financement',
+    definition:
+      "Taxe incluse dans le prix de vente d'un logement neuf : 20 % au taux normal. En accession sociale, un taux réduit de 5,5 % s'applique sous conditions (dispositif, localisation, plafonds de ressources et de prix).",
+    aussi: ['TVA à taux réduit', 'TVA à 5,5 %', 'Taux réduit de TVA'],
+  },
+  {
+    terme: 'Plafonds de prix',
+    categorie: 'Logement social',
+    definition:
+      "Prix de vente maximaux, fixés par dispositif et revalorisés chaque année, que le vendeur ne doit pas dépasser pour que l'acquéreur bénéficie de l'accession sociale (par exemple le taux réduit de TVA). Ils s'expriment en euros hors taxes par mètre carré de surface utile.",
+    aussi: ['Plafond de prix', 'Prix plafonds'],
+  },
+  {
+    terme: 'Plafonds de ressources',
+    categorie: 'Logement social',
+    definition:
+      "Revenus maximaux qu'un ménage ne doit pas dépasser pour accéder à un dispositif d'accession sociale. Ils sont revalorisés chaque année.",
+    aussi: ['Plafond de ressources'],
+  },
+  {
+    terme: "Taxe d'aménagement",
+    categorie: 'Urbanisme',
+    definition:
+      "Taxe due à l'occasion d'une construction. Son assiette est la surface de plancher (article L331-10 du code de l'urbanisme). Des exonérations ou abattements existent pour certains logements aidés.",
+  },
+  {
+    terme: 'Frais financiers',
+    categorie: 'Financement',
+    definition:
+      "Intérêts et frais des financements de l'opération. Ils augmentent quand l'opération dure plus longtemps : un retard coûte de l'argent.",
+  },
+  {
+    terme: 'Honoraires techniques',
+    categorie: 'Promotion',
+    definition:
+      "Rémunération des intervenants techniques : architecte, bureaux d'études, contrôleur technique, coordonnateur SPS, géotechnicien. Poste du bilan d'opération.",
+    aussi: ['Honoraires'],
+  },
+  {
+    terme: 'Aléas',
+    categorie: 'Promotion',
+    definition:
+      "Provision prévue dans le bilan pour les imprévus du chantier. Elle est soit comprise dans les travaux, soit inscrite sur une ligne à part.",
+    aussi: ['Aléa', 'Provision pour aléas', 'Imprévus'],
+  },
+  {
+    terme: 'Bilan à rebours',
+    categorie: 'Promotion',
+    definition:
+      "Calcul qui part du prix de vente pour trouver le prix maximal du terrain : recettes moins dépenses hors foncier moins marge visée. Le terrain y sert de variable d'ajustement.",
+    aussi: ['Compte à rebours', 'Compte à rebours du promoteur'],
+  },
+  {
+    terme: 'PSLA',
+    developpe: 'Prêt Social Location-Accession',
+    categorie: 'Logement social',
+    definition:
+      "Dispositif de location-accession à la propriété pour des ménages sous plafonds de ressources, avec des plafonds de prix de vente. Les logements financés en PSLA peuvent bénéficier de la TVA à 5,5 %.",
+  },
+  {
+    terme: 'QPV',
+    developpe: 'Quartier Prioritaire de la politique de la Ville',
+    categorie: 'Urbanisme',
+    definition:
+      "Quartier défini par la politique de la ville, où vit une population à faibles revenus. Pour l'accession sociale, la vente de logements neufs dans un QPV ou à moins de 300 m de ses limites peut bénéficier de la TVA à 5,5 %, sous conditions.",
+    aussi: ['Quartier prioritaire', 'Quartiers prioritaires'],
+  },
 ];
