@@ -1,0 +1,27 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Chapitre from '../../components/Chapitre.astro';
+
+export async function getStaticPaths() {
+  const cours = await getCollection('cours', ({ data }) => data.parcours === 'promotion');
+  return cours.map((entry) => ({
+    params: { slug: entry.id.replace('promotion/', '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Mini-quiz du chapitre (même identifiant que le cours), transmis au navigateur en JSON.
+const quiz = await getEntry('quiz', entry.id);
+const quizJson = JSON.stringify(quiz?.data ?? {}).replace(/</g, '\\u003c');
+---
+
+<Chapitre
+  entry={entry}
+  quizJson={quizJson}
+  retour={{ href: '/promotion/', libelle: 'Promotion immobilière' }}
+>
+  <Content />
+</Chapitre>
