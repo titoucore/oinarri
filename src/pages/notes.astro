@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import * as baba from '../data/ba-ba.js';
+import * as promotion from '../data/promotion.js';
+
+// Pour chaque cours disponible : son titre, son adresse et son parcours (les notes sont rangées par cours).
+const cours = {};
+for (const [parcours, plan] of [
+  ['B.A.-BA du bâtiment', baba],
+  ['Promotion immobilière', promotion],
+]) {
+  for (const c of plan.chapitres) {
+    if (c.cours) cours[c.cours] = { titre: c.titre, href: c.href, parcours };
+  }
+}
+---
+
+<Base
+  title="Mes notes — Oinarri"
+  description="Tes passages surlignés et tes notes, chapitre par chapitre."
+>
+  <a class="retour" href="/">Accueil</a>
+  <h1>Mes notes</h1>
+  <p class="lead">
+    Les passages que tu as surlignés dans les cours, avec tes notes. Tu peux les modifier ici ou
+    les supprimer.
+  </p>
+
+  <input
+    class="mes-notes-recherche"
+    id="mes-notes-recherche"
+    type="search"
+    placeholder="Rechercher dans mes notes"
+    aria-label="Rechercher dans mes notes"
+    autocomplete="off"
+    autocapitalize="none"
+    hidden
+  />
+  <p class="mes-notes-compte" id="mes-notes-compte" role="status"></p>
+
+  <p class="mes-notes-vide" id="mes-notes-vide" hidden>
+    Tu n'as pas encore de note. Dans un cours, sélectionne un passage puis touche « Surligner » :
+    il apparaît ici, et tu peux y ajouter une note.
+  </p>
+  <p class="mes-notes-vide" id="mes-notes-erreur" role="alert" hidden></p>
+
+  <div id="mes-notes"></div>
+
+  <script is:inline type="application/json" id="cours-data" set:html={JSON.stringify(cours)} />
+</Base>
+
+<script>
+  import '../scripts/mes-notes.js';
+</script>
