@@ -1,0 +1,102 @@
+# Mini-quiz du chapitre 3 de Promotion immobilière : L'urbanisme.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que contient un plan local d'urbanisme (PLU) ?"
+    choix:
+      - "Un zonage, un règlement par zone, des orientations d'aménagement et des annexes"
+      - "Uniquement la liste des propriétaires de la commune"
+      - "Le prix de vente des terrains"
+      - "Le planning des chantiers de la commune"
+    reponse: 0
+    explication: "Le PLU comprend un zonage (zones U, AU, A, N), un règlement qui fixe usages, implantation, hauteur et stationnement, des orientations d'aménagement (OAP) et des annexes, dont les servitudes d'utilité publique."
+
+  - type: qcm
+    question: "Quelle est la différence entre un CUa et un CUb ?"
+    choix:
+      - "Le CUa informe sur les règles du terrain ; le CUb dit en plus si le projet envisagé est réalisable"
+      - "Le CUa autorise les travaux ; le CUb les interdit"
+      - "Le CUa vaut un an ; le CUb vaut dix ans"
+      - "Il n'y en a pas : ce sont deux noms du permis de construire"
+    reponse: 0
+    explication: "Le certificat d'information (CUa) renseigne sur le terrain. Le certificat opérationnel (CUb) se prononce sur un projet précis. Ni l'un ni l'autre n'autorise de construire."
+
+  - type: vf
+    affirmation: "Un certificat d'urbanisme autorise à construire."
+    reponse: false
+    explication: "Le CU ne vaut pas autorisation. Il indique les règles applicables et les fige pendant 18 mois. Pour construire, il faut un permis."
+
+  - type: qcm
+    question: "Pendant combien de temps un certificat d'urbanisme fige-t-il les règles ?"
+    choix:
+      - "3 mois"
+      - "6 mois"
+      - "18 mois"
+      - "10 ans"
+    reponse: 2
+    explication: "Si le permis est demandé dans les 18 mois suivant la délivrance du CU, les règles qui y figurent ne peuvent pas être remises en cause (article L410-1), sauf celles qui protègent la sécurité ou la salubrité publiques."
+
+  - type: ouverte
+    question: "Cite dans l'ordre les étapes d'un permis de construire, du dépôt à la purge."
+    modele: "Dépôt du dossier en mairie ; instruction (trois mois pour un collectif) ; décision, expresse ou tacite ; affichage sur le terrain ; écoulement des délais de recours des tiers et de retrait ; le permis est alors purgé."
+
+approfondir:
+  - type: qcm
+    question: "Quel est le délai d'instruction de droit commun d'un permis pour un immeuble collectif ?"
+    choix:
+      - "Un mois"
+      - "Deux mois"
+      - "Trois mois"
+      - "Six mois"
+    reponse: 2
+    explication: "Le délai est de deux mois pour une maison individuelle, trois mois pour les autres permis de construire (article R423-23). Des consultations ou des cas particuliers peuvent le modifier."
+
+  - type: vf
+    affirmation: "Si la mairie ne répond pas dans le délai d'instruction, le permis est refusé."
+    reponse: false
+    explication: "Le permis est tacitement accordé si aucune décision n'est notifiée à l'issue du délai d'instruction (article L424-2). Des exceptions existent, à vérifier selon le dossier."
+
+  - type: qcm
+    question: "À partir de quand court le délai de recours des tiers contre un permis ?"
+    choix:
+      - "À la date de dépôt du dossier"
+      - "Au premier jour d'une période continue de deux mois d'affichage sur le terrain"
+      - "À la fin du chantier"
+      - "À la remise des clés"
+    reponse: 1
+    explication: "L'article R600-2 fixe le départ du délai de deux mois au premier jour d'une période continue de deux mois d'affichage régulier sur le terrain."
+
+  - type: vf
+    affirmation: "Si le panneau d'affichage est irrégulier ou interrompu, le délai de recours ne commence pas à courir."
+    reponse: true
+    explication: "C'est pourquoi le bénéficiaire doit pouvoir prouver un affichage visible, lisible et continu. Tant que l'affichage n'est pas régulier, le permis reste attaquable."
+
+  - type: ouverte
+    question: "Qui peut contester un permis de construire, et à quelle condition ?"
+    modele: "Un tiers, par exemple un voisin ou une association, à condition d'avoir un intérêt à agir : la construction doit affecter directement les conditions d'occupation, d'utilisation ou de jouissance de son bien (article L600-1-2). Il doit aussi notifier son recours à la commune et au bénéficiaire du permis (article R600-1), à peine d'irrecevabilité."
+
+expert:
+  - type: qcm
+    question: "Dans quel délai la commune peut-elle retirer un permis illégal ?"
+    choix:
+      - "Dans les trois mois suivant la décision, avec notification avant la fin du délai"
+      - "À tout moment"
+      - "Dans les deux mois suivant l'affichage"
+      - "Jamais"
+    reponse: 0
+    explication: "L'article L424-5 limite le retrait aux permis illégaux, dans les trois mois suivant la décision. La décision de retrait doit être notifiée au bénéficiaire avant l'expiration de ce délai."
+
+  - type: vf
+    affirmation: "Le bénéficiaire d'un permis peut demander des dommages et intérêts à l'auteur d'un recours qui excède la défense de ses intérêts légitimes et lui cause un préjudice excessif."
+    reponse: true
+    explication: "L'article L600-7, issu de l'ordonnance du 18 juillet 2013, vise les recours abusifs. La demande se fait devant le juge administratif, par mémoire distinct."
+
+  - type: ouverte
+    question: "Qu'appelle-t-on « purge » en pratique, et pourquoi n'est-ce pas une définition légale ?"
+    modele: "Les professionnels attendent la fin du plus long des deux délais (recours des tiers et retrait), sous réserve d'un affichage régulier, pour considérer le permis comme purgé. C'est un usage de la profession : un recours gracieux, un contentieux ou un affichage irrégulier peuvent prolonger l'incertitude."
