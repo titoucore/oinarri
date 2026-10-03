@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" role="img">
+<title>Le cycle d'une opération de promotion</title>
+<desc>Sept étapes, de l'idée à la livraison : étudier le terrain, le sécuriser, obtenir le permis, commercialiser, lancer les travaux, construire, livrer. L'ordre varie d'une opération à l'autre.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="500" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="40" y="24" width="600" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="50" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="50" text-anchor="middle" dominant-baseline="central" fill="#085041">1</text>
+<text class="th" x="88" y="42" dominant-baseline="central" fill="#085041">Étudier le terrain</text><text class="ts" x="88" y="60" dominant-baseline="central" fill="#0F6E56">Faisabilité : combien de logements, à quel coût, à quel prix</text>
+<path d="M64 77 V89" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="90" width="600" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<circle cx="64" cy="116" r="11" fill="#fff" stroke="#0F6E56" stroke-width=".8"/><text class="th" x="64" y="116" text-anchor="middle" dominant-baseline="central" fill="#085041">2</text>
+<text class="th" x="88" y="108" dominant-baseline="central" fill="#085041">Sécuriser le terrain</text><text class="ts" x="88" y="126" dominant-baseline="central" fill="#0F6E56">Promesse de vente sous conditions</text>
+<path d="M64 143 V155" stroke="#0F6E56" stroke-width="1.5"/>
+<rect x="40" y="156" width="600" height="52" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="64" cy="182" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="64" y="182" text-anchor="middle" dominant-baseline="central" fill="#712B13">3</text>
+<text class="th" x="88" y="174" dominant-baseline="central" fill="#712B13">Obtenir le permis</text><text class="ts" x="88" y="192" dominant-baseline="central" fill="#993C1D">Dépôt, instruction, délai de recours des tiers</text>
+<path d="M64 209 V221" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="222" width="600" height="52" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<circle cx="64" cy="248" r="11" fill="#fff" stroke="#993C1D" stroke-width=".8"/><text class="th" x="64" y="248" text-anchor="middle" dominant-baseline="central" fill="#712B13">4</text>
+<text class="th" x="88" y="240" dominant-baseline="central" fill="#712B13">Commercialiser</text><text class="ts" x="88" y="258" dominant-baseline="central" fill="#993C1D">Réservations des futurs acquéreurs, souvent avant les travaux</text>
+<path d="M64 275 V287" stroke="#993C1D" stroke-width="1.5"/>
+<rect x="40" y="288" width="600" height="52" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="64" cy="314" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="64" y="314" text-anchor="middle" dominant-baseline="central" fill="#444441">5</text>
+<text class="th" x="88" y="306" dominant-baseline="central" fill="#444441">Lancer les travaux</text><text class="ts" x="88" y="324" dominant-baseline="central" fill="#5F5E5A">Consultation des entreprises, ordre de service</text>
+<path d="M64 341 V353" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="40" y="354" width="600" height="52" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="64" cy="380" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="64" y="380" text-anchor="middle" dominant-baseline="central" fill="#444441">6</text>
+<text class="th" x="88" y="372" dominant-baseline="central" fill="#444441">Construire</text><text class="ts" x="88" y="390" dominant-baseline="central" fill="#5F5E5A">Suivi du chantier, paiements par étapes</text>
+<path d="M64 407 V419" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="40" y="420" width="600" height="52" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<circle cx="64" cy="446" r="11" fill="#fff" stroke="#5F5E5A" stroke-width=".8"/><text class="th" x="64" y="446" text-anchor="middle" dominant-baseline="central" fill="#444441">7</text>
+<text class="th" x="88" y="438" dominant-baseline="central" fill="#444441">Livrer</text><text class="ts" x="88" y="456" dominant-baseline="central" fill="#5F5E5A">Remise des clés, puis levée des réserves</text>
+</svg>
