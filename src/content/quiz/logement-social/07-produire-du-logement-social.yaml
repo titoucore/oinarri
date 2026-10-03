@@ -20,7 +20,7 @@ essentiel:
     explication: "L'article L433-2 du CCH encadre cette pratique : les logements doivent être inclus dans un programme de construction établi par un tiers et les demandes de permis déjà déposées."
 
   - type: qcm
-    question: "Près de quel part des logements locatifs sociaux neufs vient d'une acquisition en VEFA par un organisme HLM ?"
+    question: "Quelle part des logements locatifs sociaux neufs vient d'une acquisition en VEFA par un organisme HLM ?"
     choix:
       - "Un sur dix"
       - "Près d'un sur deux"
@@ -42,7 +42,7 @@ approfondir:
       - "60 %"
       - "100 %"
     reponse: 1
-    explication: "Au plus 30 % des logements du programme, qui doit être composé majoritairement de logements sociaux et situé dans certaines zones."
+    explication: "Au plus 30 % des logements du programme, qui doit être composé majoritairement de logements sociaux et situé dans certaines zones. La vente est soumise à l'autorisation du préfet."
 
   - type: vf
     affirmation: "Un organisme HLM peut acheter la totalité d'un programme en VEFA, sous conditions."
