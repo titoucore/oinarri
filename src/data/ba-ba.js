@@ -19,6 +19,8 @@ export const chapitres = [
   {
     titre: 'Les modes constructifs',
     desc: 'Béton, maçonnerie, bois, métal : comment on fait tenir un bâtiment debout.',
+    href: '/ba-ba/03-modes-constructifs/',
+    cours: 'ba-ba/03-modes-constructifs',
   },
   {
     titre: 'Terrassement et VRD',
