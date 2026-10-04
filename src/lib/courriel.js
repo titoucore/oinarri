@@ -38,6 +38,21 @@ export function courrielReinitialisation(lien) {
   };
 }
 
+export function courrielInvitation(lien) {
+  return {
+    sujet: 'Oinarri : tu es invité(e) à rejoindre la plateforme',
+    texte:
+      'Bonjour,\n\n' +
+      "Tu es invité(e) à rejoindre Oinarri, une plateforme d'apprentissage sur le bâtiment, " +
+      'la construction, la promotion immobilière et le logement social.\n\n' +
+      'Pour activer ton compte, ouvre ce lien et choisis ton mot de passe ' +
+      '(valable 7 jours, utilisable une seule fois) :\n\n' +
+      `${lien}\n\n` +
+      'Si cette invitation ne te concerne pas, ignore ce message : aucun compte ne sera activé.' +
+      SIGNATURE,
+  };
+}
+
 export function courrielMotDePasseModifie() {
   return {
     sujet: 'Oinarri : ton mot de passe a été modifié',
