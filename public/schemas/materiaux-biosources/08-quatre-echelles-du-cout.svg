@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Quatre échelles pour parler du coût</title>
+<desc>Le coût se lit à quatre échelles : le matériau (prix déboursé sec), l'ouvrage (prix en œuvre au mètre carré), l'opération (coût de construction hors foncier) et le coût global sur la durée. L'optimisation se joue à l'échelle de l'opération.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="30" y="30" width="140" height="100" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="100" y="58" text-anchor="middle" dominant-baseline="central" fill="#444441">Le matériau</text>
+<text class="ts" x="100" y="84" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">prix déboursé sec</text>
+<text class="ts" x="100" y="102" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">fourniture seule</text>
+<path d="M172 80 H186" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="184,75 192,80 184,85" fill="#0F6E56"/>
+<rect x="194" y="30" width="140" height="100" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="264" y="58" text-anchor="middle" dominant-baseline="central" fill="#444441">L'ouvrage</text>
+<text class="ts" x="264" y="84" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">prix en œuvre</text>
+<text class="ts" x="264" y="102" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">€ HT par m² de paroi</text>
+<path d="M336 80 H350" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="348,75 356,80 348,85" fill="#0F6E56"/>
+<rect x="358" y="30" width="140" height="100" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="428" y="58" text-anchor="middle" dominant-baseline="central" fill="#085041">L'opération</text>
+<text class="ts" x="428" y="84" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">coût de construction</text>
+<text class="ts" x="428" y="102" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">hors foncier</text>
+<path d="M500 80 H514" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="512,75 520,80 512,85" fill="#0F6E56"/>
+<rect x="522" y="30" width="128" height="100" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="586" y="58" text-anchor="middle" dominant-baseline="central" fill="#444441">Coût global</text>
+<text class="ts" x="586" y="84" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">sur la durée :</text>
+<text class="ts" x="586" y="102" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">énergie, entretien</text>
+<rect x="30" y="156" width="620" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="50" y="178" dominant-baseline="central" fill="#085041">Où optimiser ?</text>
+<text class="ts" x="50" y="200" dominant-baseline="central" fill="#0F6E56">À l'échelle de l'opération : le bon mélange de biosourcé et de classique,</text>
+<text class="ts" x="50" y="216" dominant-baseline="central" fill="#0F6E56">pas un remplacement produit par produit.</text>
+<rect x="30" y="246" width="620" height="68" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="50" y="266" dominant-baseline="central" fill="#444441">Ce qui fait bouger le coût</text>
+<text class="ts" x="50" y="288" dominant-baseline="central" fill="#5F5E5A">Forme simple, préfabrication, durée de chantier, volume commandé,</text>
+<text class="ts" x="50" y="303" dominant-baseline="central" fill="#5F5E5A">formation des entreprises, assurance.</text>
+</svg>
