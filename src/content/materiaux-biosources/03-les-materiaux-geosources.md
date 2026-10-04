@@ -72,7 +72,7 @@ Trois choses à savoir :
 - Ils servent de base de dialogue entre concepteurs, entreprises, maîtres d'ouvrage, bureaux de contrôle et assureurs.
 - Ils précisent eux-mêmes qu'ils ne sont **pas des manuels pédagogiques** et ne remplacent pas la formation.
 
-Les enduits sur supports en terre crue relèvent, eux, de **règles professionnelles** acceptées par la C2P de l'AQC en 2012.
+Les enduits sur supports en terre crue relèvent, eux, de **règles professionnelles** acceptées par la C2P de l'AQC (acceptation du 1er juillet 2012, avec suivi du retour d'expérience). Le guide des enduits en terre couvre les autres supports.
 
 ### Ce que dit la thermique
 
@@ -87,9 +87,9 @@ Beaucoup de terres excavées sur un chantier sont évacuées comme déchets. L'i
 ## Expert
 
 - **Preuves à fournir.** Un contrôleur technique pointe pour la terre crue un manque de preuves sur la sécurité incendie et la tenue au séisme, et la nécessité d'essais et de prototypes. La terre n'est pas un matériau reproductible partout de la même façon.
-- **Assurabilité.** Les guides de bonnes pratiques visent à faciliter l'assurabilité des ouvrages en terre crue. Hors du champ des guides, le recours à une ATEx (appréciation technique d'expérimentation) est possible (chapitre 6).
+- **Assurabilité.** Les guides de bonnes pratiques visent à faciliter l'assurabilité des ouvrages en terre crue. Ils ne figurent pas dans la liste des règles professionnelles acceptées par la C2P (AQC, consultée le 4 octobre 2026) : ce sont des référentiels reconnus par la profession, que des contrôleurs techniques citent parmi les textes de référence. Selon une présentation de 2021, des chantiers de torchis, de terre allégée, de bauge ou de briques ont pu se faire sans ATEx dans ce cadre, alors qu'un pisé porteur en R+2 relevait d'une démarche d'ATEx. Hors du champ des guides, le recours à une ATEx (appréciation technique d'expérimentation) est possible (chapitre 6).
 - **Terre crue et terre stabilisée.** Ajouter un liant (chaux, ciment) change le matériau : le mur n'est plus « crue » au sens strict, avec des effets sur le bilan carbone et sur la fin de vie.
-- **Pierre sèche.** Ses règles professionnelles sont acceptées par la C2P, ce qui en fait une technique courante pour les assureurs d'après la FFB. En dehors des chantiers de restauration du patrimoine, ses usages actuels se limitent aux aménagements extérieurs.
+- **Pierre sèche.** Ses règles professionnelles sont acceptées par la C2P (1er juillet 2016, avec suivi du retour d'expérience), ce qui en fait une technique courante pour les assureurs d'après la FFB. En dehors des chantiers de restauration du patrimoine, ses usages actuels se limitent aux aménagements extérieurs.
 - **Pierre massive en logement social.** Un programme de 17 logements sociaux neufs en pierre naturelle à Paris (RIVP) a été primé au concours « Construire en pierre naturelle au XXIᵉ siècle » : la pierre porteuse n'est pas réservée au patrimoine ancien.
 
 ## Cas pratiques
@@ -117,7 +117,7 @@ Géosourcé · Terre crue · Pisé · Bauge · Adobe · Bloc de terre comprimée
 - Géosourcé : issu d'une ressource minérale peu transformée (terre crue, pierre). Pas de définition réglementaire repérée.
 - Trois familles de terre crue : porter (pisé, bauge, adobe, BTC), remplir (torchis, terre allégée), finir (enduits).
 - Pisé : terre compactée entre deux banches. Craint l'eau liquide, régule l'humidité de l'air.
-- Six guides de bonnes pratiques : performances attendues, pas des manuels de formation.
+- Six guides de bonnes pratiques : performances attendues, pas des manuels de formation ; hors liste des règles C2P.
 - Terre crue : λ de l'ordre de 1 W/(m·K), mais forte inertie : elle ne remplace pas un isolant.
 - Pierre sèche : règles professionnelles acceptées par la C2P, usages actuels surtout en extérieur.
 
@@ -134,11 +134,13 @@ Géosourcé · Terre crue · Pisé · Bauge · Adobe · Bloc de terre comprimée
 Vérifié le 4 octobre 2026.
 
 - Guides de bonnes pratiques : FFB, [Guides de bonnes pratiques de la construction en terre crue](https://www.ffbatiment.fr/revues-guides/guides/guide-de-bonnes-pratiques-de-la-construction-en-terre-crue) (PDF d'octobre 2024) ; exemples d'éditions : [guide Pisé](https://maisons-paysannes.org/wp-content/uploads/2021/01/GBP_PISE_20-web.pdf) (13 décembre 2018) et [guide Brique de terre crue](https://maisons-paysannes.org/wp-content/uploads/2021/10/GBP_BRIQUE_21_web.pdf) (15 octobre 2020).
-- Règles professionnelles des enduits sur terre crue (2012) : FFB, [Enduits sur terre crue : un bâti ancien à respecter](https://www.ffbatiment.fr/techniques-batiment/gros-oeuvre-structure/maconnerie-beton-arme-dallage-fondations/dossier-bam/enduits-sur-terre-crue-un-bati-ancien-a-respecter).
+- Règles professionnelles acceptées par la C2P (enduits sur terre crue, pierre sèche) : AQC, [Règles professionnelles acceptées par la C2P](https://qualiteconstruction.com/ressource/publication-c2p/publication-c2p-regles-professionnelles-acceptees/) (consultée le 4 octobre 2026) ; FFB, [Enduits sur terre crue : un bâti ancien à respecter](https://www.ffbatiment.fr/techniques-batiment/gros-oeuvre-structure/maconnerie-beton-arme-dallage-fondations/dossier-bam/enduits-sur-terre-crue-un-bati-ancien-a-respecter).
 - Pisé et eau : Cerema, [L'habitat en pisé](https://www.loire.gouv.fr/contenu/telechargement/4429/42962/file/L_habitat_en_pise.pdf) ; DDT de l'Ain, [Maison en pisé : conseils de rénovation thermique](https://www.ain.gouv.fr/contenu/telechargement/14102/105916/file/ficherenovationthermique1_maisonenpise_voct2020.pdf) (octobre 2020).
 - Patrimoine et propriétés : Projet national Terre crue, [Étude d'opportunité](https://projet-national-terre.univ-gustave-eiffel.fr/fileadmin/contributeurs/PN_Terre/Etude_opportunite.pdf) ; AQC, [Construction et réhabilitation en terre crue : points de vigilance](https://proreno.fr/storage/media/shares/pdf/00498/152_Vigilance_terre_crue_AQC.pdf) ; conductivité : [thèse sur le pisé et le béton végétal](https://gdr-mbs.univ-gustave-eiffel.fr/fileadmin/contributeurs/MBS/pdf/2023/2023_these_pacs_fr_IP.pdf) (2023).
-- Contrôle technique et preuves : Apave, [Contrôle technique et terre crue](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/20210423_apave.pdf) (avril 2021).
+- Contrôle technique, preuves et ATEx : Apave, [Contrôle technique et terre crue](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/20210423_apave.pdf) (avril 2021) ; CTA, [Construire en terre crue : réglementation, assurabilité, retours d'expériences](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/20210423_cta.pdf) (avril 2021).
 - Pierre : DREAL des Pays de la Loire, [Enjeux de la pierre massive en construction neuve](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/presentation_dreal_28avril2022_-construction_neuve_pierre.pdf) (avril 2022) ; FFB, [Mur en pierre sèche : atouts, mise en œuvre et performances](https://www.ffbatiment.fr/techniques-batiment/performance-environnementale-batiments/materiaux-biosources/dossier/murs-en-pierre-atouts-mise-en-oeuvre-et-performances) (septembre 2025).
 - Terre de site : Novabuild, [État des lieux de la filière terre](https://www.novabuild.fr/wp-content/uploads/2025/12/2025-12-18_C-Positif_terre-biosources_2_filiereTerre.pdf) (décembre 2025).
 
-À contrôler : le statut actuel des six guides vis-à-vis de la C2P (liste verte) et leur lien avec l'assurabilité ; le fait que « géosourcé » n'ait toujours pas de définition réglementaire ; le principe du toit débordant et de la hauteur du soubassement, qui viennent de la pratique plus que d'un texte cité ici ; la part des terres excavées dans les déchets du BTP ; l'ordre de grandeur de la conductivité de la terre crue (une seule thèse citée) ; l'effet d'un ajout de liant sur le bilan carbone ; le périmètre exact de l'Eurocode 6 et du NF DTU 20.1 pour la pierre massive ; l'état de l'ATEx pour la terre crue et la pierre sèche.
+Contrôlé le 4 octobre 2026 : les dates d'acceptation par la C2P des règles sur les enduits de terre crue (1er juillet 2012) et sur la pierre sèche (1er juillet 2016) ; l'absence des six guides dans la liste des règles professionnelles acceptées par la C2P.
+
+À contrôler : l'éventuelle reconnaissance des guides de bonnes pratiques par la C2P depuis (une présentation de 2025 évoque une validation en liste verte, sans la préciser) ; la portée exacte du cadre « sans ATEx » pour les techniques de terre, tirée d'une présentation de 2021 ; le fait que « géosourcé » n'ait toujours pas de définition réglementaire ; le principe du toit débordant et de la hauteur du soubassement, qui viennent de la pratique plus que d'un texte cité ici ; la part des terres excavées dans les déchets du BTP ; l'ordre de grandeur de la conductivité de la terre crue (une seule thèse citée) ; l'effet d'un ajout de liant sur le bilan carbone ; le périmètre exact de l'Eurocode 6 et du NF DTU 20.1 pour la pierre massive.
