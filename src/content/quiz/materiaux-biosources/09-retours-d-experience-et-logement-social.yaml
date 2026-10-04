@@ -38,14 +38,14 @@ essentiel:
 
 approfondir:
   - type: qcm
-    question: "Quel bonus par logement neuf l'appel à projets de l'Occitanie prévoit-il en 2025 pour les matériaux biosourcés dans le logement social ?"
+    question: "Quel bonus l'appel à projets de l'Occitanie prévoit-il (2025, reconduit en 2026) pour un logement neuf intégrant des matériaux biosourcés ?"
     choix:
-      - "300 €"
-      - "1 000 €"
-      - "3 000 €"
-      - "30 000 €"
+      - "300 € par logement PLAI ou PLAI adapté"
+      - "1 000 € par logement PLUS"
+      - "3 000 € par logement PLAI ou PLAI adapté"
+      - "30 000 € par logement quel que soit le financement"
     reponse: 2
-    explication: "Lancé en 2023 à 1 000 € par logement, le bonus est devenu un appel à projets en 2025 : l'incitation est multipliée par trois pour atteindre 3 000 € en neuf (1 500 € en acquisition-amélioration)."
+    explication: "Lancé en 2023 à 1 000 € par logement, le bonus a pris la forme d'un appel à projets : 3 000 € par logement PLAI ou PLAI adapté en construction neuve, 1 500 € en acquisition-amélioration. Les logements PLUS ne sont pas concernés. Le dispositif est annuel et soumis à sélection."
 
   - type: vf
     affirmation: "Un bailleur social gère un bâtiment sur 40 à 50 ans, alors qu'un promoteur est surtout tenu par la garantie décennale de 10 ans."
