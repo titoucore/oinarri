@@ -112,7 +112,7 @@ D'après la feuille de route « Construction durable » de la Communauté d'Aggl
 ## Cas pratiques
 
 1. Avec les fourchettes de 2015, calcule le milieu de chaque fourchette pour « mur béton + isolation minérale » (172–207) et « caissons de paille » (235–245), puis le surcoût en pourcentage. Pour 1 520 m² de parois (bâtiment de référence de l'étude), quel écart total en € HT ?
-2. Les travaux d'Arbola sont estimés à 3 000 000 € HT (fictif). Que représente un surcoût de 6,5 % ? Cite trois raisons pour lesquelles Arbola pourrait s'écarter de cette moyenne.
+2. Les travaux d'Arbola (12 logements) sont estimés à 1 480 000 € HT (fictif). Que représente un surcoût de 6,5 % ? Cite trois raisons pour lesquelles Arbola pourrait s'écarter de cette moyenne.
 3. Pour la paille, le bois et le chanvre, remplis un tableau : qui produit la ressource, qui la transforme, qui la met en œuvre, quelles preuves d'assurabilité (chapitre 6). Où cherches-tu les informations ?
 4. Le directeur voudrait écrire dans le marché « entreprises locales exclusivement ». Pourquoi est-ce délicat ? Propose trois critères de remplacement.
 
