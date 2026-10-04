@@ -48,7 +48,9 @@ export const chapitres = [
   },
   {
     titre: 'Coûts et filières locales',
-    desc: 'Prix, approvisionnement, savoir-faire et entreprises.',
+    desc: 'Prix, ordres de grandeur, coût global, ressources et acteurs en Nouvelle-Aquitaine et au Pays basque.',
+    href: '/materiaux-biosources/08-couts-et-filieres-locales/',
+    cours: 'materiaux-biosources/08-couts-et-filieres-locales',
   },
   {
     titre: 'Retours d\'expérience et logement social',
