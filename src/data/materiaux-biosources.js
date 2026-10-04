@@ -43,6 +43,8 @@ export const chapitres = [
   {
     titre: 'Réemploi, réutilisation, recyclage',
     desc: 'Diagnostic avant démolition, filières, responsabilités et assurance.',
+    href: '/materiaux-biosources/07-reemploi-reutilisation-recyclage/',
+    cours: 'materiaux-biosources/07-reemploi-reutilisation-recyclage',
   },
   {
     titre: 'Coûts et filières locales',
