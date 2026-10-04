@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Coût d'une paroi, quatre solutions (2015)</title>
+<desc>Fourchettes de prix d'une paroi en euros hors taxes par mètre carré, fourniture et pose, en Île-de-France, estimées par un économiste de la construction en 2015. Mur béton avec isolation minérale : 172 à 207. Mur béton avec isolation biosourcée : 187 à 227. Panneaux préfabriqués en chanvre : 250 à 280. Caissons préfabriqués remplis de paille : 235 à 245.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="30" y="28" dominant-baseline="central" fill="#444441">Coût d'une paroi, € HT par m², fourniture et pose</text>
+<path d="M200 58 V262 M346.7 58 V262 M493.3 58 V262 M640 58 V262" stroke="#D3D1C7" stroke-width=".5"/>
+<text class="ts" x="30" y="84" dominant-baseline="central" fill="#444441">Béton + ITI minérale</text>
+<rect x="264.5" y="70" width="102.6" height="28" rx="4" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="ts" x="375" y="84" dominant-baseline="central" fill="#5F5E5A">172 à 207</text>
+<text class="ts" x="30" y="134" dominant-baseline="central" fill="#444441">Béton + ITI biosourcée</text>
+<rect x="308.5" y="120" width="117.4" height="28" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="434" y="134" dominant-baseline="central" fill="#0F6E56">187 à 227</text>
+<text class="ts" x="30" y="184" dominant-baseline="central" fill="#444441">Panneaux chanvre préfab.</text>
+<rect x="493.3" y="170" width="88" height="28" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="589" y="184" dominant-baseline="central" fill="#0F6E56">250 à 280</text>
+<text class="ts" x="30" y="234" dominant-baseline="central" fill="#444441">Paille, caissons préfab.</text>
+<rect x="449.3" y="220" width="29.4" height="28" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="487" y="234" dominant-baseline="central" fill="#0F6E56">235 à 245</text>
+<path d="M200 262 H640" stroke="#5F5E5A" stroke-width="1"/>
+<text class="ts" x="200" y="278" text-anchor="middle" fill="#5F5E5A">150</text>
+<text class="ts" x="346.7" y="278" text-anchor="middle" fill="#5F5E5A">200</text>
+<text class="ts" x="493.3" y="278" text-anchor="middle" fill="#5F5E5A">250</text>
+<text class="ts" x="640" y="278" text-anchor="middle" fill="#5F5E5A">300</text>
+<text class="ts" x="340" y="308" text-anchor="middle" fill="#993C1D">Axe tronqué à 150. Prix de 2015, Île-de-France : à ne pas comparer à ceux de 2026.</text>
+</svg>
