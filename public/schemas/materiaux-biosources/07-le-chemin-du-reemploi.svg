@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Du diagnostic à la pose : le chemin du réemploi</title>
+<desc>Le réemploi suit quatre étapes : diagnostic PEMD avant la démolition, dépose soignée et stockage, qualification technique du produit, puis mise en œuvre, que les assureurs traitent en général comme une technique non courante. Chaque acteur répond de sa part.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="30" y="30" width="140" height="100" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="100" y="58" text-anchor="middle" dominant-baseline="central" fill="#444441">Diagnostic PEMD</text>
+<text class="ts" x="100" y="84" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">inventaire avant</text>
+<text class="ts" x="100" y="102" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">démolition</text>
+<path d="M172 80 H186" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="184,75 192,80 184,85" fill="#0F6E56"/>
+<rect x="194" y="30" width="140" height="100" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="264" y="58" text-anchor="middle" dominant-baseline="central" fill="#085041">Dépose soignée</text>
+<text class="ts" x="264" y="84" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">stockage à l'abri</text>
+<text class="ts" x="264" y="102" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">traçabilité</text>
+<path d="M336 80 H350" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="348,75 356,80 348,85" fill="#0F6E56"/>
+<rect x="358" y="30" width="140" height="100" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="428" y="58" text-anchor="middle" dominant-baseline="central" fill="#085041">Qualification</text>
+<text class="ts" x="428" y="84" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">preuves, essais,</text>
+<text class="ts" x="428" y="102" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">usage visé</text>
+<path d="M500 80 H514" stroke="#0F6E56" stroke-width="1.5"/>
+<polygon points="512,75 520,80 512,85" fill="#0F6E56"/>
+<rect x="522" y="30" width="128" height="100" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="586" y="58" text-anchor="middle" dominant-baseline="central" fill="#712B13">Mise en œuvre</text>
+<text class="ts" x="586" y="84" text-anchor="middle" dominant-baseline="central" fill="#993C1D">en général</text>
+<text class="ts" x="586" y="102" text-anchor="middle" dominant-baseline="central" fill="#993C1D">technique non courante</text>
+<rect x="30" y="156" width="620" height="76" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="50" y="178" dominant-baseline="central" fill="#444441">Qui répond de quoi</text>
+<text class="ts" x="50" y="200" dominant-baseline="central" fill="#5F5E5A">Le vendeur d'un produit cédé : garanties légales. L'entreprise : les produits qu'elle pose.</text>
+<text class="ts" x="50" y="217" dominant-baseline="central" fill="#5F5E5A">Le maître d'œuvre : le CCTP réemploi. Le contrôleur technique : un avis, sans prescrire.</text>
+<rect x="30" y="252" width="620" height="62" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="50" y="272" dominant-baseline="central" fill="#712B13">Le point sensible</text>
+<text class="ts" x="50" y="292" dominant-baseline="central" fill="#993C1D">Sans fabricant, qui garantit le produit ? Il faut une qualification et une traçabilité,</text>
+<text class="ts" x="50" y="307" dominant-baseline="central" fill="#993C1D">et prévenir l'assureur avant le chantier.</text>
+</svg>
