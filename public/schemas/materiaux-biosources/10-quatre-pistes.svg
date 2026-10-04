@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>Quatre pistes pour construire et habiter autrement</title>
+<desc>Le hors site fabrique en atelier et assemble sur place. La réversibilité prévoit dès la conception d'autres usages. La sobriété construit juste ce qui est nécessaire. L'habitat participatif associe les habitants à la conception et à la gestion.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="30" y="24" width="300" height="100" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="48" y="46" dominant-baseline="central" fill="#085041">Le hors site</text>
+<text class="ts" x="48" y="74" dominant-baseline="central" fill="#0F6E56">Fabriquer en atelier, assembler sur place</text>
+<text class="ts" x="48" y="96" dominant-baseline="central" fill="#0F6E56">Chantier plus court, conception plus précise</text>
+<rect x="350" y="24" width="300" height="100" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="368" y="46" dominant-baseline="central" fill="#444441">La réversibilité</text>
+<text class="ts" x="368" y="74" dominant-baseline="central" fill="#5F5E5A">Prévoir dès la conception d'autres usages</text>
+<text class="ts" x="368" y="96" dominant-baseline="central" fill="#5F5E5A">Transformable, évolutif, démontable</text>
+<rect x="30" y="136" width="300" height="100" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="48" y="158" dominant-baseline="central" fill="#444441">La sobriété</text>
+<text class="ts" x="48" y="186" dominant-baseline="central" fill="#5F5E5A">Construire juste ce qui est nécessaire</text>
+<text class="ts" x="48" y="208" dominant-baseline="central" fill="#5F5E5A">Moins de matière, de surface, de technique</text>
+<rect x="350" y="136" width="300" height="100" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="368" y="158" dominant-baseline="central" fill="#085041">L'habitat participatif</text>
+<text class="ts" x="368" y="186" dominant-baseline="central" fill="#0F6E56">Les habitants conçoivent et gèrent</text>
+<text class="ts" x="368" y="208" dominant-baseline="central" fill="#0F6E56">Coopérative ou société d'autopromotion</text>
+<rect x="30" y="256" width="620" height="58" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="ts" x="48" y="276" dominant-baseline="central" fill="#5F5E5A">Aucune piste ne se suffit : elles se combinent avec les matériaux des chapitres 2 à 8,</text>
+<text class="ts" x="48" y="296" dominant-baseline="central" fill="#5F5E5A">et chacune se heurte aux règles, à l'assurance et au financement.</text>
+</svg>
