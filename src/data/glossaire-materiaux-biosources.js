@@ -574,4 +574,81 @@ export const termes = [
       "Démarche environnementale volontaire adaptée à la Nouvelle-Aquitaine. Elle propose des critères d'exigence pour les maîtres d'ouvrage, par exemple sur le recours à des matériaux disponibles sur site, au réemploi ou à des entreprises locales.",
     aussi: ['Bâtiments Durables Nouvelle-Aquitaine', 'Démarche BDNA'],
   },
+  {
+    terme: 'Pecquenchanvre',
+    categorie: 'Biosourcé',
+    definition:
+      "Opération pilote de rénovation énergétique de 318 logements à Pecquencourt (Nord) par le bailleur Maisons & Cités, dont 115 isolés en béton de chanvre. Le Cerema a instrumenté 18 logements pour comparer chanvre et laine de bois.",
+    aussi: ['Hauts-de-Chanvre', 'Pecquencourt'],
+  },
+  {
+    terme: 'Hors site',
+    categorie: 'Construction',
+    definition:
+      "Mode de construction où des éléments du bâtiment (panneaux, murs, modules) sont fabriqués en atelier puis assemblés sur le chantier. Il raccourcit le chantier mais oblige à décider très tôt de la conception.",
+    aussi: ['Construction hors site', 'Hors-site', 'Préfabrication', 'Construction modulaire'],
+  },
+  {
+    terme: 'Modulaire 3D',
+    categorie: 'Construction',
+    definition:
+      "Forme de construction hors site où le bâtiment est composé de modules en trois dimensions fabriqués en atelier, livrés et empilés sur place. Elle convient bien aux logements de petite taille (étudiants, par exemple).",
+    aussi: ['Modules 3D', 'Modulaire bois'],
+  },
+  {
+    terme: 'Réversibilité',
+    categorie: 'Construction',
+    definition:
+      "Capacité d'un bâtiment à être transformé pour accueillir d'autres usages, par exemple des bureaux qui deviennent des logements. Elle se prévoit dès la programmation et la conception, et se heurte aux règles d'incendie, d'acoustique, de fiscalité et d'urbanisme.",
+    aussi: ['Bâtiment réversible', 'Construire réversible', 'Conception réversible'],
+  },
+  {
+    terme: 'Évolutivité',
+    categorie: 'Construction',
+    definition:
+      "Capacité d'un bâtiment à s'adapter à de nouveaux besoins au sein du même usage, par exemple avec des cloisons mobiles ou des logements agrandis. On parle aussi de modularité.",
+    aussi: ['Modularité', 'Bâtiment évolutif'],
+  },
+  {
+    terme: 'Démontabilité',
+    categorie: 'Construction',
+    definition:
+      "Capacité d'un bâtiment, d'un système constructif ou d'un assemblage à être démonté sans destruction, pour être déplacé, pour réemployer ses éléments ou pour rendre le site à son état d'origine.",
+    aussi: ['Démontable', 'Bâtiment démontable', 'Conception pour le désassemblage'],
+  },
+  {
+    terme: 'Sobriété',
+    categorie: 'Concepts',
+    definition:
+      "Approche qui réduit volontairement la consommation de ressources (énergie, eau, matériaux) sans compromettre les usages essentiels. En construction, elle revient à ajuster les dimensions, la performance et les besoins au juste nécessaire.",
+    aussi: ['Frugalité', 'Construction frugale', 'Bâtiment sobre'],
+  },
+  {
+    terme: 'Basse intensité technologique',
+    categorie: 'Concepts',
+    definition:
+      "Qualifie des solutions techniques simples, robustes et réparables, souvent inspirées de savoir-faire artisanaux, qui privilégient des ressources locales peu transformées et limitent la dépendance à des technologies complexes.",
+    aussi: ['Low-tech', 'Innovation à basse intensité technologique'],
+  },
+  {
+    terme: 'Habitat participatif',
+    categorie: 'Logement social',
+    definition:
+      "Démarche citoyenne définie à l'article L200-1 du code de la construction et de l'habitation (loi ALUR, 2014) : des personnes s'associent pour concevoir leurs logements et leurs espaces communs, construire ou acquérir un immeuble et, le cas échéant, le gérer. Un bailleur social peut les accompagner.",
+    aussi: ['Habitat participatif et coopératif', 'Société d\'habitat participatif', 'Autopromotion'],
+  },
+  {
+    terme: "Coopérative d'habitants",
+    categorie: 'Logement social',
+    definition:
+      "Société d'habitat participatif propriétaire de l'immeuble, dont les habitants sont associés. Elle est l'une des deux formes créées par la loi ALUR. Les personnes morales n'y détiennent pas plus de 30 % du capital ou des droits de vote.",
+    aussi: ["Coopératives d'habitants"],
+  },
+  {
+    terme: "Société d'attribution et d'autopromotion",
+    categorie: 'Logement social',
+    definition:
+      "Société d'habitat participatif où les familles associées supportent ensemble les coûts de construction, puis se voient attribuer des logements au prorata de leur participation. C'est l'une des deux formes créées par la loi ALUR.",
+    aussi: ["Sociétés d'attribution et d'autopromotion", 'SAA'],
+  },
 ];
