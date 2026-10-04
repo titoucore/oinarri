@@ -1,7 +1,7 @@
 // Plan du parcours « Nouvelles méthodes de construction » (biosourcé, géosourcé, réemploi), partagé par l'accueil et la liste des chapitres.
 // Un chapitre avec `href` et `cours` est disponible ; sans, il est « À venir ».
 // `cours` = identifiant de la collection de contenu (dossier/fichier sans extension).
-// Le parcours est en cours d'écriture : les chapitres sans lien sont à venir.
+// Les dix chapitres du parcours sont écrits.
 
 export const chapitres = [
   {
@@ -54,11 +54,15 @@ export const chapitres = [
   },
   {
     titre: 'Retours d\'expérience et logement social',
-    desc: 'La Résidence Arbola en version biosourcée, comparée à la version béton.',
+    desc: 'Ce que montrent les opérations réelles, les aides, et la Résidence Arbola en version béton ou biosourcée.',
+    href: '/materiaux-biosources/09-retours-d-experience-et-logement-social/',
+    cours: 'materiaux-biosources/09-retours-d-experience-et-logement-social',
   },
   {
-    titre: 'Ouverture : de nouvelles façons de construire et d\'habiter',
-    desc: 'Construction hors site, réversibilité, sobriété et habitat participatif.',
+    titre: 'Ouverture : construire et habiter autrement',
+    desc: 'Construction hors site, réversibilité, sobriété, habitat participatif, et bilan du parcours.',
+    href: '/materiaux-biosources/10-ouverture-construire-et-habiter-autrement/',
+    cours: 'materiaux-biosources/10-ouverture-construire-et-habiter-autrement',
   },
 ];
 
