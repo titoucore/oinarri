@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 10 de Nouvelles méthodes de construction : Ouverture, construire et habiter autrement.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Que désigne la « démontabilité » d'un bâtiment, selon l'AQC ?"
+    choix:
+      - "Sa capacité à changer d'usage"
+      - "Sa capacité à être démonté de façon non destructive, pour le déplacer ou restituer le site à son état d'origine"
+      - "Sa capacité à être agrandi"
+      - "Sa capacité à résister au feu"
+    reponse: 1
+    explication: "La démontabilité est la capacité d'un bâtiment à être démonté sans le détruire. La réversibilité est la capacité à changer d'usage, l'évolutivité ou modularité l'adaptation au sein d'un même bâtiment."
+
+  - type: vf
+    affirmation: "L'habitat participatif a une définition légale dans le code de la construction et de l'habitation depuis la loi ALUR de 2014."
+    reponse: true
+    explication: "L'article L200-1 du CCH le définit comme une démarche citoyenne qui permet à des personnes de s'associer pour participer à la définition et à la conception de leurs logements et des espaces communs, de construire ou d'acquérir des immeubles destinés à leur habitation et, le cas échéant, d'en assurer la gestion."
+
+  - type: qcm
+    question: "Quelles sont les deux formes de sociétés d'habitat participatif créées par la loi ALUR ?"
+    choix:
+      - "La coopérative d'habitants et la société d'attribution et d'autopromotion"
+      - "La SCI familiale et le syndicat de copropriété"
+      - "L'office public de l'habitat et la SEM"
+      - "L'organisme de foncier solidaire et la coopérative HLM"
+    reponse: 0
+    explication: "Les sociétés d'habitat participatif peuvent se constituer en coopératives d'habitants ou en sociétés d'attribution et d'autopromotion, sans exclure d'autres formes juridiques prévues par la loi."
+
+  - type: ouverte
+    question: "Distingue réversibilité, évolutivité et démontabilité avec un exemple pour chacune."
+    modele: "Réversibilité : capacité à changer d'usage, par exemple un immeuble de bureaux transformé en logements. Évolutivité ou modularité : adaptation au sein du même bâtiment, par exemple des cloisons mobiles ou des logements agrandis. Démontabilité : capacité à être démonté sans destruction, par exemple des modules ou une structure métallique déplacés ou réemployés ailleurs."
+
+approfondir:
+  - type: qcm
+    question: "Quelle était la part de marché du bois pour les extensions et surélévations en 2014, selon l'étude de la Caisse des Dépôts (2016) ?"
+    choix:
+      - "3 %"
+      - "10 %"
+      - "20 %"
+      - "60 %"
+    reponse: 2
+    explication: "L'étude cite 20 % pour les extensions et surélévations en 2014, contre 10 % pour les maisons individuelles et 3 % pour les logements collectifs neufs (source France Bois Forêt). La légèreté du bois y est un atout."
+
+  - type: vf
+    affirmation: "Dans une coopérative d'habitants ou une société d'attribution et d'autopromotion, les personnes morales peuvent détenir la majorité du capital."
+    reponse: false
+    explication: "Le code prévoit que les personnes morales qui y adhèrent ne détiennent pas plus de 30 % du capital social ou des droits de vote. Un office public de l'habitat peut toutefois prendre une participation."
+
+  - type: qcm
+    question: "Pourquoi les opérations en modules 3D en bois de l'étude CDC-USH (2016) coûtaient-elles plus cher au m² (environ 2 300 € contre 1 400 €) ?"
+    choix:
+      - "Parce que le bois est interdit en structure"
+      - "À cause du procédé constructif et de logements de petite taille, parfois livrés équipés"
+      - "Parce que le chantier durait plus longtemps"
+      - "Parce que le foncier était plus cher"
+    reponse: 1
+    explication: "L'étude attribue ce surcoût au procédé constructif et aux spécificités des logements de petite taille (étudiants), parfois livrés équipés. Ce n'est pas une règle générale du hors site."
+
+  - type: qcm
+    question: "Dans l'étude normande, quelle part de l'activité des bailleurs sociaux (2017) allait à l'entretien et à la rénovation ?"
+    choix:
+      - "1 %"
+      - "Environ un quart"
+      - "43 %"
+      - "56 %"
+    reponse: 3
+    explication: "En 2017, l'activité des bailleurs sociaux normands se répartissait en 43 % de construction neuve, 56 % d'entretien-rénovation et 1 % de démolition. La rénovation pèse donc plus que le neuf : d'où l'importance de l'existant."
+
+expert:
+  - type: vf
+    affirmation: "Un immeuble neuf de bureaux conçu pour devenir des logements doit viser dès le départ les performances acoustiques du logement."
+    reponse: true
+    explication: "Selon l'AQC, les exigences acoustiques sont en général plus contraignantes pour le logement que pour les bureaux : il faut viser directement les performances du logement, ou s'assurer au minimum de pouvoir les atteindre plus tard."
+
+  - type: ouverte
+    question: "Le rez-de-chaussée d'Arbola pourrait accueillir des commerces aujourd'hui et des logements demain. Quelles questions poses-tu à la maîtrise d'œuvre ?"
+    modele: "Hauteur sous plafond et trame structurelle compatibles avec les deux usages ; indépendance des réseaux et des cloisons par rapport à la structure ; exigences d'évacuation incendie du futur usage ; performances acoustiques et thermiques du logement dès la construction ; accès et façade ; conséquences sur la TVA, l'urbanisme (changement de destination) et le financement ; coût marginal de la réversibilité à la conception comparé au coût d'une transformation ultérieure ; et ce qu'en disent l'assureur et le contrôleur technique."
