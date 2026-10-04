@@ -23,7 +23,7 @@ verifie_le: 2026-10-04
 
 ### La RE2020 en une page
 
-La RE2020 s'applique aux logements neufs dont le permis est déposé depuis le 1er janvier 2022. Elle ajoute un volet environnemental à l'approche énergétique. Elle l'a précédée d'une expérimentation, appelée E+C-. Elle fixe six exigences de résultat, en trois familles :
+La RE2020 s'applique aux logements neufs dont le permis est déposé depuis le 1er janvier 2022. Elle ajoute un volet environnemental à l'approche énergétique. Une expérimentation, appelée E+C-, l'a précédée. Elle fixe six exigences de résultat, en trois familles :
 
 - **sobriété énergétique** : le Bbio (qualité du bâti avant les équipements), le Cep et le Cep,nr (consommation d'énergie primaire, totale et non renouvelable) ;
 - **carbone** : l'Ic énergie et l'Ic construction ;
@@ -86,7 +86,7 @@ L'arrêté liste huit fonctions : structure, façade, couverture, menuiseries, i
 
 ### Lire une FDES
 
-Une FDES donne l'unité fonctionnelle (ce qu'on compare : par exemple, 1 m² de mur sur une durée de vie donnée) et la durée de vie du produit. Pour comparer deux FDES, il faut que ces bases soient les mêmes. Depuis novembre 2022, les FDES suivent la norme NF EN 15804+A2.
+Une FDES donne l'unité fonctionnelle (ce qu'on compare : par exemple, 1 m² de mur sur une durée de vie donnée) et la durée de vie du produit. Pour comparer deux FDES, il faut que ces deux éléments soient les mêmes. Depuis novembre 2022, les FDES suivent la norme NF EN 15804+A2.
 
 ## Expert
 
