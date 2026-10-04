@@ -42,7 +42,7 @@ export async function creerSession(env, utilisateurId) {
   return jeton;
 }
 
-// Renvoie { id, email, prenom, sessionHash } si la session est valide, sinon null.
+// Renvoie { id, email, prenom, role, sessionHash } si la session est valide, sinon null.
 export async function lireSession(request, env) {
   const jeton = lireJetonCookie(request);
   if (!jeton) return null;
@@ -50,7 +50,7 @@ export async function lireSession(request, env) {
   const idHash = await sha256Hex(jeton);
   const t = maintenant();
   const session = await env.DB_OINARRI.prepare(
-    `SELECT s.cree_le, s.expire_le, s.derniere_activite, u.id, u.email, u.prenom
+    `SELECT s.cree_le, s.expire_le, s.derniere_activite, u.id, u.email, u.prenom, u.role
      FROM sessions s
      JOIN utilisateurs u ON u.id = s.utilisateur_id
      WHERE s.id_hash = ?`,
@@ -78,7 +78,13 @@ export async function lireSession(request, env) {
     }
   }
 
-  return { id: session.id, email: session.email, prenom: session.prenom, sessionHash: idHash };
+  return {
+    id: session.id,
+    email: session.email,
+    prenom: session.prenom,
+    role: session.role,
+    sessionHash: idHash,
+  };
 }
 
 // Supprime la session de la requête en cours (déconnexion de cet appareil).
