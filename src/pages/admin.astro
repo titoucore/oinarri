@@ -1,0 +1,197 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Administration — Oinarri"
+  description="Inviter des personnes et gérer les comptes d'Oinarri."
+>
+  <a class="retour" href="/compte/">Mon compte</a>
+  <h1>Administration</h1>
+
+  <div id="admin" class="admin">
+    <p class="ad-message" id="ad-message" role="status" aria-live="polite" hidden></p>
+
+    <section class="ad-bloc" aria-labelledby="t-inviter">
+      <h2 id="t-inviter">Inviter quelqu'un</h2>
+      <form id="ad-form-invitation">
+        <label for="ad-email">Adresse e-mail</label>
+        <div class="ad-ligne">
+          <input
+            id="ad-email"
+            type="email"
+            autocomplete="off"
+            inputmode="email"
+            autocapitalize="none"
+            required
+          />
+          <button class="ad-bouton" type="submit">Envoyer l'invitation</button>
+        </div>
+        <p class="ad-aide">
+          La personne reçoit un e-mail avec un lien, valable 7 jours, pour choisir son mot de passe.
+          Elle renseigne son prénom à sa première connexion.
+        </p>
+      </form>
+    </section>
+
+    <section class="ad-bloc" aria-labelledby="t-comptes">
+      <h2 id="t-comptes">Comptes</h2>
+      <p class="ad-aide" id="ad-vide" hidden>
+        Aucune autre personne n'a encore de compte. Invite quelqu'un avec le formulaire ci-dessus.
+      </p>
+      <ul class="ad-liste" id="ad-liste"></ul>
+    </section>
+  </div>
+</Base>
+
+<style is:global>
+  #admin [hidden] {
+    display: none !important;
+  }
+  #admin .ad-bloc {
+    margin: 0 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+  }
+  #admin .ad-bloc h2 {
+    margin: 0 0 0.75rem;
+  }
+  #admin p {
+    margin: 0 0 0.5rem;
+  }
+  #admin label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #admin input {
+    min-width: 0;
+    width: 100%;
+    margin: 0.25rem 0 0.75rem;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+  #admin .ad-ligne {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  #admin .ad-ligne input {
+    flex: 1 1 14rem;
+    width: auto;
+    margin: 0;
+  }
+  #admin .ad-aide {
+    margin: 0.75rem 0 0;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  #admin .ad-message {
+    padding: 0.7rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-weight: 500;
+    font-size: 15px;
+  }
+  #admin .ad-message.ad-erreur {
+    border-left-width: 7px;
+  }
+
+  #admin .ad-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #admin .ad-compte + .ad-compte {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ink-100);
+  }
+  #admin .ad-nom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin-bottom: 0.1rem;
+    word-break: break-word;
+  }
+  #admin .ad-badge {
+    padding: 1px 8px;
+    border: 1px solid var(--ink-400);
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--ink-600);
+  }
+  #admin .ad-badge-attente {
+    border-style: dashed;
+  }
+  #admin .ad-email {
+    font-size: 14px;
+    color: var(--ink-600);
+    word-break: break-all;
+  }
+  #admin .ad-meta {
+    margin-bottom: 0.1rem;
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  #admin .ad-boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0.75rem;
+  }
+  #admin .ad-bouton {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--ink-900);
+    background: var(--ink-900);
+    color: var(--paper);
+    cursor: pointer;
+  }
+  #admin .ad-bouton-secondaire {
+    background: none;
+    color: var(--ink-900);
+  }
+  #admin .ad-bouton:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  #admin .ad-lien {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 4px 0;
+    border: none;
+    background: none;
+    color: var(--ink-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+  #admin .ad-confirm {
+    margin-top: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-size: 15px;
+  }
+</style>
+
+<script>
+  import '../scripts/admin.js';
+</script>
