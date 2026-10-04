@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>La Résidence Arbola en deux versions (chiffres fictifs)</title>
+<desc>Comparaison fictive de deux versions de la Résidence Arbola. Version béton : Ic construction 700, au-dessus du seuil de 650 ; pas de label biosourcé ; travaux de 3 000 000 euros hors taxes. Version biosourcée : Ic construction 560, sous le seuil ; 20 kgC par m², niveau 1 du label ; environ 3 195 000 euros, soit 6,5 pour cent de plus ; paille, chanvre et enduits en technique courante, pisé porteur en technique non courante.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="190" y="40" dominant-baseline="central" fill="#444441">Version béton</text>
+<text class="th" x="420" y="40" dominant-baseline="central" fill="#085041">Version biosourcée (mixte)</text>
+<text class="th" x="30" y="94" dominant-baseline="central" fill="#444441">Carbone</text>
+<rect x="180" y="62" width="220" height="64" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="194" y="86" dominant-baseline="central" fill="#712B13">Ic construction 700</text>
+<text class="ts" x="194" y="108" dominant-baseline="central" fill="#993C1D">au-dessus du seuil de 650</text>
+<rect x="410" y="62" width="240" height="64" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="424" y="86" dominant-baseline="central" fill="#085041">Ic construction 560</text>
+<text class="ts" x="424" y="108" dominant-baseline="central" fill="#0F6E56">sous le seuil de 650</text>
+<text class="th" x="30" y="158" dominant-baseline="central" fill="#444441">Label</text>
+<rect x="180" y="132" width="220" height="52" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="ts" x="194" y="158" dominant-baseline="central" fill="#5F5E5A">Non visé</text>
+<rect x="410" y="132" width="240" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="ts" x="424" y="150" dominant-baseline="central" fill="#0F6E56">20 kgC par m² : niveau 1</text>
+<text class="ts" x="424" y="168" dominant-baseline="central" fill="#0F6E56">(le niveau 2 demande 25)</text>
+<text class="th" x="30" y="222" dominant-baseline="central" fill="#444441">Coût</text>
+<rect x="180" y="190" width="220" height="64" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="194" y="214" dominant-baseline="central" fill="#444441">3 000 000 € HT</text>
+<text class="ts" x="194" y="236" dominant-baseline="central" fill="#5F5E5A">base de comparaison</text>
+<rect x="410" y="190" width="240" height="64" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="424" y="214" dominant-baseline="central" fill="#444441">≈ 3 195 000 € HT</text>
+<text class="ts" x="424" y="236" dominant-baseline="central" fill="#5F5E5A">+ 6,5 % : + 195 000 €</text>
+<text class="th" x="30" y="284" dominant-baseline="central" fill="#444441">Assurance</text>
+<rect x="180" y="260" width="220" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="ts" x="194" y="284" dominant-baseline="central" fill="#5F5E5A">Techniques courantes</text>
+<rect x="410" y="260" width="240" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="ts" x="424" y="276" dominant-baseline="central" fill="#5F5E5A">Paille, chanvre, enduits : courants</text>
+<text class="ts" x="424" y="294" dominant-baseline="central" fill="#993C1D">Pisé porteur : non courant</text>
+<text class="ts" x="340" y="322" text-anchor="middle" fill="#993C1D">Chiffres fictifs, repris des chapitres 5 et 8</text>
+</svg>
