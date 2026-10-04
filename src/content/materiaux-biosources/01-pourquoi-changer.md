@@ -4,7 +4,7 @@ description: "Pourquoi la façon de construire pèse sur le climat, les grandes 
 parcours: materiaux-biosources
 ordre: 1
 niveau: Débutant
-verifie_le: 2026-10-03
+verifie_le: 2026-10-04
 ---
 
 ## Objectifs
@@ -39,7 +39,7 @@ C'est le **cycle de vie**. La RE2020, la réglementation des bâtiments neufs en
 ### Cinq mots à ne plus confondre
 
 - **Biosourcé** : une matière issue de la biomasse végétale ou animale (bois, paille, chanvre, lin, liège, ouate de cellulose, laine de mouton…). Le mot décrit l'origine, pas la performance ni l'innocuité : celles-ci se vérifient (chapitres 4 à 6).
-- **Géosourcé** : un matériau issu de ressources d'origine minérale, peu transformées, comme la terre crue ou la pierre. Je n'ai pas trouvé de définition réglementaire : c'est une description du ministère et du Cerema.
+- **Géosourcé** : un matériau issu de ressources d'origine minérale, peu transformées, comme la terre crue ou la pierre. Aucune définition réglementaire n'a été repérée : c'est une description du ministère et du Cerema.
 - **Réemploi** : un produit qui n'est pas un déchet est utilisé de nouveau pour le même usage. Une porte déposée avec soin et reposée comme porte.
 - **Réutilisation** : un produit devenu déchet est utilisé de nouveau, après contrôle, nettoyage ou réparation (« préparation en vue de la réutilisation »). L'usage peut changer.
 - **Recyclage** : le déchet est retraité pour redevenir de la matière. Brûler du bois pour produire de la chaleur, ou combler une carrière, n'est pas du recyclage.
@@ -66,7 +66,7 @@ Une plante absorbe du CO₂ en poussant et en garde le carbone. Quand elle devie
 
 ### Le label Bâtiment biosourcé a changé
 
-Créé par le décret n° 2012-518 du 19 avril 2012, le label reposait sur l'arrêté du 19 décembre 2012, qui exigeait un taux minimal d'incorporation de matière biosourcée. Cet arrêté est abrogé par l'arrêté du 2 juillet 2024, pris en application de l'article D171-6 du code de la construction et de l'habitation. Les demandes déposées avant le 31 août 2024 restent régies par l'ancien texte. Le nouvel arrêté définit trois niveaux fondés sur une quantité minimale de carbone biogénique stocké par m² de surface de référence (kgC/m²). Le label est délivré par un organisme ayant passé une convention avec l'État. Méfie-toi des documents antérieurs à 2024 : ils décrivent l'ancien label.
+Créé par le décret n° 2012-518 du 19 avril 2012, le label reposait sur l'arrêté du 19 décembre 2012, qui exigeait un taux minimal d'incorporation de matière biosourcée. Cet arrêté est abrogé par l'arrêté du 2 juillet 2024 (publié au Journal officiel du 5 juillet 2024), pris en application de l'article D171-6 du code de la construction et de l'habitation. Les demandes déposées avant le 31 août 2024 restent régies par l'ancien texte ; le nouveau s'applique aux demandes à partir du 1er septembre 2024. Le nouvel arrêté définit trois niveaux fondés sur une quantité minimale de carbone biogénique stocké par m² de surface de référence (kgC/m²). Pour un bâtiment d'habitation, les seuils sont de 15, 25 et 45 kgC/m². Le label est délivré par un organisme ayant passé une convention avec l'État. Méfie-toi des documents antérieurs à 2024 : ils décrivent l'ancien label.
 
 ### Réemploi, réutilisation : pourquoi la distinction compte
 
@@ -118,13 +118,15 @@ Biosourcé · Biomasse · Géosourcé · Réemploi · Réutilisation · Prépara
 
 ## Sources et vérification
 
-Vérifié le 3 octobre 2026.
+Vérifié le 4 octobre 2026.
 
 - Définitions de réemploi, réutilisation et limites du recyclage : [article L541-1-1 du code de l'environnement](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042176087) (version consultée par recherche ; version en vigueur à confirmer). Ordre de priorité : [article L541-1](https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006143752) (Légifrance).
-- Label et définitions du biosourcé : [arrêté du 2 juillet 2024](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049880757) (Légifrance), qui abroge l'arrêté du 19 décembre 2012 ; décret n° 2012-518 du 19 avril 2012.
+- Label et définitions du biosourcé : [arrêté du 2 juillet 2024](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049880757) (Légifrance), qui abroge l'arrêté du 19 décembre 2012 ; décret n° 2012-518 du 19 avril 2012 ; seuils pour l'habitation (15, 25, 45 kgC/m²) : DREAL Pays de la Loire et DREAL Normandie, pages sur le label 2024.
 - Biosourcé et géosourcé : ministère de la Transition écologique, fiche [Les matériaux de construction biosourcés et géosourcés](https://www.ecologie.gouv.fr/sites/default/files/documents/les_materiaux_de_construction_biosources_geosources.pdf).
 - Émissions de gaz à effet de serre du bâtiment : [ADEME, Batizoom](https://batizoom.ademe.fr/indicateurs/emissions-de-ges-liees-a-lexploitation-des-batiments-tertiaires-et-residentiels) (données 2024 provisoires) ; [notre-environnement.gouv.fr](https://www.notre-environnement.gouv.fr/themes/climat/les-emissions-de-gaz-a-effet-de-serre-et-l-empreinte-carbone-ressources/article/les-emissions-francaises-de-gaz-a-effet-de-serre) (2023).
 - Déchets du bâtiment : ministère de la Transition écologique, [Déchets du bâtiment](https://www.ecologie.gouv.fr/politiques-publiques/dechets-du-batiment) ; SDES, Chiffres clés du logement, production de déchets (données 2014).
 - RE2020 : fiche C04 de l'Agence Qualité Construction (AQC) ; arrêté du 4 août 2021.
 
-À contrôler : la version en vigueur de L541-1-1, notamment la définition exacte du recyclage ; les valeurs des trois niveaux du label biosourcé (arrêté du 2 juillet 2024, article 4) ; les périmètres exacts des chiffres de 23 % et de près d'un quart ; des données plus récentes que 2014 sur les déchets du bâtiment ; la date d'entrée en vigueur de la RE2020 selon le type de bâtiment ; les modules exacts du cycle de vie compris dans l'Ic construction.
+Contrôlé le 4 octobre 2026 : les seuils du label 2024 pour l'habitation (15, 25 et 45 kgC/m²), la publication de l'arrêté au Journal officiel du 5 juillet 2024 et son application aux demandes à partir du 1er septembre 2024 ; les définitions du réemploi, de la réutilisation et de la préparation en vue de la réutilisation, concordantes dans plusieurs présentations officielles.
+
+À contrôler : la version en vigueur de L541-1-1 sur Légifrance, notamment la définition exacte du recyclage ; les périmètres exacts des chiffres de 23 % et de près d'un quart ; des données plus récentes que 2014 sur les déchets du bâtiment ; la date d'entrée en vigueur de la RE2020 selon le type de bâtiment ; les modules exacts du cycle de vie compris dans l'Ic construction ; les chiffres ADEME 2024 (57,1 Mt, 15,5 %), cités d'après des données provisoires.
