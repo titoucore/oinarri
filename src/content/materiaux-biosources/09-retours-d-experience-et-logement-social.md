@@ -17,13 +17,13 @@ verifie_le: 2026-10-04
 
 ## Cas concret : Arbola, béton ou mixte ?
 
-*Opération fictive.* Le conseil d'administration doit trancher. Deux versions sont sur la table : une version béton, et une version mixte (ossature bois, isolants biosourcés, enduits de terre à l'intérieur). Les chiffres de ce chapitre sont ceux des chapitres 5 et 8 : environ 25 logements (hypothèse), 1 800 m² de surface de référence, 3 000 000 € HT de travaux en version béton.
+*Opération fictive.* Le conseil d'administration doit trancher. Deux versions sont sur la table : une version béton, et une version mixte (ossature bois, isolants biosourcés, enduits de terre à l'intérieur). Les chiffres de ce chapitre sont ceux du module Promotion et des chapitres 5 et 8 : 12 logements, 744 m² de surface habitable (retenue ici comme surface de référence), 1 480 000 € HT de travaux en version béton.
 
 ![Arbola en deux versions : carbone, label, coût, assurance (chiffres fictifs).](/schemas/materiaux-biosources/09-arbola-deux-versions.svg)
 
 - **Carbone** : 700 kg CO₂e/m² en béton, contre un seuil moyen de 650 pour un permis de 2027 : la version béton est hors seuil. La version mixte atteint 560.
-- **Label** : 36 000 kgC de carbone biogénique stocké pour 1 800 m² donnent 20 kgC/m² : niveau 1 (15), pas niveau 2 (25).
-- **Coût** : un surcoût moyen de 6,5 % représente 195 000 € HT, soit environ 108 € par m² de surface de référence, ou 7 800 € par logement.
+- **Label** : 14 880 kgC de carbone biogénique stocké pour 744 m² donnent 20 kgC/m² : niveau 1 (15), pas niveau 2 (25).
+- **Coût** : un surcoût moyen de 6,5 % représente 96 200 € HT, soit environ 129 € par m² de surface de référence, ou environ 8 000 € par logement.
 - **Assurance** : paille, chanvre et enduits de terre sont en technique courante dans leur domaine d'emploi ; un pisé porteur serait non courant.
 
 Le conseil demande : « Les opérations déjà réalisées confirment-elles ces ordres de grandeur ? »
@@ -86,7 +86,7 @@ Dans les retours cités : associer tôt le contrôleur technique et l'assureur ;
 
 ## Cas pratiques
 
-1. Reprends la version mixte d'Arbola. Calcule le surcoût par m² de surface de référence et par logement (25 logements, hypothèse). Compare ensuite à un bonus de type Occitanie, comme si l'opération s'y trouvait : 3 000 € par logement PLAI, avec 8 PLAI (hypothèse). Quelle part du surcoût de 195 000 € HT couvre-t-il ?
+1. Reprends la version mixte d'Arbola. Calcule le surcoût par m² de surface de référence (744 m²) et par logement (12 logements). Compare ensuite à un bonus de type Occitanie, comme si l'opération s'y trouvait : 3 000 € par logement PLAI, avec 4 PLAI (hypothèse). Quelle part du surcoût de 96 200 € HT couvre-t-il ?
 2. Une étude annonce « 8 à 14 mois de chantier » pour des immeubles en bois, et Arbola doit se faire en 16 mois en béton. Que peux-tu conclure, et que dois-tu vérifier avant de promettre un délai plus court ?
 3. Le promoteur d'une VEFA HLM propose une version « biosourcée » avec un bardage bois sur mur béton. En quoi cela pose-t-il question pour le carbone et pour le label ?
 4. Écris cinq indicateurs à suivre pendant deux ans sur Arbola pour alimenter votre propre retour d'expérience.
@@ -118,7 +118,7 @@ Coût global · Marge locale · VEFA HLM · Technique courante · Label bâtimen
 
 - Aucun chiffre de ce chapitre ne vaut pour une opération donnée : ils servent à poser les bonnes questions.
 - Les aides citées sont régionales, annuelles et peuvent avoir changé : consulte la DREAL ou la collectivité délégataire.
-- Les chiffres d'Arbola sont fictifs et le nombre de logements est une hypothèse.
+- Les chiffres d'Arbola sont fictifs.
 - Les données de l'étude CDC-USH datent de 2016, celles de l'étude normande de 2022.
 - Ce chapitre ne remplace pas une étude de faisabilité, un chiffrage ni l'avis d'un juriste ou d'un assureur.
 
@@ -133,4 +133,4 @@ Vérifié le 4 octobre 2026.
 - Mesures : Cerema, [Le Cerema mesure les performances du béton de chanvre comme isolant dans les Hauts-de-France](https://www.cerema.fr/fr/actualites/cerema-mesure-performances-du-beton-chanvre-isolant-hauts) (juin 2025).
 - Exemple déclaratif : France Villes et Territoires Durables, [4 logements sociaux en béton de chanvre](https://francevilledurable.fr/realisations/4-logements-sociaux-en-beton-de-chanvre/).
 
-À contrôler : les données du panel CDC-USH (neuf opérations, 2011 à 2014, présentées en 2016) ; la portée de l'étude normande (déclarations d'acteurs en 2022) ; le témoignage unique du promoteur normand (+30 à 35 %) ; le fait que la marge locale soit encore appliquée dans les barèmes actuels ; l'existence d'une édition 2026 de l'appel à projets normand et le montant de subvention par logement en Normandie (non relevés) ; l'année exacte où le bonus occitan est devenu un appel à projets (les sources divergent entre 2025 et 2026) ; les conditions exactes du pacte normand ; le nombre de logements d'Arbola (25 est une hypothèse) et le nombre de PLAI (8 est une hypothèse d'exercice) ; l'affirmation selon laquelle les bétons végétaux consomment moins que ne le prévoit la simulation, reprise de l'étude normande sans vérification ; la fiche parisienne de quatre logements, non datée dans l'extrait consulté.
+À contrôler : les données du panel CDC-USH (neuf opérations, 2011 à 2014, présentées en 2016) ; la portée de l'étude normande (déclarations d'acteurs en 2022) ; le témoignage unique du promoteur normand (+30 à 35 %) ; le fait que la marge locale soit encore appliquée dans les barèmes actuels ; l'existence d'une édition 2026 de l'appel à projets normand et le montant de subvention par logement en Normandie (non relevés) ; l'année exacte où le bonus occitan est devenu un appel à projets (les sources divergent entre 2025 et 2026) ; les conditions exactes du pacte normand ; le nombre de PLAI d'Arbola (4 est une hypothèse d'exercice) ; l'affirmation selon laquelle les bétons végétaux consomment moins que ne le prévoit la simulation, reprise de l'étude normande sans vérification ; la fiche parisienne de quatre logements, non datée dans l'extrait consulté.
