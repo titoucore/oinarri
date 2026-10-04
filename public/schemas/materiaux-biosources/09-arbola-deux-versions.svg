@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
 <title>La Résidence Arbola en deux versions (chiffres fictifs)</title>
-<desc>Comparaison fictive de deux versions de la Résidence Arbola. Version béton : Ic construction 700, au-dessus du seuil de 650 ; pas de label biosourcé ; travaux de 3 000 000 euros hors taxes. Version biosourcée : Ic construction 560, sous le seuil ; 20 kgC par m², niveau 1 du label ; environ 3 195 000 euros, soit 6,5 pour cent de plus ; paille, chanvre et enduits en technique courante, pisé porteur en technique non courante.</desc>
+<desc>Comparaison fictive de deux versions de la Résidence Arbola, douze logements. Version béton : Ic construction 700, au-dessus du seuil de 650 ; pas de label biosourcé ; travaux de 1 480 000 euros hors taxes. Version biosourcée : Ic construction 560, sous le seuil ; 20 kgC par m², niveau 1 du label ; environ 1 576 000 euros, soit 6,5 pour cent de plus ; paille, chanvre et enduits en technique courante, pisé porteur en technique non courante.</desc>
 <style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
 <rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
 <text class="th" x="190" y="40" dominant-baseline="central" fill="#444441">Version béton</text>
@@ -20,11 +20,11 @@
 <text class="ts" x="424" y="168" dominant-baseline="central" fill="#0F6E56">(le niveau 2 demande 25)</text>
 <text class="th" x="30" y="222" dominant-baseline="central" fill="#444441">Coût</text>
 <rect x="180" y="190" width="220" height="64" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
-<text class="th" x="194" y="214" dominant-baseline="central" fill="#444441">3 000 000 € HT</text>
+<text class="th" x="194" y="214" dominant-baseline="central" fill="#444441">1 480 000 € HT</text>
 <text class="ts" x="194" y="236" dominant-baseline="central" fill="#5F5E5A">base de comparaison</text>
 <rect x="410" y="190" width="240" height="64" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
-<text class="th" x="424" y="214" dominant-baseline="central" fill="#444441">≈ 3 195 000 € HT</text>
-<text class="ts" x="424" y="236" dominant-baseline="central" fill="#5F5E5A">+ 6,5 % : + 195 000 €</text>
+<text class="th" x="424" y="214" dominant-baseline="central" fill="#444441">≈ 1 576 000 € HT</text>
+<text class="ts" x="424" y="236" dominant-baseline="central" fill="#5F5E5A">+ 6,5 % : + 96 200 €</text>
 <text class="th" x="30" y="284" dominant-baseline="central" fill="#444441">Assurance</text>
 <rect x="180" y="260" width="220" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
 <text class="ts" x="194" y="284" dominant-baseline="central" fill="#5F5E5A">Techniques courantes</text>
