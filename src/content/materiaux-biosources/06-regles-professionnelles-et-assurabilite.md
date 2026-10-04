@@ -52,7 +52,7 @@ D'après la liste des règles professionnelles acceptées par la C2P (page de l'
 - **Paille** : règles professionnelles de la construction en paille (remplissage isolant et support d'enduit, 3e édition, RFCP), acceptées depuis le 1er juillet 2018.
 - **Béton de chanvre** : règles professionnelles pour les parois verticales (juin 2024), acceptées avec suivi du retour d'expérience depuis le 1er juillet 2024. Elles remplacent la version de 2012.
 - **Enduits sur supports en terre crue** : règles de 2012, acceptées avec suivi.
-- **Pierre sèche** : règles professionnelles sur les murs, acceptées avec suivi.
+- **Pierre sèche** : règles professionnelles « Technique de construction des murs en pierre sèche » (document de novembre 2017, ENTPE/ABPS), acceptées avec suivi. La C2P les avait acceptées dès juillet 2016. Elles visent les murs de soutènement et les murs à double parement, c'est-à-dire des ouvrages « accessoires au bâtiment » : un bâtiment porteur en pierre sèche n'est pas couvert.
 - **Blocs de terre comprimée de Mayotte** : règles de 2022, acceptées avec suivi.
 
 Pour l'ossature bois, la référence est le NF DTU 31.2.
@@ -81,7 +81,7 @@ Seule une ATEx favorable ouvre la voie à l'assurabilité (FFB). Elle est valabl
 
 ### Et le Pass'Innovation ?
 
-Le Pass'Innovation a été lancé par le CSTB en 2008 comme voie rapide d'évaluation. Les documents récents sur l'assurabilité consultés ici (AQC 2025, FFB décembre 2024) ne le citent plus parmi les référentiels. Son existence actuelle n'est donc pas confirmée : à vérifier auprès du CSTB avant de s'en servir.
+Le Pass'Innovation a été lancé par le CSTB en 2008 comme voie rapide d'évaluation, et une présentation du CSTB de 2013 le cite encore à côté de l'ATEx. Les documents récents sur l'assurabilité consultés ici (CSTB 2025, FFB décembre 2024) ne le citent plus parmi les référentiels. Son existence actuelle n'est donc pas confirmée : à vérifier auprès du CSTB avant de s'en servir.
 
 ### Quand le chantier sort du cadre courant
 
@@ -128,7 +128,7 @@ Technique courante · Technique non courante · Domaine d'emploi · AQC · C2P �
 - C2P : commission de l'AQC qui examine les règles professionnelles et tient la liste verte.
 - Liste verte : Avis Techniques et DTA en cours de validité, non mis en observation : techniques courantes.
 - ATEx : évaluation rapide du CSTB pour un procédé innovant. Cas A (plusieurs chantiers), B (un chantier), C (reprise d'un cas B).
-- Paille, chanvre, enduits de terre, pierre sèche : règles professionnelles acceptées par la C2P (liste de janvier 2026).
+- Paille, chanvre, enduits de terre, pierre sèche : règles professionnelles acceptées par la C2P (liste de janvier 2026). Pierre sèche : murs de soutènement et à double parement seulement.
 
 ## Attention
 
@@ -143,9 +143,12 @@ Technique courante · Technique non courante · Domaine d'emploi · AQC · C2P �
 Vérifié le 4 octobre 2026.
 
 - Technique courante et non courante : AQC, [Comprendre les processus technico-assurantiels](https://qualiteconstruction.com/wp-content/uploads/2026/01/Fiche-Maitrise-Ouvrage-Professionnelle-Comprendre-Processus-Technico-Assurantiels-Domaine-Metiers-Batiment-AQC.pdf) (fiche 2025) ; AQC, [Publication C2P, actualités](https://qualiteconstruction.com/ressource/publication-c2p/publication-c2p-actualites/).
-- Règles professionnelles acceptées : AQC, [Règles professionnelles acceptées par la C2P](https://qualiteconstruction.com/ressource/publication-c2p/publication-c2p-regles-professionnelles-acceptees/) (mise à jour de janvier 2026).
+- Règles professionnelles acceptées : AQC, [Règles professionnelles acceptées par la C2P](https://qualiteconstruction.com/ressource/publication-c2p/publication-c2p-regles-professionnelles-acceptees/) (mise à jour de janvier 2026) ; FFB, [Quelles règles professionnelles sont considérées en techniques courantes par les assureurs ?](https://www.ffbatiment.fr/techniques-batiment/normalisation-regles-de-lart/regles-recommandations-professionnelles/dossier/quelles-regles-professionnelles-sont-considerees-en-techniques-courantes-par-les-assureurs).
+- Pierre sèche : FFB, [La pierre sèche fait son entrée dans la modernité](https://www.ffbatiment.fr/techniques-batiment/gros-oeuvre-structure/maconnerie-beton-arme-dallage-fondations/dossier-bam/la-pierre-seche-fait-son-entree-dans-la-modernite) (décembre 2016, acceptation « en juillet dernier ») ; AQC, [Publication semestrielle C2P, juillet 2016](https://qualiteconstruction.com/wp-content/uploads/2024/05/PS-Publication-Semestrielle-Juillet-2016-AQC.pdf) ; FFB, [Mur en pierre sèche : atouts, mise en œuvre et performances](https://www.ffbatiment.fr/techniques-batiment/performance-environnementale-batiments/materiaux-biosources/dossier/murs-en-pierre-atouts-mise-en-oeuvre-et-performances) (septembre 2025) ; ABPS, [retour d'expérience de 20 chantiers](https://www2.cevennes-parcnational.fr/sites/cevennes-parcnational.fr/files/le_retour_dexperience_de_20_chantiers-abps.pdf) (périmètre « accessoires au bâtiment »).
 - ATEx : FFB, [Comment faire évaluer un nouveau procédé de construction ?](https://www.ffbatiment.fr/techniques-batiment/normalisation-regles-de-lart/avis-techniques/dossier/comment-faire-evaluer-nouveau-procede-construction) (décembre 2024) ; CSTB, [Innovation et assurance en construction](https://www.afgc.asso.fr/app/uploads/2025/03/3-AFGC-Web-assurance-innovation-CSTB.pdf) (2025).
-- Pass'Innovation : Batiweb, [Le CSTB lance le Pass'Innovation](https://www.batiweb.com/actualites/legislation/le-cstb-lance-le-pass-innovation-10411) (juillet 2008).
+- Pass'Innovation : Batiweb, [Le CSTB lance le Pass'Innovation](https://www.batiweb.com/actualites/legislation/le-cstb-lance-le-pass-innovation-10411) (juillet 2008) ; CSTB, [présentation aux DREAL](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/CSTB__Maxime_Roger_2013_10_08_Coll_DREAL-2.pdf) (octobre 2013).
 - Dommages-ouvrage et personnes publiques : Assemblée nationale, [réponse ministérielle sur l'assurance dommages-ouvrage](https://questions.assemblee-nationale.fr/dyn/12/questions/QANR5L12QE2760.pdf) (question de la 12e législature).
 
-À contrôler : l'existence actuelle du Pass'Innovation ; la date d'acceptation de la C2P pour la pierre sèche, indiquée 2016 sur la page alors que le texte porte la date de 2017 ; les autres listes de l'AQC (recommandations professionnelles de grands programmes, familles en observation), non consultées, qui pourraient citer des documents sur la terre crue ; la durée de validité d'une ATEx, variable selon les cas ; les articles du code des assurances sur la décennale et la dommages-ouvrage (cités d'après l'AQC et des réponses ministérielles, pas relus sur Légifrance) ; l'obligation de dommages-ouvrage des organismes publics d'habitation, qui repose sur une réponse ministérielle ancienne ; la reconnaissance des techniques ancestrales par chaque assureur ; le statut du béton de chanvre hors règles professionnelles ; le sort des guides de la terre crue vis-à-vis de la C2P (point soulevé au chapitre 3).
+Contrôlé le 4 octobre 2026 : pierre sèche, acceptation C2P en juillet 2016 (FFB et AQC), texte daté de novembre 2017 ; périmètre limité aux murs de soutènement et à double parement.
+
+À contrôler : l'existence actuelle du Pass'Innovation (cité en 2013, absent des documents de 2024-2025) ; les autres listes de l'AQC (recommandations professionnelles de grands programmes, familles en observation), non consultées, qui pourraient citer des documents sur la terre crue ; la durée de validité d'une ATEx, variable selon les cas ; les articles du code des assurances sur la décennale et la dommages-ouvrage (cités d'après l'AQC et des réponses ministérielles, pas relus sur Légifrance) ; l'obligation de dommages-ouvrage des organismes publics d'habitation, qui repose sur une réponse ministérielle ancienne ; la reconnaissance des techniques ancestrales par chaque assureur ; le statut du béton de chanvre hors règles professionnelles ; le sort des guides de la terre crue vis-à-vis de la C2P (point soulevé au chapitre 3).
