@@ -518,10 +518,53 @@ export const termes = [
     aussi: ['In situ'],
   },
   {
+    terme: 'Réemploi rapporté',
+    categorie: 'Assurance',
+    definition:
+      "Réemploi de matériaux venus d'autres opérations, du même maître d'ouvrage ou non, mis à disposition des entreprises sans être vendus. Il n'y a pas de cession, donc pas de garantie de vendeur ; l'entreprise peut refuser la mise en œuvre. Ne pas confondre avec le réemploi ex situ, qui passe par une vente.",
+    aussi: ['Réemploi rapporté (hors site)', 'Matériaux rapportés'],
+  },
+  {
     terme: 'Réemploi ex situ',
     categorie: 'Assurance',
     definition:
       "Réemploi de matériaux venus d'un autre site, par cession ou achat. Le vendeur est tenu aux garanties légales : information, délivrance conforme, vices cachés.",
-    aussi: ['Ex situ', 'Réemploi rapporté'],
+    aussi: ['Ex situ', 'Réemploi par cession'],
+  },
+  {
+    terme: 'Déboursé sec',
+    categorie: 'Promotion',
+    definition:
+      "Prix d'un matériau ou d'un produit fourni, sans sa pose. Il sert à comparer des produits dont la mise en œuvre est identique ou proche. Pour comparer des techniques différentes, on préfère le prix en œuvre.",
+    aussi: ['Prix déboursé sec', 'Déboursés secs', 'Prix en œuvre'],
+  },
+  {
+    terme: 'Coût global',
+    categorie: 'Promotion',
+    definition:
+      "Coût d'un bâtiment sur toute sa durée : investissement, exploitation, entretien, remplacements et déconstruction (norme ISO 15686-5). Il intéresse surtout les propriétaires qui gèrent leur patrimoine, comme les bailleurs.",
+    aussi: ['Coût global direct', 'Coût global élargi', 'ISO 15686-5'],
+  },
+  {
+    terme: 'Filière locale',
+    categorie: 'Concepts',
+    definition:
+      "Ensemble des acteurs d'un territoire qui, d'une ressource locale (forêt, paille, terre, pierre) à la mise en œuvre, produisent des matériaux de construction. Une filière tient par la disponibilité de la ressource, des solutions rentables et assurables, et des acteurs formés.",
+    aussi: ['Filières locales', 'Filière bas carbone', 'Filières bas carbone', 'Circuit court'],
+  },
+  {
+    terme: 'Formation Pro-Paille',
+    categorie: 'Biosourcé',
+    definition:
+      "Formation de 5 jours définie par le Réseau Français de la Construction Paille. Elle couvre les pratiques des règles professionnelles de la construction en paille et est à prévoir pour la conception comme pour la réalisation.",
+    aussi: ['Pro-Paille', 'Pro paille'],
+  },
+  {
+    terme: 'BDNA',
+    developpe: 'Bâtiments Durables Nouvelle-Aquitaine',
+    categorie: 'Réglementation',
+    definition:
+      "Démarche environnementale volontaire adaptée à la Nouvelle-Aquitaine. Elle propose des critères d'exigence pour les maîtres d'ouvrage, par exemple sur le recours à des matériaux disponibles sur site, au réemploi ou à des entreprises locales.",
+    aussi: ['Bâtiments Durables Nouvelle-Aquitaine', 'Démarche BDNA'],
   },
 ];
