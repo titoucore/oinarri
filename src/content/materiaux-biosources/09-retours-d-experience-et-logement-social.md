@@ -66,10 +66,11 @@ Un bailleur social gère un bâtiment pendant 40 à 50 ans. Un promoteur n'est t
 ### Les aides qui existent
 
 - **Marge locale** : majoration du loyer maximal PLUS et PLAI pour les opérations ayant fait des investissements complémentaires de qualité énergétique, environnementale et de service (article R353-16 du CCH, cadrée par l'avis annuel des loyers). L'étude normande note qu'elle pourrait disparaître des barèmes à mesure que la RE2020 s'impose.
-- **Bonus régionaux** : en Occitanie, un bonus de 1 000 € par logement (2023) est devenu en 2025 un appel à projets à 3 000 € en neuf et 1 500 € en acquisition-amélioration. En Normandie, un appel à projets a financé en 2025 56 logements avec 372 000 €.
+- **Bonus régionaux : l'exemple de l'Occitanie.** Un bonus de 1 000 € par logement, créé en 2023, a pris en 2025 la forme d'un appel à projets, reconduit en 2026 par la DREAL. Montants : 3 000 € par logement **PLAI ou PLAI adapté** en construction neuve, 1 500 € en acquisition-amélioration. Les logements PLUS ne sont donc pas concernés. Le porteur doit justifier d'un taux d'incorporation de matériaux biosourcés exprimé en kg par m², et les opérations les plus ambitieuses sont priorisées, avec une attention à l'origine et à la traçabilité du bois. Les candidatures 2026 ont été closes le 30 septembre 2026.
+- **Bonus régionaux : l'exemple de la Normandie.** Un appel à projets existe depuis 2023 et a été reconduit en 2024 et 2025. Il vise les opérations PLUS et PLAI (neuf ou acquisition-amélioration, en maîtrise d'ouvrage directe ou en VEFA), avec un seuil minimal d'incorporation : niveau 1 du label biosourcé 2024 en collectif, niveau 2 en maison individuelle. En 2025, il a financé 56 logements avec 372 000 €. Une édition 2026 n'est pas confirmée.
 - **Pactes bois et biosourcés** : l'UHS Normandie s'est engagée sur un minimum de 36 kg de bois et biosourcés par m² en neuf (moyenne des opérations), 10 kg en rénovation, au moins deux familles de biosourcés, 30 % de biosourcés français et un référent biosourcés. Attention : ce sont des kilogrammes de matière, pas des kilogrammes de carbone du label 2024.
 
-Ces dispositifs changent souvent. Ils sont régionaux : pas de généralisation.
+Ces dispositifs sont régionaux, annuels et conditionnés aux crédits de l'année : pas de généralisation. Les régions qui n'ont pas d'appel équivalent existent aussi ; la DREAL ou la collectivité délégataire des aides à la pierre renseigne.
 
 ### Réussir : ce que recommandent les acteurs
 
@@ -85,7 +86,7 @@ Dans les retours cités : associer tôt le contrôleur technique et l'assureur ;
 
 ## Cas pratiques
 
-1. Reprends la version mixte d'Arbola. Calcule le surcoût par m² de surface de référence et par logement (25 logements, hypothèse), puis compare à un bonus de 3 000 € par logement. Quelle part du surcoût couvre-t-il ?
+1. Reprends la version mixte d'Arbola. Calcule le surcoût par m² de surface de référence et par logement (25 logements, hypothèse). Compare ensuite à un bonus de type Occitanie, comme si l'opération s'y trouvait : 3 000 € par logement PLAI, avec 8 PLAI (hypothèse). Quelle part du surcoût de 195 000 € HT couvre-t-il ?
 2. Une étude annonce « 8 à 14 mois de chantier » pour des immeubles en bois, et Arbola doit se faire en 16 mois en béton. Que peux-tu conclure, et que dois-tu vérifier avant de promettre un délai plus court ?
 3. Le promoteur d'une VEFA HLM propose une version « biosourcée » avec un bardage bois sur mur béton. En quoi cela pose-t-il question pour le carbone et pour le label ?
 4. Écris cinq indicateurs à suivre pendant deux ans sur Arbola pour alimenter votre propre retour d'expérience.
@@ -102,7 +103,7 @@ Coût global · Marge locale · VEFA HLM · Technique courante · Label bâtimen
 2. Que pensaient 79 % des bailleurs normands des aides ?
 3. Combien de logements en béton de chanvre à Pecquencourt ?
 4. Pourquoi lire les retours d'expérience avec prudence ?
-5. Quel bonus par logement neuf en Occitanie en 2025 ?
+5. Quel bonus par logement PLAI neuf en Occitanie, et quels logements ne sont pas concernés ?
 
 ### Flashcards
 
@@ -110,13 +111,13 @@ Coût global · Marge locale · VEFA HLM · Technique courante · Label bâtimen
 - Pecquencourt : 318 logements, 115 en béton de chanvre, 18 instrumentés par le Cerema ; ventilation défaillante dans la moitié des cas.
 - Étude normande 2022 : le biosourcé coûte plus cher, mais personne ne sait de combien ; 79 % des bailleurs jugent les aides insuffisantes.
 - Bailleur : 40 à 50 ans de gestion ; promoteur : décennale de 10 ans.
-- Aides : marge locale (R353-16 CCH), bonus Occitanie 3 000 € en neuf (2025), pactes bois et biosourcés.
+- Aides : marge locale (R353-16 CCH) ; Occitanie, 3 000 € par PLAI neuf (appel à projets, reconduit en 2026, pas de PLUS) ; Normandie, appel à projets PLUS et PLAI depuis 2023 ; pactes bois et biosourcés.
 - Pacte normand : 36 kg de matière par m² (pas des kgC du label 2024).
 
 ## Attention
 
 - Aucun chiffre de ce chapitre ne vaut pour une opération donnée : ils servent à poser les bonnes questions.
-- Les aides citées sont régionales et peuvent avoir changé : consulte la DREAL ou la collectivité délégataire.
+- Les aides citées sont régionales, annuelles et peuvent avoir changé : consulte la DREAL ou la collectivité délégataire.
 - Les chiffres d'Arbola sont fictifs et le nombre de logements est une hypothèse.
 - Les données de l'étude CDC-USH datent de 2016, celles de l'étude normande de 2022.
 - Ce chapitre ne remplace pas une étude de faisabilité, un chiffrage ni l'avis d'un juriste ou d'un assureur.
@@ -126,9 +127,9 @@ Coût global · Marge locale · VEFA HLM · Technique courante · Label bâtimen
 Vérifié le 4 octobre 2026.
 
 - Bois en logement social : Caisse des Dépôts, [Éclairages n° 12, Construction en bois : des atouts à chaque étape de la vie du logement](https://banquedesterritoires.fr/sites/default/files/2018-11/eclairages_12.pdf) (mai 2016, étude pilotée avec l'USH).
-- Étude normande : CERC et ARPE Normandie pour l'UHS, [Matériaux géo et biosourcés dans les logements sociaux en Normandie](https://arpenormandie.org/wp-content/uploads/2024/06/UHSN_Materiaux-geo-et-biosources-dans-les-logements-sociaux-en-Normandie_2022.pdf) (décembre 2022) ; DREAL Normandie, [appel à projets bailleurs sociaux et biosourcés](https://www.normandie.developpement-durable.gouv.fr/appel-a-projet-demarche-regionale-d-accompagnement-a6135.html?lang=fr) ; Union sociale pour l'habitat, [pacte bois et biosourcés régional de Normandie](https://www.union-habitat.org/l-uhs-normandie-s-engage-dans-le-pact-bois-et-biosources-regional).
-- Occitanie : Constructions publiques en bois en Occitanie, [Bois et biosourcés dans les logements sociaux : les aides de l'État évoluent](https://www.boisconstruction-occitanie.org/bois-et-biosources-dans-les-logements-sociaux-les-aides-de-letat-evoluent/).
+- Étude normande : CERC et ARPE Normandie pour l'UHS, [Matériaux géo et biosourcés dans les logements sociaux en Normandie](https://arpenormandie.org/wp-content/uploads/2024/06/UHSN_Materiaux-geo-et-biosources-dans-les-logements-sociaux-en-Normandie_2022.pdf) (décembre 2022) ; DREAL Normandie, [appel à projets bailleurs sociaux et biosourcés](https://www.normandie.developpement-durable.gouv.fr/appel-a-projet-demarche-regionale-d-accompagnement-a6135.html?lang=fr) (page publiée le 31 octobre 2025, lauréats 2025) ; Union sociale pour l'habitat, [pacte bois et biosourcés régional de Normandie](https://www.union-habitat.org/l-uhs-normandie-s-engage-dans-le-pact-bois-et-biosources-regional).
+- Occitanie : DREAL Occitanie, [appel à projets régional « Matériaux biosourcés » 2026](https://www.occitanie.developpement-durable.gouv.fr/appel-a-projets-regional-materiaux-biosources-2026-a27246.html?lang=fr) ; Constructions publiques en bois en Occitanie, [Bois et biosourcés dans les logements sociaux : les aides de l'État évoluent](https://www.boisconstruction-occitanie.org/bois-et-biosources-dans-les-logements-sociaux-les-aides-de-letat-evoluent/) (2025).
 - Mesures : Cerema, [Le Cerema mesure les performances du béton de chanvre comme isolant dans les Hauts-de-France](https://www.cerema.fr/fr/actualites/cerema-mesure-performances-du-beton-chanvre-isolant-hauts) (juin 2025).
 - Exemple déclaratif : France Villes et Territoires Durables, [4 logements sociaux en béton de chanvre](https://francevilledurable.fr/realisations/4-logements-sociaux-en-beton-de-chanvre/).
 
-À contrôler : les données du panel CDC-USH (neuf opérations, 2011 à 2014, présentées en 2016) ; la portée de l'étude normande (déclarations d'acteurs en 2022) ; le témoignage unique du promoteur normand (+30 à 35 %) ; le fait que la marge locale soit encore appliquée dans les barèmes actuels ; les bonus régionaux (Occitanie, Normandie), dont l'existence en 2026 n'est pas vérifiée ; les conditions exactes du pacte normand ; le nombre de logements d'Arbola (25 est une hypothèse) ; l'affirmation selon laquelle les bétons végétaux consomment moins que ne le prévoit la simulation, reprise de l'étude normande sans vérification ; la fiche parisienne de quatre logements, non datée dans l'extrait consulté.
+À contrôler : les données du panel CDC-USH (neuf opérations, 2011 à 2014, présentées en 2016) ; la portée de l'étude normande (déclarations d'acteurs en 2022) ; le témoignage unique du promoteur normand (+30 à 35 %) ; le fait que la marge locale soit encore appliquée dans les barèmes actuels ; l'existence d'une édition 2026 de l'appel à projets normand et le montant de subvention par logement en Normandie (non relevés) ; l'année exacte où le bonus occitan est devenu un appel à projets (les sources divergent entre 2025 et 2026) ; les conditions exactes du pacte normand ; le nombre de logements d'Arbola (25 est une hypothèse) et le nombre de PLAI (8 est une hypothèse d'exercice) ; l'affirmation selon laquelle les bétons végétaux consomment moins que ne le prévoit la simulation, reprise de l'étude normande sans vérification ; la fiche parisienne de quatre logements, non datée dans l'extrait consulté.
