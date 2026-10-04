@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 7 de Nouvelles méthodes de construction : Réemploi, réutilisation, recyclage.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Selon le code de l'environnement, qu'est-ce que le réemploi ?"
+    choix:
+      - "Un déchet que l'on broie pour fabriquer un nouveau produit"
+      - "L'utilisation de nouveau, pour un usage identique, d'un produit qui n'est pas un déchet"
+      - "Le dépôt de terres excavées sur un autre site"
+      - "L'incinération d'un déchet avec production d'énergie"
+    reponse: 1
+    explication: "Le réemploi est une opération par laquelle des substances, matières ou produits qui ne sont pas des déchets sont utilisés de nouveau pour un usage identique à celui pour lequel ils avaient été conçus. Il relève de la prévention des déchets."
+
+  - type: vf
+    affirmation: "Le remblayage compte comme du recyclage."
+    reponse: false
+    explication: "Le code de l'environnement exclut du recyclage la valorisation énergétique, la conversion en combustible et le remblayage."
+
+  - type: qcm
+    question: "À partir de quelle surface le diagnostic « produits, équipements, matériaux, déchets » (PEMD) est-il obligatoire avant une démolition ou une rénovation significative ?"
+    choix:
+      - "Dès 100 m²"
+      - "Plus de 500 m²"
+      - "Plus de 1 000 m² de surface cumulée de plancher"
+      - "Plus de 4 000 m²"
+    reponse: 2
+    explication: "Le diagnostic PEMD s'applique, depuis juillet 2023, aux opérations de démolition ou de rénovation significative dont la surface cumulée de plancher dépasse 1 000 m². Le maître d'ouvrage en est responsable."
+
+  - type: ouverte
+    question: "Dans quel ordre le code de l'environnement classe-t-il les modes de traitement des déchets, et où se place le réemploi ?"
+    modele: "Après la prévention, il faut préférer la préparation en vue de la réutilisation, puis le recyclage, puis une autre valorisation (notamment énergétique), puis l'élimination. Le réemploi relève de la prévention, tout en haut de l'ordre : le produit n'est pas devenu un déchet et il est utilisé de nouveau pour le même usage, sans retraitement de la matière."
+
+approfondir:
+  - type: qcm
+    question: "Comment les assureurs classent-ils en général le réemploi de produits dans un ouvrage (SMABTP, 2025) ?"
+    choix:
+      - "En technique courante, sans condition"
+      - "En technique non courante, étudiée au cas par cas"
+      - "Comme non assurable"
+      - "Comme relevant de la dommages-ouvrage seulement"
+    reponse: 1
+    explication: "Selon la présentation de la SMABTP (juin 2025), les référentiels reconnus ne visent pas le réemploi : il est considéré comme une technique non courante, avec une assurance décennale au cas par cas, tant que des recommandations professionnelles validées par la C2P ne le couvrent pas."
+
+  - type: qcm
+    question: "Quelle est la première recommandation professionnelle de réemploi acceptée par la C2P, d'après la FFB (juillet 2024) ?"
+    choix:
+      - "Le réemploi des briques de terre cuite"
+      - "Le réemploi des portes coupe-feu"
+      - "Le réemploi d'éléments structuraux en acier"
+      - "Le réemploi des tuiles"
+    reponse: 2
+    explication: "La publication de juillet 2024 de la C2P cite « Réemploi d'éléments structuraux en acier » (SCMF-FFB, Union des métalliers). Acceptée par la C2P, elle est considérée comme technique courante par les assureurs, dans son domaine d'emploi."
+
+  - type: vf
+    affirmation: "Dans la filière REP des produits et matériaux de construction du bâtiment, les producteurs doivent contribuer à la reprise sans frais des déchets triés."
+    reponse: true
+    explication: "Le décret du 31 décembre 2021 a créé la filière : les producteurs contribuent ou pourvoient à la reprise sans frais des déchets collectés séparément et à leur traitement. L'écocontribution s'applique aux produits facturés depuis le 1er mai 2023."
+
+  - type: qcm
+    question: "Quel est le statut des terres excavées qui quittent le site où elles ont été extraites ?"
+    choix:
+      - "Un produit, tant qu'elles ne sont pas polluées"
+      - "Un déchet"
+      - "Un matériau de réemploi, automatiquement"
+      - "Un bien du domaine public"
+    reponse: 1
+    explication: "Selon le ministère et les guides régionaux, les terres excavées qui sortent du site ont un statut de déchet. Les terres réutilisées dans leur état naturel sur le site même de leur excavation ne prennent pas, d'après le ministère, ce statut."
+
+expert:
+  - type: vf
+    affirmation: "En assurance décennale, l'assureur peut appliquer un coefficient de vétusté parce que le matériau posé est de réemploi."
+    reponse: false
+    explication: "Le principe est la réparation intégrale du dommage : pas de coefficient de vétusté, et réparation à neuf, sans perte ni profit pour la victime (SMABTP, 2025). Cela explique la prudence des assureurs sur le réemploi."
+
+  - type: ouverte
+    question: "L'équipe d'Arbola veut acheter des briques de réemploi à une plateforme (réemploi hors site). Qui répond de quoi, et que prépare-t-on ?"
+    modele: "Le vendeur est tenu aux garanties légales (information, délivrance conforme, vices cachés). L'entreprise qui pose reste responsable des produits qu'elle met en œuvre, même fournis par un tiers. Le maître d'œuvre définit les produits et leurs caractéristiques dans un CCTP réemploi ; le contrôleur technique donne un avis sur les justificatifs. On prépare une qualification technique (preuves, essais, traçabilité), la déclaration de la technique non courante à l'assureur dommages-ouvrage et à celui de l'entreprise, et on vérifie l'assurance du qualificateur et du vendeur."
