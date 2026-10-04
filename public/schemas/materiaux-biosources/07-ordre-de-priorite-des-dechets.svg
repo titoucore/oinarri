@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img">
+<title>L'ordre de priorité des déchets du bâtiment</title>
+<desc>Après la prévention, qui inclut le réemploi, viennent la préparation en vue de la réutilisation, le recyclage, une autre valorisation notamment énergétique, puis l'élimination. Le remblayage et la valorisation énergétique ne sont pas du recyclage.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="330" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="30" y="24" width="330" height="38" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="44" y="43" dominant-baseline="central" fill="#085041">Prévention, dont le réemploi</text>
+<text class="ts" x="490" y="43" dominant-baseline="central" fill="#0F6E56">produit encore utilisable</text>
+<rect x="58" y="70" width="330" height="38" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="72" y="89" dominant-baseline="central" fill="#085041">Préparation en vue de la réutilisation</text>
+<text class="ts" x="490" y="89" dominant-baseline="central" fill="#0F6E56">déchet contrôlé, réparé</text>
+<rect x="86" y="116" width="330" height="38" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="100" y="135" dominant-baseline="central" fill="#444441">Recyclage</text>
+<text class="ts" x="490" y="135" dominant-baseline="central" fill="#5F5E5A">matière retraitée</text>
+<rect x="114" y="162" width="330" height="38" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="128" y="181" dominant-baseline="central" fill="#444441">Autre valorisation</text>
+<text class="ts" x="490" y="181" dominant-baseline="central" fill="#5F5E5A">dont énergétique</text>
+<rect x="142" y="208" width="330" height="38" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="156" y="227" dominant-baseline="central" fill="#712B13">Élimination</text>
+<text class="ts" x="490" y="227" dominant-baseline="central" fill="#993C1D">dernier recours</text>
+<rect x="30" y="262" width="620" height="52" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="50" y="280" dominant-baseline="central" fill="#444441">Ce n'est pas du recyclage</text>
+<text class="ts" x="50" y="299" dominant-baseline="central" fill="#5F5E5A">Le remblayage et la valorisation énergétique sont exclus du recyclage (code de l'environnement).</text>
+</svg>
