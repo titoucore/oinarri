@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 9 de Nouvelles méthodes de construction : Retours d'expérience et logement social.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Selon l'étude pilotée par la Caisse des Dépôts et l'USH (2016) sur neuf opérations de logements sociaux en bois, quelle était la durée de construction ?"
+    choix:
+      - "De 8 à 14 mois, contre 18 mois en moyenne pour une construction classique"
+      - "De 24 à 30 mois, contre 18 mois en classique"
+      - "Identique à une construction classique"
+      - "Moins de 3 mois pour tous les projets"
+    reponse: 0
+    explication: "L'étude indique de 8 mois (modulaire 3D) à 14 mois (mixte bois-béton ou tout bois), contre 18 mois en moyenne pour une construction classique. Cela s'explique par une conception plus exigeante en amont. Panel de neuf opérations, données de 2011 à 2014."
+
+  - type: vf
+    affirmation: "Dans l'étude menée en Normandie en 2022, une majorité de bailleurs sociaux pensait que les aides disponibles suffiraient à intégrer les matériaux géo et biosourcés."
+    reponse: false
+    explication: "79 % des bailleurs interrogés pensaient au contraire que les aides ne seraient pas suffisantes. Les subventions spécifiques concernaient surtout la rénovation, peu le neuf."
+
+  - type: qcm
+    question: "Dans l'opération Pecquenchanvre (Pecquencourt), sur combien de logements rénovés cette isolation en béton de chanvre a-t-elle été posée ?"
+    choix:
+      - "18 sur 318"
+      - "115 sur 318"
+      - "250 sur 318"
+      - "318 sur 318"
+    reponse: 1
+    explication: "L'opération porte sur 318 logements, dont 115 ont été rénovés en béton de chanvre (projeté ou en blocs). Le Cerema a instrumenté un panel de 18 logements."
+
+  - type: ouverte
+    question: "Pourquoi faut-il lire les retours d'expérience sur le logement social biosourcé avec prudence ?"
+    modele: "Les retours viennent d'un petit nombre d'opérations, souvent portées par des maîtres d'ouvrage volontaires. Les mesures sont rares et parfois incomplètes (à Pecquencourt, les locataires n'ont pas permis tout le protocole de mesure). Les périmètres, les années et les niveaux de performance diffèrent, donc on ne peut pas en tirer une moyenne. Les coûts sont mal connus, et un bon résultat peut venir de la mise en œuvre plus que du matériau."
+
+approfondir:
+  - type: qcm
+    question: "Quel bonus par logement neuf l'appel à projets de l'Occitanie prévoit-il en 2025 pour les matériaux biosourcés dans le logement social ?"
+    choix:
+      - "300 €"
+      - "1 000 €"
+      - "3 000 €"
+      - "30 000 €"
+    reponse: 2
+    explication: "Lancé en 2023 à 1 000 € par logement, le bonus est devenu un appel à projets en 2025 : l'incitation est multipliée par trois pour atteindre 3 000 € en neuf (1 500 € en acquisition-amélioration)."
+
+  - type: vf
+    affirmation: "Un bailleur social gère un bâtiment sur 40 à 50 ans, alors qu'un promoteur est surtout tenu par la garantie décennale de 10 ans."
+    reponse: true
+    explication: "C'est une différence d'horizon relevée par l'étude normande de 2022. Elle explique pourquoi le coût global (énergie, entretien) compte davantage pour un bailleur."
+
+  - type: qcm
+    question: "À quoi sert la « marge locale » évoquée dans l'étude normande ?"
+    choix:
+      - "À majorer le loyer maximal d'opérations PLUS et PLAI qui ont fait des investissements complémentaires de qualité"
+      - "À réduire la TVA"
+      - "À financer les honoraires de l'architecte"
+      - "À compenser la taxe foncière"
+    reponse: 0
+    explication: "La marge locale (article R353-16 du CCH) autorise une majoration des loyers maximaux PLUS et PLAI pour les opérations qui ont réalisé des investissements complémentaires de qualité énergétique, environnementale et de service. Elle peut disparaître progressivement des barèmes à mesure que les exigences de la RE2020 se généralisent."
+
+  - type: qcm
+    question: "Que montrent les mesures du Cerema à Pecquencourt sur le confort d'été ?"
+    choix:
+      - "Le béton de chanvre est nettement plus frais que la laine de bois"
+      - "La laine de bois est nettement plus fraîche que le béton de chanvre"
+      - "Aucune différence notable selon l'isolant"
+      - "Le confort d'été n'a pas pu être mesuré"
+    reponse: 2
+    explication: "Le Cerema n'a constaté aucune différence notable en confort d'été, quel que soit l'isolant. C'est cohérent avec le chapitre 4 : protections solaires et ventilation pèsent davantage."
+
+expert:
+  - type: vf
+    affirmation: "Dans l'étude normande, des entreprises et des maîtres d'œuvre craignent que certaines entreprises générales « déshabillent » les projets biosourcés pour y revenir à des solutions minérales."
+    reponse: true
+    explication: "La crainte est rapportée dans l'étude : besoin de solutions connues et nécessité de tenir le budget. Une réponse possible est de verrouiller les exigences dans le cahier des charges et de les faire suivre par une maîtrise d'œuvre et un AMO compétents."
+
+  - type: ouverte
+    question: "Arbola hésite entre la version béton et une version mixte (ossature bois, isolants biosourcés, enduits de terre). Quelles conditions poses-tu avant de choisir la version mixte ?"
+    modele: "Un chiffrage comparé à performances égales par un économiste, avec le surcoût réel et une analyse en coût global ; la vérification que les techniques retenues sont courantes ou, sinon, un échange précoce avec l'assureur et le contrôleur technique ; un cahier des charges qui verrouille les exigences (FDES, formation, filière) pour éviter le déshabillage ; une ventilation conçue et contrôlée ; des aides recherchées (marge locale, appels à projets) ; et un plan de suivi des consommations pour capitaliser le retour d'expérience."
