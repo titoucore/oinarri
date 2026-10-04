@@ -536,7 +536,14 @@ export const termes = [
     categorie: 'Promotion',
     definition:
       "Prix d'un matériau ou d'un produit fourni, sans sa pose. Il sert à comparer des produits dont la mise en œuvre est identique ou proche. Pour comparer des techniques différentes, on préfère le prix en œuvre.",
-    aussi: ['Prix déboursé sec', 'Déboursés secs', 'Prix en œuvre'],
+    aussi: ['Prix déboursé sec', 'Déboursés secs'],
+  },
+  {
+    terme: 'Prix en œuvre',
+    categorie: 'Promotion',
+    definition:
+      "Prix d'un ouvrage fourni et posé, par exemple en euros hors taxes par mètre carré de paroi. Il inclut la mise en œuvre, donc convient mieux que le déboursé sec pour comparer des techniques différentes (mur en paille, bloc de chanvre…).",
+    aussi: ['Prix mis en œuvre', 'Fourniture et pose', 'Coût en œuvre'],
   },
   {
     terme: 'Coût global',
