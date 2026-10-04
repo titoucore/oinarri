@@ -4,8 +4,10 @@
 // Identification : connexion par e-mail et mot de passe, avec cookie de session (voir api-auth.js).
 // Il n'existe qu'un seul mode, et il refuse par défaut : toute page qui n'est pas explicitement
 // publique, et toute route de données, exige une session valide.
+// L'administration (/admin/ et /api/admin/*) exige en plus le rôle « admin ».
 
 import { gererAccueil } from './api-accueil.js';
+import { gererAdmin } from './api-admin.js';
 import { gererAuth } from './api-auth.js';
 import { gererCompte } from './api-compte.js';
 import { gererExpliquer } from './api-expliquer.js';
@@ -22,6 +24,11 @@ import { lireSession } from './lib/sessions.js';
 // Routes de données : elles exigent une session. Chemin -> gestionnaire.
 const ROUTES_UTILISATEUR = new Map([
   ['/api/accueil', gererAccueil],
+  ['/api/admin/utilisateurs', gererAdmin],
+  ['/api/admin/inviter', gererAdmin],
+  ['/api/admin/lien', gererAdmin],
+  ['/api/admin/parcours', gererAdmin],
+  ['/api/admin/supprimer', gererAdmin],
   ['/api/compte', gererCompte],
   ['/api/compte/export', gererCompte],
   ['/api/expliquer', gererExpliquer],
@@ -48,6 +55,11 @@ function cheminPublic(chemin) {
   return (
     chemin.startsWith('/_astro/') || PAGES_PUBLIQUES.includes(chemin) || PAGES_PUBLIQUES.includes(avecSlash)
   );
+}
+
+// Pages réservées aux administrateurs.
+function cheminAdmin(chemin) {
+  return chemin === '/admin' || chemin.startsWith('/admin/');
 }
 
 const PRENOM_VALIDE = /^[\p{L}\p{M}'’ .-]{1,40}$/u;
@@ -192,6 +204,7 @@ async function router(request, env, ctx) {
         email: utilisateur.email,
         prenom: utilisateur.prenom,
         prenom_requis: !utilisateur.prenom,
+        admin: utilisateur.role === 'admin',
       });
     }
 
@@ -220,7 +233,12 @@ async function router(request, env, ctx) {
       await env.DB_OINARRI.prepare('UPDATE utilisateurs SET prenom = ? WHERE id = ?')
         .bind(prenom, utilisateur.id)
         .run();
-      return reponseJson({ email: utilisateur.email, prenom, prenom_requis: false });
+      return reponseJson({
+        email: utilisateur.email,
+        prenom,
+        prenom_requis: false,
+        admin: utilisateur.role === 'admin',
+      });
     }
 
     return reponseJson({ erreur: 'Méthode non autorisée' }, 405);
@@ -249,6 +267,13 @@ async function router(request, env, ctx) {
         });
       }
       return new Response('Non authentifié', { status: 401 });
+    }
+    // L'administration est invisible pour les autres comptes : même réponse qu'une page inexistante.
+    if (cheminAdmin(url.pathname) && session.role !== 'admin') {
+      return new Response('Page introuvable', {
+        status: 404,
+        headers: { 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8' },
+      });
     }
   }
 
