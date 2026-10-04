@@ -454,7 +454,7 @@ export const termes = [
     developpe: 'ATec',
     categorie: 'Assurance',
     definition:
-      "Évaluation volontaire d'un procédé innovant, instruite par le CSTB et validée par une commission (la CCFAT). Le Document Technique d'Application (DTA) en est une variante. Sur la liste verte de la C2P, il rend le procédé technique courante dans son domaine d'emploi.",
+      "Évaluation volontaire d'un procédé innovant, instruite par le CSTB et validée par une commission (la CCFAT). Le Document Technique d'Application (DTA) en est une variante. Quand il figure sur la liste verte de la C2P, le procédé relève de la technique courante dans son domaine d'emploi.",
     aussi: ['ATec', 'DTA', "Document Technique d'Application", 'Avis Techniques'],
   },
   {
@@ -472,5 +472,56 @@ export const termes = [
     definition:
       "Établissement public de recherche et d'évaluation du bâtiment. Il instruit les Avis Techniques et délivre les ATEx.",
     aussi: ['Centre scientifique et technique du bâtiment'],
+  },
+  {
+    terme: 'Diagnostic PEMD',
+    developpe: 'Produits, Équipements, Matériaux et Déchets',
+    categorie: 'Réglementation',
+    definition:
+      "Diagnostic que le maître d'ouvrage doit faire réaliser avant une démolition ou une rénovation significative dont la surface cumulée de plancher dépasse 1 000 m². Il décrit la nature et la quantité des produits, matériaux, équipements et déchets, et ce qui peut être réemployé. Il remplace depuis juillet 2023 le diagnostic déchets.",
+    aussi: ['PEMD', 'Diagnostic déchets', 'Diagnostic ressources', 'Diagnostic produits équipements matériaux déchets'],
+  },
+  {
+    terme: 'REP',
+    developpe: 'Responsabilité Élargie du Producteur',
+    categorie: 'Réglementation',
+    definition:
+      "Principe selon lequel les producteurs financent la gestion des déchets issus de leurs produits. Pour le bâtiment (REP PMCB), instaurée par la loi AGEC puis le décret du 31 décembre 2021, elle finance la reprise sans frais des déchets triés. L'écocontribution s'applique aux produits facturés depuis le 1er mai 2023.",
+    aussi: ['REP PMCB', 'REP bâtiment', 'Responsabilité élargie du producteur', 'Écocontribution'],
+  },
+  {
+    terme: 'Éco-organisme',
+    categorie: 'Réglementation',
+    definition:
+      "Organisme agréé par l'État auquel les producteurs adhèrent pour remplir leur responsabilité élargie. Il perçoit les écocontributions et organise la collecte et le traitement des déchets.",
+    aussi: ['Éco-organismes'],
+  },
+  {
+    terme: 'Terres excavées',
+    categorie: 'Réglementation',
+    definition:
+      "Terres extraites lors d'un chantier de terrassement. Quand elles quittent le site, elles ont un statut de déchet. Réutilisées dans leur état naturel sur le site même, elles ne prennent pas ce statut, selon le ministère.",
+    aussi: ['Terre excavée', 'Déblais', 'Terres de déblais'],
+  },
+  {
+    terme: "Qualification d'un produit de réemploi",
+    categorie: 'Assurance',
+    definition:
+      "Étape qui vérifie qu'un produit de réemploi convient à l'usage visé : examen, mesures, calculs ou essais, et traçabilité. Aucun texte ne l'encadre : elle peut être faite par une plateforme, un acteur indépendant ou un intervenant de l'opération, qui doit être assuré.",
+    aussi: ['Qualification technique', 'Qualificateur', 'CCTP réemploi'],
+  },
+  {
+    terme: 'Réemploi in situ',
+    categorie: 'Assurance',
+    definition:
+      "Réemploi de matériaux issus du site même de l'opération, par exemple des briques d'un bâtiment démoli utilisées dans le neuf sur la même parcelle.",
+    aussi: ['In situ'],
+  },
+  {
+    terme: 'Réemploi ex situ',
+    categorie: 'Assurance',
+    definition:
+      "Réemploi de matériaux venus d'un autre site, par cession ou achat. Le vendeur est tenu aux garanties légales : information, délivrance conforme, vices cachés.",
+    aussi: ['Ex situ', 'Réemploi rapporté'],
   },
 ];
