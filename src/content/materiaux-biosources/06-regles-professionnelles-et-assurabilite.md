@@ -23,7 +23,7 @@ verifie_le: 2026-10-04
 
 ### Pourquoi l'assurance décide
 
-Les constructeurs (entreprises, artisans, maîtres d'œuvre) sont responsables pendant dix ans des dommages graves après la réception : c'est la **responsabilité décennale** (chapitre « garanties » du B.A.-BA). Ils doivent s'assurer pour cela. Le maître d'ouvrage souscrit de son côté une assurance **dommages-ouvrage**, qui préfinance les réparations.
+Les constructeurs (entreprises, artisans, maîtres d'œuvre) sont responsables pendant dix ans des dommages graves après la réception : c'est la **responsabilité décennale**. Ils doivent s'assurer pour cela. Le maître d'ouvrage souscrit de son côté une assurance **dommages-ouvrage**, qui préfinance les réparations.
 
 Les contrats d'assurance ne couvrent pas n'importe quoi. Ils définissent les travaux garantis en se référant à la notion de **technique courante**. Un procédé hors de ce cadre peut rester assurable, mais au prix de démarches, de délais, parfois d'une surprime. C'est pour cela qu'un matériau « écologique » peut être refusé ou retardé : le blocage est rarement physique, il est souvent documentaire et assurantiel.
 
