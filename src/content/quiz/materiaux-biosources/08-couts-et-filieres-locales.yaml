@@ -1,0 +1,83 @@
+# Mini-quiz du chapitre 8 de Nouvelles méthodes de construction : Coûts et filières locales.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "À quelle échelle le Cerema recommande-t-il d'optimiser le coût d'un projet intégrant des biosourcés ?"
+    choix:
+      - "Au prix de chaque matériau"
+      - "À l'échelle de l'opération, en cherchant le bon mélange biosourcé et classique"
+      - "Au prix d'un seul lot, le gros œuvre"
+      - "Au prix du terrain"
+    reponse: 1
+    explication: "Le Cerema conclut qu'il faut dépasser la logique de remplacement d'un produit par un autre : l'optimisation se fait à l'échelle de l'opération, pour trouver le bon « mix biosourcé-classique » compatible avec le budget."
+
+  - type: vf
+    affirmation: "Selon une étude de 2025 sur 82 opérations, les projets bois étudiés présentent en moyenne un surcoût de l'ordre de 6,5 % par rapport aux projets à structure béton, à performances égales."
+    reponse: true
+    explication: "L'étude Echos'Lab pour Fibois France, financée par l'ADEME, compare des projets à mêmes Bbio et Ic construction (seuil 2028). C'est une moyenne : les écarts réels dépendent du projet. Ce chiffre vient d'un compte rendu de presse spécialisée, pas de l'étude complète."
+
+  - type: qcm
+    question: "Quelle différence entre un prix « déboursé sec » et un prix « en œuvre » ?"
+    choix:
+      - "Le déboursé sec inclut la pose, le prix en œuvre non"
+      - "Le déboursé sec est la fourniture seule, le prix en œuvre inclut la mise en œuvre"
+      - "Le prix en œuvre est toujours hors taxes, pas le déboursé sec"
+      - "Aucune, ce sont deux noms du même prix"
+    reponse: 1
+    explication: "Le prix déboursé sec est celui du matériau fourni. Le prix en œuvre inclut sa mise en œuvre. Il est plus adapté pour comparer des techniques différentes, où la pose change (mur en paille, bloc de chanvre…)."
+
+  - type: ouverte
+    question: "Pourquoi ne faut-il pas conclure qu'un projet biosourcé coûtera « 10 % de plus » à partir du seul prix d'un isolant ?"
+    modele: "Parce que le prix d'un matériau n'est pas le coût de l'opération. Le choix d'un biosourcé modifie la paroi, les interfaces avec les autres lots, les règles feu et acoustique, le poids sur les fondations, la durée de chantier et le temps de conception. Le coût réel se calcule à l'échelle de l'opération, avec un économiste de la construction. Les ordres de grandeur sont dispersés selon les études, les dates et le périmètre."
+
+approfondir:
+  - type: qcm
+    question: "En 2016, quel isolant biosourcé était compétitif en prix face aux isolants minéraux, selon le Cerema ?"
+    choix:
+      - "Les panneaux de fibre de bois"
+      - "Le liège expansé"
+      - "La ouate de cellulose en vrac"
+      - "Les laines de chanvre et de mouton"
+    reponse: 2
+    explication: "À résistance thermique égale (R = 5), seule la ouate de cellulose en vrac était compétitive en prix de gros en 2016. Les panneaux biosourcés étaient 2 à 3 fois plus chers hors mise en œuvre. Ces données sont anciennes."
+
+  - type: vf
+    affirmation: "Un chantier plus court, permis par la préfabrication, peut compenser en partie le surcoût des matériaux."
+    reponse: true
+    explication: "Une durée de chantier réduite diminue les frais de chantier et les frais financiers, et peut accélérer la commercialisation. L'économiste AE Bretagne le cite parmi les éléments à intégrer dans une étude d'incidence réelle."
+
+  - type: qcm
+    question: "Combien de producteurs de paille pour la construction sont recensés en Nouvelle-Aquitaine (Odéys, 2026) ?"
+    choix:
+      - "5"
+      - "22"
+      - "120"
+      - "500"
+    reponse: 1
+    explication: "L'Odéys recense 22 producteurs de paille pour la construction en Nouvelle-Aquitaine. Selon la même source, environ 90 % des approvisionnements viennent de moins de 100 km."
+
+  - type: qcm
+    question: "Quel est le premier établissement recevant du public en ossature bois et remplissage paille de la Communauté d'Agglomération Pays Basque ?"
+    choix:
+      - "Le centre de contrôle technique de Mouguerre"
+      - "La crèche Mamurrak à Espelette (2023)"
+      - "L'école ISA BTP à Anglet"
+      - "La pépinière Arkinova"
+    reponse: 1
+    explication: "La feuille de route de la Communauté Pays Basque présente la crèche Mamurrak, à Espelette, inaugurée en 2023, comme son premier ERP en ossature bois et remplissage paille. Elle a été lauréate de l'appel à projets régional « Bâtiment du Futur »."
+
+expert:
+  - type: vf
+    affirmation: "Les fourchettes de prix de 2015 (AE Bretagne) et celles de 2026 (Odéys, Nouvelle-Aquitaine) peuvent être comparées directement."
+    reponse: false
+    explication: "Les années, les régions (Île-de-France contre Nouvelle-Aquitaine), les périmètres de chaque ligne de prix et l'inflation diffèrent. Ces chiffres donnent des ordres de grandeur séparés, pas une évolution."
+
+  - type: ouverte
+    question: "Un bailleur public veut favoriser les filières locales dans le marché d'Arbola. Comment procéder sans fixer un critère du type « entreprises locales » ?"
+    modele: "En commande publique, un critère de proximité géographique en tant que tel est en principe écarté (point à valider avec le service marchés de l'organisme). On passe par des critères objectifs : performance environnementale et empreinte carbone des produits, délais et conditions d'approvisionnement, formations exigées (par exemple Pro-Paille), références, sourcing documenté dès la programmation, assistance par un AMO spécialiste, et des allotissements adaptés aux entreprises de la région."
