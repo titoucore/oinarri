@@ -4,7 +4,7 @@ description: "Bois, paille, chanvre, ouate de cellulose, fibre de bois, liège, 
 parcours: materiaux-biosources
 ordre: 2
 niveau: Débutant
-verifie_le: 2026-10-03
+verifie_le: 2026-10-04
 ---
 
 ## Objectifs
@@ -38,7 +38,7 @@ Le bois reste minoritaire dans la construction de logements : de l'ordre de 6 % 
 
 La paille est la tige des céréales, une fois le grain récolté. En construction, on utilise des **bottes** denses comme remplissage isolant d'une ossature (souvent en bois) et comme support d'enduit. Elle ne porte pas le bâtiment.
 
-Elle est encadrée par les **règles professionnelles CP 2012** du Réseau français de la construction paille (RFCP), approuvées en juin 2011 par la commission de l'AQC chargée de la prévention des produits. Les ouvrages conformes relèvent des « techniques courantes ». La botte type mesure 37 × 47 cm, pèse 80 à 120 kg/m³ et a une humidité inférieure à 20 %. Posée sur chant, elle donne λ = 0,052 W/(m·K), soit R = 7,1 m².K/W pour 37 cm. La mise en œuvre exige une formation (« Pro-Paille ») et un contrôle de la qualité du matériau.
+Elle est encadrée par les **règles professionnelles CP 2012** du Réseau français de la construction paille (RFCP). Elles ont été acceptées par la commission de l'AQC chargée de la prévention des produits (la C2P) fin 2011, avec suivi du retour d'expérience, puis révisées : la 3e édition date d'avril 2018. Les ouvrages conformes relèvent des « techniques courantes » (chapitre 6). La botte type mesure 37 × 47 cm, pèse 80 à 120 kg/m³ et a une humidité inférieure à 20 %. Posée sur chant, elle donne λ = 0,052 W/(m·K), soit R = 7,1 m².K/W pour 37 cm. La mise en œuvre exige une formation (« Pro-Paille ») et un contrôle de la qualité du matériau.
 
 ### Le chanvre : remplir, isoler et apporter de l'inertie
 
@@ -79,7 +79,7 @@ Les émissions de composés chimiques par les isolants biosourcés ont fait l'ob
 
 ## Expert
 
-- **Normes et évaluations.** Certaines familles disposent de normes de produit (bois, ouate de cellulose), d'autres d'avis techniques ou d'ATEx (lin, textile recyclé, terre crue, pierre sèche), d'après le ministère. Le chapitre 6 détaille ce que cela change pour l'assurance.
+- **Normes et évaluations.** Certaines familles disposent de normes de produit (bois, ouate de cellulose), d'autres d'avis techniques ou d'ATEx (lin, textile recyclé, terre crue, pierre sèche), d'après un guide du ministère de 2020. Depuis, la pierre sèche (2016) et les enduits sur terre crue (2012) ont été acceptés en règles professionnelles par la C2P. Le chapitre 6 détaille ce que cela change pour l'assurance.
 - **λ déclaré et λ en œuvre.** La valeur de la fiche est mesurée dans des conditions fixées. Dans le mur, l'humidité, le tassement et les ponts thermiques peuvent la dégrader.
 - **Densité et tassement.** Des isolants en vrac peuvent se tasser avec le temps : les règles de mise en œuvre prévoient des densités de pose et, selon les produits, des surépaisseurs.
 - **Produits connexes du bois.** Sciures, copeaux et chutes de scierie alimentent les panneaux de fibre de bois et les isolants en vrac, ce qui relie le biosourcé à l'économie circulaire (chapitre 7).
@@ -108,7 +108,7 @@ Ossature bois · CLT · Classe d'emploi · Botte de paille · Règles profession
 
 - Trois rôles : porter (bois), remplir et isoler (paille, chanvre, ouate, fibre de bois, liège, lin), protéger et finir (enduits, bardage).
 - Ossature bois : 85 % des maisons individuelles en bois ; NF DTU 31.2.
-- Paille : bottes de 80 à 120 kg/m³, humidité inférieure à 20 %, règles CP 2012, λ = 0,052 sur chant.
+- Paille : bottes de 80 à 120 kg/m³, humidité inférieure à 20 %, règles CP 2012 (3e édition, 2018), λ = 0,052 sur chant.
 - Béton de chanvre : chènevotte et chaux, non porteur, λ environ 0,1.
 - R = e ÷ λ.
 - Un isolant mouillé isole moins bien.
@@ -123,11 +123,13 @@ Ossature bois · CLT · Classe d'emploi · Botte de paille · Règles profession
 
 ## Sources et vérification
 
-Vérifié le 3 octobre 2026.
+Vérifié le 4 octobre 2026.
 
 - Ossature bois, part de marché du bois : ministère de l'Agriculture, [Construire en bois : potentialités environnementales et économiques](https://agriculture.gouv.fr/construire-en-bois-potentialites-environnementales-et-economiques). NF DTU 31.2 (mai 2019) : domaine d'application jusqu'à 28 m et classe d'emploi par défaut.
-- Paille : [Réseau français de la construction paille (RFCP), formation Pro-Paille](https://www.rfcp.fr/wp-content/uploads/dlm_uploads/2021/07/D%C3%A9roul%C3%A9-Formation-Pro-Paille.pdf) et [cahier des charges des bottes](https://rfcp.fr/wp-content/uploads/2018/11/RFCP_cahier-des-charges-bottes-de-paille.pdf) ; [présentation de la réglementation](https://auvergnerhonealpes.constructionpaille.fr/la-construction-paille/r%C3%A9glementation/) ; présentation de la [DREAL Pays de la Loire](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/20210409_cpa.pdf).
+- Paille : [Réseau français de la construction paille (RFCP), formation Pro-Paille](https://www.rfcp.fr/wp-content/uploads/dlm_uploads/2021/07/D%C3%A9roul%C3%A9-Formation-Pro-Paille.pdf) et [cahier des charges des bottes](https://rfcp.fr/wp-content/uploads/2018/11/RFCP_cahier-des-charges-bottes-de-paille.pdf) ; [présentation de la réglementation](https://auvergnerhonealpes.constructionpaille.fr/la-construction-paille/r%C3%A9glementation/) ; présentation de la [DREAL Pays de la Loire](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/20210409_cpa.pdf). Date d'acceptation par la C2P : AQC, [Publication semestrielle C2P, janvier 2012](https://qualiteconstruction.com/wp-content/uploads/2024/05/PS-Publication-Semestrielle-Janvier-2012-AQC.pdf) ; DREAL Pays de la Loire, [Assurabilité (colloque du 8 octobre 2013)](https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/Assurabilite__H_Auger_colloque_DREAL_08_10_2013.pdf) (acceptation d'octobre 2011) ; FFB, [Quelles règles professionnelles sont considérées en techniques courantes par les assureurs ?](https://www.ffbatiment.fr/techniques-batiment/normalisation-regles-de-lart/regles-recommandations-professionnelles/dossier/quelles-regles-professionnelles-sont-considerees-en-techniques-courantes-par-les-assureurs) (3e édition).
 - Chanvre : [Construire en Chanvre, plaquette Isolation Chanvre](https://cd2e.com/wp-content/uploads/2024/09/Plaquette-Isolation-Chanvre.pdf) (2024) ; Cerema, [synthèse sur la rénovation thermique du bâti ancien avec des isolants biosourcés](https://www.rehabilitation-bati-ancien.fr/sites/creba/files/fichiers/2021/09/036_Bati_ancien_biosources_Cerema_Est.pdf) (2016).
 - Isolants et conductivités : Cerema, [Neutralité carbone dans la construction : les atouts des matériaux biosourcés](https://www.cerema.fr/fr/actualites/neutralite-carbone-construction-atouts-materiaux-biosources) ; [comparatif des isolants de l'ALEC de Montpellier](https://www.alec-montpellier.org/wp-content/uploads/2020/07/Comparatif-des-isolants-ALEC-08.01.2019.pdf) (2019) ; ministère de la Transition écologique, [Les matériaux de construction biosourcés dans la commande publique](https://www.ecologie.gouv.fr/sites/default/files/documents/Guide%20mat%C3%A9riaux%20biosourc%C3%A9s%20et%20commande%20publique_avril%202020.pdf) (avril 2020).
 
-À contrôler : la part du bois dans la construction de logements et son millésime ; le domaine d'application actuel des règles CP 2012 (hauteur, hygrométrie des locaux) dans l'édition en vigueur ; la version des règles professionnelles du béton de chanvre (2024) et leur statut d'assurabilité ; la part de la ouate de cellulose après 2016 ; le tassement et les conditions de pose des isolants en vrac ; les résultats d'EmiBio sur la qualité de l'air.
+Contrôlé le 4 octobre 2026 : les règles CP 2012 ont été acceptées par la C2P fin 2011 (publication de janvier 2012), la 3e édition révisée date d'avril 2018. Le texte indiquait à tort « juin 2011 ».
+
+À contrôler : la part du bois dans la construction de logements et son millésime ; le domaine d'application actuel des règles CP 2012 (hauteur, hygrométrie des locaux) dans l'édition en vigueur ; la version des règles professionnelles du béton de chanvre (2024) et leur statut d'assurabilité ; la part de la ouate de cellulose après 2016 ; le tassement et les conditions de pose des isolants en vrac ; les résultats d'EmiBio sur la qualité de l'air ; la mention d'ATEx pour le lin, le textile recyclé, la terre crue et la pierre sèche, issue du guide ministériel de 2020 et sans doute dépassée pour la pierre sèche et les enduits de terre.
