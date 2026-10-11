@@ -85,6 +85,15 @@ Le CUa renseigne sans engager. Le CUb répond à la question « puis-je faire ce
 
 Plusieurs situations allongent l'instruction : dossier incomplet, avis d'un service extérieur, zone protégée. Le récépissé, puis les courriers de la mairie, indiquent le délai réel.
 
+### Si le projet est en secteur protégé
+
+Dans un secteur protégé (abords d'un monument historique, site patrimonial remarquable), le projet est soumis à l'avis de l'**architecte des Bâtiments de France (ABF)**. L'avis est souvent **conforme** : l'autorité qui délivre le permis est liée par lui. Selon la protection, il peut aussi être simple, et l'autorité décide alors seule.
+
+- L'instruction est **majorée d'un mois** : un immeuble collectif comme Arbola passe de 3 à 4 mois.
+- L'ABF a **un mois** à compter de la réception du dossier pour rendre son avis.
+- Le silence ne vaut plus accord : si l'ABF rend un avis défavorable, ou favorable avec prescriptions, l'absence de décision vaut **refus implicite** du permis, et non permis tacite.
+- En cas de désaccord, l'autorité compétente peut saisir le **préfet de région**, ce qui prolonge l'instruction de trois mois.
+
 ### La fin de chantier, étape par étape
 
 1. **Opérations préalables à la réception (OPR).** La maîtrise d'œuvre organise une visite avec les entreprises et note ce qui reste à corriger. C'est un usage de la profession.
