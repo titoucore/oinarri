@@ -32,7 +32,7 @@ On classe un bâtiment selon sa **hauteur** et son type. D'après les documents 
 
 - **1re famille** : maisons individuelles isolées ou jumelées, R+1 au plus ; maisons de plain-pied groupées en bande.
 - **2e famille** : maisons individuelles de plus d'un étage ; maisons groupées dont les structures ne sont pas indépendantes ; **immeubles collectifs d'au plus trois étages sur rez-de-chaussée**.
-- **3e famille** : immeubles à usage exclusif d'habitation dont le plancher bas du logement le plus haut est à 28 m au plus du sol utilement accessible. On distingue la **3e A** (de R+4 à R+7, moins de 10 m entre la porte palIère la plus éloignée et l'escalier, escaliers atteints par la voie échelles) et la **3e B** (les autres cas).
+- **3e famille** : immeubles à usage exclusif d'habitation dont le plancher bas du logement le plus haut est à 28 m au plus du sol utilement accessible. On distingue la **3e A** (de R+4 à R+7, moins de 10 m entre la porte palière la plus éloignée et l'escalier, escaliers atteints par la voie échelles) et la **3e B** (les autres cas).
 - **4e famille** : plancher bas du logement le plus haut entre 28 m et 50 m.
 
 La loi ELAN a créé la catégorie des immeubles de moyenne hauteur (IMH), présentée comme remplaçant la 4e famille.
@@ -46,7 +46,7 @@ La structure et les planchers doivent tenir de plus en plus longtemps :
 - **Stabilité au feu des éléments porteurs** : 15 minutes en 1re famille, **30 minutes en 2e**, 1 heure en 3e, 1 h 30 en 4e.
 - **Planchers** (hors planchers à l'intérieur d'un même logement) : coupe-feu de 15 minutes (plancher haut du sous-sol) en 1re famille, **30 minutes en 2e**, 1 heure en 3e, 1 h 30 en 4e.
 - **Parois entre logements** : coupe-feu d'une demi-heure pour les collectifs de 2e famille et pour la 3e famille, d'une heure en 4e famille.
-- **Portes palIères** : pare-flammes d'un quart d'heure pour les collectifs de 2e famille et la 3e famille, d'une demi-heure en 4e famille.
+- **Portes palières** : pare-flammes d'un quart d'heure pour les collectifs de 2e famille et la 3e famille, d'une demi-heure en 4e famille.
 
 Pour Arbola, passer de la 2e à la 3e famille double donc d'un coup la stabilité au feu et le coupe-feu des planchers : de 30 à 60 minutes.
 
@@ -64,7 +64,7 @@ Les isolants qui ne sont pas incombustibles (les biosourcés comme la fibre de b
 
 ### Comment se mesure la hauteur
 
-La hauteur qui compte est celle du **plancher bas du logement le plus haut**, mesurée depuis le sol utilement accessible aux engins des services de secours. Pour les duplex et triplex situés à l'étage le plus élevé, seul le niveau bas est pris en compte, à condition que le logement dispose d'une pièce principale et d'une porte palIère en partie basse (arrêté du 19 juin 2015). Un architecte peut donc jouer sur un duplex en couronnement : le bureau de contrôle vérifie les conditions.
+La hauteur qui compte est celle du **plancher bas du logement le plus haut**, mesurée depuis le sol utilement accessible aux engins des services de secours. Pour les duplex et triplex situés à l'étage le plus élevé, seul le niveau bas est pris en compte, à condition que le logement dispose d'une pièce principale et d'une porte palière en partie basse (arrêté du 19 juin 2015). Un architecte peut donc jouer sur un duplex en couronnement : le bureau de contrôle vérifie les conditions.
 
 ### Le rôle de la preuve
 
@@ -83,14 +83,14 @@ Les parcs de stationnement couverts et les locaux d'activité en pied d'immeuble
 
 ## Cas pratiques
 
-1. Classe chacun de ces bâtiments : (a) une maison de plain-pied isolée ; (b) un immeuble de résidence à rez-de-chaussée et trois étages ; (c) un immeuble de R+5 dont la porte palIère la plus éloignée est à 12 m de l'escalier ; (d) un immeuble dont le plancher bas du logement le plus haut est à 35 m.
+1. Classe chacun de ces bâtiments : (a) une maison de plain-pied isolée ; (b) un immeuble de résidence à rez-de-chaussée et trois étages ; (c) un immeuble de R+5 dont la porte palière la plus éloignée est à 12 m de l'escalier ; (d) un immeuble dont le plancher bas du logement le plus haut est à 35 m.
 2. Arbola passe de R+3 à R+4. Quelles exigences changent pour la structure et les planchers ? Quelles conditions te font choisir entre 3e A et 3e B ?
 3. Un plancher d'Arbola doit être coupe-feu d'une demi-heure. Quelle durée s'il passait en 3e famille ? Et en 4e ?
 4. Quel texte et quel guide faut-il consulter pour protéger une isolation à base de fibre de bois d'un mur intérieur ? Quelle preuve exiger de l'entreprise ?
 
 ## Vocabulaire
 
-Famille d'habitation · Stabilité au feu · Résistance au feu · Escalier protégé · Voie-échelles · Voie-engins · Porte palIère · Écran thermique · IGH · IMH
+Famille d'habitation · Stabilité au feu · Résistance au feu · Escalier protégé · Voie-échelles · Voie-engins · Porte palière · Écran thermique · IGH · IMH
 
 ## Auto-évaluation
 
