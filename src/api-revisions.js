@@ -12,7 +12,9 @@
 //   - réussite : 3 jours, puis 7 jours, puis intervalle précédent x facilité ;
 //   - échec : retour à 1 jour, et la facilité baisse de 0,2 (minimum 1,3).
 
-const CARTE_VALIDE = /^[a-z0-9-]{1,40}\/[a-z0-9-]{1,80}#(essentiel|approfondir|expert)#[0-9]{1,3}$/;
+// Trois familles de cartes : quiz (cours#niveau#n), vocabulaire (vocab/terme#mot), exercices (exo/id).
+const CARTE_VALIDE =
+  /^(?:[a-z0-9-]{1,40}\/[a-z0-9-]{1,80}#(?:essentiel|approfondir|expert)#[0-9]{1,3}|vocab\/[a-z0-9-]{1,80}#mot|exo\/[a-z0-9-]{1,60})$/;
 const MAX_CARTES = 100;
 const FACILITE_INITIALE = 2.5;
 const FACILITE_MIN = 1.3;
