@@ -1,0 +1,287 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+// Tous les schémas du dossier public/schemas sont listés automatiquement :
+// un nouveau fichier « NN-nom.svg » placé dans le dossier d'un parcours apparaît ici sans autre travail.
+// Le titre et la description viennent des balises <title> et <desc> du SVG ;
+// le numéro NN relie le schéma au chapitre du même numéro dans le parcours.
+
+const PARCOURS = [
+  { id: 'ba-ba', libelle: 'Bâtiment et construction (B.A.-BA)' },
+  { id: 'promotion', libelle: 'Promotion immobilière' },
+  { id: 'logement-social', libelle: 'Logement social' },
+  { id: 'materiaux-biosources', libelle: 'Nouvelles méthodes de construction' },
+];
+
+const decoder = (s) =>
+  s
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+
+function lireBalise(svg, balise) {
+  const m = svg.match(new RegExp(`<${balise}[^>]*>([\\s\\S]*?)</${balise}>`));
+  return m ? decoder(m[1].trim()) : '';
+}
+
+const cours = await getCollection('cours');
+const chapitre = new Map(cours.map((c) => [`${c.data.parcours}#${c.data.ordre}`, c]));
+
+const racine = path.join(process.cwd(), 'public', 'schemas');
+const schemas = [];
+for (const parcours of PARCOURS) {
+  const dossier = path.join(racine, parcours.id);
+  if (!fs.existsSync(dossier)) continue;
+  const fichiers = fs
+    .readdirSync(dossier)
+    .filter((f) => f.endsWith('.svg'))
+    .sort();
+  for (const fichier of fichiers) {
+    const svg = fs.readFileSync(path.join(dossier, fichier), 'utf8');
+    const numero = Number((fichier.match(/^(\d+)-/) ?? [])[1]);
+    const ch = chapitre.get(`${parcours.id}#${numero}`);
+    const titre = lireBalise(svg, 'title') || fichier.replace(/\.svg$/, '');
+    schemas.push({
+      parcours: parcours.id,
+      src: `/schemas/${parcours.id}/${fichier}`,
+      nom: `oinarri-${parcours.id}-${fichier.replace(/\.svg$/, '')}`,
+      titre,
+      description: lireBalise(svg, 'desc'),
+      chapitreTitre: ch?.data.titre ?? null,
+      chapitreHref: ch ? `/${ch.id}/` : null,
+    });
+  }
+}
+---
+
+<Base
+  large
+  title="Infographies — Oinarri"
+  description="Tous les schémas du cours au même endroit, avec le lien vers leur chapitre et un téléchargement en SVG ou en PNG."
+>
+  <a class="retour" href="/">Accueil</a>
+  <h1>Infographies</h1>
+  <p class="ig-intro">
+    Les schémas du cours, regroupés par parcours. Chacun renvoie à son chapitre et se télécharge en SVG
+    (qualité vectorielle, pour l'impression) ou en PNG (pour un document ou une présentation). Les
+    chiffres du cours sont sur la page <a href="/chiffres-cles/">Chiffres clés</a>.
+  </p>
+
+  <div id="infographies" class="ig">
+    <div class="ig-filtres">
+      <label for="ig-recherche">Rechercher un schéma</label>
+      <input id="ig-recherche" type="search" autocomplete="off" placeholder="pont thermique, famille, loyer…" />
+      <div id="ig-parcours" class="ig-puces" role="group" aria-label="Parcours">
+        <button class="ig-puce" type="button" data-parcours="" aria-pressed="true">Tous</button>
+        {
+          PARCOURS.map((p) => (
+            <button class="ig-puce" type="button" data-parcours={p.id} aria-pressed="false">
+              {p.libelle}
+            </button>
+          ))
+        }
+      </div>
+      <p id="ig-compte" class="ig-compte" role="status" aria-live="polite">{schemas.length} schémas</p>
+    </div>
+
+    <ul class="ig-liste">
+      {
+        schemas.map((s) => (
+          <li
+            class="ig-carte"
+            data-parcours={s.parcours}
+            data-texte={`${s.titre} ${s.description} ${s.chapitreTitre ?? ''}`.toLowerCase()}
+          >
+            <figure>
+              <img src={s.src} alt={s.description || s.titre} loading="lazy" />
+              <figcaption>
+                <strong>{s.titre}</strong>
+                {s.chapitreHref && (
+                  <>
+                    <br />
+                    <a href={s.chapitreHref}>Chapitre : {s.chapitreTitre}</a>
+                  </>
+                )}
+              </figcaption>
+            </figure>
+            <div class="ig-actions">
+              <a class="ig-bouton ig-bouton-secondaire" href={s.src} download={`${s.nom}.svg`}>
+                Télécharger en SVG
+              </a>
+              <button class="ig-bouton ig-png" type="button" data-src={s.src} data-nom={s.nom} hidden>
+                Télécharger en PNG
+              </button>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <p id="ig-vide" class="ig-vide" hidden>Aucun schéma ne correspond à cette recherche.</p>
+    <p id="ig-erreur" class="ig-vide" role="alert" hidden></p>
+  </div>
+</Base>
+
+<style is:global>
+  .ig-intro {
+    max-width: var(--lecture-w);
+    color: var(--ink-800);
+  }
+
+  .ig-intro a {
+    text-underline-offset: 3px;
+  }
+
+  #infographies [hidden] {
+    display: none !important;
+  }
+
+  .ig-filtres {
+    margin: 0 0 1.25rem;
+    padding: 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+  }
+
+  #infographies label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  #ig-recherche {
+    width: 100%;
+    min-height: 44px;
+    margin: 0.25rem 0 0.75rem;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+
+  .ig-puces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 0.5rem;
+  }
+
+  .ig-puce {
+    min-height: 44px;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius);
+    background: none;
+    color: var(--ink-900);
+    cursor: pointer;
+  }
+
+  .ig-puce[aria-pressed='true'] {
+    background: var(--ink-900);
+    border-color: var(--ink-900);
+    color: var(--paper);
+  }
+
+  .ig-compte {
+    margin: 0;
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  .ig-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 48rem) {
+    .ig-liste {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+    }
+  }
+
+  .ig-carte {
+    padding: 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+    min-width: 0;
+  }
+
+  .ig-carte figure {
+    margin: 0 0 0.75rem;
+  }
+
+  .ig-carte img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .ig-carte figcaption {
+    margin-top: 0.5rem;
+    font-size: 14px;
+  }
+
+  .ig-carte figcaption a {
+    text-underline-offset: 3px;
+    color: var(--ink-600);
+  }
+
+  .ig-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .ig-bouton {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 9px 16px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--ink-900);
+    background: var(--ink-900);
+    color: var(--paper);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .ig-bouton-secondaire {
+    background: none;
+    color: var(--ink-900);
+  }
+
+  .ig-bouton:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .ig-vide {
+    padding: 1rem;
+    border: 1px dashed var(--ink-200);
+    border-radius: 12px;
+    color: var(--ink-600);
+  }
+</style>
+
+<script>
+  import '../scripts/infographies.js';
+</script>
