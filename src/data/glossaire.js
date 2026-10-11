@@ -806,4 +806,4 @@ const termesBatiment = [
   },
 ];
 
-export const termes = [...termesBatiment, ...termesPromotion, ...termesLogementSocial, ...termesMateriauxBiosources, ...termesThermique, ...termesAcoustique, ...termesPassif];
+export const termes = [...termesBatiment, ...termesPromotion, ...termesLogementSocial, ...termesMateriauxBiosources, ...termesThermique, ...termesAcoustique, ...termesPassif, ...termesIncendie];
