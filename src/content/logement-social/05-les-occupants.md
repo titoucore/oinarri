@@ -35,6 +35,8 @@ Pour Arbola : la famille de trois personnes (36 000 euros) est sous le plafond P
 
 ### Qui attribue ?
 
+![De la demande de logement à l'attribution : plafonds, candidatures, commission d'attribution, bail.](/schemas/logement-social/05-de-la-demande-a-l-attribution.svg)
+
 C'est la **commission d'attribution des logements et d'examen de l'occupation des logements (CALEOL)** de chaque organisme qui décide, logement par logement. En principe :
 
 - elle examine au moins **trois candidatures** par logement ;
