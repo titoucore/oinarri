@@ -55,7 +55,7 @@ approfondir:
       - "Le nombre de logements par étage seulement"
       - "La date du permis"
     reponse: 0
-    explication: "La 3e A doit respecter trois dispositions : de R+4 à R+7 au plus, moins de 10 m entre la porte palIère la plus éloignée et l'escalier, et accès aux escaliers par la voie échelles. Si l'une n'est pas respectée, le bâtiment est en 3e B."
+    explication: "La 3e A doit respecter trois dispositions : de R+4 à R+7 au plus, moins de 10 m entre la porte palière la plus éloignée et l'escalier, et accès aux escaliers par la voie échelles. Si l'une n'est pas respectée, le bâtiment est en 3e B."
 
   - type: qcm
     question: "Quel type d'escalier est exigé dans les habitations de 3e famille B ?"
@@ -70,11 +70,11 @@ approfondir:
   - type: vf
     affirmation: "Pour un duplex au dernier étage, c'est toujours le niveau le plus haut du duplex qui définit la hauteur de classement."
     reponse: false
-    explication: "Pour les duplex et triplex situés à l'étage le plus élevé, seul le niveau bas est pris en compte, si le logement a une pièce principale et une porte palIère en partie basse (arrêté du 19 juin 2015)."
+    explication: "Pour les duplex et triplex situés à l'étage le plus élevé, seul le niveau bas est pris en compte, si le logement a une pièce principale et une porte palière en partie basse (arrêté du 19 juin 2015)."
 
   - type: ouverte
     question: "Qu'est-ce qui change pour la structure d'Arbola quand elle passe de R+3 à R+4 ?"
-    modele: "Elle passe de la 2e à la 3e famille : la stabilité au feu de la structure et le coupe-feu des planchers passent de 30 minutes à 1 heure. Selon les conditions (distance porte palIère-escalier, voie échelles), ce sera la 3e A ou la 3e B, avec un escalier protégé en 3e B. Il faut aussi vérifier l'accès des secours et la justification de la paroi à ossature bois."
+    modele: "Elle passe de la 2e à la 3e famille : la stabilité au feu de la structure et le coupe-feu des planchers passent de 30 minutes à 1 heure. Selon les conditions (distance porte palière-escalier, voie échelles), ce sera la 3e A ou la 3e B, avec un escalier protégé en 3e B. Il faut aussi vérifier l'accès des secours et la justification de la paroi à ossature bois."
 
 expert:
   - type: qcm
