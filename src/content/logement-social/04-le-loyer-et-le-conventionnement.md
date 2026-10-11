@@ -126,5 +126,6 @@ Vérifié le 3 octobre 2026.
 - Valeurs de zone, marges locales, annexes, plafonnement, revalorisation : avis relatif à la fixation des loyers et redevances maximums des conventions APL, pour les opérations conventionnées en 2026 (ministère chargé du logement, annexes 1, 2, 4, 6 et 8).
 - Calcul du loyer : article D353-16 du CCH, fiche de la DHUP sur les loyers des logements sociaux.
 - Durée de la convention : fiche du ministère de la Transition écologique sur le conventionnement, et document de l'Association des maires de France.
+- Réduction de loyer de solidarité : Service-Public, [Les montants changent le 1er juin](https://www.service-public.gouv.fr/particuliers/actualites/A15236) (arrêté du 22 mai 2026) ; ANIL, [Réduction de loyer de solidarité et APL](https://www.anil.org/aj-reduction-loyer-solidarite-rls-apl/) (article L. 442-2-1, baisse de l'APL de 98 %, loi de finances pour 2026).
 
 À contrôler sur Légifrance : la version en vigueur de D353-16 et L353-9-2 ; le classement de la commune dans le zonage ; l'avis des loyers de l'année de signature de chaque convention.
