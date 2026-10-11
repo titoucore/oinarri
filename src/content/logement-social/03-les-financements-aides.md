@@ -104,7 +104,7 @@ PLAI · PLUS · PLS · Banque des Territoires · Action Logement · Décision de
 
 - Les taux, les durées et les plafonds changent chaque année. Les valeurs de ce chapitre datent du 3 octobre 2026.
 - Les montants de subvention sont locaux : celui du Morbihan n'est pas transposable.
-- La date du 31 décembre 2026 peut être modifiée par une loi de finances ultérieure.
+- La date du 31 décembre 2026 peut être modifiée par une loi de finances : le projet de loi de finances pour 2027 propose de la repousser à fin 2030, mais il n'est pas voté.
 - Plusieurs sources consultées sont des sites de vulgarisation ; les faits importants sont à confirmer sur Légifrance et le BOFiP.
 
 ## Sources et vérification
