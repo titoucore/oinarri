@@ -1,0 +1,97 @@
+# Mini-quiz du chapitre 10 : Le bâtiment passif, la double flux et le puits canadien.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quel est le besoin de chauffage maximal d'un bâtiment Passivhaus ?"
+    choix:
+      - "15 kWh/(m²·an), ou une puissance de chauffe de 10 W/m²"
+      - "50 kWh/(m²·an)"
+      - "120 kWh/(m²·an)"
+      - "Aucun besoin"
+    reponse: 0
+    explication: "Le label demande un besoin de chauffage d'au plus 15 kWh/(m²·an) ou une puissance de chauffe d'au plus 10 W/m². Le chiffre de 120 kWh/(m²·an) est la limite d'énergie primaire, tous usages confondus."
+
+  - type: vf
+    affirmation: "Un bâtiment passif n'a besoin d'aucun chauffage."
+    reponse: false
+    explication: "Hors cas exceptionnel, un appoint reste nécessaire. Il est si faible qu'un système de chauffage classique devient inutile, mais « passif » ne veut pas dire « sans chauffage »."
+
+  - type: qcm
+    question: "Quel taux de récupération de chaleur est demandé à la ventilation double flux d'un bâtiment passif ?"
+    choix:
+      - "Au moins 25 %"
+      - "Au moins 50 %"
+      - "Au moins 75 %"
+      - "100 %"
+    reponse: 2
+    explication: "Selon La Maison Passive, la ventilation double flux d'un bâtiment passif récupère au moins 75 % de la chaleur de l'air extrait. L'ADEME cite des rendements d'environ 85 % pour les échangeurs courants."
+
+  - type: qcm
+    question: "Quelle différence y a-t-il entre un puits canadien et un puits provençal ?"
+    choix:
+      - "Aucune : c'est un seul système, nommé selon qu'il réchauffe l'air (hiver) ou le rafraîchit (été)"
+      - "Le puits canadien est plus profond"
+      - "Le puits provençal utilise de l'eau"
+      - "Le puits canadien sert uniquement en été"
+    reponse: 0
+    explication: "D'après l'ADEME, puits canadien et puits provençal qualifient un seul et même système : des tubes enterrés dans lesquels circule l'air neuf. Le nom dépend de la saison. On parle aussi de puits climatique."
+
+  - type: ouverte
+    question: "La RE2020 impose-t-elle le niveau passif ? Pourquoi ne peut-on pas comparer directement 15 et 50 kWh/m²/an ?"
+    modele: "Non : le passif est une démarche volontaire, plus exigeante que la RE2020. Le chiffre de 15 est un besoin de chauffage, le chiffre de 50 une consommation d'énergie primaire sur plusieurs usages : les deux indicateurs ne mesurent pas la même chose, donc ils ne se comparent pas tels quels."
+
+approfondir:
+  - type: qcm
+    question: "Quelle étanchéité à l'air exige le label Passivhaus ?"
+    choix:
+      - "n50 d'au plus 0,6 renouvellement d'air par heure"
+      - "Q4Pa-surf d'au plus 1,0 m³/(h·m²)"
+      - "Aucune exigence"
+      - "n50 d'au plus 6 renouvellements par heure"
+    reponse: 0
+    explication: "Le label demande un n50 d'au plus 0,6 renouvellement d'air par heure sous 50 pascals. Le Q4Pa-surf, utilisé par la réglementation, est un autre indicateur."
+
+  - type: vf
+    affirmation: "Un n50 de 0,6 et un Q4Pa-surf de 0,6 sont deux façons de dire la même chose."
+    reponse: false
+    explication: "Le n50 est un nombre de renouvellements d'air par heure sous 50 pascals ; le Q4Pa-surf est un débit par mètre carré de paroi sous 4 pascals. Les unités et les pressions diffèrent : les chiffres ne sont pas équivalents."
+
+  - type: qcm
+    question: "Que dit l'ADEME du couplage d'un puits canadien et d'une ventilation double flux ?"
+    choix:
+      - "Il est complexe et, en général, pas judicieux sur les plans technique et économique"
+      - "Il est obligatoire"
+      - "Il doublera le rendement"
+      - "Il est interdit"
+    reponse: 0
+    explication: "La fiche de l'ADEME (2012) explique que la double flux a déjà un rendement élevé et que le puits n'ajoute pas beaucoup, surtout l'hiver. Il peut toutefois éviter de solliciter le dégivrage en cas de gel."
+
+  - type: ouverte
+    question: "Quels sont les deux risques sanitaires d'un puits canadien et trois précautions pour les limiter ?"
+    modele: "La condensation, qui peut favoriser moisissures et bactéries, et le radon, dans les sols granitiques et volcaniques. Précautions : prise d'air à 1,20 m, loin des pollutions, avec filtre entretenu ; pente de 2 % vers un point bas avec évacuation de l'eau ; réseau étanche, jonctions conformes à la norme NF EN 1277 d'après le CETIAT."
+
+expert:
+  - type: vf
+    affirmation: "Un bâtiment passif doit forcément être construit avec des matériaux naturels."
+    reponse: false
+    explication: "Le label fixe des performances, pas des matériaux. Un bâtiment passif peut être bâti en biosourcé comme en matériaux classiques."
+
+  - type: qcm
+    question: "Quel outil de calcul accompagne le label Passivhaus ?"
+    choix:
+      - "Le PHPP (Passive House Planning Package)"
+      - "Le Bbio"
+      - "Le DH"
+      - "Le Q4Pa-surf"
+    reponse: 0
+    explication: "Le label s'appuie sur le Passive House Planning Package. Le Bbio, le DH et le Q4Pa-surf sont des indicateurs de la RE2020 ou de ses tests."
+
+  - type: ouverte
+    question: "Pourquoi faut-il revérifier l'avis de l'ADEME sur les puits climatiques avant de s'en servir ?"
+    modele: "La fiche date de juillet 2012. Elle jugeait alors que le manque d'offre industrielle et de compétences reconnues empêchait d'offrir des garanties. Le marché, les compétences et les retours d'expérience ont pu évoluer depuis : il faut chercher des sources plus récentes avant de décider, et demander son avis à l'assureur."

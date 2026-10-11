@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>Le puits canadien</title>
+<desc>Coupe d'un puits canadien : l'air entre par une prise d'air située à 1,20 m du sol, circule dans un tube enterré en pente de 2 % vers un point bas muni d'une évacuation de l'eau, puis remonte vers le logement par un ventilateur. En été, l'air qui se refroidit peut condenser dans le tube.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<defs>
+<marker id="pc-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0F6E56"/></marker>
+</defs>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="1" y="150" width="678" height="189" rx="11" fill="#F1EFE8"/>
+<line x1="1" y1="150" x2="679" y2="150" stroke="#5F5E5A" stroke-width="1.2"/>
+<polygon points="420,80 525,40 630,80" fill="#FAECE7" stroke="#993C1D" stroke-width=".8"/>
+<rect x="430" y="80" width="190" height="70" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.2"/>
+<text class="th" x="525" y="120" text-anchor="middle" fill="#444441">Logement</text>
+<line x1="70" y1="150" x2="70" y2="104" stroke="#444441" stroke-width="4"/>
+<rect x="58" y="96" width="24" height="8" fill="#444441"/>
+<text class="th" x="96" y="104" fill="#2C2C2A">Prise d'air</text>
+<text class="ts" x="96" y="122" fill="#5F5E5A">à 1,20 m, avec filtre et grille</text>
+<path d="M70 150 V212 L300 240 L475 215 V158" fill="none" stroke="#0F6E56" stroke-width="8" stroke-linejoin="round" marker-end="url(#pc-a)"/>
+<text class="ts" x="130" y="212" fill="#085041">pente de 2 %</text>
+<circle cx="300" cy="240" r="7" fill="#FFFFFF" stroke="#0F6E56" stroke-width="2"/>
+<rect x="286" y="256" width="28" height="22" rx="3" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<text class="th" x="300" y="298" text-anchor="middle" fill="#444441">Point bas</text>
+<text class="ts" x="300" y="316" text-anchor="middle" fill="#5F5E5A">évacuation de l'eau</text>
+<circle cx="475" cy="186" r="13" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.2"/>
+<text class="th" x="475" y="186" text-anchor="middle" dominant-baseline="central" fill="#444441">V</text>
+<text class="ts" x="497" y="190" fill="#5F5E5A">Ventilateur</text>
+<text class="ts" x="30" y="324" fill="#5F5E5A">Sol : température stable en profondeur</text>
+<text class="ts" x="430" y="300" fill="#993C1D">Été : l'air se refroidit et peut condenser,</text>
+<text class="ts" x="430" y="318" fill="#993C1D">d'où la pente et l'évacuation.</text>
+</svg>
