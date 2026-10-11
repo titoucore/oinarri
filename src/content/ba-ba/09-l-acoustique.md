@@ -55,6 +55,8 @@ L'arrêté fixe d'autres exigences, pour les circulations communes, les locaux d
 
 Quatre réflexes de conception et de chantier :
 
+![Vue en plan : le bruit passe par la paroi qui sépare deux pièces (direct) et par les parois qui se prolongent (latéral).](/schemas/ba-ba/09-transmission-directe-et-laterale.svg)
+
 - **La masse arrête le bruit aérien.** Une paroi légère, comme l'ossature bois d'Arbola, doit compenser par sa composition : deux parois séparées par un matériau souple isolent mieux qu'une seule (principe masse-ressort-masse, chapitre 4 du parcours « Nouvelles méthodes »).
 - **On désolidarise pour les chocs.** Un revêtement de sol posé sur une sous-couche souple, sans contact rigide avec la structure, évite que le choc ne passe dans le plancher.
 - **On soigne les détails.** Les joints qui fuient, les gaines et les traversées de réseaux peuvent faire perdre jusqu'à 10 dB d'isolement.
