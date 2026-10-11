@@ -167,7 +167,13 @@ export const EXERCICES = [
     generer(a) {
       const n = a.choix([3, 6, 12]);
       const su = a.choix([45, 52, 60, 68, 75]);
-      const prix = a.choix([5.77, 6.1, 6.49, 7]);
+      const zone = a.choix([
+        { produit: 'PLUS', zone: 'II', v: 6.49 },
+        { produit: 'PLUS', zone: 'III', v: 6.01 },
+        { produit: 'PLAI', zone: 'II', v: 5.77 },
+        { produit: 'PLAI', zone: 'III', v: 5.33 },
+      ]);
+      const prix = zone.v;
       const cs = 0.77 * (1 + (n * 20) / (n * su));
       const loyer = prix * cs * su;
       return {
