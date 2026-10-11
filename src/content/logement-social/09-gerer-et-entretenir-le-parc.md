@@ -49,6 +49,8 @@ Pour les logements neufs, les garanties de parfait achèvement (un an), biennale
 
 ### Seconde vie
 
+![Le régime Seconde vie : d'un logement de classe E, F ou G à la classe A ou B, avec ses aides.](/schemas/logement-social/09-seconde-vie.svg)
+
 Le dispositif **Seconde vie** concerne la rénovation énergétique lourde de logements sociaux anciens. Sous agrément, il donne droit à une TVA réduite, à une exonération de taxe foncière de longue durée et à des prêts équivalents au PLAI, au PLUS ou au PLS. Les logements doivent être achevés et constituer des logements locatifs sociaux depuis au moins 40 ans, avoir une performance dégradée avant travaux (classes E, F ou G) et atteindre un niveau élevé après (A ou B). Après travaux, les loyers peuvent être augmentés par avenant, dans des limites fixées par décret de février 2025.
 
 ### La convention d'utilité sociale
