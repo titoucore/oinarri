@@ -58,6 +58,12 @@ export const chapitres = [
     href: '/ba-ba/09-l-acoustique/',
     cours: 'ba-ba/09-l-acoustique',
   },
+  {
+    titre: 'Le bâtiment passif, la double flux et le puits canadien',
+    desc: 'Le label Passivhaus, ses cinq mesures, la ventilation double flux et ce que vaut un puits canadien.',
+    href: '/ba-ba/10-le-batiment-passif-et-le-puits-canadien/',
+    cours: 'ba-ba/10-le-batiment-passif-et-le-puits-canadien',
+  },
 ];
 
 export const disponibles = chapitres.filter((c) => c.cours);
