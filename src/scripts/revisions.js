@@ -34,7 +34,7 @@ export async function noterCarte(carte, note) {
   const reponse = await fetch('/api/revisions', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ action: 'noter', carte, reussi }),
+    body: JSON.stringify({ action: 'noter', carte, note: valeur }),
   });
   if (!reponse.ok) throw new Error('Enregistrement impossible');
   return reponse.json();
