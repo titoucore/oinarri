@@ -64,6 +64,12 @@ export const chapitres = [
     href: '/ba-ba/10-le-batiment-passif-et-le-puits-canadien/',
     cours: 'ba-ba/10-le-batiment-passif-et-le-puits-canadien',
   },
+  {
+    titre: 'La sécurité incendie des logements',
+    desc: 'Les quatre familles d’habitation, la tenue au feu de la structure, les escaliers et les isolants combustibles.',
+    href: '/ba-ba/11-la-securite-incendie/',
+    cours: 'ba-ba/11-la-securite-incendie',
+  },
 ];
 
 export const disponibles = chapitres.filter((c) => c.cours);
