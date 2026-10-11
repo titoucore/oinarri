@@ -1,13 +1,17 @@
 // Page /revisions/ : séances de révision espacée.
 //
-// Trois modes au départ : séance rapide (5 cartes), un chapitre, mélange (jusqu'à 20 cartes).
-// QCM et vrai/faux : on touche sa réponse, la correction est immédiate et la note est automatique
-// (sûr(e), hésité ou oublié). Question ouverte : on écrit (facultatif), on compare, puis on s'auto-évalue
-// sur trois niveaux. Une carte oubliée ou hésitée revient une fois dans la séance (« rappel »),
-// sans modifier son calendrier : seule la première réponse compte pour la planification.
+// Trois modes au départ : séance rapide (5 cartes), un chapitre (ou le vocabulaire), mélange.
+// Quatre sortes de cartes :
+//   - QCM et vrai/faux : on touche sa réponse, la correction est immédiate, la note est automatique ;
+//   - vocabulaire : un terme du glossaire, retrouvé à partir de sa définition (ou l'inverse) ;
+//   - exercice chiffré : de nouvelles valeurs à chaque tirage, on saisit un résultat ;
+//   - question ouverte : on écrit (facultatif), on compare, puis on s'auto-évalue.
+// Notes possibles : su, hesite, oublie. Une carte oubliée ou hésitée revient une fois dans la séance
+// (« rappel »), sans modifier son calendrier : seule la première réponse compte.
 
 import { LIBELLES } from './progression.js';
 import { chargerRevisions, noterCarte, cartesDues } from './revisions.js';
+import { EXERCICES, alea } from '../data/exercices.js';
 
 const TAILLE_RAPIDE = 5;
 const TAILLE_MELANGE = 20;
@@ -48,6 +52,9 @@ function formaterDate(jour) {
   });
 }
 
+const nombreFr = (x, decimales = 2) =>
+  x.toLocaleString('fr-FR', { minimumFractionDigits: decimales, maximumFractionDigits: decimales });
+
 function melanger(tableau) {
   const t = [...tableau];
   for (let i = t.length - 1; i > 0; i -= 1) {
@@ -68,6 +75,8 @@ async function demarrer() {
 
   const cartes = JSON.parse(donneesCartes.textContent || '[]');
   const parId = new Map(cartes.map((c) => [c.carte, c]));
+  const cartesVocab = cartes.filter((c) => c.type === 'vocab');
+  const groupeDe = (id) => parId.get(id).groupe ?? coursDe(id);
 
   function message(texte, ...suite) {
     zone.replaceChildren(el('p', 'rev-message', texte), ...suite);
@@ -82,7 +91,7 @@ async function demarrer() {
   const inscrites = donnees.revisions.filter((r) => parId.has(r.carte));
   if (!inscrites.length) {
     message(
-      "Aucune carte pour l'instant. Quand tu valides un niveau dans un chapitre, ses questions de quiz deviennent des cartes de révision.",
+      "Aucune carte pour l'instant. Quand tu valides un niveau dans un chapitre, ses questions de quiz, son vocabulaire et ses exercices deviennent des cartes de révision.",
       lien('rev-bouton', 'Aller au B.A.-BA', '/ba-ba/'),
     );
     return;
@@ -106,6 +115,47 @@ async function demarrer() {
     }
   }
 
+  // ---------- Préparation des cartes de vocabulaire et des exercices ----------
+
+  // Un terme : on retrouve soit le terme à partir de sa définition, soit la définition à partir du terme.
+  function preparerVocab(carte) {
+    const voisins = cartesVocab.filter((c) => c.carte !== carte.carte && c.terme !== carte.terme);
+    const pool = [
+      ...melanger(voisins.filter((c) => c.categorie === carte.categorie)),
+      ...melanger(voisins.filter((c) => c.categorie !== carte.categorie)),
+    ];
+    const sensDefinition = carte.definition.length <= 150 && Math.random() < 0.5;
+    const candidats = sensDefinition ? pool.filter((c) => c.definition.length <= 220) : pool;
+    const distracteurs = candidats.slice(0, 3);
+    const complement = carte.developpe ? `${carte.terme} signifie : ${carte.developpe}.` : null;
+
+    if (sensDefinition) {
+      return {
+        enonce: `Quelle est la définition de « ${carte.terme} » ?`,
+        options: melanger([
+          { texte: carte.definition, juste: true },
+          ...distracteurs.map((d) => ({ texte: d.definition, juste: false })),
+        ]),
+        reponse: carte.definition,
+        explication: complement,
+      };
+    }
+    return {
+      enonce: `Quel terme correspond à cette définition ? ${carte.definition}`,
+      options: melanger([
+        { texte: carte.terme, juste: true },
+        ...distracteurs.map((d) => ({ texte: d.terme, juste: false })),
+      ]),
+      reponse: carte.terme,
+      explication: complement,
+    };
+  }
+
+  function genererExercice(carte) {
+    const exo = EXERCICES.find((e) => e.id === carte.exo);
+    return exo ? exo.generer(alea) : null;
+  }
+
   // ---------- Choix de la séance ----------
 
   function boutonMode(titre, description, action) {
@@ -124,11 +174,11 @@ async function demarrer() {
       el('p', 'rev-info', 'Choisis ta séance.'),
     );
 
-    const parCours = new Map();
+    const parGroupe = new Map();
     for (const r of dues) {
-      const cours = coursDe(r.carte);
-      if (!parCours.has(cours)) parCours.set(cours, []);
-      parCours.get(cours).push(r);
+      const groupe = groupeDe(r.carte);
+      if (!parGroupe.has(groupe)) parGroupe.set(groupe, []);
+      parGroupe.get(groupe).push(r);
     }
 
     const modes = el('div', 'rev-modes');
@@ -144,22 +194,24 @@ async function demarrer() {
         () => serie(melanger(dues.slice(0, TAILLE_MELANGE))),
       ),
       boutonMode(
-        'Un chapitre',
-        `${parCours.size} chapitre${parCours.size > 1 ? 's' : ''} avec des cartes à réviser`,
-        () => menuChapitres(parCours),
+        'Un chapitre ou le vocabulaire',
+        `${parGroupe.size} groupe${parGroupe.size > 1 ? 's' : ''} avec des cartes à réviser`,
+        () => menuGroupes(parGroupe),
       ),
     );
     zone.append(modes);
   }
 
-  function menuChapitres(parCours) {
-    zone.replaceChildren(el('p', 'rev-titre', 'Quel chapitre ?'));
+  function menuGroupes(parGroupe) {
+    zone.replaceChildren(el('p', 'rev-titre', 'Quel groupe de cartes ?'));
     const liste = el('div', 'rev-modes');
-    for (const [cours, liste_] of parCours) {
-      const titre = parId.get(liste_[0].carte).titreCours;
+    for (const [, cartesDuGroupe] of parGroupe) {
+      const titre = parId.get(cartesDuGroupe[0].carte).titreCours;
       liste.append(
-        boutonMode(titre, `${liste_.length} carte${liste_.length > 1 ? 's' : ''}`, () =>
-          serie(liste_.slice(0, TAILLE_MELANGE)),
+        boutonMode(
+          titre,
+          `${cartesDuGroupe.length} carte${cartesDuGroupe.length > 1 ? 's' : ''}`,
+          () => serie(cartesDuGroupe.slice(0, TAILLE_MELANGE)),
         ),
       );
     }
@@ -171,27 +223,62 @@ async function demarrer() {
   function serie(choisies) {
     const file = choisies.map((r) => ({ id: r.carte, rappel: false }));
     const idsSerie = new Set(choisies.map((r) => r.carte));
-    const arevoir = new Map(); // carte -> note ('oublie' ou 'hesite')
+    const arevoir = new Map(); // carte -> carte (oubliée ou hésitée)
     let position = 0;
     let faites = 0;
     let sues = 0;
+
+    function passer() {
+      position += 1;
+      if (position < file.length) afficherCarte();
+      else terminerSerie();
+    }
 
     function afficherCarte() {
       arreterTouches();
       const element = file[position];
       const carte = parId.get(element.id);
       let repondue = false;
-      zone.replaceChildren();
 
+      // Contenu de la carte selon son type.
+      let enonce = carte.enonce;
+      let options = null; // cartes à choix : [{ texte, juste }]
+      let reponseTexte = carte.reponse;
+      let explicationTexte = carte.explication;
+      let instance = null; // exercice chiffré
+      let origine = `${carte.titreCours} · ${LIBELLES[carte.niveau]}`;
+
+      if (carte.type === 'vf') {
+        options = [
+          { texte: 'Vrai', juste: carte.reponse === 'Vrai' },
+          { texte: 'Faux', juste: carte.reponse === 'Faux' },
+        ];
+      } else if (carte.type === 'qcm') {
+        options = carte.choix.map((texte) => ({ texte, juste: texte === carte.reponse }));
+        if (!options.some((o) => PAS_DE_MELANGE.test(o.texte))) options = melanger(options);
+      } else if (carte.type === 'vocab') {
+        const v = preparerVocab(carte);
+        enonce = v.enonce;
+        options = v.options;
+        reponseTexte = v.reponse;
+        explicationTexte = v.explication;
+        origine = `Vocabulaire · ${carte.categorie}`;
+      } else if (carte.type === 'exercice') {
+        instance = genererExercice(carte);
+        if (!instance) {
+          // Exercice retiré du catalogue : on passe à la carte suivante.
+          passer();
+          return;
+        }
+        enonce = instance.enonce;
+        origine = `${carte.titreCours} · Exercice`;
+      }
+      if (element.rappel) origine += ' · Rappel';
+
+      zone.replaceChildren();
       zone.append(el('p', 'rev-progression', `Carte ${position + 1} sur ${file.length}`));
-      zone.append(
-        el(
-          'p',
-          'rev-origine',
-          `${carte.titreCours} · ${LIBELLES[carte.niveau]}${element.rappel ? ' · Rappel' : ''}`,
-        ),
-      );
-      zone.append(el('p', 'rev-enonce', carte.enonce));
+      zone.append(el('p', 'rev-origine', origine));
+      zone.append(el('p', 'rev-enonce', enonce));
 
       const retour = el('div', 'rev-retour');
       retour.tabIndex = -1;
@@ -216,12 +303,10 @@ async function demarrer() {
             file.splice(Math.min(position + 1 + ECART_RAPPEL, file.length), 0, { id: carte.carte, rappel: true });
           }
         }
-        position += 1;
-        if (position < file.length) afficherCarte();
-        else terminerSerie();
+        passer();
       }
 
-      function pied(...actions) {
+      function pied() {
         const zoneActions = el('div', 'rev-actions');
         const erreur = el('p', 'rev-erreur');
         erreur.setAttribute('role', 'alert');
@@ -232,27 +317,56 @@ async function demarrer() {
       function verso(estJuste) {
         const bloc = el('div', 'rev-verso');
         if (estJuste !== undefined) {
-          bloc.append(el('p', 'rev-resultat', estJuste ? 'Bonne réponse.' : "Ce n'est pas la bonne réponse."));
+          bloc.append(
+            el('p', 'rev-resultat', estJuste ? 'Bonne réponse.' : instance ? 'Pas tout à fait.' : "Ce n'est pas la bonne réponse."),
+          );
         }
-        if (carte.type === 'ouverte') bloc.append(el('p', 'rev-reponse', carte.reponse));
-        else if (!estJuste) bloc.append(el('p', 'rev-reponse', `Réponse : ${carte.reponse}`));
-        if (carte.explication) bloc.append(el('p', 'rev-explication', carte.explication));
-        bloc.append(lien('rev-lien', 'Revoir dans le chapitre', hrefDe(carte.carte), true));
+        if (instance) {
+          bloc.append(el('p', 'rev-reponse', `Résultat : ${nombreFr(instance.reponse, instance.decimales)} ${instance.unite}`));
+          const etapes = el('ul', 'rev-etapes');
+          for (const e of instance.etapes) etapes.append(el('li', undefined, e));
+          bloc.append(etapes);
+        } else if (carte.type === 'ouverte') {
+          bloc.append(el('p', 'rev-reponse', reponseTexte));
+        } else if (!estJuste) {
+          bloc.append(el('p', 'rev-reponse', `Réponse : ${reponseTexte}`));
+        }
+        if (explicationTexte) bloc.append(el('p', 'rev-explication', explicationTexte));
+        bloc.append(
+          lien(
+            'rev-lien',
+            carte.type === 'vocab' ? 'Voir dans le glossaire' : 'Revoir dans le chapitre',
+            carte.href ?? hrefDe(carte.carte),
+            true,
+          ),
+        );
         return bloc;
       }
 
-      if (carte.type === 'qcm' || carte.type === 'vf') {
-        let options;
-        if (carte.type === 'vf') {
-          options = [
-            { texte: 'Vrai', juste: carte.reponse === 'Vrai' },
-            { texte: 'Faux', juste: carte.reponse === 'Faux' },
-          ];
+      // Correction commune aux cartes à choix et aux exercices.
+      function corriger(estJuste) {
+        retour.append(verso(estJuste));
+        const { zoneActions, erreur, ajouter } = pied();
+        if (element.rappel) {
+          const suite = bouton('rev-bouton', 'Carte suivante', () => terminerCarte('su', [suite], erreur));
+          ajouter(suite);
+        } else if (estJuste) {
+          retour.append(el('p', 'rev-info', 'Étais-tu sûr(e) de ta réponse ?'));
+          const sur = bouton('rev-bouton', 'Oui, j\u2019en étais sûr(e)', () => terminerCarte('su', [sur, doute], erreur));
+          const doute = bouton('rev-bouton rev-bouton-secondaire', 'J\u2019ai hésité ou deviné', () =>
+            terminerCarte('hesite', [sur, doute], erreur),
+          );
+          ajouter(sur, doute);
         } else {
-          options = carte.choix.map((texte) => ({ texte, juste: texte === carte.reponse }));
-          if (!options.some((o) => PAS_DE_MELANGE.test(o.texte))) options = melanger(options);
+          const suite = bouton('rev-bouton', 'Carte suivante', () => terminerCarte('oublie', [suite], erreur));
+          ajouter(suite);
         }
+        retour.append(zoneActions, erreur);
+        retour.focus();
+      }
 
+      if (options) {
+        // Cartes à choix : QCM, vrai/faux, vocabulaire.
         const groupe = el('div', 'rev-options');
         groupe.setAttribute('role', 'group');
         groupe.setAttribute('aria-label', 'Réponses possibles');
@@ -281,25 +395,7 @@ async function demarrer() {
               b.querySelector('.rev-option-texte').append(el('span', 'rev-etiquette', 'Ta réponse'));
             }
           });
-
-          retour.append(verso(option.juste));
-          const { zoneActions, erreur, ajouter } = pied();
-          if (element.rappel) {
-            const suite = bouton('rev-bouton', 'Carte suivante', () => terminerCarte('su', [suite], erreur));
-            ajouter(suite);
-          } else if (option.juste) {
-            retour.append(el('p', 'rev-info', 'Étais-tu sûr(e) de ta réponse ?'));
-            const sur = bouton('rev-bouton', 'Oui, j\u2019en étais sûr(e)', () => terminerCarte('su', [sur, doute], erreur));
-            const doute = bouton('rev-bouton rev-bouton-secondaire', 'J\u2019ai hésité ou deviné', () =>
-              terminerCarte('hesite', [sur, doute], erreur),
-            );
-            ajouter(sur, doute);
-          } else {
-            const suite = bouton('rev-bouton', 'Carte suivante', () => terminerCarte('oublie', [suite], erreur));
-            ajouter(suite);
-          }
-          retour.append(zoneActions, erreur);
-          retour.focus();
+          corriger(option.juste);
         }
 
         ecouteur = (e) => {
@@ -309,6 +405,52 @@ async function demarrer() {
           if (Number.isInteger(n) && n >= 1 && n <= boutonsOptions.length) boutonsOptions[n - 1].click();
         };
         document.addEventListener('keydown', ecouteur);
+      } else if (instance) {
+        // Exercice chiffré : on saisit un résultat.
+        const champ = el('input', 'rev-nombre');
+        champ.type = 'text';
+        champ.inputMode = 'decimal';
+        champ.autocomplete = 'off';
+        champ.setAttribute('aria-label', `Ta réponse, en ${instance.unite}`);
+        const rangee = el('div', 'rev-saisie-nombre');
+        rangee.append(champ, el('span', 'rev-unite', instance.unite));
+
+        const erreurSaisie = el('p', 'rev-erreur');
+        erreurSaisie.setAttribute('role', 'alert');
+        erreurSaisie.hidden = true;
+
+        function finir(juste) {
+          if (repondue) return;
+          repondue = true;
+          champ.readOnly = true;
+          valider.hidden = true;
+          sansReponse.hidden = true;
+          erreurSaisie.hidden = true;
+          corriger(juste);
+        }
+
+        function verifier() {
+          const brut = champ.value.trim().replace(/\s/g, '').replace(',', '.');
+          const valeur = Number(brut);
+          if (brut === '' || !Number.isFinite(valeur)) {
+            erreurSaisie.textContent = 'Entre un nombre, par exemple 4,5.';
+            erreurSaisie.hidden = false;
+            champ.focus();
+            return;
+          }
+          finir(Math.abs(valeur - instance.reponse) <= instance.tolerance);
+        }
+
+        const valider = bouton('rev-bouton', 'Valider', verifier);
+        const sansReponse = bouton('rev-bouton rev-bouton-secondaire', 'Je ne sais pas', () => finir(false));
+        champ.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') verifier();
+        });
+
+        const actions = el('div', 'rev-actions');
+        actions.append(valider, sansReponse);
+        zone.append(rangee, erreurSaisie, actions, retour);
+        champ.focus();
       } else {
         // Question ouverte : on formule sa réponse, puis on compare.
         const saisie = el('textarea', 'rev-saisie');
@@ -358,8 +500,12 @@ async function demarrer() {
         const liste = el('ul', 'rev-choix');
         for (const carte of arevoir.values()) {
           const li = el('li');
-          li.append(el('span', undefined, `${carte.enonce} `));
-          li.append(lien('rev-lien', 'Chapitre', hrefDe(carte.carte), true));
+          const libelle =
+            carte.type === 'vocab' ? carte.terme : carte.type === 'exercice' ? `Exercice : ${carte.titreCours}` : carte.enonce;
+          li.append(el('span', undefined, `${libelle} `));
+          li.append(
+            lien('rev-lien', carte.type === 'vocab' ? 'Glossaire' : 'Chapitre', carte.href ?? hrefDe(carte.carte), true),
+          );
           liste.append(li);
         }
         zone.append(liste);
