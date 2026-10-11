@@ -56,6 +56,16 @@ Aucun texte n'oblige à produire une FDES pour vendre un produit. Mais sans FDES
 
 Le seuil dépend de l'année de dépôt du permis. Il baisse en trois paliers (2025, 2028, 2031). Pour un logement collectif, l'Ic construction moyen passe de 740 à 650, puis 580, puis 490 kg CO₂e/m² : environ un tiers de baisse entre 2022 et 2031. Ces valeurs sont des moyennes, ensuite modulées (surface du logement, altitude, combles, fondations…).
 
+### Ce qui a changé en 2026
+
+Trois textes sont à connaître pour un permis déposé en 2026 ou en 2027 :
+
+- **Le décret n° 2026-200 et l'arrêté du 18 mars 2026**, publiés au Journal officiel du 20 mars, s'appliquent aux **permis déposés à partir du 1er juillet 2026**. Ils ajoutent des modulations de l'Ic construction pour les espaces extérieurs (balcons, loggias, terrasses, au-delà de 10 % de la surface de référence, avec un plafonnement à 25 %) et pour les hauteurs sous plafond. Ils assouplissent aussi le seuil des immeubles de grande hauteur et allègent les règles de certaines surélévations. Pour les logements, les paliers de 2028 et 2031 ne sont pas déplacés, d'après un site professionnel au 28 septembre 2026.
+- **Le décret n° 2026-863 du 12 septembre 2026**, publié au Journal officiel du 13 septembre, fixe un plafond de **79 gCO₂e/kWh** d'énergie finale pour les équipements de chauffage, de refroidissement et d'eau chaude installés dans les bâtiments neufs. Pour les **logements**, il s'applique aux permis et aux déclarations préalables déposés à partir du **1er janvier 2027** ; en pratique, il écarte le gaz. Les équipements utilisés uniquement en secours sont exclus du seuil. Le sort des appoints est décrit de façon différente selon les sources.
+- **Le décret n° 2026-16 du 15 janvier 2026** étend la RE2020, depuis le 1er mai 2026, à de nouvelles catégories de bâtiments tertiaires et industriels. Il ne concerne pas les logements.
+
+Une seconde série d'ajustements, sur les seuils carbone et le confort d'été, a été annoncée par le ministère pour l'été 2026. Au 11 octobre 2026, aucune publication n'a été relevée : le chapitre 4 s'appuie donc sur les seuils de DH actuels.
+
 ### Biosourcé et carbone
 
 L'ACV de la RE2020 est **dynamique** : elle valorise le stockage temporaire du carbone. Un matériau qui a capté du carbone pendant sa croissance (bois, isolants biosourcés) le garde tant qu'il reste en place, et ne le réémet qu'en fin de vie. Cela avantage la construction bois et les biosourcés.
