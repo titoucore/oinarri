@@ -117,7 +117,7 @@ DCE · Règlement de la consultation · CCAP · CCTP · Acte d'engagement · Lot
 
 ## Attention
 
-- Un seuil se vérifie le jour de la consultation : il change tous les deux ans.
+- Un seuil se vérifie le jour de la consultation : les seuils européens changent tous les deux ans et le droit de la commande publique évolue souvent.
 - Les critères de choix ne se modifient jamais après la remise des offres.
 - Le prix le plus bas n'est pas toujours le critère unique.
 - Ce chapitre donne des repères généraux, pas un avis juridique : le régime exact dépend du statut de l'organisme.
