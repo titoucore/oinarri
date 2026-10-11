@@ -288,6 +288,26 @@ const idsCartes = (await listerCartes()).map((c) => c.carte);
   .outil-lien:focus-visible {
     border-color: var(--ink-900);
   }
+  .groupe-titre {
+    max-width: 48rem;
+    margin: 1.75rem 0 0.5rem;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ink-600);
+  }
+  .outils-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 10px;
+    max-width: 48rem;
+    margin: 0 0 0.5rem;
+  }
+  .outils-grille .outil-lien {
+    max-width: none;
+    margin: 0;
+  }
+
   .parcours-titre {
     display: block;
     font-weight: 700;
