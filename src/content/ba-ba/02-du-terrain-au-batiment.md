@@ -122,7 +122,7 @@ La DOC et la DAACT sont déposées par le bénéficiaire du permis, donc par l'o
 - **Hors d'eau, hors d'air.** La mise hors d'eau figure dans le texte qui échelonne les paiements en VEFA. Le terme « hors d'air » est un usage de chantier : aucun texte consulté ne le définit. Le contrat de VEFA peut préciser ce que les parties entendent par chaque stade.
 - **Plafonds, pas obligations.** Les pourcentages de VEFA sont des maximums cumulés. Le contrat peut prévoir moins, et les appels de fonds doivent correspondre à un avancement effectif des travaux.
 - **Garanties de l'acquéreur en VEFA.** La garantie financière d'achèvement protège l'acquéreur contre l'arrêt du chantier. Elle est traitée dans le module promotion.
-- **Évolution législative.** Les délais et procédures d'urbanisme changent régulièrement. L'effet éventuel de la loi n° 2026-403 sur les règles de ce chapitre n'a pas été vérifié.
+- **Évolution législative.** Les délais et procédures d'urbanisme changent régulièrement. La loi n° 2026-403 du 26 mai 2026 de simplification de la vie économique porte sur d'autres sujets : elle autorise des dérogations aux PLU (hauteur pour les projets d'intérêt national majeur, énergies renouvelables, toitures réflectives) et supprime trois obligations d'études préalables (énergies renouvelables, évolution et réversibilité d'un bâtiment, changement de destination avant démolition).
 
 ## Cas pratiques
 
