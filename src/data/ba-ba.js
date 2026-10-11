@@ -46,6 +46,12 @@ export const chapitres = [
     href: '/ba-ba/07-marches-et-appels-d-offres/',
     cours: 'ba-ba/07-marches-et-appels-d-offres',
   },
+  {
+    titre: "L'enveloppe et la thermique",
+    desc: 'Par où un bâtiment perd sa chaleur : parois, ponts thermiques, étanchéité à l’air et Bbio.',
+    href: '/ba-ba/08-l-enveloppe-et-la-thermique/',
+    cours: 'ba-ba/08-l-enveloppe-et-la-thermique',
+  },
 ];
 
 export const disponibles = chapitres.filter((c) => c.cours);
