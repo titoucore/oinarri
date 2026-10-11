@@ -177,7 +177,7 @@ export const EXERCICES = [
       const cs = 0.77 * (1 + (n * 20) / (n * su));
       const loyer = prix * cs * su;
       return {
-        enonce: `Une opération compte ${n} logements identiques de ${su} m² de surface utile. Le prix au m² de l'opération est de ${nombre(prix)} € (valeur fictive pour l'exercice). Quel est le loyer maximal mensuel d'un logement, en euros, en ne comptant que le coefficient de structure ? (arrondi à l'euro)`,
+        enonce: `Une opération compte ${n} logements ${zone.produit} identiques de ${su} m² de surface utile, en zone ${zone.zone}. Le loyer maximal de zone 2026 est de ${nombre(prix)} € par m² et par mois. Quel est le loyer maximal mensuel d'un logement, en euros, sans marge locale et avec un coefficient propre égal à 1 ? (arrondi à l'euro)`,
         reponse: loyer,
         tolerance: 1,
         unite: '€ par mois',
