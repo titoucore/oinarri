@@ -32,6 +32,8 @@ verifie_le: 2026-10-11
 
 La Banque des Territoires finance ces opérations à partir de l'épargne réglementée. Les taux sont indexés sur le taux du Livret A : **Livret A moins 0,20 %** pour le PLAI, **plus 0,60 %** pour le PLUS, **plus 1,11 %** pour le PLS. L'amortissement peut aller jusqu'à **40 ans** pour le bâti, **50 ans** pour le foncier, et jusqu'à 80 ans selon les cas.
 
+Le Livret A est révisé deux fois par an (au 1er février et au 1er août). Depuis le **1er août 2026**, il est à **1,7 %** (arrêté du 28 juillet 2026, pour la période d'août 2026 à janvier 2027). Les taux des prêts en découlent : **1,50 %** pour le PLAI, **2,30 %** pour le PLUS et **2,81 %** pour le PLS. Ces taux sont donc susceptibles de changer le 1er février 2027.
+
 ### Des aides en plus du prêt
 
 - Une **subvention de l'État** pour les logements PLUS et PLAI (jamais pour le PLS).
