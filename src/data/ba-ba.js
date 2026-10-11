@@ -70,6 +70,12 @@ export const chapitres = [
     href: '/ba-ba/11-la-securite-incendie/',
     cours: 'ba-ba/11-la-securite-incendie',
   },
+  {
+    titre: "L'accessibilité des logements neufs",
+    desc: 'L’ascenseur dès trois étages, les logements accessibles et évolutifs, et le rôle du bailleur.',
+    href: '/ba-ba/12-l-accessibilite/',
+    cours: 'ba-ba/12-l-accessibilite',
+  },
 ];
 
 export const disponibles = chapitres.filter((c) => c.cours);
