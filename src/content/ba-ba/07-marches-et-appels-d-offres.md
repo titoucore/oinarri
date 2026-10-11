@@ -128,7 +128,7 @@ DCE · Règlement de la consultation · CCAP · CCTP · Acte d'engagement · Lot
 Vérifié le 3 octobre 2026.
 
 - Seuils européens 2026-2027 : avis et fiches de la Direction des affaires juridiques de Bercy (economie.gouv.fr).
-- Seuil de dispense de 100 000 € HT pour les travaux : plusieurs sites juridiques, qui citent le décret n° 2025-1386 du 29 décembre 2025 ; une source le donnait comme supprimé.
+- Seuil de dispense de 100 000 € HT pour les travaux : plusieurs sites juridiques, qui citent le décret n° 2025-1386 du 29 décembre 2025 ; confirmé par la FFB ([Marchés de travaux : un des seuils a changé](https://www.ffbatiment.fr/actualites-batiment/actualite-ba/marches-travaux-changement-seuils)), la CAPEB ([Marchés publics 2026 : nouveaux seuils](https://www.capeb.fr/actualites/marches-publics-2026-nouveaux-seuils-et-simplification-pour-les-marches-de-travaux)) et la Maison des Communes de la Vendée ([Modification des seuils](https://www.maisondescommunes85.fr/actualites/modification-seuils-commande-publique), qui renvoie au Journal officiel). Loi n° 2026-403 du 26 mai 2026 : [Landot & associés](https://blog.landot-avocats.net/2026/05/27/commande-publique-la-loi-de-simplification-de-la-vie-economique-est-publiee/), [Banque des Territoires](https://www.banquedesterritoires.fr/loi-de-simplification-de-la-vie-economique-les-apports-en-droit-de-la-commande-publique), [Seban Avocats sur l'article 20 (VEFA)](https://www.seban-associes.avocat.fr/?p=129204).
 - CCAG-Travaux : arrêté du 30 mars 2021 publié au Journal officiel du 1er avril 2021.
 - Retenue de garantie : article R2191-33 du code de la commande publique, d'après le site code-commande-publique.com.
 - Avance : fiche de la Fédération française du bâtiment sur le CCAG-Travaux 2021.
