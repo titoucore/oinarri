@@ -162,7 +162,7 @@ PLU · Certificat d'urbanisme · Permis de construire · Recours des tiers · DO
 
 ## Sources et vérification
 
-Vérifié le 3 octobre 2026.
+Vérifié le 3 octobre 2026, mis à jour le 11 octobre 2026 (recours et retrait, ABF, DAACT, réception tacite, loi n° 2026-403).
 
 - Service-public.fr : fiches « Certificat d'urbanisme » (délais, validité) et « Garanties après la réception des travaux » (1, 2, 10 ans), consultées par l'intermédiaire de reprises sur des sites de communes.
 - Récépissés de dépôt de permis de construire publiés par des préfectures et des communes : délai d'instruction, recours des tiers, retrait en 3 mois, permis tacite.
