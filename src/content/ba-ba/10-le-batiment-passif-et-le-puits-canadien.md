@@ -64,6 +64,8 @@ Les filtres s'entretiennent régulièrement, et le bruit de l'installation reste
 
 ### Le puits canadien
 
+![Le puits canadien : prise d'air, tube enterré en pente, point bas d'évacuation de l'eau, ventilateur et logement.](/schemas/ba-ba/10-le-puits-canadien.svg)
+
 Le **puits canadien** fait circuler l'air extérieur dans des tubes enterrés à une profondeur où la température du sol varie peu. L'air gagne ou perd des calories au contact du sol avant d'entrer dans le bâtiment par la ventilation. On parle de puits **canadien** quand il réchauffe l'air en hiver et de puits **provençal** quand il le rafraîchit en été : c'est un seul et même système, aussi appelé puits climatique.
 
 Son intérêt et ses limites, d'après l'ADEME (fiche de 2012) :
