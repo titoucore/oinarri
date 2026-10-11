@@ -142,6 +142,7 @@ ACV · RE2020 · Ic construction · Ic énergie · Carbone biogénique · Label 
 - Un matériau biosourcé n'est pas automatiquement bon pour le carbone : tout dépend de sa donnée environnementale.
 - Un label n'est pas une exigence. Il peut être imposé par un financeur, un PLU ou un appel à projets.
 - Les chiffres d'Arbola sont fictifs.
+- Les règles de la RE2020 ont changé en 2026 : la date de dépôt du permis (avant ou après le 1er juillet 2026, avant ou après le 1er janvier 2027) décide des règles applicables.
 - Ce chapitre donne des repères généraux, pas un avis technique ni un calcul réglementaire.
 
 ## Sources et vérification
