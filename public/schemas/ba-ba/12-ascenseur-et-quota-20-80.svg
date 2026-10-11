@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
 <title>L'ascenseur et la règle des 20 % et 80 %</title>
-<desc>Un immeuble d'un rez-de-chaussée et de trois étages avec un ascenseur. À droite, la répartition des logements du rez-de-chaussée et des étages desserv(is par l'ascenseur : au moins 20 % de logements accessibles et au moins un, les autres évolutifs.</desc>
+<desc>Un immeuble d'un rez-de-chaussée et de trois étages avec un ascenseur. À droite, la répartition des logements du rez-de-chaussée et des étages desservis par l'ascenseur : au moins 20 % de logements accessibles et au moins un, les autres évolutifs.</desc>
 <style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
 <rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
 <text class="th" x="70" y="34" text-anchor="middle" fill="#085041">Ascenseur</text>
