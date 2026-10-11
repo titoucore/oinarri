@@ -52,6 +52,8 @@ Pour Arbola, passer de la 2e à la 3e famille double donc d'un coup la stabilit�
 
 ### Escaliers et accès des secours
 
+![Accès des secours : voie-échelles en 3e famille A, escalier protégé et voie-engins à 50 m au plus en 3e famille B.](/schemas/ba-ba/11-acces-des-secours.svg)
+
 Dans la 3e famille B, l'escalier doit être **protégé**, soit « à l'air libre », soit « à l'abri des fumées ». Les secours doivent pouvoir atteindre le bâtiment : une **voie-échelles** en bordure pour la 3e famille A, une **voie-engins** à moins de 50 m des accès aux escaliers pour la 3e B et la 4e famille.
 
 ### Façades et isolants combustibles
