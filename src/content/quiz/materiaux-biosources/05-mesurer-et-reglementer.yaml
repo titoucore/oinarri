@@ -81,3 +81,18 @@ expert:
   - type: ouverte
     question: "Un bureau d'études annonce un Ic construction de 560 pour la version biosourcée d'Arbola et de 700 pour la version béton. Que faut-il vérifier avant de comparer ces deux chiffres ?"
     modele: "Que les deux calculs reposent sur les mêmes hypothèses : même surface, mêmes périmètre et durée de vie (50 ans), même part de données par défaut ou de FDES spécifiques, mêmes modulations. Il faut aussi vérifier la qualité des FDES utilisées (vérifiées par tierce partie, même unité fonctionnelle) et rappeler que le calcul est conventionnel : il sert à vérifier un seuil, pas à mesurer l'empreinte réelle du bâtiment."
+
+  - type: qcm
+    question: "Quel plafond d'émissions le décret n° 2026-863 du 12 septembre 2026 fixe-t-il pour les équipements de chauffage, de refroidissement et d'eau chaude des logements neufs (permis à partir du 1er janvier 2027) ?"
+    choix:
+      - "79 gCO₂e/kWh d'énergie finale"
+      - "300 gCO₂e/kWh d'énergie finale"
+      - "0 gCO₂e/kWh"
+      - "Aucun plafond"
+    reponse: 0
+    explication: "Le décret fixe un seuil de 79 gCO₂e/kWh d'énergie finale pour les équipements installés dans les bâtiments neufs, à partir du 1er janvier 2027 pour les logements. En pratique, il écarte le gaz. Source : sources professionnelles ; le texte n'a pas pu être relu sur Légifrance."
+
+  - type: vf
+    affirmation: "Les ajustements du décret n° 2026-200 (permis à partir du 1er juillet 2026) ont repoussé le palier carbone de 2028 pour les logements."
+    reponse: false
+    explication: "Ils portent surtout sur des modulations (espaces extérieurs, hauteurs sous plafond), sur les surélévations et sur les immeubles de grande hauteur. Selon un site professionnel au 28 septembre 2026, le palier de 2028 est maintenu, sauf assouplissement pour les IGH."
