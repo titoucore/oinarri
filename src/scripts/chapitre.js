@@ -14,6 +14,7 @@ import {
 import { chargerResultatsQuiz, creerQuiz } from './quiz.js';
 import { chargerRevisions, inscrireCartes, cartesJusquaNiveau } from './revisions.js';
 import { termes } from '../data/glossaire.js';
+import { exercicesDuCours } from '../data/exercices.js';
 import { identifiant, normaliser } from '../lib/texte.js';
 
 // Transforme la liste « Terme · Terme · Terme » de la section Vocabulaire en liens vers le glossaire.
