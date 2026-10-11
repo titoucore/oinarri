@@ -81,7 +81,7 @@ Le CUa renseigne sans engager. Le CUb répond à la question « puis-je faire ce
 
 ### Un calendrier du permis, jour par jour
 
-*Dates fictives, délais légaux.* L'organisme dépose le permis d'Arbola le 3 mars. Rien n'est notifié avant le 3 avril : le délai de 3 mois est donc figé, et la réponse est due au plus tard le 3 juin. Le permis est accordé le 3 juin et affiché sur le terrain dès le 5 juin. Le recours des tiers prend fin vers le 5 août. Le retrait par la mairie reste possible jusqu'au 3 septembre. Le permis n'est vraiment « purgé » qu'à cette dernière date.
+*Dates fictives, délais légaux.* L'organisme dépose le permis d'Arbola le 3 mars. Rien n'est notifié avant le 3 avril : le délai de 3 mois est donc figé, et la réponse est due au plus tard le 3 juin. Le permis est accordé le 3 juin et affiché sur le terrain dès le 5 juin. Le recours des tiers prend fin vers le 5 août. Le retrait par l'autorité reste possible jusqu'au 3 septembre. Le permis n'est vraiment « purgé » qu'à cette dernière date.
 
 Plusieurs situations allongent l'instruction : dossier incomplet, avis d'un service extérieur, zone protégée. Le récépissé, puis les courriers de la mairie, indiquent le délai réel.
 
