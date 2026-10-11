@@ -64,7 +64,7 @@ Action Logement Services distribue aussi des prêts PLAI et PLUS aux organismes,
 
 ### Le PLS complémentaire
 
-Selon la Banque des Territoires, le prêt PLS doit représenter au moins 50 % du prix de revient de l'opération et peut être complété par un prêt complémentaire dans la limite de 49 %. Ces règles sont à revérifier : la page consultée est ancienne.
+Selon la page actuelle de la Banque des Territoires, le prêt PLS (Livret A plus 111 points de base) doit représenter au moins 50 % du prix de revient de l'opération et peut être complété par un prêt complémentaire (CPLS), d'une durée maximale de 40 ans. Le plafond de 49 % pour ce complément, cité dans une page plus ancienne, n'a pas été reconfirmé.
 
 ## Expert
 
