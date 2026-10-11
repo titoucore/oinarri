@@ -85,7 +85,14 @@ async function initialiser() {
 
   // Inscrit les cartes des niveaux jusqu'à indexMax (sans bloquer ni alerter en cas d'échec).
   async function inscrireJusqua(indexMax) {
-    const manquantes = cartesJusquaNiveau(cours, quiz, NIVEAUX, indexMax).filter(
+    // Cartes du quiz, du vocabulaire du chapitre et des exercices chiffrés des niveaux validés.
+    const supplementaires = [
+      ...idsVocabulaire,
+      ...exercicesDuCours(cours)
+        .filter((e) => NIVEAUX.indexOf(e.niveau) <= indexMax)
+        .map((e) => e.carte),
+    ];
+    const manquantes = [...cartesJusquaNiveau(cours, quiz, NIVEAUX, indexMax), ...supplementaires].filter(
       (id) => !inscrites.has(id),
     );
     if (!manquantes.length) return;
