@@ -121,4 +121,4 @@ Vérifié le 3 octobre 2026.
 
 Contrôlé le 11 octobre 2026 : le Livret A à 1,7 % (source officielle), la marge de 111 points de base du PLS et le seuil de 50 % (page actuelle de la Banque des Territoires), la non-prorogation par la loi de finances pour 2026 (Unafo) et la proposition de prorogation à fin 2030 dans le projet de loi de finances pour 2027 (Fédération des coopératives HLM).
 
-À contrôler sur Légifrance et le BOFiP : le taux de TVA et ses cas d'exception ; la règle du PLS à 50 % du prix de revient ; l'évolution après le 31 décembre 2026.
+À contrôler sur Légifrance et le BOFiP : le taux de TVA et ses cas d'exception ; l'adoption de l'article 8 du projet de loi de finances pour 2027 (évolution après le 31 décembre 2026) ; le plafond de 49 % du prêt complémentaire du PLS.
