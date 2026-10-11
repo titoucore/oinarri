@@ -1,7 +1,51 @@
 ---
-// En-tête commun : logo, étiquette du parcours (facultative) et liens.
+// En-tête commun : logo, étiquette du parcours (facultative) et menu.
 // `etiquette` = deux morceaux d'un mot coupé sur deux lignes, par exemple ['PROMO-', 'TION'].
+//
+// Le menu regroupe tous les accès de l'application en quatre groupes, identiques partout :
+// Parcours (apprendre), Outils (manipuler), Ressources (consulter), Mon espace (ma progression).
+// Pour ajouter une page, on l'ajoute dans GROUPES ci-dessous : elle apparaît dans le menu de toutes les pages.
 const { etiquette = null } = Astro.props;
+const chemin = Astro.url.pathname;
+
+const GROUPES = [
+  {
+    titre: 'Parcours',
+    liens: [
+      { href: '/ba-ba/', libelle: 'B.A.-BA du bâtiment' },
+      { href: '/promotion/', libelle: 'Promotion immobilière' },
+      { href: '/logement-social/', libelle: 'Logement social' },
+      { href: '/materiaux-biosources/', libelle: 'Nouvelles méthodes de construction' },
+    ],
+  },
+  {
+    titre: 'Outils',
+    liens: [
+      { href: '/simulateur/', libelle: 'Simulateur de bilan' },
+      { href: '/comparateur/', libelle: 'Comparateur de matériaux' },
+    ],
+  },
+  {
+    titre: 'Ressources',
+    liens: [
+      { href: '/glossaire/', libelle: 'Glossaire' },
+      { href: '/chiffres-cles/', libelle: 'Chiffres clés' },
+      { href: '/infographies/', libelle: 'Infographies' },
+    ],
+  },
+  {
+    titre: 'Mon espace',
+    liens: [
+      { href: '/revisions/', libelle: 'Révisions' },
+      { href: '/notes/', libelle: 'Mes notes' },
+      { href: '/compte/', libelle: 'Mon compte' },
+      // Visible seulement pour un administrateur (révélé par le script ci-dessous).
+      { href: '/admin/', libelle: 'Administration', admin: true },
+    ],
+  },
+];
+
+const actif = (href) => chemin === href || chemin.startsWith(href);
 ---
 
 <header class="entete">
@@ -27,9 +71,20 @@ const { etiquette = null } = Astro.props;
     }
   </div>
   <div class="entete-droite">
-    <a class="lien-entete" href="/glossaire/">Glossaire</a>
-    <a class="lien-entete lien-notes" href="/notes/">Mes notes</a>
-    <a class="lien-entete" href="/compte/">Mon compte</a>
+    <button
+      class="menu-bouton"
+      id="menu-bouton"
+      type="button"
+      aria-expanded="false"
+      aria-controls="menu-panneau"
+    >
+      <svg class="menu-icone" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+        <line x1="7" y1="3" x2="15" y2="3" />
+        <line x1="4" y1="8" x2="18" y2="8" />
+        <line x1="1.5" y1="13" x2="20.5" y2="13" />
+      </svg>
+      <span>Menu</span>
+    </button>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer de thème">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
         <circle cx="12" cy="12" r="4" />
@@ -40,9 +95,36 @@ const { etiquette = null } = Astro.props;
       </svg>
     </button>
   </div>
+
+  <div class="menu-panneau" id="menu-panneau" hidden>
+    <nav aria-label="Menu principal">
+      <div class="menu-groupes">
+        {
+          GROUPES.map((groupe) => (
+            <section class="menu-groupe">
+              <h2 class="menu-titre">{groupe.titre}</h2>
+              <ul class="menu-liste">
+                {groupe.liens.map((lien) => (
+                  <li id={lien.admin ? 'menu-admin' : undefined} hidden={lien.admin ? true : undefined}>
+                    <a href={lien.href} aria-current={actif(lien.href) ? 'page' : undefined}>
+                      {lien.libelle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+      </div>
+    </nav>
+  </div>
 </header>
 
 <style>
+  .entete {
+    position: relative;
+  }
+
   .lockup {
     display: flex;
     align-items: center;
@@ -79,25 +161,100 @@ const { etiquette = null } = Astro.props;
   .entete-droite {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
   }
 
-  .lien-entete {
+  /* Le bouton reprend la hauteur et le trait du bouton de thème, et l'icône reprend les trois
+     traits décroissants du logo. */
+  .menu-bouton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 34px;
+    padding: 0 14px 0 12px;
+    font-family: inherit;
     font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--ink-200);
+    border-radius: 999px;
+    background: none;
+    color: var(--ink-900);
+    cursor: pointer;
+  }
+
+  .menu-bouton[aria-expanded='true'] {
+    border-color: var(--ink-900);
+  }
+
+  .menu-icone {
+    width: 18px;
+    height: auto;
+  }
+
+  .menu-panneau {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    z-index: 50;
+    width: min(46rem, 100%);
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+    background: var(--paper);
+  }
+
+  .menu-groupes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 34rem) {
+    .menu-groupes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .menu-groupes {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .menu-titre {
+    margin: 0 0 0.25rem;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     color: var(--ink-600);
+  }
+
+  .menu-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-liste a {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    font-size: 15px;
+    line-height: 1.3;
+    color: var(--ink-900);
+    text-decoration: none;
+  }
+
+  .menu-liste a:hover {
+    text-decoration: underline;
     text-underline-offset: 3px;
   }
 
-  .lien-entete:hover {
-    color: var(--ink-900);
-  }
-
-  /* Sur téléphone, la place manque : l'étiquette est déjà rappelée dans la bande,
-     et « Mes notes » reste accessible depuis le tiroir de notes d'un cours. */
-  @media (max-width: 40rem) {
-    .lien-notes {
-      display: none;
-    }
+  .menu-liste a[aria-current='page'] {
+    font-weight: 700;
   }
 
   @media (max-width: 36rem) {
@@ -107,3 +264,49 @@ const { etiquette = null } = Astro.props;
     }
   }
 </style>
+
+<script>
+  const bouton = document.getElementById('menu-bouton');
+  const panneau = document.getElementById('menu-panneau');
+  let adminVerifie = false;
+
+  // Le lien « Administration » n'apparaît que pour un administrateur. La vérification se fait
+  // à la première ouverture du menu, pour ne pas ajouter une requête à chaque page.
+  async function reveleAdmin() {
+    if (adminVerifie) return;
+    adminVerifie = true;
+    try {
+      const reponse = await fetch('/api/moi');
+      if (!reponse.ok) return;
+      const moi = await reponse.json();
+      const entree = document.getElementById('menu-admin');
+      if (moi && moi.admin && entree) entree.hidden = false;
+    } catch {
+      // sans réponse, le lien reste masqué
+    }
+  }
+
+  function ouvrir() {
+    panneau.hidden = false;
+    bouton.setAttribute('aria-expanded', 'true');
+    reveleAdmin();
+  }
+
+  function fermer(rendreLeFocus = false) {
+    panneau.hidden = true;
+    bouton.setAttribute('aria-expanded', 'false');
+    if (rendreLeFocus) bouton.focus();
+  }
+
+  if (bouton && panneau) {
+    bouton.addEventListener('click', () => (panneau.hidden ? ouvrir() : fermer()));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !panneau.hidden) fermer(true);
+    });
+    document.addEventListener('click', (e) => {
+      if (panneau.hidden) return;
+      if (panneau.contains(e.target) || bouton.contains(e.target)) return;
+      fermer();
+    });
+  }
+</script>
