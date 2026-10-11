@@ -1,0 +1,97 @@
+# Mini-quiz du chapitre 9 : L'acoustique, le bruit entre voisins.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Quelle est la différence entre un bruit aérien et un bruit de choc ?"
+    choix:
+      - "Le bruit aérien se propage dans l'air (voix, télévision) ; le bruit de choc frappe la structure (pas, chute d'objet)"
+      - "Le bruit aérien vient de l'extérieur ; le bruit de choc vient de l'intérieur"
+      - "Le bruit aérien est plus fort que le bruit de choc"
+      - "Il n'y a pas de différence"
+    reponse: 0
+    explication: "Le bruit aérien se transmet par l'air puis traverse les parois. Le bruit de choc frappe la structure, qui le transmet à l'étage du dessous. Les exigences et les solutions sont différentes pour chacun."
+
+  - type: qcm
+    question: "De combien de décibels le niveau augmente-t-il quand on ajoute une deuxième source identique ?"
+    choix:
+      - "De 3 dB"
+      - "De 10 dB"
+      - "Il double"
+      - "Il n'augmente pas"
+    reponse: 0
+    explication: "L'échelle des décibels est logarithmique : deux sources identiques ajoutent environ 3 dB. Il faut un écart de 10 dB pour avoir l'impression d'un bruit deux fois plus fort."
+
+  - type: qcm
+    question: "Quel isolement acoustique DnT,A est exigé entre deux logements neufs ?"
+    choix:
+      - "Au moins 30 dB"
+      - "Au moins 45 dB"
+      - "Au moins 53 dB"
+      - "Au moins 70 dB"
+    reponse: 2
+    explication: "L'arrêté du 30 juin 1999 exige un isolement acoustique standardisé pondéré DnT,A d'au moins 53 dB entre le local d'un logement et la pièce d'un autre logement."
+
+  - type: vf
+    affirmation: "Le bruit de la ventilation d'un logement neuf peut atteindre 40 dB(A) dans une chambre."
+    reponse: false
+    explication: "L'arrêté limite le bruit d'une installation de ventilation mécanique, au débit minimal, à 30 dB(A) dans les pièces principales et 35 dB(A) dans les cuisines."
+
+  - type: ouverte
+    question: "Pourquoi un joint qui fuit ou une gaine mal rebouchée peut-il ruiner une bonne paroi ?"
+    modele: "L'isolement d'une paroi se juge sur la paroi complète, mesurée une fois construite. Un défaut d'étanchéité (joint, traverse de gaine ou de réseau) laisse passer le bruit aérien directement : il peut faire perdre jusqu'à 10 dB d'isolement, ce qui suffit pour passer sous l'exigence."
+
+approfondir:
+  - type: qcm
+    question: "À partir de quand le maître d'ouvrage doit-il remettre une attestation de prise en compte de la réglementation acoustique ?"
+    choix:
+      - "Pour les permis déposés depuis le 1er janvier 2000"
+      - "Pour les permis déposés depuis le 1er janvier 2013"
+      - "Pour les permis déposés depuis le 1er janvier 2022"
+      - "Elle n'existe pas"
+    reponse: 1
+    explication: "Le décret du 30 mai 2011 et l'arrêté du 27 novembre 2012 imposent l'attestation pour les bâtiments d'habitation dont le permis est déposé à compter du 1er janvier 2013. C'est la réglementation de 1999 qui s'applique depuis 2000."
+
+  - type: qcm
+    question: "À partir de combien de logements l'attestation acoustique doit-elle s'appuyer sur des mesures faites à la fin des travaux ?"
+    choix:
+      - "2 logements"
+      - "10 logements"
+      - "50 logements"
+      - "Jamais"
+    reponse: 1
+    explication: "Pour les opérations d'au moins 10 logements, l'attestation s'appuie sur des mesures acoustiques réalisées à l'achèvement, sur un échantillon de logements."
+
+  - type: vf
+    affirmation: "L'attestation acoustique se limite aux mesures de fin de chantier."
+    reponse: false
+    explication: "Elle s'appuie aussi sur des constats faits pendant les études et pendant le chantier. Les mesures de fin de travaux ne la remplacent pas : elles vérifient ce qui a été construit."
+
+  - type: ouverte
+    question: "Pourquoi associer un bureau d'études acoustique dès la conception ?"
+    modele: "Parce que les mesures de fin de chantier arrivent trop tard : on peut mesurer et constater, pas refaire les planchers. Le bureau d'études fixe les objectifs, aide à choisir les parois et les sols, contrôle la mise en œuvre et interprète les mesures à la réception."
+
+expert:
+  - type: qcm
+    question: "Que signifie le suffixe tr dans DnT,A,tr ?"
+    choix:
+      - "Le bruit de trafic routier"
+      - "La transmission par les murs"
+      - "Le temps de réverbération"
+      - "Un test de réception"
+    reponse: 0
+    explication: "DnT,A,tr est l'isolement acoustique vis-à-vis du bruit de trafic : il vaut au moins 30 dB pour un logement neuf, davantage dans les secteurs classés bruyants."
+
+  - type: vf
+    affirmation: "Les exigences acoustiques des logements neufs s'appliquent telles quelles à la rénovation d'un logement ancien."
+    reponse: false
+    explication: "La réglementation vise les bâtiments neufs, les surifications et les additions. Pour la rénovation de logements existants, les exigences sont moindres, selon la DREAL Occitanie."
+
+  - type: ouverte
+    question: "Quels documents prouvent, après livraison, qu'un immeuble respecte l'acoustique ?"
+    modele: "L'attestation de prise en compte de la réglementation acoustique remise à l'achèvement (conception et chantier), et, pour une opération d'au moins 10 logements, les rapports de mesures acoustiques sur site. En cas de litige, les mesures font preuve. Ces documents se conservent avec le dossier de l'ouvrage."

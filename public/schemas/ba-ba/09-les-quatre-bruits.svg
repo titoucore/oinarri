@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>Les quatre bruits d'un immeuble</title>
+<desc>Coupe d'un immeuble de deux étages avec deux logements par étage. Le bruit aérien passe d'un logement au logement voisin (DnT,A d'au moins 53 dB). Le bruit de choc passe d'un étage à celui du dessous (L'nT,w d'au plus 58 dB). Un équipement comme la ventilation fait du bruit dans les pièces (au plus 30 dB(A)). Le bruit de la route traverse la façade (DnT,A,tr d'au moins 30 dB).</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<defs>
+<marker id="fl-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#993C1D"/></marker>
+<marker id="fl-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0F6E56"/></marker>
+<marker id="fl-c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#5F5E5A"/></marker>
+</defs>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="230" y="40" width="200" height="120" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="430" y="40" width="200" height="120" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="230" y="160" width="200" height="120" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="430" y="160" width="200" height="120" fill="#FFFFFF" stroke="#5F5E5A" stroke-width="1.5"/>
+<text class="ts" x="240" y="58" fill="#5F5E5A">Logement A, étage 2</text>
+<text class="ts" x="440" y="58" fill="#5F5E5A">Logement B, étage 2</text>
+<text class="ts" x="240" y="178" fill="#5F5E5A">Logement A, étage 1</text>
+<text class="ts" x="440" y="178" fill="#5F5E5A">Logement B, étage 1</text>
+<path d="M330 105 H525" stroke="#993C1D" stroke-width="2.5" marker-end="url(#fl-a)"/>
+<rect x="372" y="76" width="116" height="20" fill="#FFFFFF"/>
+<text class="th" x="430" y="91" text-anchor="middle" fill="#712B13">Bruit aérien</text>
+<rect x="362" y="116" width="136" height="20" fill="#FFFFFF"/>
+<text class="ts" x="430" y="131" text-anchor="middle" fill="#993C1D">DnT,A ≥ 53 dB</text>
+<path d="M262 120 V248" stroke="#0F6E56" stroke-width="2.5" marker-end="url(#fl-b)"/>
+<text class="th" x="278" y="216" fill="#085041">Bruit de choc</text>
+<text class="ts" x="278" y="236" fill="#0F6E56">L'nT,w ≤ 58 dB</text>
+<text class="th" x="530" y="206" text-anchor="middle" fill="#444441">Équipement</text>
+<rect x="482" y="216" width="96" height="36" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<text class="th" x="530" y="234" text-anchor="middle" dominant-baseline="central" fill="#444441">VMC</text>
+<text class="ts" x="530" y="270" text-anchor="middle" fill="#5F5E5A">≤ 30 dB(A)</text>
+<rect x="30" y="190" width="90" height="44" rx="6" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<text class="th" x="75" y="212" text-anchor="middle" dominant-baseline="central" fill="#2C2C2A">Route</text>
+<path d="M124 212 H224" stroke="#5F5E5A" stroke-width="2.5" marker-end="url(#fl-c)"/>
+<text class="th" x="30" y="262" fill="#444441">Bruit extérieur</text>
+<text class="ts" x="30" y="282" fill="#5F5E5A">DnT,A,tr ≥ 30 dB</text>
+<text class="ts" x="340" y="314" text-anchor="middle" fill="#5F5E5A">Valeurs de l'arrêté du 30 juin 1999 pour un logement neuf, d'après les sources du chapitre.</text>
+</svg>
