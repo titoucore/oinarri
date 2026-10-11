@@ -40,8 +40,6 @@ Le label compte plusieurs niveaux : Classic, Plus et Premium pour le neuf, et En
 
 ### Les cinq mesures du bâtiment passif
 
-![Le puits canadien : prise d'air, tube enterré en pente, point bas d'évacuation de l'eau, ventilateur et logement.](/schemas/ba-ba/10-le-puits-canadien.svg)
-
 La méthode tient en cinq mesures, que l'association Maison Passive présente ainsi :
 
 1. **Une isolation renforcée** de l'enveloppe (chapitre 8). Le comparateur de matériaux montre les épaisseurs qu'impose une forte résistance thermique.
