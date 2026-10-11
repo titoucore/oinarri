@@ -1,0 +1,97 @@
+# Mini-quiz du chapitre 12 : L'accessibilité des logements neufs.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "À partir de combien d'étages au-dessus du rez-de-chaussée l'ascenseur est-il obligatoire dans un immeuble d'habitation collectif neuf ?"
+    choix:
+      - "Plus de deux étages (soit R+3)"
+      - "Plus de quatre étages (soit R+5)"
+      - "Plus de dix étages"
+      - "Il n'est jamais obligatoire"
+    reponse: 0
+    explication: "L'ascenseur est obligatoire dans les parties de bâtiments d'habitation collectifs comportant plus de deux étages accueillant des logements au-dessus ou au-dessous du rez-de-chaussée. Depuis le décret du 11 avril 2019 (applicable le 1er octobre 2019), le seuil est le R+3, contre le R+4 auparavant."
+
+  - type: qcm
+    question: "Quelle part des logements doit être accessible dès la construction dans un immeuble collectif neuf ?"
+    choix:
+      - "100 %"
+      - "20 % au moins, et au moins un logement"
+      - "5 %"
+      - "Aucun"
+    reponse: 1
+    explication: "Pour les logements du rez-de-chaussée ou des étages desservis par un ascenseur, 20 % au moins, et au moins un logement, doivent être accessibles. Les autres sont évolutifs."
+
+  - type: qcm
+    question: "Qu'est-ce qu'un logement évolutif ?"
+    choix:
+      - "Un logement dont l'accessibilité complète peut être réalisée plus tard par des travaux simples"
+      - "Un logement qui change de loyer chaque année"
+      - "Un logement qui peut changer d'étage"
+      - "Un logement très économe en énergie"
+    reponse: 0
+    explication: "Un logement évolutif est conçu pour que la redistribution des volumes permette d'obtenir ultérieurement l'accessibilité, à l'issue de travaux simples, sans toucher à la structure."
+
+  - type: vf
+    affirmation: "Les 80 % de logements évolutifs peuvent être exclusivement des petits logements."
+    reponse: false
+    explication: "Pour une même typologie, la surface moyenne des logements évolutifs ne peut pas être inférieure à la surface moyenne des logements accessibles lors de la conception."
+
+  - type: ouverte
+    question: "Pourquoi Arbola (rez-de-chaussée et trois étages) doit-elle avoir un ascenseur ?"
+    modele: "Parce qu'elle comporte trois étages au-dessus du rez-de-chaussée, soit plus de deux : le seuil d'obligation d'ascenseur est franchi (R+3). Le nombre de logements par étage ne change rien à cette règle."
+
+approfondir:
+  - type: qcm
+    question: "Que doit faire un organisme de logement social pour ses logements évolutifs ?"
+    choix:
+      - "Garantir la mise en accessibilité et imposer l'exécution des travaux dans un délai raisonnable, à sa charge"
+      - "Ne rien faire tant qu'un locataire n'est pas handicapé"
+      - "Faire payer les travaux au locataire"
+      - "Vendre ces logements"
+    reponse: 0
+    explication: "Le code prévoit que les organismes garantissent la mise en accessibilité des logements évolutifs et imposent l'exécution de ces travaux dans un délai raisonnable. Ils sont à la charge financière du bailleur, sans préjudice des aides."
+
+  - type: vf
+    affirmation: "La règle des 20 % et 80 % s'applique aussi aux logements des étages non desservis par un ascenseur."
+    reponse: false
+    explication: "Elle porte sur les logements situés au rez-de-chaussée ou dans des étages desservis par un ascenseur."
+
+  - type: qcm
+    question: "Quels articles cite-t-on aujourd'hui pour l'accessibilité des bâtiments neufs dans la partie réglementaire du code de la construction et de l'habitation ?"
+    choix:
+      - "R. 162-1 et suivants"
+      - "R. 111-1 à R. 111-5 seulement"
+      - "L. 100-1"
+      - "R. 311-1"
+    reponse: 0
+    explication: "Après la recodification du livre Ier, le chapitre « Bâtiments neufs » comprend les articles R. 162-1 à R. 162-15. Des documents plus anciens citent les articles R. 111-18 et suivants."
+
+  - type: ouverte
+    question: "Que peut demander un acquéreur en VEFA pour adapter son logement ?"
+    modele: "Il peut demander au promoteur des travaux modificatifs, pour que le logement livré soit rendu accessible à son handicap. C'est la même logique que celle des logements évolutifs : une adaptation par travaux simples."
+
+expert:
+  - type: vf
+    affirmation: "Le décret du 26 décembre 2025 a changé le seuil de l'ascenseur pour les logements."
+    reponse: false
+    explication: "Ce décret, en vigueur depuis le 1er avril 2026, ajoute des règles d'accessibilité pour les bâtiments à usage professionnel neufs. Il ne modifie pas la règle de l'ascenseur ni le quota des logements, mais il montre que le chapitre évolue : on vérifie la version en vigueur à la date du permis."
+
+  - type: qcm
+    question: "Quel texte fixe les dimensions et les équipements des logements accessibles ?"
+    choix:
+      - "L'arrêté du 24 décembre 2015, modifié"
+      - "L'arrêté du 30 juin 1999"
+      - "L'arrêté du 31 janvier 1986"
+      - "L'arrêté du 4 août 2021"
+    reponse: 0
+    explication: "L'arrêté du 24 décembre 2015, modifié en 2019 et 2020, fixe les prescriptions d'accessibilité. Les autres arrêtés traitent d'acoustique, d'incendie et de RE2020."
+
+  - type: ouverte
+    question: "Pourquoi la définition des « travaux simples » pose-t-elle problème ?"
+    modele: "Parce que le caractère simple d'une adaptation (cloisons, volumes, réseaux encastrés) s'apprécie au cas par cas. C'est une source de débats entre bailleurs, constructeurs et associations. La loi a prévu un rapport au Parlement pour en évaluer l'application."

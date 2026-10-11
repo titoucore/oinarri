@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>L'ascenseur et la règle des 20 % et 80 %</title>
+<desc>Un immeuble d'un rez-de-chaussée et de trois étages avec un ascenseur. À droite, la répartition des logements du rez-de-chaussée et des étages desserv(is par l'ascenseur : au moins 20 % de logements accessibles et au moins un, les autres évolutifs.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="70" y="34" text-anchor="middle" fill="#085041">Ascenseur</text>
+<rect x="40" y="44" width="60" height="240" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".8"/>
+<rect x="54" y="232" width="32" height="44" rx="3" fill="#FFFFFF" stroke="#0F6E56" stroke-width=".8"/>
+<rect x="100" y="44" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="170" y="44" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="240" y="44" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="100" y="104" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="170" y="104" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="240" y="104" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="100" y="164" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="170" y="164" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="240" y="164" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="100" y="224" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="170" y="224" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="240" y="224" width="70" height="60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<text class="ts" x="322" y="78" fill="#5F5E5A">R+3</text>
+<text class="ts" x="322" y="138" fill="#5F5E5A">R+2</text>
+<text class="ts" x="322" y="198" fill="#5F5E5A">R+1</text>
+<text class="ts" x="322" y="258" fill="#5F5E5A">RdC</text>
+<text class="ts" x="205" y="310" text-anchor="middle" fill="#5F5E5A">Plus de deux étages : ascenseur obligatoire.</text>
+<text class="th" x="400" y="64" fill="#2C2C2A">Logements du rez-de-chaussée</text>
+<text class="th" x="400" y="84" fill="#2C2C2A">et des étages desservis</text>
+<rect x="400" y="104" width="48" height="36" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".8"/>
+<rect x="448" y="104" width="192" height="36" fill="#FAECE7" stroke="#993C1D" stroke-width=".8"/>
+<text class="th" x="400" y="172" fill="#085041">Accessibles</text>
+<text class="ts" x="400" y="190" fill="#0F6E56">20 % au moins, et au moins un logement</text>
+<text class="th" x="400" y="220" fill="#712B13">Évolutifs</text>
+<text class="ts" x="400" y="238" fill="#993C1D">les autres : accessibilité par travaux simples</text>
+<text class="ts" x="400" y="270" fill="#5F5E5A">Surface moyenne des évolutifs ≥ celle des accessibles</text>
+<text class="ts" x="400" y="286" fill="#5F5E5A">(même typologie).</text>
+</svg>
