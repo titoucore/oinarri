@@ -40,11 +40,11 @@ export const termes = [
     aussi: ['Voie engins', 'Voies-engins'],
   },
   {
-    terme: 'Porte palIère',
+    terme: 'Porte palière',
     categorie: 'Construction',
     definition:
       "Porte d'entrée d'un logement, donnant sur le palier ou la circulation commune. En 2e et 3e familles, elle doit être pare-flammes un quart d'heure.",
-    aussi: ['Portes palIères', 'Bloc-porte palier', 'Porte palier'],
+    aussi: ['Portes palières', 'Bloc-porte palier', 'Porte palier'],
   },
   {
     terme: 'Écran thermique',
