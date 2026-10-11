@@ -4,7 +4,7 @@ description: "Comment les entreprises sont choisies et engagées : le dossier de
 parcours: ba-ba
 ordre: 7
 niveau: Débutant
-verifie_le: 2026-10-03
+verifie_le: 2026-10-11
 ---
 
 ## Objectifs
