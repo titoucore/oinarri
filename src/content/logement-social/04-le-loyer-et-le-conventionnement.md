@@ -4,7 +4,7 @@ description: "Comment le loyer maximal d'un logement social est calculé (loyer 
 parcours: logement-social
 ordre: 4
 niveau: Intermédiaire
-verifie_le: 2026-10-03
+verifie_le: 2026-10-11
 ---
 
 ## Objectifs
