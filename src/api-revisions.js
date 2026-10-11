@@ -92,7 +92,13 @@ export async function gererRevisions(request, env, utilisateur, url) {
       let repetitions;
       let intervalle;
       let facilite = ligne.facilite;
-      if (reussi) {
+      if (note === 'hesite') {
+        // Réponse hésitante : le nombre de répétitions ne bouge pas, l'intervalle s'allonge peu,
+        // la facilité baisse légèrement.
+        repetitions = ligne.repetitions;
+        intervalle = Math.max(2, Math.round(ligne.intervalle_jours * 1.2));
+        facilite = Math.max(FACILITE_MIN, facilite - 0.15);
+      } else if (note === 'su') {
         repetitions = ligne.repetitions + 1;
         if (repetitions === 1) intervalle = 3;
         else if (repetitions === 2) intervalle = 7;
