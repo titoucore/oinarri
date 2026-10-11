@@ -22,6 +22,8 @@ verifie_le: 2026-10-03
 
 ### Quatre familles
 
+![Les familles d'organismes : OPH, ESH, coopératives d'HLM, et les structures qui ne sont pas des organismes HLM.](/schemas/logement-social/02-les-familles-d-organismes.svg)
+
 - **L'office public de l'habitat (OPH)** est un organisme HLM public, rattaché à une collectivité territoriale ou à un groupement de collectivités.
 - **L'entreprise sociale pour l'habitat (ESH)** est une société anonyme d'HLM. Elle a des actionnaires et appartient souvent à un groupe.
 - **La coopérative d'HLM** est une société coopérative, très présente dans l'accession sociale.
