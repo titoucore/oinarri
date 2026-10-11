@@ -101,6 +101,8 @@ La manière de tester un immeuble collectif (par logement ou par échantillon) n
 
 ### Isoler par l'intérieur, par l'extérieur ou en paroi répartie
 
+![Jonction mur-plancher : l'isolation par l'intérieur crée un pont thermique, l'isolation par l'extérieur reste continue.](/schemas/ba-ba/08-ponts-thermiques-iti-ite.svg)
+
 - **Par l'intérieur (ITI)** : simple à poser, mais elle réduit la surface habitable et laisse en général des ponts thermiques au droit des planchers.
 - **Par l'extérieur (ITE)** : l'isolant passe devant les planchers, ce qui traite mieux les ponts thermiques. Elle change l'aspect de la façade, ce qui peut demander une autorisation d'urbanisme.
 - **Répartie** : l'isolant est entre les montants d'une ossature, comme pour Arbola. Les montants eux-mêmes forment de petits ponts thermiques, souvent complétés par une couche d'isolant continue.
