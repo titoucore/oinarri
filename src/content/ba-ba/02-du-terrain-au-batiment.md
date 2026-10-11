@@ -117,7 +117,7 @@ La DOC et la DAACT sont déposées par le bénéficiaire du permis, donc par l'o
 
 ## Expert
 
-- **Réception expresse ou tacite.** La réception est normalement prononcée de façon contradictoire, avec les entreprises. La jurisprudence admet aussi une réception tacite, quand le maître d'ouvrage manifeste sans ambiguïté sa volonté d'accepter l'ouvrage. Ce point n'a pas été vérifié dans les sources de ce chapitre.
+- **Réception expresse ou tacite.** La réception est normalement prononcée de façon contradictoire, avec les entreprises. La jurisprudence admet aussi une réception tacite, quand le maître d'ouvrage manifeste sans ambiguïté sa volonté d'accepter l'ouvrage. La prise de possession de l'ouvrage et le paiement des travaux font présumer cette volonté (Cour de cassation, 3e chambre civile, 18 avril 2019, n° 18-13.734). La seule prise de possession, ou le seul paiement, ne suffit pas toujours : le juge apprécie l'ensemble des circonstances.
 - **Délais de la DAACT.** Les sources consultées ne s'accordent pas sur la date limite de dépôt. Le chapitre retient l'obligation de déclarer l'achèvement des travaux (article R462-1 du code de l'urbanisme) et le contrôle de la mairie en 3 mois (5 mois dans certains cas). Les articles exacts du contrôle de conformité sont à contrôler.
 - **Hors d'eau, hors d'air.** La mise hors d'eau figure dans le texte qui échelonne les paiements en VEFA. Le terme « hors d'air » est un usage de chantier : aucun texte consulté ne le définit. Le contrat de VEFA peut préciser ce que les parties entendent par chaque stade.
 - **Plafonds, pas obligations.** Les pourcentages de VEFA sont des maximums cumulés. Le contrat peut prévoir moins, et les appels de fonds doivent correspondre à un avancement effectif des travaux.
