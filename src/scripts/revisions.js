@@ -28,7 +28,9 @@ export async function inscrireCartes(cartes) {
 }
 
 // reussi = true (« je savais ») ou false (« à revoir »).
-export async function noterCarte(carte, reussi) {
+export async function noterCarte(carte, note) {
+  // « note » : 'su', 'hesite' ou 'oublie'. Un booléen reste accepté (true = su, false = oublie).
+  const valeur = typeof note === 'boolean' ? (note ? 'su' : 'oublie') : note;
   const reponse = await fetch('/api/revisions', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
