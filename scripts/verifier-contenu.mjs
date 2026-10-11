@@ -169,7 +169,7 @@ async function main() {
 
       const textes = [...svg.matchAll(/<text[^>]*>([\s\S]*?)<\/text>/g)]
         .map((m) => decoder(m[1].replace(/<[^>]+>/g, '')))
-        .join(' ');
+        .join(' | ');
       const absents = nombres(textes).filter(
         (n) => !autorises.has(n) && !texteChap.includes(n) && !textesChiffres.includes(n),
       );
