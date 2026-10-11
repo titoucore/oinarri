@@ -4,7 +4,7 @@ description: "Les trois produits du logement social neuf, PLAI, PLUS et PLS : à
 parcours: logement-social
 ordre: 3
 niveau: Débutant
-verifie_le: 2026-10-03
+verifie_le: 2026-10-11
 ---
 
 ## Objectifs
