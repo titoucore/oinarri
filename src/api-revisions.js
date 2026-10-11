@@ -73,8 +73,10 @@ export async function gererRevisions(request, env, utilisateur, url) {
     }
 
     if (corps?.action === 'noter') {
-      const { carte, reussi } = corps;
-      if (typeof carte !== 'string' || !CARTE_VALIDE.test(carte) || typeof reussi !== 'boolean') {
+      const { carte } = corps;
+      // « note » : 'su', 'hesite' ou 'oublie'. L'ancien champ « reussi » (booléen) reste accepté.
+      const note = corps.note ?? (typeof corps.reussi === 'boolean' ? (corps.reussi ? 'su' : 'oublie') : undefined);
+      if (typeof carte !== 'string' || !CARTE_VALIDE.test(carte) || !NOTES.includes(note)) {
         return reponseJson({ erreur: 'Requête invalide' }, 400);
       }
 
