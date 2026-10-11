@@ -52,6 +52,12 @@ export const chapitres = [
     href: '/ba-ba/08-l-enveloppe-et-la-thermique/',
     cours: 'ba-ba/08-l-enveloppe-et-la-thermique',
   },
+  {
+    titre: "L'acoustique : le bruit entre voisins",
+    desc: 'Bruits aériens, de choc et d’équipements : les exigences d’un logement neuf et l’attestation acoustique.',
+    href: '/ba-ba/09-l-acoustique/',
+    cours: 'ba-ba/09-l-acoustique',
+  },
 ];
 
 export const disponibles = chapitres.filter((c) => c.cours);
