@@ -22,6 +22,7 @@ import { termes as termesMateriauxBiosources } from './glossaire-materiaux-bioso
 import { termes as termesThermique } from './glossaire-thermique.js';
 import { termes as termesAcoustique } from './glossaire-acoustique.js';
 import { termes as termesPassif } from './glossaire-passif.js';
+import { termes as termesIncendie } from './glossaire-incendie.js';
 
 const termesBatiment = [
   {
