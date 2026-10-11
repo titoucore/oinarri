@@ -21,6 +21,7 @@ import { termes as termesLogementSocial } from './glossaire-logement-social.js';
 import { termes as termesMateriauxBiosources } from './glossaire-materiaux-biosources.js';
 import { termes as termesThermique } from './glossaire-thermique.js';
 import { termes as termesAcoustique } from './glossaire-acoustique.js';
+import { termes as termesPassif } from './glossaire-passif.js';
 
 const termesBatiment = [
   {
