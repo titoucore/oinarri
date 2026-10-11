@@ -72,7 +72,7 @@ Un mur, un plancher ou une façade ne sont acceptés que si leur performance est
 
 ### Parc de stationnement et locaux annexes
 
-Les parcs de stationnement couverts et les locaux d'activité en pied d'immeuble relevent de règles spécifiques (arrêté de 1986 et règlement des établissements recevant du public). Elles ne sont pas détaillées ici.
+Les parcs de stationnement couverts et les locaux d'activité en pied d'immeuble relèvent de règles spécifiques (arrêté de 1986 et règlement des établissements recevant du public). Elles ne sont pas détaillées ici.
 
 ## Expert
 
