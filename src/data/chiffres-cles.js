@@ -255,6 +255,42 @@ export const SOURCES_CHIFFRES = {
     url: '/materiaux-biosources/05-mesurer-et-reglementer/',
     niveau: 'chapitre',
   },
+  'ush-chiffres': {
+    libelle: "USH, Les chiffres clés du logement social (éditions 2023 et 2024)",
+    niveau: 'professionnelle',
+  },
+  'anil-plafonds': {
+    libelle: 'ANIL, plafonds de ressources 2026 du logement social',
+    niveau: 'officielle',
+  },
+  'ministere-dpe': {
+    libelle: 'Ministère chargé du logement, réponse du 26 février 2026 sur le calendrier du DPE',
+    niveau: 'officielle',
+  },
+  anru: {
+    libelle: 'ANRU, bilan du PNRU et programme NPNRU',
+    niveau: 'officielle',
+  },
+  'ch-ls02': {
+    libelle: 'Chapitre « Les organismes HLM »',
+    url: '/logement-social/02-les-organismes-hlm/',
+    niveau: 'chapitre',
+  },
+  'ch-ls05': {
+    libelle: 'Chapitre « Les occupants » (articles du CCH cités dans le chapitre)',
+    url: '/logement-social/05-les-occupants/',
+    niveau: 'chapitre',
+  },
+  'ch-ls07': {
+    libelle: 'Chapitre « Produire du logement social » (article L433-2 du CCH)',
+    url: '/logement-social/07-produire-du-logement-social/',
+    niveau: 'chapitre',
+  },
+  'ch-ls09': {
+    libelle: 'Chapitre « Gérer et entretenir le parc » (sources fiscales citées dans le chapitre)',
+    url: '/logement-social/09-gerer-et-entretenir-le-parc/',
+    niveau: 'chapitre',
+  },
   'ch-ba07': {
     libelle: 'Chapitre « Les marchés et les appels d\'offres » (sources citées dans le chapitre)',
     url: '/ba-ba/07-marches-et-appels-d-offres/',
