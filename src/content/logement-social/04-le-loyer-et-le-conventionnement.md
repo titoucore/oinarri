@@ -121,7 +121,7 @@ Convention APL · APL · Loyer maximal de zone · Coefficient de structure · Ma
 
 ## Sources et vérification
 
-Vérifié le 3 octobre 2026.
+Vérifié le 3 octobre 2026, complété le 11 octobre 2026 (réduction de loyer de solidarité). Les conditions de ressources de la RLS et les montants pour les foyers plus grands ne sont pas détaillés ici.
 
 - Valeurs de zone, marges locales, annexes, plafonnement, revalorisation : avis relatif à la fixation des loyers et redevances maximums des conventions APL, pour les opérations conventionnées en 2026 (ministère chargé du logement, annexes 1, 2, 4, 6 et 8).
 - Calcul du loyer : article D353-16 du CCH, fiche de la DHUP sur les loyers des logements sociaux.
