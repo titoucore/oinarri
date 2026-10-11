@@ -145,6 +145,128 @@ const cartesJson = JSON.stringify(cartes).replace(/</g, '\\u003c');
     opacity: 0.5;
     cursor: default;
   }
+  .revision .rev-bouton {
+    min-height: 44px;
+  }
+
+  .revision .rev-modes,
+  .revision .rev-options {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 1rem;
+  }
+
+  .revision .rev-mode,
+  .revision .rev-option {
+    display: flex;
+    width: 100%;
+    min-height: 44px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 12px 14px;
+    border: 1px solid var(--ink-200);
+    border-radius: 10px;
+    background: none;
+    color: var(--ink-900);
+    cursor: pointer;
+  }
+
+  .revision .rev-mode {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .revision .rev-mode-titre {
+    font-weight: 700;
+  }
+
+  .revision .rev-mode-desc {
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .revision .rev-option {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .revision .rev-option-num {
+    flex: 0 0 auto;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--ink-400);
+    border-radius: 50%;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .revision .rev-option-texte {
+    flex: 1;
+  }
+
+  .revision .rev-option:disabled {
+    cursor: default;
+  }
+
+  .revision .rev-option.rev-juste {
+    border: 2px solid var(--ink-900);
+    background: var(--ink-50);
+  }
+
+  .revision .rev-option.rev-faux {
+    border: 2px dashed var(--ink-600);
+  }
+
+  .revision .rev-etiquette {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .revision .rev-saisie {
+    width: 100%;
+    margin: 0 0 0.75rem;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+
+  .revision .rev-resultat {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .revision .rev-retour:focus {
+    outline: none;
+  }
+
+  .revision .rev-lien {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0;
+    font-family: inherit;
+    font-size: 13px;
+    border: none;
+    background: none;
+    color: var(--ink-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  .revision .rev-arreter {
+    margin-top: 0.5rem;
+  }
 </style>
 
 <script>
