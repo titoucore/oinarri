@@ -77,7 +77,7 @@ Quand l'organisme vend en **VEFA** (vente en l'état futur d'achèvement, c'est-
 
 ### Le certificat d'urbanisme, de plus près
 
-Le CUa renseigne sans engager. Le CUb répond à la question « puis-je faire ce projet ici ? ». Si la mairie ne répond pas dans le délai, un certificat tacite est réputé délivré, mais il se limite à figer les règles en vigueur à la date de la demande. Il peut être prolongé : la demande se fait au moins 2 mois avant la fin des 18 mois. Un des intérêts du certificat est de garantir pendant sa validité les règles d'urbanisme applicables à une demande déposée dans ce délai (point à confirmer sur le texte du code de l'urbanisme).
+Le CUa renseigne sans engager. Le CUb répond à la question « puis-je faire ce projet ici ? ». Si la mairie ne répond pas dans le délai, un certificat tacite est réputé délivré, mais il se limite à figer les règles en vigueur à la date de la demande. Il peut être prolongé : la demande se fait au moins 2 mois avant la fin des 18 mois. Un des intérêts du certificat est de garantir pendant sa validité les règles d'urbanisme applicables à une demande déposée dans ce délai (article L410-1 du code de l'urbanisme).
 
 ### Un calendrier du permis, jour par jour
 
