@@ -1,0 +1,438 @@
+---
+import Base from '../layouts/Base.astro';
+import { DONNEES_VERIFIEES_LE } from '../data/materiaux.js';
+
+const verifieLe = new Date(`${DONNEES_VERIFIEES_LE}T12:00:00Z`).toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Base
+  large
+  title="Comparateur de matériaux — Oinarri"
+  description="Compare deux ou trois matériaux de construction (biosourcés, géosourcés, références classiques) et calcule l'épaisseur nécessaire pour une résistance thermique donnée."
+>
+  <a class="retour" href="/materiaux-biosources/">Nouvelles méthodes de construction</a>
+  <h1>Comparateur de matériaux</h1>
+  <p class="cmp-intro">
+    Choisis deux ou trois matériaux. Le comparateur met leurs propriétés côte à côte et calcule l'épaisseur
+    qu'il faut pour atteindre une résistance thermique donnée. Un matériau se choisit d'abord pour son rôle dans
+    la paroi : porter, remplir et isoler, ou protéger (chapitre 2).
+  </p>
+
+  <div id="comparateur" class="cmp">
+    <noscript>
+      <p class="cmp-noscript">Le comparateur a besoin de JavaScript pour fonctionner.</p>
+    </noscript>
+
+    <p class="cmp-message" id="cmp-message" role="status" aria-live="polite" hidden></p>
+
+    <section class="cmp-bloc" aria-labelledby="t-choix">
+      <h2 id="t-choix">Matériaux</h2>
+      <p class="cmp-aide">Trois au maximum. Touche un matériau pour l'ajouter ou le retirer.</p>
+      <div id="cmp-choix"></div>
+    </section>
+
+    <section class="cmp-bloc" aria-labelledby="t-r">
+      <h2 id="t-r">Résistance thermique visée</h2>
+      <label for="cmp-r">R en m²·K/W</label>
+      <input id="cmp-r" type="number" min="0.5" max="20" step="0.5" inputmode="decimal" value="5" />
+      <div id="cmp-reperes" class="cmp-reperes"></div>
+      <p class="cmp-aide">
+        Ces trois repères viennent de la presse spécialisée (2019, à l'époque de la RT 2012). Ce ne sont pas des
+        exigences de la RE2020. La résistance R d'une couche vaut son épaisseur divisée par sa conductivité λ.
+      </p>
+    </section>
+
+    <p class="cmp-vide" id="cmp-vide">
+      Aucun matériau choisi. Commence par un isolant et un matériau de structure : la différence d'épaisseur
+      montre pourquoi on ne les compare pas sur le même critère.
+    </p>
+
+    <div id="cmp-resultats" hidden>
+      <h2 id="cmp-titre-barres" class="cmp-titre-barres"></h2>
+      <ul class="cmp-barres" id="cmp-barres"></ul>
+      <ul class="cmp-cartes" id="cmp-cartes"></ul>
+    </div>
+
+    <section class="cmp-bloc" aria-labelledby="t-lire">
+      <h2 id="t-lire">Lire ces données</h2>
+      <ul class="cmp-limites">
+        <li>
+          Données vérifiées le {verifieLe}. Les fourchettes de λ sont des valeurs déclarées par les fabricants ou
+          des valeurs par défaut de la réglementation thermique : la valeur réelle dans un mur peut être plus
+          élevée (humidité, tassement, ponts thermiques).
+        </li>
+        <li>
+          La mention « source unique » ou « non recoupé » signale une valeur qui n'a pas pu être confirmée par une
+          seconde source. « Sources en désaccord » signale des valeurs différentes selon les documents : l'écart
+          est expliqué sous la valeur.
+        </li>
+        <li>
+          Le cadre d'assurance reprend les chapitres 2, 3 et 6 du cours. Il se confirme par écrit auprès de
+          l'assureur de l'opération, pour le domaine d'emploi exact.
+        </li>
+        <li>
+          Le carbone est qualitatif : le résultat d'un projet dépend des FDES des produits retenus (chapitre 5).
+        </li>
+        <li>
+          Cet outil donne des repères généraux. Il ne remplace ni la fiche d'un produit, ni une étude thermique,
+          ni l'avis d'un bureau de contrôle.
+        </li>
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<style is:global>
+  .cmp-intro {
+    max-width: var(--lecture-w);
+    color: var(--ink-800);
+  }
+
+  #comparateur [hidden] {
+    display: none !important;
+  }
+
+  #comparateur h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+  }
+
+  #comparateur h3 {
+    margin: 0;
+  }
+
+  #comparateur p {
+    margin: 0 0 0.6rem;
+  }
+
+  .cmp-bloc {
+    margin: 0 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+  }
+
+  .cmp-aide {
+    margin: 0.5rem 0 0;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .cmp-message {
+    padding: 0.7rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .cmp-noscript {
+    padding: 0.7rem 0.9rem;
+    border-left: 3px solid var(--ink-900);
+    background: var(--ink-50);
+  }
+
+  .cmp-groupe {
+    margin: 1rem 0 0.4rem !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink-600);
+  }
+
+  .cmp-puces,
+  .cmp-reperes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .cmp-puce,
+  .cmp-repere {
+    min-height: 44px;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius);
+    background: none;
+    color: var(--ink-900);
+    cursor: pointer;
+  }
+
+  .cmp-puce[aria-pressed='true'],
+  .cmp-repere[aria-pressed='true'] {
+    background: var(--ink-900);
+    border-color: var(--ink-900);
+    color: var(--paper);
+  }
+
+  #comparateur label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  #cmp-r {
+    width: 8rem;
+    min-height: 44px;
+    margin: 0.25rem 0 0.75rem;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+
+  .cmp-vide {
+    padding: 1rem;
+    border: 1px dashed var(--ink-200);
+    border-radius: 12px;
+    color: var(--ink-600);
+  }
+
+  .cmp-titre-barres {
+    margin: 0 0 0.75rem !important;
+    font-size: 1rem !important;
+  }
+
+  .cmp-barres {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+  }
+
+  .cmp-barre-ligne {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.2rem 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .cmp-barre-nom {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .cmp-barre-valeur {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: right;
+  }
+
+  .cmp-barre-piste {
+    grid-column: 1 / -1;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--ink-100);
+    overflow: hidden;
+  }
+
+  .cmp-barre {
+    height: 100%;
+    border-radius: 5px;
+    background: var(--ink-900);
+    transition: width 0.25s ease;
+  }
+
+  .cmp-cartes {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 48rem) {
+    .cmp-cartes {
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+      align-items: start;
+    }
+  }
+
+  .cmp-carte {
+    padding: 1rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+    min-width: 0;
+  }
+
+  .cmp-carte-tete {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .cmp-carte h3 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .cmp-retirer {
+    min-height: 44px;
+    padding: 0 4px;
+    font-family: inherit;
+    font-size: 13px;
+    border: none;
+    background: none;
+    color: var(--ink-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .cmp-famille {
+    margin: 0 !important;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-600);
+  }
+
+  .cmp-forme {
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  .cmp-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0 0 0.9rem;
+    padding: 0;
+  }
+
+  .cmp-roles li {
+    padding: 1px 10px;
+    border: 1px solid var(--ink-400);
+    border-radius: 999px;
+    font-size: 13px;
+  }
+
+  .cmp-epaisseur-lib {
+    margin: 0 !important;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .cmp-epaisseur {
+    margin: 0 0 0.6rem !important;
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+
+  .cmp-note {
+    padding: 0.6rem 0.8rem;
+    border-left: 3px solid var(--ink-400);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-50);
+    font-size: 14px;
+  }
+
+  .cmp-proprietes {
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .cmp-proprietes dt {
+    margin-top: 0.7rem;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .cmp-proprietes dd {
+    margin: 0.1rem 0 0;
+    font-size: 15px;
+  }
+
+  .cmp-etiquette {
+    font-weight: 700;
+  }
+
+  .cmp-statut {
+    margin-left: 0.5rem;
+    padding: 0 8px;
+    border: 1px dashed var(--ink-400);
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--ink-600);
+    white-space: nowrap;
+  }
+
+  .cmp-detail {
+    margin: 0.2rem 0 0 !important;
+    font-size: 13px;
+    color: var(--ink-600);
+  }
+
+  .cmp-details {
+    margin: 0.5rem 0;
+    font-size: 14px;
+  }
+
+  .cmp-details summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .cmp-sources {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 13px;
+  }
+
+  .cmp-sources li {
+    margin-bottom: 0.4rem;
+  }
+
+  .cmp-sources a {
+    text-underline-offset: 3px;
+    word-break: break-word;
+  }
+
+  .cmp-source-meta {
+    color: var(--ink-600);
+  }
+
+  .cmp-chapitre {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 14px;
+    text-underline-offset: 3px;
+  }
+
+  .cmp-limites {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 14px;
+    color: var(--ink-800);
+  }
+
+  .cmp-limites li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cmp-barre {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  import '../scripts/comparateur.js';
+</script>
