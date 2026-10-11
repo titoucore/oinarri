@@ -4,7 +4,7 @@ description: Les deux calendriers d'une opération, celui du droit (certificat d
 parcours: ba-ba
 ordre: 2
 niveau: Débutant
-verifie_le: 2026-10-03
+verifie_le: 2026-10-11
 ---
 
 ## Objectifs
