@@ -53,7 +53,7 @@ Un marché de travaux se découpe souvent en **lots** (un par corps d'état, vus
 
 Selon le montant estimé du marché de travaux, la procédure change (valeurs 2026, hors taxes) :
 
-- **en dessous de 100 000 €** : dispense de publicité et de mise en concurrence, d'après plusieurs sources. Ce seuil a été pérennisé par le décret n° 2025-1386, mais une source le donnait comme supprimé : à confirmer sur Légifrance ;
+- **en dessous de 100 000 €** : dispense de publicité et de mise en concurrence, d'après plusieurs sources. Ce seuil a été pérennisé par le décret n° 2025-1386, du 29 décembre 2025, ce que confirment la FFB, la CAPEB et la Maison des Communes de la Vendée ; la loi n° 2026-403 du 26 mai 2026 le consacre aussi, d'après une synthèse : à confirmer sur Légifrance ;
 - **de 100 000 € au seuil européen** : **procédure adaptée** (MAPA), dont l'organisme fixe librement les modalités dans le respect des principes ;
 - **à partir de 5 404 000 €** : **procédure formalisée**, avec publication au niveau européen. L'avis de la Direction des affaires juridiques annonce ce seuil pour 2026-2027, contre 5 538 000 € auparavant.
 
