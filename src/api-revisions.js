@@ -16,6 +16,7 @@ const CARTE_VALIDE = /^[a-z0-9-]{1,40}\/[a-z0-9-]{1,80}#(essentiel|approfondir|e
 const MAX_CARTES = 100;
 const FACILITE_INITIALE = 2.5;
 const FACILITE_MIN = 1.3;
+const NOTES = ['su', 'hesite', 'oublie'];
 
 function reponseJson(donnees, statut = 200) {
   return Response.json(donnees, {
