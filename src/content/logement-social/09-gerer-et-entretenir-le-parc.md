@@ -22,6 +22,8 @@ verifie_le: 2026-10-03
 
 ### Le calendrier des interdictions
 
+![Calendrier d'interdiction de location : classe G en 2025, F en 2028, E en 2034.](/schemas/logement-social/09-calendrier-des-interdictions.svg)
+
 La loi Climat et Résilience interdit progressivement la mise en location des logements énergivores, y compris dans le parc social :
 
 - **classe G** : depuis le 1er janvier 2025 ;
