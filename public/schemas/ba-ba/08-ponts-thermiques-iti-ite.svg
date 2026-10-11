@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>Ponts thermiques : isolation par l'intérieur ou par l'extérieur</title>
+<desc>Coupe d'une jonction entre un mur et un plancher. À gauche, avec une isolation par l'intérieur, l'isolant s'interrompt au droit du plancher et crée un pont thermique. À droite, avec une isolation par l'extérieur, l'isolant reste continu devant le plancher.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="30" y="20" width="300" height="250" rx="10" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="ts" x="52" y="44" fill="#5F5E5A">Extérieur</text>
+<text class="ts" x="308" y="44" text-anchor="end" fill="#5F5E5A">Intérieur</text>
+<rect x="140" y="60" width="40" height="190" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="180" y="140" width="130" height="20" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="180" y="60" width="18" height="80" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".8"/>
+<rect x="180" y="160" width="18" height="90" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".8"/>
+<circle cx="180" cy="150" r="22" fill="none" stroke="#993C1D" stroke-width="2.5" stroke-dasharray="5 3"/>
+<text class="ts" x="160" y="78" text-anchor="middle" fill="#444441">mur</text>
+<text class="ts" x="206" y="100" fill="#0F6E56">isolant</text>
+<text class="ts" x="250" y="186" text-anchor="middle" fill="#444441">plancher</text>
+<rect x="370" y="20" width="300" height="250" rx="10" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="ts" x="392" y="44" fill="#5F5E5A">Extérieur</text>
+<text class="ts" x="648" y="44" text-anchor="end" fill="#5F5E5A">Intérieur</text>
+<rect x="500" y="60" width="40" height="190" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="540" y="140" width="100" height="20" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="478" y="60" width="22" height="190" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".8"/>
+<text class="ts" x="520" y="78" text-anchor="middle" fill="#444441">mur</text>
+<text class="ts" x="472" y="110" text-anchor="end" fill="#0F6E56">isolant</text>
+<text class="ts" x="592" y="186" text-anchor="middle" fill="#444441">plancher</text>
+<text class="th" x="180" y="296" text-anchor="middle" fill="#712B13">Isolation par l'intérieur</text>
+<text class="ts" x="180" y="314" text-anchor="middle" fill="#993C1D">L'isolant s'arrête au plancher :</text>
+<text class="ts" x="180" y="330" text-anchor="middle" fill="#993C1D">pont thermique.</text>
+<text class="th" x="520" y="296" text-anchor="middle" fill="#085041">Isolation par l'extérieur</text>
+<text class="ts" x="520" y="314" text-anchor="middle" fill="#0F6E56">L'isolant reste continu</text>
+<text class="ts" x="520" y="330" text-anchor="middle" fill="#0F6E56">devant le plancher.</text>
+</svg>

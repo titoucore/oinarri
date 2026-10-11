@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>Transmission directe et transmissions latérales du bruit</title>
+<desc>Vue en plan de deux pièces côte à côte. Le bruit d'une source passe par la paroi qui sépare les pièces (transmission directe), mais aussi par les parois voisines qui se prolongent d'une pièce à l'autre (transmissions latérales).</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<defs>
+<marker id="tl-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#993C1D"/></marker>
+<marker id="tl-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0F6E56"/></marker>
+</defs>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="60" y="70" width="240" height="170" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="6"/>
+<rect x="300" y="70" width="240" height="170" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="6"/>
+<text class="th" x="180" y="102" text-anchor="middle" fill="#444441">Pièce avec la source</text>
+<text class="th" x="420" y="102" text-anchor="middle" fill="#444441">Pièce voisine</text>
+<circle cx="130" cy="170" r="10" fill="#993C1D"/>
+<path d="M146 160 Q156 170 146 180 M156 154 Q172 170 156 186" fill="none" stroke="#993C1D" stroke-width="2"/>
+<circle cx="470" cy="170" r="10" fill="#5F5E5A"/>
+<path d="M180 170 H440" stroke="#993C1D" stroke-width="3" fill="none" marker-end="url(#tl-a)"/>
+<rect x="290" y="196" width="20" height="22" fill="#F1EFE8"/>
+<text class="ts" x="300" y="212" text-anchor="middle" fill="#993C1D">direct</text>
+<path d="M130 150 Q130 76 200 76 L400 76 Q470 76 470 150" stroke="#0F6E56" stroke-width="2.5" stroke-dasharray="6 4" fill="none" marker-end="url(#tl-b)"/>
+<path d="M130 190 Q130 234 200 234 L400 234 Q470 234 470 190" stroke="#0F6E56" stroke-width="2.5" stroke-dasharray="6 4" fill="none" marker-end="url(#tl-b)"/>
+<text class="ts" x="300" y="58" text-anchor="middle" fill="#0F6E56">transmissions latérales par les murs extérieurs</text>
+<text class="th" x="340" y="282" text-anchor="middle" fill="#712B13">Directe : par la paroi qui sépare les pièces</text>
+<text class="th" x="340" y="302" text-anchor="middle" fill="#085041">Latérales : par les parois qui se prolongent d'une pièce à l'autre</text>
+<text class="ts" x="340" y="324" text-anchor="middle" fill="#5F5E5A">Un joint ou une jonction mal traités suffisent à faire passer le bruit.</text>
+</svg>

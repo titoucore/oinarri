@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>Accès des secours : 3e famille A et 3e famille B</title>
+<desc>Deux immeubles en coupe. À gauche, en 3e famille A, une voie-échelles borde la façade et les pompiers dressent leurs échelles. À droite, en 3e famille B, l'escalier est protégé et son accès se trouve à 50 m au plus d'une voie-engins.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<line x1="340" y1="20" x2="340" y2="320" stroke="#D3D1C7" stroke-dasharray="5 4"/>
+<text class="th" x="170" y="40" text-anchor="middle" fill="#712B13">3e famille A</text>
+<text class="th" x="510" y="40" text-anchor="middle" fill="#712B13">3e famille B</text>
+<line x1="20" y1="250" x2="660" y2="250" stroke="#5F5E5A" stroke-width="1.2"/>
+<rect x="70" y="60" width="110" height="190" fill="#FAECE7" stroke="#993C1D" stroke-width=".8"/>
+<line x1="70" y1="91" x2="180" y2="91" stroke="#993C1D" stroke-width=".5"/>
+<line x1="70" y1="123" x2="180" y2="123" stroke="#993C1D" stroke-width=".5"/>
+<line x1="70" y1="155" x2="180" y2="155" stroke="#993C1D" stroke-width=".5"/>
+<line x1="70" y1="187" x2="180" y2="187" stroke="#993C1D" stroke-width=".5"/>
+<line x1="70" y1="219" x2="180" y2="219" stroke="#993C1D" stroke-width=".5"/>
+<rect x="195" y="230" width="46" height="20" rx="3" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<path d="M206 230 L176 78" stroke="#993C1D" stroke-width="3" fill="none"/>
+<text class="ts" x="218" y="150" fill="#712B13">échelle</text>
+<text class="ts" x="170" y="282" text-anchor="middle" fill="#5F5E5A">Voie-échelles en bordure de façade</text>
+<text class="ts" x="170" y="300" text-anchor="middle" fill="#5F5E5A">R+4 à R+7 au plus</text>
+<rect x="400" y="60" width="110" height="190" fill="#FAECE7" stroke="#993C1D" stroke-width=".8"/>
+<line x1="400" y1="91" x2="510" y2="91" stroke="#993C1D" stroke-width=".5"/>
+<line x1="400" y1="123" x2="510" y2="123" stroke="#993C1D" stroke-width=".5"/>
+<line x1="400" y1="155" x2="510" y2="155" stroke="#993C1D" stroke-width=".5"/>
+<line x1="400" y1="187" x2="510" y2="187" stroke="#993C1D" stroke-width=".5"/>
+<line x1="400" y1="219" x2="510" y2="219" stroke="#993C1D" stroke-width=".5"/>
+<rect x="510" y="60" width="60" height="190" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text class="ts" x="540" y="150" text-anchor="middle" fill="#085041">Escalier</text>
+<text class="ts" x="540" y="166" text-anchor="middle" fill="#085041">protégé</text>
+<rect x="600" y="230" width="46" height="20" rx="3" fill="#D3D1C7" stroke="#5F5E5A" stroke-width=".8"/>
+<path d="M570 268 H600" stroke="#0F6E56" stroke-width="2" fill="none"/>
+<path d="M570 262 V274 M600 262 V274" stroke="#0F6E56" stroke-width="2" fill="none"/>
+<text class="ts" x="510" y="282" text-anchor="middle" fill="#0F6E56">≤ 50 m</text>
+<text class="ts" x="510" y="300" text-anchor="middle" fill="#5F5E5A">Accès à l'escalier à 50 m au plus d'une voie-engins</text>
+<text class="ts" x="340" y="324" text-anchor="middle" fill="#5F5E5A">Schéma de principe, non à l'échelle.</text>
+</svg>
