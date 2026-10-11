@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img">
+<title>Les seuils de ressources d'un couple : plafonds et surloyer</title>
+<desc>Axe des revenus d'un couple sans personne à charge, hors Île-de-France, plafonds 2026. Le plafond PLUS est de 31 254 euros. Le couple d'Arbola, à 33 000 euros, dépasse ce plafond mais reste sous le plafond PLS de 40 630 euros. Le surloyer s'applique à partir de 37 505 euros, soit 20 % au-dessus du plafond PLUS. Trois ans plus tard, à 40 000 euros, le couple dépasse ce seuil.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="300" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="119" y="140" width="291" height="20" fill="#E1F5EE"/>
+<rect x="410" y="140" width="150" height="20" fill="#FAECE7"/>
+<line x1="60" y1="150" x2="620" y2="150" stroke="#5F5E5A" stroke-width="2"/>
+<text class="ts" x="60" y="176" text-anchor="middle" fill="#5F5E5A">30 000 €</text>
+<text class="ts" x="620" y="176" text-anchor="middle" fill="#5F5E5A">42 000 €</text>
+<line x1="119" y1="128" x2="119" y2="172" stroke="#0F6E56" stroke-width="2"/>
+<text class="th" x="119" y="108" text-anchor="middle" fill="#085041">Plafond PLUS</text>
+<text class="ts" x="119" y="124" text-anchor="middle" fill="#0F6E56">31 254 €</text>
+<line x1="200" y1="140" x2="200" y2="184" stroke="#2C2C2A" stroke-width="2"/>
+<text class="th" x="200" y="204" text-anchor="middle" fill="#2C2C2A">Couple d'Arbola</text>
+<text class="ts" x="200" y="220" text-anchor="middle" fill="#5F5E5A">33 000 €</text>
+<line x1="410" y1="128" x2="410" y2="172" stroke="#993C1D" stroke-width="2"/>
+<text class="th" x="390" y="108" text-anchor="middle" fill="#712B13">Seuil du surloyer</text>
+<text class="ts" x="390" y="124" text-anchor="middle" fill="#993C1D">37 505 € (plafond + 20 %)</text>
+<line x1="527" y1="140" x2="527" y2="184" stroke="#2C2C2A" stroke-width="2"/>
+<text class="th" x="527" y="204" text-anchor="middle" fill="#2C2C2A">Trois ans plus tard</text>
+<text class="ts" x="527" y="220" text-anchor="middle" fill="#5F5E5A">40 000 €</text>
+<line x1="556" y1="128" x2="556" y2="172" stroke="#5F5E5A" stroke-width="2" stroke-dasharray="4 3"/>
+<text class="th" x="590" y="108" text-anchor="middle" fill="#444441">Plafond PLS</text>
+<text class="ts" x="590" y="124" text-anchor="middle" fill="#5F5E5A">40 630 €</text>
+<text class="ts" x="265" y="140" text-anchor="middle" fill="#0F6E56">pas de surloyer</text>
+<text class="ts" x="485" y="140" text-anchor="middle" fill="#993C1D">surloyer possible</text>
+<text class="th" x="340" y="256" text-anchor="middle" fill="#2C2C2A">Couple sans personne à charge, hors Île-de-France, plafonds 2026.</text>
+<text class="ts" x="340" y="276" text-anchor="middle" fill="#5F5E5A">Exemple fictif d'Arbola. Le plafond PLS vaut le plafond PLUS majoré de 30 %.</text>
+</svg>

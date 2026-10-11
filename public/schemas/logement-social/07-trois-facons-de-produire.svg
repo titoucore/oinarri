@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img">
+<title>Trois façons de produire du logement social</title>
+<desc>Trois façons de produire du logement social neuf ou existant : la maîtrise d'ouvrage directe, l'achat en VEFA et l'acquisition d'un immeuble existant. En sens inverse, la VEFA inversée permet à un organisme de vendre jusqu'à 30 % d'un programme majoritairement social à une personne privée, avec l'autorisation du préfet.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="340" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="20" y="24" width="200" height="160" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="240" y="24" width="200" height="160" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<rect x="460" y="24" width="200" height="160" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<text class="th" x="120" y="52" text-anchor="middle" fill="#2C2C2A">Maîtrise d'ouvrage directe</text>
+<text class="ts" x="120" y="82" text-anchor="middle" fill="#5F5E5A">L'organisme achète le terrain,</text>
+<text class="ts" x="120" y="100" text-anchor="middle" fill="#5F5E5A">fait concevoir et construire,</text>
+<text class="ts" x="120" y="118" text-anchor="middle" fill="#5F5E5A">et reste propriétaire.</text>
+<text class="th" x="340" y="52" text-anchor="middle" fill="#085041">Achat en VEFA</text>
+<text class="ts" x="340" y="82" text-anchor="middle" fill="#0F6E56">Programme monté par un tiers,</text>
+<text class="ts" x="340" y="100" text-anchor="middle" fill="#0F6E56">permis de construire déjà déposés,</text>
+<text class="ts" x="340" y="118" text-anchor="middle" fill="#0F6E56">prix payé par étapes,</text>
+<text class="ts" x="340" y="136" text-anchor="middle" fill="#0F6E56">propriété au fil du chantier.</text>
+<text class="ts" x="340" y="166" text-anchor="middle" fill="#085041">Près d'un logement neuf sur deux</text>
+<text class="th" x="560" y="52" text-anchor="middle" fill="#2C2C2A">Acquisition d'existant</text>
+<text class="ts" x="560" y="82" text-anchor="middle" fill="#5F5E5A">Immeuble existant,</text>
+<text class="ts" x="560" y="100" text-anchor="middle" fill="#5F5E5A">avec ou sans travaux</text>
+<text class="ts" x="560" y="118" text-anchor="middle" fill="#5F5E5A">(acquisition-amélioration).</text>
+<rect x="20" y="204" width="640" height="92" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width=".8"/>
+<text class="th" x="340" y="232" text-anchor="middle" fill="#712B13">VEFA inversée : l'organisme vend</text>
+<text class="ts" x="340" y="256" text-anchor="middle" fill="#993C1D">Jusqu'à 30 % d'un programme majoritairement social, à une personne privée,</text>
+<text class="ts" x="340" y="274" text-anchor="middle" fill="#993C1D">avec l'autorisation du préfet.</text>
+<text class="ts" x="340" y="322" text-anchor="middle" fill="#5F5E5A">Arbola côté bailleur : l'autre organisme achète en VEFA à un organisme HLM.</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img">
+<title>Le régime Seconde vie : de E, F ou G à A ou B</title>
+<desc>Un logement social achèvé depuis au moins 40 ans et classé E, F ou G subit une rénovation énergétique lourde sous agrément pour atteindre la classe A ou B. Il bénéficie alors d'une TVA réduite, d'une exonération de taxe foncière de longue durée et de prêts équivalents au PLAI, au PLUS ou au PLS. Les loyers peuvent être augmentés par avenant dans des limites fixées par décret.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<defs>
+<marker id="sv-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#5F5E5A"/></marker>
+</defs>
+<rect width="680" height="320" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<rect x="20" y="30" width="190" height="120" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width=".8"/>
+<rect x="245" y="30" width="190" height="120" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".8"/>
+<rect x="470" y="30" width="190" height="120" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".8"/>
+<path d="M212 90 H243" stroke="#5F5E5A" stroke-width="2" fill="none" marker-end="url(#sv-a)"/>
+<path d="M437 90 H468" stroke="#5F5E5A" stroke-width="2" fill="none" marker-end="url(#sv-a)"/>
+<text class="th" x="115" y="56" text-anchor="middle" fill="#712B13">Avant travaux</text>
+<text class="ts" x="115" y="82" text-anchor="middle" fill="#993C1D">Classe E, F ou G</text>
+<text class="ts" x="115" y="102" text-anchor="middle" fill="#993C1D">Logement social</text>
+<text class="ts" x="115" y="118" text-anchor="middle" fill="#993C1D">achevé depuis</text>
+<text class="ts" x="115" y="134" text-anchor="middle" fill="#993C1D">au moins 40 ans</text>
+<text class="th" x="340" y="56" text-anchor="middle" fill="#2C2C2A">Rénovation lourde</text>
+<text class="ts" x="340" y="82" text-anchor="middle" fill="#5F5E5A">Performance énergétique</text>
+<text class="ts" x="340" y="98" text-anchor="middle" fill="#5F5E5A">et environnementale</text>
+<text class="ts" x="340" y="114" text-anchor="middle" fill="#5F5E5A">élevée, sous agrément</text>
+<text class="th" x="565" y="56" text-anchor="middle" fill="#085041">Après travaux</text>
+<text class="ts" x="565" y="82" text-anchor="middle" fill="#0F6E56">Classe A ou B</text>
+<text class="ts" x="565" y="102" text-anchor="middle" fill="#0F6E56">Loyers révisables</text>
+<text class="ts" x="565" y="118" text-anchor="middle" fill="#0F6E56">par avenant, dans</text>
+<text class="ts" x="565" y="134" text-anchor="middle" fill="#0F6E56">des limites fixées</text>
+<text class="th" x="340" y="188" text-anchor="middle" fill="#2C2C2A">Ce que le régime apporte</text>
+<text class="ts" x="340" y="212" text-anchor="middle" fill="#5F5E5A">TVA réduite</text>
+<text class="ts" x="340" y="232" text-anchor="middle" fill="#5F5E5A">Exonération de taxe foncière de longue durée</text>
+<text class="ts" x="340" y="252" text-anchor="middle" fill="#5F5E5A">Prêts équivalents au PLAI, au PLUS ou au PLS</text>
+<text class="ts" x="340" y="288" text-anchor="middle" fill="#5F5E5A">Conditions tirées de sources fiscales secondaires : à relire dans le CGI.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img">
+<title>Le calendrier d'interdiction de location selon le DPE</title>
+<desc>Chronologie des interdictions de mise en location : les logements de classe G depuis le 1er janvier 2025, de classe F à partir du 1er janvier 2028 et de classe E à partir du 1er janvier 2034. Le parc social est concerné. Calendrier de l'Hexagone ; l'outre-mer est décalé.</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="300" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<line x1="60" y1="130" x2="620" y2="130" stroke="#5F5E5A" stroke-width="2"/>
+<circle cx="90" cy="130" r="14" fill="#993C1D"/>
+<text class="th" x="90" y="135" text-anchor="middle" fill="#FFFFFF">G</text>
+<circle cx="270" cy="130" r="14" fill="#993C1D"/>
+<text class="th" x="270" y="135" text-anchor="middle" fill="#FFFFFF">F</text>
+<circle cx="590" cy="130" r="14" fill="#993C1D"/>
+<text class="th" x="590" y="135" text-anchor="middle" fill="#FFFFFF">E</text>
+<text class="th" x="90" y="84" text-anchor="middle" fill="#712B13">1er janvier 2025</text>
+<text class="ts" x="90" y="104" text-anchor="middle" fill="#993C1D">classe G</text>
+<text class="th" x="270" y="84" text-anchor="middle" fill="#712B13">1er janvier 2028</text>
+<text class="ts" x="270" y="104" text-anchor="middle" fill="#993C1D">classe F</text>
+<text class="th" x="590" y="84" text-anchor="middle" fill="#712B13">1er janvier 2034</text>
+<text class="ts" x="590" y="104" text-anchor="middle" fill="#993C1D">classe E</text>
+<text class="ts" x="90" y="170" text-anchor="middle" fill="#5F5E5A">plus de nouvelle</text>
+<text class="ts" x="90" y="186" text-anchor="middle" fill="#5F5E5A">location possible</text>
+<text class="ts" x="270" y="170" text-anchor="middle" fill="#5F5E5A">le logement de la résidence</text>
+<text class="ts" x="270" y="186" text-anchor="middle" fill="#5F5E5A">classe F de l'exemple</text>
+<text class="ts" x="590" y="170" text-anchor="middle" fill="#5F5E5A">dernière étape</text>
+<text class="ts" x="590" y="186" text-anchor="middle" fill="#5F5E5A">du calendrier</text>
+<text class="th" x="340" y="238" text-anchor="middle" fill="#2C2C2A">Le diagnostic de performance énergétique (DPE) classe un logement de A à G.</text>
+<text class="ts" x="340" y="260" text-anchor="middle" fill="#5F5E5A">Le parc social est concerné. Calendrier de l'Hexagone ; l'outre-mer est décalé.</text>
+<text class="ts" x="340" y="280" text-anchor="middle" fill="#5F5E5A">Une réforme du DPE est évoquée en 2026 : à revoir si le calendrier change.</text>
+</svg>
