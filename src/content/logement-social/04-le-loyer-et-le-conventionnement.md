@@ -69,6 +69,14 @@ Quand les marges et les annexes sont importantes, le produit locatif maximum ne 
 
 Pour les conventions en cours, le loyer maximal est révisé chaque 1er janvier d'après l'**indice de référence des loyers** du deuxième trimestre de l'année précédente (article L353-9-2 du CCH). Au 1er janvier 2026, la révision était de 1,04 %. Les valeurs de zone des nouvelles conventions sont aussi réévaluées chaque année.
 
+### La réduction de loyer de solidarité
+
+La **réduction de loyer de solidarité** (RLS), créée par la loi de finances pour 2018, est une baisse de loyer que le bailleur social applique aux locataires modestes dont le logement ouvre droit à l'APL (article L. 442-2-1 du CCH). Elle vient après le calcul du loyer maximal : c'est une réduction sur le loyer pratiqué, pas une modification de la convention.
+
+Son montant mensuel dépend de la zone et de la composition du foyer. L'arrêté du 22 mai 2026 (qui modifie celui du 27 février 2018) fixe les montants applicables depuis le 1er juin 2026. Pour une personne seule, par exemple : 35,99 € en zones 1 et 1 bis, 31,58 € en zone 2 et 29,57 € en zone 3.
+
+En contrepartie, l'APL du locataire est diminuée à hauteur de 98 % de la RLS : son reste à charge change très peu. C'est donc le **bailleur** qui supporte la baisse de recettes, ce qui pèse sur ses fonds propres et sa capacité à construire. La loi de finances pour 2026 prévoit que l'évolution annuelle de la RLS peut être inférieure à celle de l'IRL.
+
 ## Expert
 
 - **Surface utile ou surface corrigée.** Les logements neufs d'un organisme HLM conventionnés depuis 2025 relèvent de la surface utile. La surface corrigée subsiste pour d'anciennes conventions ou des logements conventionnés sans travaux.
