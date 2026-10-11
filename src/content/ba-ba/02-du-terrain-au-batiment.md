@@ -37,7 +37,7 @@ La mairie répond en 1 mois pour le premier, 2 mois pour le second. Le certifica
 
 ### Étape 2 : obtenir le permis de construire
 
-Le **permis de construire** est l'autorisation de bâtir. Pour un immeuble collectif comme Arbola, la mairie dispose de **3 mois** à compter du dépôt (2 mois pour une maison individuelle). Le récépissé remis au dépôt indique le délai applicable. Dans le premier mois, la mairie peut réclamer des pièces ou modifier ce délai ; passé ce premier mois, le délai annoncé ne bouge plus. Dans la plupart des cas, le silence de la mairie vaut accord (permis tacite), avec des exceptions comme les sites classés.
+Le **permis de construire** est l'autorisation de bâtir. Pour un immeuble collectif comme Arbola, la mairie dispose de **3 mois** à compter du dépôt (2 mois pour une maison individuelle). Le récépissé remis au dépôt indique le délai applicable. Dans le premier mois, la mairie peut réclamer des pièces ou modifier ce délai ; passé ce premier mois, le délai annoncé ne bouge plus. Dans la plupart des cas, le silence de la mairie vaut accord (permis tacite), avec des exceptions, notamment lorsque le projet est soumis à l'accord de l'architecte des Bâtiments de France (voir « Approfondir »).
 
 ### Étape 3 : laisser passer les délais de recours
 
