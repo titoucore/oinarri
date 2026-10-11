@@ -22,6 +22,8 @@ verifie_le: 2026-10-03
 
 ### Trois façons de produire
 
+![Trois façons de produire du logement social (maîtrise d'ouvrage directe, achat en VEFA, acquisition d'existant) et la VEFA inversée.](/schemas/logement-social/07-trois-facons-de-produire.svg)
+
 - **La maîtrise d'ouvrage directe.** L'organisme achète un terrain, fait concevoir et construire, et reste propriétaire. C'est l'organisme d'Arbola dans le module Promotion.
 - **L'achat en VEFA.** L'organisme achète des logements à construire dans un programme monté par un tiers, promoteur ou autre organisme. Il paie le prix par étapes, au fur et à mesure du chantier, et devient propriétaire des logements et du terrain à mesure qu'ils sont réalisés. Près d'un logement social neuf sur deux vient d'une VEFA, selon une question parlementaire rapportée par la presse spécialisée.
 - **L'acquisition d'un immeuble existant**, avec ou sans travaux (acquisition-amélioration).
