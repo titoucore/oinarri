@@ -59,6 +59,8 @@ Un locataire dont les ressources dépassent d'au moins **20 %** les plafonds d'a
 
 Le montant mensuel est égal à la surface habitable du logement multipliée par un coefficient de dépassement et par un supplément de loyer de référence fixé par zone (article R441-20 du CCH). Le cumul du loyer principal et du surloyer est plafonné à **30 %** des ressources du foyer. Les plafonds pris en compte sont ceux du PLUS (majorés de 30 % pour les logements PLS).
 
+![Les seuils de ressources d'un couple : plafond PLUS, seuil du surloyer, plafond PLS, et les revenus du couple d'Arbola.](/schemas/logement-social/05-seuils-de-ressources-d-un-couple.svg)
+
 Pour le couple d'Arbola, si le plafond PLUS à deux personnes est de 31 254 euros, le seuil de 20 % est de 31 254 × 1,20 = environ 37 505 euros. À 40 000 euros de revenus, le couple dépasse ce seuil : un surloyer est possible. À 33 000 euros, non.
 
 ### Où le surloyer ne s'applique pas
