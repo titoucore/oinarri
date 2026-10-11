@@ -23,6 +23,8 @@
 export const THEMES = [
   'Financement du logement social',
   'Loyers et conventions',
+  'Occupants et organismes',
+  'Production et gestion du parc',
   'Carbone et RE2020',
   'Marchés publics',
   'Thermique et énergie',
