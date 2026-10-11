@@ -4,7 +4,7 @@ description: "RE2020, analyse de cycle de vie, FDES et base INIES, seuils carbon
 parcours: materiaux-biosources
 ordre: 5
 niveau: Débutant
-verifie_le: 2026-10-04
+verifie_le: 2026-10-11
 ---
 
 ## Objectifs
