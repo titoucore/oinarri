@@ -24,7 +24,7 @@ verifie_le: 2026-10-11
 
 Une opération se déroule sur deux plans. Le premier est celui du **droit** : autorisations, délais de recours, déclarations à la mairie, réception, garanties. Le second est celui du **chantier** : ce qu'on construit, dans l'ordre que la physique impose (on ne pose pas un toit avant les murs). Les deux se croisent à quelques moments clés, que le schéma situe.
 
-![Les deux calendriers d'une opération : en haut le droit (certificat d'urbanisme, permis, recours des tiers, ouverture de chantier, déclaration d'achèvement, contrôle de la mairie), au milieu ce qui se construit, en bas la durée des garanties à l'échelle.](/schemas/ba-ba/02-deux-calendriers.svg)
+![Les deux calendriers d'une opération : en haut le droit (certificat d'urbanisme, permis, recours des tiers et retrait en parallèle, ouverture de chantier, déclaration d'achèvement, contrôle de la mairie), au milieu ce qui se construit, en bas la durée des garanties à l'échelle.](/schemas/ba-ba/02-deux-calendriers.svg)
 
 ### Étape 1 : savoir ce que le terrain permet
 
