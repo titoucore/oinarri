@@ -5,9 +5,13 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/verifier-contenu.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "astro build && wrangler deploy",
+    "verifier": "node scripts/verifier-contenu.mjs",
+    "verifier:strict": "node scripts/verifier-contenu.mjs --strict",
+    "verifier:liens": "node scripts/verifier-contenu.mjs --liens"
   },
   "dependencies": {
     "@fontsource/space-grotesk": "^5.0.0",
