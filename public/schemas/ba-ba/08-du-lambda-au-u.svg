@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img">
+<title>Du λ au U : les couches d'un mur d'Arbola</title>
+<desc>Un mur d'Arbola de l'intérieur vers l'extérieur : résistance superficielle intérieure 0,13, plaque de plâtre 0,05, isolant de 20 cm 5,00, panneau OSB 0,12, résistance superficielle extérieure 0,04. La somme donne R total 5,34 m²·K/W, soit un coefficient U d'environ 0,19 W/(m²·K).</desc>
+<style>text{font-family:'Space Grotesk',system-ui,sans-serif}.th{font-size:14px;font-weight:500}.ts{font-size:12px}</style>
+<rect width="680" height="360" rx="12" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="ts" x="30" y="34" fill="#5F5E5A">Intérieur</text>
+<text class="ts" x="650" y="34" text-anchor="end" fill="#5F5E5A">Extérieur</text>
+<rect x="30" y="50" width="90" height="90" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="75" y="84" text-anchor="middle" fill="#444441">Rsi</text>
+<text class="ts" x="75" y="104" text-anchor="middle" fill="#5F5E5A">surface</text>
+<text class="ts" x="75" y="120" text-anchor="middle" fill="#5F5E5A">intérieure</text>
+<rect x="120" y="50" width="110" height="90" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="175" y="84" text-anchor="middle" fill="#712B13">Plâtre</text>
+<text class="ts" x="175" y="104" text-anchor="middle" fill="#993C1D">1,3 cm</text>
+<text class="ts" x="175" y="120" text-anchor="middle" fill="#993C1D">λ 0,25</text>
+<rect x="230" y="50" width="220" height="90" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="340" y="84" text-anchor="middle" fill="#085041">Isolant</text>
+<text class="ts" x="340" y="104" text-anchor="middle" fill="#0F6E56">20 cm</text>
+<text class="ts" x="340" y="120" text-anchor="middle" fill="#0F6E56">λ 0,040</text>
+<rect x="450" y="50" width="110" height="90" fill="#FAECE7" stroke="#993C1D" stroke-width=".5"/>
+<text class="th" x="505" y="84" text-anchor="middle" fill="#712B13">Panneau OSB</text>
+<text class="ts" x="505" y="104" text-anchor="middle" fill="#993C1D">1,5 cm</text>
+<text class="ts" x="505" y="120" text-anchor="middle" fill="#993C1D">λ 0,13</text>
+<rect x="560" y="50" width="90" height="90" fill="#F1EFE8" stroke="#5F5E5A" stroke-width=".5"/>
+<text class="th" x="605" y="84" text-anchor="middle" fill="#444441">Rse</text>
+<text class="ts" x="605" y="104" text-anchor="middle" fill="#5F5E5A">surface</text>
+<text class="ts" x="605" y="120" text-anchor="middle" fill="#5F5E5A">extérieure</text>
+<text class="th" x="75" y="166" text-anchor="middle" fill="#444441">0,13</text>
+<text class="th" x="175" y="166" text-anchor="middle" fill="#712B13">0,05</text>
+<text class="th" x="340" y="166" text-anchor="middle" fill="#085041">5,00</text>
+<text class="th" x="505" y="166" text-anchor="middle" fill="#712B13">0,12</text>
+<text class="th" x="605" y="166" text-anchor="middle" fill="#444441">0,04</text>
+<text class="ts" x="340" y="186" text-anchor="middle" fill="#5F5E5A">Résistance de chaque couche, en m²·K/W (épaisseur ÷ λ)</text>
+<rect x="30" y="202" width="620" height="60" rx="8" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text class="th" x="340" y="226" text-anchor="middle" fill="#2C2C2A">R total = 0,13 + 0,05 + 5,00 + 0,12 + 0,04 = 5,34 m²·K/W</text>
+<text class="ts" x="340" y="246" text-anchor="middle" fill="#5F5E5A">L'isolant apporte presque tout ; les films d'air comptent 0,17 au total.</text>
+<rect x="30" y="278" width="620" height="62" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width=".5"/>
+<text class="th" x="340" y="302" text-anchor="middle" fill="#085041">U = 1 ÷ 5,34 ≈ 0,19 W/(m²·K)</text>
+<text class="ts" x="340" y="322" text-anchor="middle" fill="#0F6E56">En partie courante : sans les montants de l'ossature ni les ponts thermiques.</text>
+</svg>

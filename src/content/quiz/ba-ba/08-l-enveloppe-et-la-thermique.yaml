@@ -1,0 +1,107 @@
+# Mini-quiz du chapitre 8 : L'enveloppe et la thermique.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Comment calcule-t-on la résistance thermique R d'une couche ?"
+    choix:
+      - "R = épaisseur ÷ λ"
+      - "R = épaisseur × λ"
+      - "R = λ ÷ épaisseur"
+      - "R = 1 ÷ épaisseur"
+    reponse: 0
+    explication: "La résistance d'une couche vaut son épaisseur en mètres divisée par sa conductivité λ. Plus la couche est épaisse et plus λ est faible, plus R est grand."
+
+  - type: vf
+    affirmation: "Plus le coefficient U d'une paroi est élevé, mieux elle isole."
+    reponse: false
+    explication: "U dit combien de chaleur traverse un mètre carré de paroi. Plus il est faible, moins la paroi laisse passer de chaleur, donc mieux elle isole."
+
+  - type: qcm
+    question: "Quelles sont les résistances superficielles usuelles d'un mur, Rsi (intérieur) puis Rse (extérieur) ?"
+    choix:
+      - "0,13 et 0,04 m²·K/W"
+      - "0,04 et 0,13 m²·K/W"
+      - "1,3 et 0,4 m²·K/W"
+      - "0 et 0 m²·K/W"
+    reponse: 0
+    explication: "Pour un mur (flux de chaleur horizontal), Rsi vaut 0,13 et Rse 0,04. Ce sont les films d'air qui collent aux deux faces de la paroi. Les valeurs diffèrent pour une toiture et un plancher bas."
+
+  - type: qcm
+    question: "Qu'est-ce qu'un pont thermique ?"
+    choix:
+      - "Une zone de l'enveloppe où la chaleur passe plus facilement, par exemple une jonction mur-plancher"
+      - "Un passage couvert entre deux bâtiments"
+      - "Une couche d'isolant renforcée"
+      - "Un appareil qui mesure la température"
+    reponse: 0
+    explication: "Un pont thermique est un endroit où l'isolant s'interrompt ou s'amincit : liaison mur-plancher, balcon, appui de fenêtre, montant d'ossature. La parade est la continuité de l'isolant."
+
+  - type: ouverte
+    question: "Pourquoi mesure-t-on l'étanchéité à l'air d'un bâtiment neuf ?"
+    modele: "Parce qu'un bâtiment bien isolé peut quand même perdre de la chaleur par les fuites d'air (joints, traversées de réseaux, menuiseries). Le test à la porte soufflante donne un indicateur chiffré, le Q4Pa-surf, qui se compare à un seuil. D'après les sources professionnelles, il est obligatoire en fin de chantier pour les logements neufs soumis à la RE2020."
+
+approfondir:
+  - type: qcm
+    question: "Quelle est la formule du Bbio ?"
+    choix:
+      - "2 × chauffage + 2 × refroidissement + 5 × éclairage"
+      - "1 × chauffage + 1 × refroidissement + 1 × éclairage"
+      - "5 × chauffage + 2 × refroidissement + 2 × éclairage"
+      - "Chauffage ÷ éclairage"
+    reponse: 0
+    explication: "Le Bbio pondère les besoins de chauffage et de refroidissement par 2, et ceux d'éclairage par 5. Il s'exprime en points."
+
+  - type: qcm
+    question: "Quelle est la valeur moyenne du Bbio max pour un logement collectif, avant modulations ?"
+    choix:
+      - "45 points"
+      - "63 points"
+      - "65 points"
+      - "95 points"
+    reponse: 2
+    explication: "Le Bbio max moyen est de 65 points en logement collectif et de 63 points en maison individuelle (décret du 29 juillet 2021). Le plafond d'un projet est modulé selon la géographie, les combles, la surface des logements et le bruit."
+
+  - type: vf
+    affirmation: "Le Bbio dépend du type de chauffage choisi pour le bâtiment."
+    reponse: false
+    explication: "Le Bbio note la qualité du bâti (isolation, orientation, vitrages, éclairage naturel), indépendamment des équipements. Ce sont d'autres indicateurs, comme le Cep, qui tiennent compte des systèmes."
+
+  - type: qcm
+    question: "Selon les sources professionnelles consultées, quel est le Q4Pa-surf maximal en logement collectif ?"
+    choix:
+      - "0,6 m³/(h·m²)"
+      - "1,0 m³/(h·m²)"
+      - "3,0 m³/(h·m²)"
+      - "Il n'y a pas de seuil"
+    reponse: 1
+    explication: "Les sources consultées donnent 0,6 en maison individuelle et 1,0 en logement collectif. Ces valeurs viennent de sources professionnelles : le texte de l'arrêté n'a pas été relu."
+
+  - type: ouverte
+    question: "Pourquoi un balcon en béton qui traverse l'isolant pose-t-il problème ?"
+    modele: "Il interrompt l'isolant et crée un pont thermique : la chaleur s'échappe plus facilement par cette jonction que par le mur voisin. On le mesure par un coefficient linéique ψ. On le traite en gardant l'isolant continu, par exemple avec une rupture de pont thermique ou un balcon désolidarisé de la façade."
+
+expert:
+  - type: qcm
+    question: "Dans les règles Th-Bât, que vaut le coefficient FR pour un isolant avec un marquage CE de système 1+ ?"
+    choix:
+      - "1"
+      - "1,15"
+      - "0,85"
+      - "2"
+    reponse: 0
+    explication: "FR est un coefficient de sécurité appliqué à la valeur déclarée : il vaut 1 avec un marquage CE de système 1+ (ou équivalent) et 1,15 avec les autres systèmes de marquage CE. La valeur utile est la valeur déclarée multipliée par FT, Fm et FR."
+
+  - type: vf
+    affirmation: "Le U calculé en partie courante donne la déperdition réelle d'un mur à ossature bois."
+    reponse: false
+    explication: "Il ignore les montants de l'ossature, plus conducteurs que l'isolant, et les jonctions. Les règles Th-Bât les traitent comme des ponts thermiques intégrés : le U réel est moins bon que le U de partie courante."
+
+  - type: ouverte
+    question: "Pourquoi les valeurs par défaut des règles Th-Bât sont-elles plus prudentes que les valeurs déclarées par les fabricants ?"
+    modele: "Elles s'appliquent quand aucune valeur déclarée n'est justifiée : le calcul doit alors rester du côté de la sécurité. Elles tiennent compte de la dispersion de fabrication et des conditions d'usage (humidité, vieillissement). Un fabricant qui fait certifier sa valeur peut obtenir une valeur utile plus favorable. Exemple : pour le béton de chanvre, les règles imposent 0,1 à 0,2 W/(m·K) par défaut, alors que des fabricants déclarent 0,056 à 0,09."
