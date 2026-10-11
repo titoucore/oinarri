@@ -23,6 +23,7 @@ import { termes as termesThermique } from './glossaire-thermique.js';
 import { termes as termesAcoustique } from './glossaire-acoustique.js';
 import { termes as termesPassif } from './glossaire-passif.js';
 import { termes as termesIncendie } from './glossaire-incendie.js';
+import { termes as termesAccessibilite } from './glossaire-accessibilite.js';
 
 const termesBatiment = [
   {
