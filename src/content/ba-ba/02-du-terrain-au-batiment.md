@@ -43,7 +43,7 @@ Le **permis de construire** est l'autorisation de bâtir. Pour un immeuble colle
 
 Le permis doit être **affiché sur le terrain**, sur un panneau lisible depuis la voie publique. Deux délais courent alors :
 
-- les **tiers** (voisins, associations) peuvent le contester pendant **2 mois**, à compter du premier jour d'un affichage continu de 2 mois ;
+- les **tiers** (voisins, associations) peuvent le contester pendant **2 mois**, à compter du premier jour d'un affichage continu de 2 mois. Le recours est **contentieux** (devant le tribunal administratif) ou **administratif** (un recours gracieux, adressé à l'auteur de la décision). Il doit être notifié, sous 15 jours, à l'auteur du permis et à son bénéficiaire ;
 - la mairie peut le **retirer** pendant **3 mois** après sa date, si elle le juge illégal.
 
 Quand ces délais sont écoulés sans recours ni retrait, le permis est dit **purgé**. Une banque peut demander la preuve de cette purge. Un constat d'affichage par un commissaire de justice sécurise cette preuve.
