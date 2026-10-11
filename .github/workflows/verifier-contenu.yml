@@ -1,0 +1,58 @@
+name: Contrôle du contenu
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/**'
+      - 'src/data/**'
+      - 'public/schemas/**'
+      - 'scripts/**'
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Contrôle strict (modifications du contenu)
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        run: node scripts/verifier-contenu.mjs --strict --rapport=rapport.md
+
+      - name: Contrôle hebdomadaire (avec les liens)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: node scripts/verifier-contenu.mjs --liens --rapport=rapport.md
+
+      - name: Alerte dans les issues
+        if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f rapport.md ]; then
+            numero=$(gh issue list --state open --search "Contrôle du contenu in:title" --json number --jq '.[0].number')
+            if [ -n "$numero" ]; then
+              gh issue comment "$numero" --body-file rapport.md
+            else
+              gh issue create --title "Contrôle du contenu : points à traiter" --body-file rapport.md
+            fi
+          fi
+
+      - name: Conserver le rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-controle
+          path: rapport.md
+          if-no-files-found: ignore
