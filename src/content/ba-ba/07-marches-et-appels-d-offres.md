@@ -134,4 +134,4 @@ Vérifié le 3 octobre 2026, mis à jour le 11 octobre 2026 (seuil de dispense d
 - Avance : fiche de la Fédération française du bâtiment sur le CCAG-Travaux 2021.
 - Délai de paiement de 30 jours : fiches de formation pour les collectivités.
 
-À contrôler sur Légifrance : le seuil de dispense de 100 000 € HT, le champ d'application du code de la commande publique aux organismes HLM, le délai de paiement qui leur est applicable, les règles sur les marchés globaux, la loi MOP, l'effet de la loi n° 2026-403. Les étapes et les pièces du DCE sont décrites d'après l'usage. Plusieurs sources sont des sites de reprise.
+À contrôler sur Légifrance : le champ d'application du code de la commande publique aux organismes HLM, le délai de paiement qui leur est applicable, les règles sur les marchés globaux, la loi MOP, l'effet de la loi n° 2026-403. Les étapes et les pièces du DCE sont décrites d'après l'usage. Plusieurs sources sont des sites de reprise.
