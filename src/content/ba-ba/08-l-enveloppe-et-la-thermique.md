@@ -32,6 +32,8 @@ Trois voies, à ne pas confondre :
 - **Aux jonctions.** Là où l'isolant s'interrompt (liaison mur-plancher, balcon, appui de fenêtre), la chaleur passe plus facilement : ce sont les **ponts thermiques**.
 - **Avec l'air.** Une partie de l'air chaud sort par les défauts de l'enveloppe, et de l'air froid entre : ce sont les fuites parasites. À distinguer de la **ventilation**, qui renouvelle l'air volontairement pour le garder sain.
 
+![Les trois voies de perte de chaleur : à travers les parois, aux jonctions (ponts thermiques) et par l'air.](/schemas/ba-ba/08-trois-voies-de-perte.svg)
+
 ### De λ à R, puis à U
 
 ![Du λ au U : les couches d'un mur d'Arbola, leurs résistances, la somme et le coefficient U.](/schemas/ba-ba/08-du-lambda-au-u.svg)
