@@ -1,0 +1,97 @@
+# Mini-quiz du chapitre 11 : La sécurité incendie des logements.
+# Types de question :
+#   qcm     : plusieurs choix, "reponse" = numéro du bon choix (0 = le premier)
+#   vf      : affirmation, "reponse" = true (vrai) ou false (faux)
+#   ouverte : réponse libre, le lecteur compare avec "modele" et s'auto-évalue
+# Chaque question vaut 2 points.
+# Ne jamais réordonner les questions : une carte de révision = cours#niveau#index.
+
+essentiel:
+  - type: qcm
+    question: "Selon quel critère principal classe-t-on un immeuble d'habitation en famille de sécurité incendie ?"
+    choix:
+      - "Sa hauteur et son type (maison ou collectif)"
+      - "Sa couleur de façade"
+      - "Le nombre d'habitants"
+      - "Son prix de construction"
+    reponse: 0
+    explication: "Le classement dépend de la hauteur du plancher bas du logement le plus haut et du type de bâtiment : maisons individuelles, collectifs, jusqu'à 28 m, de 28 à 50 m."
+
+  - type: qcm
+    question: "Dans quelle famille se classe un collectif d'un rez-de-chaussée et de trois étages ?"
+    choix:
+      - "1re famille"
+      - "2e famille"
+      - "3e famille"
+      - "4e famille"
+    reponse: 1
+    explication: "Les habitations collectives comportant au plus trois étages sur rez-de-chaussée, à usage exclusif d'habitation, relevent de la 2e famille."
+
+  - type: qcm
+    question: "Quelle stabilité au feu est exigée de la structure d'un immeuble de 2e famille ?"
+    choix:
+      - "15 minutes"
+      - "30 minutes"
+      - "1 heure"
+      - "1 heure 30"
+    reponse: 1
+    explication: "Les éléments porteurs doivent être stables au feu 15 minutes en 1re famille, 30 minutes en 2e, 1 heure en 3e et 1 h 30 en 4e."
+
+  - type: vf
+    affirmation: "Au-dessus de 50 m, un immeuble d'habitation reste soumis à l'arrêté du 31 janvier 1986."
+    reponse: false
+    explication: "Au-delà de 50 m (plancher bas du logement le plus haut), ce sont les règles des immeubles de grande hauteur (IGH) qui s'appliquent."
+
+  - type: ouverte
+    question: "Pourquoi protège-t-on un isolant combustible par un écran thermique ?"
+    modele: "Pour ralentir l'embrasement généralisé, limiter la fumée et laisser du temps pour évacuer. L'arrêté du 7 août 2019 exige un écran sur les faces exposées à un feu intérieur et renvoie au guide de l'isolation par l'intérieur de 2016. Par exemple, une plaque de plâtre sous un isolant en fibre de bois."
+
+approfondir:
+  - type: qcm
+    question: "Qu'est-ce qui distingue la 3e famille A de la 3e famille B ?"
+    choix:
+      - "La 3e A : R+4 à R+7, moins de 10 m jusqu'à l'escalier, escaliers atteints par la voie échelles ; sinon 3e B"
+      - "La couleur des portes"
+      - "Le nombre de logements par étage seulement"
+      - "La date du permis"
+    reponse: 0
+    explication: "La 3e A doit respecter trois dispositions : de R+4 à R+7 au plus, moins de 10 m entre la porte palIère la plus éloignée et l'escalier, et accès aux escaliers par la voie échelles. Si l'une n'est pas respectée, le bâtiment est en 3e B."
+
+  - type: qcm
+    question: "Quel type d'escalier est exigé dans les habitations de 3e famille B ?"
+    choix:
+      - "Un escalier protégé (à l'air libre ou à l'abri des fumées)"
+      - "Un escalier en bois"
+      - "Un escalier de secours métallique extérieur seulement"
+      - "Aucun escalier"
+    reponse: 0
+    explication: "Dans la 3e famille B, l'escalier doit être protég : soit à l'air libre, soit à l'abri des fumées."
+
+  - type: vf
+    affirmation: "Pour un duplex au dernier étage, c'est toujours le niveau le plus haut du duplex qui définit la hauteur de classement."
+    reponse: false
+    explication: "Pour les duplex et triplex situés à l'étage le plus élevé, seul le niveau bas est pris en compte, si le logement a une pièce principale et une porte palIère en partie basse (arrêté du 19 juin 2015)."
+
+  - type: ouverte
+    question: "Qu'est-ce qui change pour la structure d'Arbola quand elle passe de R+3 à R+4 ?"
+    modele: "Elle passe de la 2e à la 3e famille : la stabilité au feu de la structure et le coupe-feu des planchers passent de 30 minutes à 1 heure. Selon les conditions (distance porte palIère-escalier, voie échelles), ce sera la 3e A ou la 3e B, avec un escalier protégé en 3e B. Il faut aussi vérifier l'accès des secours et la justification de la paroi à ossature bois."
+
+expert:
+  - type: qcm
+    question: "Quel arrêté a révisé les règles de propagation du feu par les façades pour les permis déposés depuis le 1er janvier 2020 ?"
+    choix:
+      - "L'arrêté du 7 août 2019"
+      - "L'arrêté du 30 juin 1999"
+      - "L'arrêté du 27 novembre 2012"
+      - "L'arrêté du 4 août 2021"
+    reponse: 0
+    explication: "L'arrêté du 7 août 2019 modifie celui du 31 janvier 1986 et s'applique aux permis déposés à compter du 1er janvier 2020. L'arrêté de 1999 traite de l'acoustique, celui de 2012 de l'attestation acoustique, celui de 2021 de la RE2020."
+
+  - type: vf
+    affirmation: "Un résultat d'essai de résistance au feu vaut pour n'importe quelle composition de paroi du même matériau."
+    reponse: false
+    explication: "Un résultat d'essai vaut pour la composition exacte essayée (support, parements, isolant, fixations). C'est le procès-verbal de la paroi concernée qui compte."
+
+  - type: ouverte
+    question: "Pourquoi demander l'avis du bureau de contrôle et du SDIS dès la conception ?"
+    modele: "Parce que le classement (famille, 3e A ou 3e B), l'accessibilité des secours, l'escalier et les parois se décident au départ : modifier la hauteur ou le plan en cours de route change les exigences de structure et de planchers. Le texte évolue, et les cas limites (duplex, distances, voie échelles) demandent un avis de professionnel de la sécurité incendie."
