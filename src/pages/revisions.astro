@@ -267,6 +267,40 @@ const cartesJson = JSON.stringify(cartes).replace(/</g, '\\u003c');
   .revision .rev-arreter {
     margin-top: 0.5rem;
   }
+
+  .revision .rev-saisie-nombre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 0.75rem;
+  }
+
+  .revision .rev-nombre {
+    width: 9rem;
+    min-height: 44px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid var(--ink-200);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink-900);
+  }
+
+  .revision .rev-unite {
+    font-size: 14px;
+    color: var(--ink-600);
+  }
+
+  .revision .rev-etapes {
+    margin: 0 0 0.5rem;
+    padding-left: 1.1rem;
+    font-size: 15px;
+  }
+
+  .revision .rev-etapes li {
+    margin-bottom: 0.3rem;
+  }
 </style>
 
 <script>
