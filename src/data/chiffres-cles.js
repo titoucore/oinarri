@@ -334,7 +334,35 @@ const PAS = 'Bâtiment passif';
 const INC = 'Incendie';
 const ACC = 'Accessibilité';
 
+const LS02 = 'logement-social/02-les-organismes-hlm';
+const LS05 = 'logement-social/05-les-occupants';
+const LS07 = 'logement-social/07-produire-du-logement-social';
+const LS09 = 'logement-social/09-gerer-et-entretenir-le-parc';
+const OCC = 'Occupants et organismes';
+const PRO = 'Production et gestion du parc';
+
+// Chiffres des chapitres 2, 5, 7 et 9 du logement social (vérifiés le 3 octobre 2026).
+const LS_COMPLEMENT = [
+  c('nombre-organismes', OCC, 'Organismes de logement social', 'Environ 560 fin 2023 : 180 offices, 172 entreprises sociales, 162 coopératives, 46 SACICAP', "Environ 88 000 salariés et 4,8 millions de logements. Chiffres de l'USH pour 2023 : ils bougent avec les fusions.", { volatilite: 'annuel', verifie_le: '2026-10-03', sources: ['ush-chiffres'], chapitres: [LS02] }),
+  c('regroupement-elan', OCC, 'Regroupement des organismes (loi ELAN)', 'Moins de 12 000 logements : rejoindre un groupe', "Depuis le 1er janvier 2021. Des exceptions existent (par exemple l'organisme seul de son département) : à vérifier sur le texte.", { verifie_le: '2026-10-03', fiabilite: 'a-confirmer', sources: ['ch-ls02'], chapitres: [LS02] }),
+  c('plafonds-plus-2026', OCC, 'Plafonds de ressources PLUS, hors Île-de-France', '1 personne : 23 403 € ; 2 personnes : 31 254 € ; 3 personnes : 37 584 € ; 4 personnes : 45 374 €', "Année 2026, revalorisés chaque année. Ressources prises en compte : avis d'imposition de l'année N-2.", { unite: '€ par an', volatilite: 'annuel', verifie_le: '2026-10-03', sources: ['anil-plafonds'], chapitres: [LS05] }),
+  c('plafond-plai-2026', OCC, 'Plafond de ressources PLAI, personne seule', '12 870 €', "Hors Île-de-France, 2026.", { unite: '€ par an', volatilite: 'annuel', verifie_le: '2026-10-03', sources: ['anil-plafonds'], chapitres: [LS05] }),
+  c('surloyer', OCC, 'Supplément de loyer de solidarité (surloyer)', 'À partir de 20 % de dépassement des plafonds ; loyer et surloyer plafonnés à 30 % des ressources', "Non applicable dans les quartiers prioritaires ni dans les zones de revitalisation rurale. Le détail du coefficient de dépassement est à relire dans le CCH.", { verifie_le: '2026-10-03', fiabilite: 'a-confirmer', sources: ['ch-ls05'], chapitres: [LS05] }),
+  c('caleol', OCC, "Commission d'attribution (CALEOL)", 'Au moins 3 candidatures par logement ; tout refus est motivé', undefined, { volatilite: 'stable', verifie_le: '2026-10-03', sources: ['ch-ls05'], chapitres: [LS05] }),
+  c('attributions-prioritaires', OCC, 'Ménages DALO ou prioritaires', "25 % au moins des attributions annuelles de logements non réservés", "Article L441-1 du CCH, repris par plusieurs règlements d'attribution.", { verifie_le: '2026-10-03', fiabilite: 'a-confirmer', sources: ['ch-ls05'], chapitres: [LS05] }),
+
+  c('vefa-hlm', PRO, "VEFA à un bailleur social (article L433-2 du CCH)", 'Programme établi par un tiers, permis de construire déjà déposés', 'Ou ouvrages achetés à un autre organisme HLM ou à une SEM. Version en vigueur depuis le 21 février 2026.', { verifie_le: '2026-10-03', sources: ['ch-ls07'], chapitres: [LS07] }),
+  c('vefa-inversee', PRO, 'VEFA inversée', "30 % au plus d'un programme majoritairement social", "Vente à une personne privée, avec l'autorisation du préfet.", { verifie_le: '2026-10-03', sources: ['ch-ls07'], chapitres: [LS07] }),
+  c('part-vefa', PRO, 'Part de la VEFA dans le logement social neuf', "Près d'un logement sur deux", "D'après une question parlementaire rapportée par la presse spécialisée.", { statut: 'repere', volatilite: 'annuel', verifie_le: '2026-10-03', fiabilite: 'a-confirmer', sources: ['ch-ls07'], chapitres: [LS07] }),
+  c('pnru', PRO, 'Premier programme de renouvellement urbain (PNRU, 2004-2021)', '546 quartiers ; 175 000 logements démolis, 220 000 produits', undefined, { volatilite: 'stable', verifie_le: '2026-10-03', sources: ['anru'], chapitres: [LS07] }),
+  c('npnru', PRO, 'Financement du NPNRU', "14,2 milliards d'euros (12,1 en équivalent-subvention)", "Dont 8 milliards d'Action Logement, 2,7 des bailleurs via la CGLLS et 1,2 de l'État. Les montants varient selon les sources.", { verifie_le: '2026-10-03', fiabilite: 'a-confirmer', sources: ['anru'], chapitres: [LS07] }),
+  c('dpe-calendrier', PRO, 'Interdiction de louer selon la classe du DPE', 'G : 1er janvier 2025 ; F : 1er janvier 2028 ; E : 1er janvier 2034', "Hexagone ; l'outre-mer est décalé. Le parc social est concerné. Une réforme du DPE est évoquée en 2026.", { verifie_le: '2026-10-03', sources: ['ministere-dpe'], chapitres: [LS09] }),
+  c('seconde-vie', PRO, 'Régime Seconde vie (rénovation lourde)', 'Logement social achevé depuis 40 ans au moins ; classe E, F ou G avant travaux ; A ou B après', "Sous agrément : TVA réduite, exonération de taxe foncière de longue durée, prêts équivalents au PLAI, au PLUS ou au PLS. Conditions tirées de sources fiscales secondaires.", { verifie_le: '2026-10-03', fiabilite: 'a-confirmer', sources: ['ch-ls09'], chapitres: [LS09] }),
+  c('garanties-constructeur', PRO, 'Garanties du constructeur (logements neufs)', 'Parfait achèvement : 1 an ; biennale : 2 ans ; décennale : 10 ans', undefined, { volatilite: 'stable', verifie_le: '2026-10-03', sources: ['ch-ls09'], chapitres: [LS09] }),
+];
+
 export const CHIFFRES = [
+  ...LS_COMPLEMENT,
   // ---------- Financement du logement social (chapitre 3) ----------
   c('livret-a', FIN, 'Taux du Livret A', '1,7 %', "Depuis le 1er août 2026, pour la période d'août 2026 à janvier 2027. Révisé le 1er février et le 1er août.", { volatilite: 'semestriel', sources: ['infogouv-livret', 'bdt-livret'], chapitres: [LS03] }),
   c('taux-plai', FIN, 'Taux du prêt PLAI', '1,50 % (Livret A moins 0,20 %)', 'Calculé avec le Livret A à 1,7 %.', { volatilite: 'semestriel', sources: ['bdt-plus', 'infogouv-livret'], chapitres: [LS03] }),
