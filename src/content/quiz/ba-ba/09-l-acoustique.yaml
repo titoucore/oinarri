@@ -90,7 +90,7 @@ expert:
   - type: vf
     affirmation: "Les exigences acoustiques des logements neufs s'appliquent telles quelles à la rénovation d'un logement ancien."
     reponse: false
-    explication: "La réglementation vise les bâtiments neufs, les surifications et les additions. Pour la rénovation de logements existants, les exigences sont moindres, selon la DREAL Occitanie."
+    explication: "La réglementation vise les bâtiments neufs, les surélévations et les additions. Pour la rénovation de logements existants, les exigences sont moindres, selon la DREAL Occitanie."
 
   - type: ouverte
     question: "Quels documents prouvent, après livraison, qu'un immeuble respecte l'acoustique ?"
