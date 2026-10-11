@@ -57,7 +57,7 @@ Selon le montant estimé du marché de travaux, la procédure change (valeurs 20
 - **de 100 000 € au seuil européen** : **procédure adaptée** (MAPA), dont l'organisme fixe librement les modalités dans le respect des principes ;
 - **à partir de 5 404 000 €** : **procédure formalisée**, avec publication au niveau européen. L'avis de la Direction des affaires juridiques annonce ce seuil pour 2026-2027, contre 5 538 000 € auparavant.
 
-Ces seuils sont révisés tous les deux ans.
+Les seuils européens sont révisés tous les deux ans (les valeurs ci-dessus valent pour 2026-2027). Le seuil de dispense de 100 000 € HT pour les travaux, lui, n'est plus temporaire.
 
 ### Le choix des offres
 
