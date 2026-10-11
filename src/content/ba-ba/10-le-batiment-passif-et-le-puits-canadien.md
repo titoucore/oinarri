@@ -58,6 +58,8 @@ Un piège courant : on lit que le passif « consomme 15 kWh/m²/an contre 50 » 
 
 ### La ventilation double flux
 
+![Principe de la double flux : l'air vicié qui sort réchauffe l'air neuf qui entre, sans se mélanger avec lui.](/schemas/ba-ba/10-double-flux-echangeur.svg)
+
 Dans une **VMC double flux**, deux circuits se croisent dans un échangeur : l'air vicié qui sort réchauffe l'air neuf qui entre, sans se mélanger avec lui. Dans un bâtiment passif, l'échangeur doit récupérer au moins 75 % de la chaleur. L'ADEME cite des rendements d'environ 85 % pour les échangeurs courants.
 
 Les filtres s'entretiennent régulièrement, et le bruit de l'installation reste soumis aux limites vues au chapitre 9 (30 dB(A) dans les pièces principales).
