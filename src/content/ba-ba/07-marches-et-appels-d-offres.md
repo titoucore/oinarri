@@ -84,7 +84,7 @@ Un marché peut être modifié par **avenant**, dans des cas encadrés. Une modi
 - **Loi MOP.** Le point ouvert du chapitre 1 demeure : l'application du régime de la loi MOP à une opération d'accession n'est pas affirmée.
 - **Marchés globaux.** La conception-réalisation et d'autres marchés globaux (article L2171-1) obéissent à des règles distinctes, évoquées dans les textes consultés mais non traitées ici.
 - **Dispense de procédure.** Même sans procédure, l'acheteur doit veiller à bien utiliser l'argent public, en choisissant une offre pertinente et en évitant de contracter systématiquement avec le même opérateur. Ce principe est cité par la pratique ; le texte exact est à vérifier.
-- **Évolution législative.** Les seuils, les décrets de simplification et la loi n° 2026-403 changent régulièrement les règles. Leur effet n'a pas été vérifié.
+- **Évolution législative.** Les seuils, les décrets de simplification et la loi n° 2026-403 changent régulièrement les règles. La loi n° 2026-403 du 26 mai 2026 de simplification de la vie économique apporte plusieurs mesures à la commande publique : la présentation de variantes est autorisée par défaut en procédure adaptée ; une dispense de procédure s'applique aux marchés innovants sous les seuils européens (à partir du 1er juillet 2026, et à partir du 1er janvier 2027 pour les travaux innovants) ; des lots peuvent être réservés à de jeunes entreprises innovantes, jusqu'à 15 % du marché ; l'article 20 assouplit les règles des marchés publics de vente en l'état futur d'achèvement (VEFA), ce qui concerne le chapitre 6 du parcours Promotion. Ces points viennent de synthèses d'avocats et de la Banque des Territoires : le texte de la loi n'a pas été relu.
 
 ## Cas pratiques
 
