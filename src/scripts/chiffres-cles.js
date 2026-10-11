@@ -55,7 +55,9 @@ function dateFr(jour) {
 
 function filtrer() {
   const mots = normaliser(etat.recherche).split(/\s+/).filter(Boolean);
-  return CHIFFRES.filter((c) => {
+  return [...CHIFFRES]
+    .sort((a, b) => THEMES.indexOf(a.theme) - THEMES.indexOf(b.theme))
+    .filter((c) => {
     if (etat.theme && c.theme !== etat.theme) return false;
     if (etat.attention && !(arevoir(c) || aconfirmer(c) || c.statut === 'projet')) return false;
     if (!mots.length) return true;
