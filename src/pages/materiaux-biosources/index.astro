@@ -38,6 +38,15 @@ import { chapitres } from '../../data/materiaux-biosources.js';
       ))
     }
   </ol>
+
+  <aside class="outil" aria-labelledby="t-outil">
+    <h2 id="t-outil">Comparateur de matériaux</h2>
+    <p>
+      Mets côte à côte deux ou trois matériaux et calcule l'épaisseur nécessaire pour une résistance
+      thermique donnée, avec les sources de chaque valeur.
+    </p>
+    <a class="outil-lien" href="/comparateur/">Ouvrir le comparateur</a>
+  </aside>
 </Base>
 
 <style>
@@ -49,6 +58,32 @@ import { chapitres } from '../../data/materiaux-biosources.js';
     border-style: solid;
     border-color: var(--ink-900);
     color: var(--ink-900);
+  }
+
+  .outil {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--ink-100);
+    border-radius: 12px;
+  }
+
+  .outil h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+  }
+
+  .outil p {
+    margin: 0 0 0.6rem;
+    max-width: var(--lecture-w);
+    color: var(--ink-800);
+  }
+
+  .outil-lien {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 500;
+    text-underline-offset: 3px;
   }
 </style>
 
