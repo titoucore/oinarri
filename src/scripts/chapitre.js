@@ -59,6 +59,12 @@ async function initialiser() {
 
   lierVocabulaire();
 
+  // Cartes de vocabulaire du chapitre : les termes de la section « Vocabulaire » présents au glossaire.
+  const idsVocabulaire = [...document.querySelectorAll('#vocabulaire + p a[href^="/glossaire/#"]')]
+    .map((a) => (a.getAttribute('href') || '').split('#')[1])
+    .filter(Boolean)
+    .map((id) => `vocab/${id}#mot`);
+
   let quiz = {};
   try {
     quiz = JSON.parse(document.getElementById('quiz-data')?.textContent || '{}');
