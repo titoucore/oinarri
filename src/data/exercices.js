@@ -185,7 +185,8 @@ export const EXERCICES = [
         etapes: [
           'Coefficient de structure = 0,77 × (1 + N × 20 ÷ surface utile totale)',
           `Coefficient = 0,77 × (1 + ${n} × 20 ÷ ${n * su}) = ${nombre(cs, 4)}`,
-          `Loyer = prix au m² × coefficient × surface utile = ${nombre(prix)} × ${nombre(cs, 4)} × ${su} = ${nombre(loyer, 1)} €`,
+          `Prix au m² = loyer de zone × coefficient = ${nombre(prix)} × ${nombre(cs, 4)} = ${nombre(prix * cs, 3)} €`,
+          `Loyer maximal = surface utile × prix au m² = ${su} × ${nombre(prix * cs, 3)} = ${nombre(loyer, 1)} €`,
         ],
       };
     },
