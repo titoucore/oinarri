@@ -109,7 +109,7 @@ PLAI · PLUS · PLS · Banque des Territoires · Action Logement · Décision de
 
 ## Sources et vérification
 
-Vérifié le 3 octobre 2026.
+Vérifié le 3 octobre 2026, mis à jour le 11 octobre 2026 (taux du Livret A, PLS, projet de loi de finances pour 2027).
 
 - Taux et durées des prêts : Banque des Territoires (pages sur les prêts PLAI, PLUS, PLS et le blog des prêts long terme).
 - Subventions, prêts Action Logement : ministère de la Transition écologique (« Les aides financières au logement », avril 2025) ; décisions d'agrément 2026 publiées par Lorient Agglomération.
