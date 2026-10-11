@@ -17,7 +17,7 @@ verifie_le: 2026-10-11
 
 ## Cas concret : Arbola passe l'examen carbone
 
-*Opération fictive.* Le permis de la Résidence Arbola sera déposé en 2027. Le bureau d'études annonce : « En version béton, nous risquons de dépasser le seuil carbone. En version biosourcée, nous passons, mais tout dépend des fiches de déclaration des produits. » Le maître d'ouvrage a quatre questions : quel seuil ? comment le calcule-t-on ? qu'est-ce qu'une FDES ? et le label « biosourcé », est-ce la même chose ? Ce chapitre y répond.
+*Opération fictive.* Le permis de la Résidence Arbola sera déposé en 2027 : il relèvera donc des règles de cette année-là, dont l'exclusion du gaz comme source de chauffage (voir « Ce qui a changé en 2026 »). Le bureau d'études annonce : « En version béton, nous risquons de dépasser le seuil carbone. En version biosourcée, nous passons, mais tout dépend des fiches de déclaration des produits. » Le maître d'ouvrage a quatre questions : quel seuil ? comment le calcule-t-on ? qu'est-ce qu'une FDES ? et le label « biosourcé », est-ce la même chose ? Ce chapitre y répond.
 
 ## Essentiel
 
